@@ -9,11 +9,12 @@ entity FSM is
 		I_ack 	: in std_logic;
 		I_W_0	: in std_logic_vector(5 downto 0); 
 		I_P_0	: in std_logic_vector(5 downto 0);
-		I_N_1 : in std_logic_vector(6 downto 0);
-		I_W_1 : in std_logic_vector(5 downto 0);
+		I_N_1 	: in std_logic_vector(6 downto 0);
+		I_W_1 	: in std_logic_vector(5 downto 0);
 		I_N_2	: in std_logic_vector(5 downto 0);
-		I_W_2 : in std_logic_vector(1 downto 0);
-		I_N_3 : in std_logic_vector(4 downto 0);
+		I_W_2 	: in std_logic_vector(1 downto 0);
+		I_N_3 	: in std_logic_vector(4 downto 0);
+		I_arg	: in std_logic;
 		O_request 		: out std_logic;
 		O_en_load 		: out std_logic;
 		O_en_C_W		: out std_logic;
@@ -23,7 +24,8 @@ entity FSM is
 		O_W_2_en 		: out std_logic;
 		O_N_2_en 		: out std_logic;
 		O_N_3_en		: out std_logic;
-		O_classifValid 	: out std_logic
+		O_classifValid 	: out std_logic;
+		O_arg 			: out std_logic
 		);
 end FSM;
 
@@ -51,6 +53,7 @@ begin
 			I_N_2,
 			I_W_2,
 			I_N_3,
+			I_arg,
 			SR_Present)
 	
 	begin 
@@ -66,6 +69,7 @@ begin
 				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
 				O_classifValid 	<= '0';
+				O_arg 			<= '0';
 				SC_Futur <= ST_Wait;
 
 			when ST_Wait =>
@@ -77,6 +81,7 @@ begin
 				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
 				O_classifValid 	<= '0';
+				O_arg 			<= '0';
 				if I_ack = '1' then
 					SC_Futur 	<= ST_Load;
 					O_en_C_W	<= '1';
@@ -99,8 +104,9 @@ begin
 				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
 				O_classifValid 	<= '0';	
-				if ( 	to_integer(to_unsigned(I_W_0,7) = 27) and 
-						to_integer(to_unsigned(I_P_0,7) = 27) ) then 
+				O_arg 			<= '0';
+				if ( 	to_integer(Unsigned(I_W_0)) = 27 and 
+						to_integer(Unsigned(I_P_0)) = 27) then 
 					SC_Futur 	<= ST_L1;
 					O_request 	<= '0';
 					O_W_1_en	<= '1';
@@ -121,8 +127,9 @@ begin
 				O_en_C_P		<= '0';
 				O_N_3_en		<= '0';
 				O_classifValid 	<= '0';
-				if ( to_integer(to_unsigned(I_W_1,7) = 27) and 
-						to_integer(to_unsigned(I_N_1,7) = 27) ) then 
+				O_arg 			<= '0';
+				if ( 	to_integer(Unsigned(I_W_1)) = 27 and 
+						to_integer(Unsigned(I_N_1)) = 27) then 
 					O_W_1_en <= '0';
 					O_N_1_en <= '0';
 					SC_Futur <= ST_L2;
@@ -147,8 +154,9 @@ begin
 				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
 				O_classifValid 	<= '0';
-				if ( to_integer(to_unsigned(I_W_2,1) = 1) and 
-						to_integer(to_unsigned(I_N_2,6) = 19) ) then 
+				O_arg 			<= '0';
+				if ( 	to_integer(Unsigned(I_W_2)) = 1 and 
+						to_integer(Unsigned(I_N_2)) = 19)  then 
 				
 					SC_Futur 	<= ST_L3;
 					O_W_2_en 	<= '0';
@@ -174,12 +182,14 @@ begin
 				O_N_2_en 		<= '0';
 				O_classifValid 	<= '0';
 				SC_Futur <= ST_Wait;
-				if (to_integer(to_unsigned(I_N_3, 5)=9) ) then
+				if (to_integer(to_unsigned(I_N_3))=9) then
 					SC_Futur <= ST_Class;
 					O_N_3_en <= '1';
+					O_arg 	<= '1';
 				else 
 					SC_Futur <= ST_L3;
 					O_N_3_en <= '0';
+					O_arg <= '0';
 				end if;
 
 			when ST_Class =>
@@ -193,7 +203,13 @@ begin
 				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
 				O_classifValid 	<= '0';
-				SC_Futur <= ST_Out;
+				if (I_arg = '0') then
+					SC_Futur <= ST_Class;
+					O_arg <= '1';
+				else 
+					SC_Futur <= ST_Out;
+					O_arg <= '0';
+				end if;
 
 			when ST_Out =>
 				O_request 		<= '0';
@@ -205,6 +221,7 @@ begin
 				O_W_2_en 		<= '0';
 				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
+				O_arg 			<= '0';
 				O_classifValid 	<= '1';
 				SC_Futur <= ST_Wait;
 
