@@ -1,28 +1,94 @@
 #!/usr/bin/env python3
+import copy
+import itertools
+from functools import lru_cache
+
+import numpy
+
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+from torch.utils.data.dataset import Dataset
 from torchvision import datasets, transforms
 from torch.autograd import Variable
 
-import numpy as np
+from scipy.ndimage.interpolation import map_coordinates
+from scipy.ndimage.filters import gaussian_filter
 
+import numpy as np
 
 # Training settings
 batch_size = 64
-n_epochs = 30
+n_epochs = 50
 
-
-model_name = "3layers.torch"
-layer_sizes=(28 * 28, 40, 20, 10)
 do_train = True
-momentum = 0.5
+do_quant = True
+
+model_name = "32_16_10.torch"
+layer_sizes = (28 * 28, 32, 16, 10)
+momentum = 0.4
 learning_rate = 0.0005
+
+
+class ElasticDataset(Dataset):
+    def __init__(self, source, alpha, sigma, random_state=None):
+        self.source = source
+        self.alpha = alpha
+        self.sigma = sigma
+        self.random_state = random_state
+
+    def __len__(self):
+        return len(self.source)
+
+    @lru_cache(maxsize=None)
+    def __getitem__(self, index):
+        origin, s = self.source[index]
+        transf = self._transform(origin, self.alpha, self.sigma, self.random_state)
+        return (transf, s)
+
+    @staticmethod
+    def _transform(image, alpha, sigma, random_state=None):
+        """Elastic deformation of images as described in [Simard2003]_.
+        .. [Simard2003] Simard, Steinkraus and Platt, "Best Practices for
+           Convolutional Neural Networks applied to Visual Document Analysis", in
+           Proc. of the International Conference on Document Analysis and
+           Recognition, 2003.
+        """
+        if random_state is None:
+            random_state = numpy.random.RandomState(None)
+
+        origin_shape = image.shape
+        image = image[0, :]
+        shape = image.shape
+        dx = (
+            gaussian_filter(
+                (random_state.rand(*shape) * 2 - 1), sigma, mode="constant", cval=0
+            )
+            * alpha
+        )
+        dy = (
+            gaussian_filter(
+                (random_state.rand(*shape) * 2 - 1), sigma, mode="constant", cval=0
+            )
+            * alpha
+        )
+
+        x, y = numpy.arange(shape[0]), numpy.arange(shape[1])
+        indices = numpy.reshape(y + dy, (-1, 1)), numpy.reshape(x + dx, (-1, 1))
+
+        img = map_coordinates(image, indices, order=1).reshape(shape)
+        output = numpy.zeros(origin_shape)
+        output[0, :] = img
+        return torch.from_numpy(output).float()
+
 
 train_dataset = datasets.MNIST(
     root="./mnist_data/", train=True, transform=transforms.ToTensor(), download=True
 )
+# train_dataset += ElasticDataset(train_dataset, .1, .1)
+
 
 test_dataset = datasets.MNIST(
     root="./mnist_data/", train=False, transform=transforms.ToTensor()
@@ -79,9 +145,7 @@ class Net(nn.Module):
             if batch_id % 1000 == 0:
                 print(
                     "Train Epoch: {} ({:.0f}%)\tLoss: {:.6f}".format(
-                        epoch,
-                        100.0 * batch_id / len(train_loader),
-                        loss.data,
+                        epoch, 100.0 * batch_id / len(train_loader), loss.data
                     )
                 )
 
@@ -120,19 +184,47 @@ class Net(nn.Module):
         self.load_state_dict(torch.load(filename))
         self.eval()
 
-def quantize_layer(weight, n_bits, shift):
+
+def quantize_layer(weight, n_bits, n_shift):
     max_weight = weight.abs().max()
-    quantum = 2**(torch.ceil(torch.log2(max_weight)) - n_bits - n_shift + 1)
+    quantum = 2 ** (torch.ceil(torch.log2(max_weight)) - n_bits - n_shift + 1)
     quantum = quantum.float()
-    max_quantized = 2**(n_bits - 1) - 1
+    max_quantized = 2 ** (n_bits - 1) - 1
 
     quant_weigth = torch.round(weight / quantum)  # integer to binary
-    quant_weigth = quant_weigth.clamp(-max_quantized - 1, max_quantized)  # clamp for storage
+    quant_weigth = quant_weigth.clamp(
+        -max_quantized - 1, max_quantized
+    )  # clamp for storage
     quant_weigth = quant_weigth * quantum
 
     return quant_weigth
 
-    
+
+def quant_model(model, n_bits, shift):
+    q_model = copy.deepcopy(model)
+    q_model.l1.weight.data = quantize_layer(q_model.l1.weight.data, n_bits, shift[0])
+    q_model.l2.weight.data = quantize_layer(q_model.l2.weight.data, n_bits, shift[1])
+    q_model.l3.weight.data = quantize_layer(q_model.l3.weight.data, n_bits, shift[2])
+    return q_model
+
+
+def best_shift(model, n_bits, test_loader, criterion):
+    score_grid = {}
+    best_score = 0
+    best_score_k = None
+    best_model = None
+    for s1, s2, s3 in itertools.product(range(n_bits), range(n_bits), range(n_bits)):
+        print((s1, s2, s3))
+        q_model = quant_model(model, n_bits, (s1, s2, s3))
+        acc = q_model.test_(test_loader, criterion)
+        score_grid[(s1, s2, s3)] = acc
+        if acc > best_score:
+            best_score = acc
+            best_score_k = (s1, s2, s3)
+            best_model = q_model
+
+    return best_score_k, best_model
+
 
 def main():
     model = Net(layer_sizes=layer_sizes)
@@ -144,12 +236,34 @@ def main():
     except Exception:
         print("Model not found, creating a new one.")
 
-    for epoch in range(1, n_epochs + 1):
-        model.train_(epoch, train_loader, optimizer, criterion)
-        if epoch % 10 == 0:
-            model.test_(test_loader, criterion)
+    if do_train:
+        for epoch in range(1, n_epochs + 1):
+            model.train_(epoch, train_loader, optimizer, criterion)
+            if epoch % 10 == 0:
+                model.test_(test_loader, criterion)
+        model.save_torch(model_name)
 
-    model.save_torch(model_name)
+    model.test_(test_loader, criterion)
+
+    if do_quant:
+        n_bits = 5
+        quant = (0, 0, 0)
+        q_model = quant_model(model, n_bits, quant)
+        # quant, q_model = best_shift(model, n_bits, test_loader, criterion)
+        # q_model = Net(layer_sizes=layer_sizes)
+        # q_model.load_torch("q_%i_" % n_bits + model_name)
+
+        print("Best shift %i bits: %i, %i, %i" % (n_bits, *quant))
+        q_model.test_(test_loader, criterion)
+        q_model.save_torch("q_%i_" % n_bits + model_name)
+
+        n_bits = 4
+        quant = (1, 1, 1)
+        q_model = quant_model(model, n_bits, quant)
+        print("Best shift %i bits: %i, %i, %i" % (n_bits, *quant))
+        q_model.test_(test_loader, criterion)
+        q_model.test_(test_loader, criterion)
+        q_model.save_torch("q_%i_" % n_bits + model_name)
 
 
 if __name__ == "__main__":
