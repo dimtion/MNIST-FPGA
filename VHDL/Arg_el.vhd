@@ -1,4 +1,4 @@
-library IEEE
+library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
@@ -24,7 +24,7 @@ architecture Behavioral of Arg_el is
 			size : natural
 		);
 		Port(
-			I_clk 	: in std_logic
+			I_clk 	: in std_logic;
 			I_rst 	: in std_logic;
 			I_en 	: in std_logic;
 			I_data 	: in std_logic_vector(size-1 downto 0);
@@ -61,13 +61,17 @@ begin
 			O_value => O_I
 		);
 
-if (Unsigned(I_P1) - Unsigned(I_P2) > 0) then
-	max_P <= Unsigned(I_P1);
-	max_I <= Unsigned(I_I1);
-else 
-	max_P <= Unsigned(I_P2);
-	max_I <= unsigned(I_I2);
-end if;
+process
+
+begin
+    if (Unsigned(I_P1) - Unsigned(I_P2) > 0) then
+	    max_P <= Unsigned(I_P1);
+	    max_I <= Unsigned(I_I1);
+    else 
+	    max_P <= Unsigned(I_P2);
+	    max_I <= unsigned(I_I2);
+    end if;
+end process;
 
 process(I_clk, I_rst) 
 
@@ -83,22 +87,5 @@ begin
 	end if;
 
 end process;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 end Behavioral;

@@ -1,4 +1,4 @@
-library IEEE
+library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.all;
 
@@ -17,7 +17,7 @@ entity Argmax is
 		I_P9 	: in std_logic_vector(7 downto 0);
 		I_P10 	: in std_logic_vector(7 downto 0);
 		I_en 	: in std_logic;
-		O_I 	: out std_logic;
+		O_I 	: out std_logic_vector(3 downto 0);
 		O_done : out std_logic
 		);
 end Argmax;
@@ -37,18 +37,21 @@ architecture Behavioral of Argmax is
 			O_P		: out std_logic_vector(7 downto 0);
 			O_done 	: out std_logic
 		);
+    end component;
 
-signal P_1_1 : unsigned(7 downto 0);
-signal P_1_2 : unsigned(7 downto 0);
-signal P_1_3 : unsigned(7 downto 0);
-signal P_1_4 : unsigned(7 downto 0);
-signal P_1_5 : unsigned(7 downto 0);
+signal P_1_1 : std_logic_vector(7 downto 0);
+signal P_1_2 : std_logic_vector(7 downto 0);
+signal P_1_3 : std_logic_vector(7 downto 0);
+signal P_1_4 : std_logic_vector(7 downto 0);
+signal P_1_5 : std_logic_vector(7 downto 0);
 
-signal I_1_1 : unsigned(3 downto 0);
-signal I_1_2 : unsigned(3 downto 0);
-signal I_1_3 : unsigned(3 downto 0);
-signal I_1_4 : unsigned(3 downto 0);
-signal I_1_5 : unsigned(3 downto 0);
+
+
+signal I_1_1 : std_logic_vector(3 downto 0);
+signal I_1_2 : std_logic_vector(3 downto 0);
+signal I_1_3 : std_logic_vector(3 downto 0);
+signal I_1_4 : std_logic_vector(3 downto 0);
+signal I_1_5 : std_logic_vector(3 downto 0);
 
 signal d_1_1 : std_logic;
 signal d_1_2 : std_logic;
@@ -56,21 +59,25 @@ signal d_1_3 : std_logic;
 signal d_1_4 : std_logic;
 signal d_1_5 : std_logic;
 
-signal P_2_1 : unsigned(7 downto 0);
-signal P_2_2 : unsigned(7 downto 0);
+signal P_2_1 : std_logic_vector(7 downto 0);
+signal P_2_2 : std_logic_vector(7 downto 0);
 
-signal I_2_1 : unsigned(3 downto 0);
-signal I_2_2 : unsigned(3 downto 0);
+signal I_2_1 : std_logic_vector(3 downto 0);
+signal I_2_2 : std_logic_vector(3 downto 0);
 
 signal d_2_1 : std_logic;
 signal d_2_2 : std_logic;
 
+signal en_2_1 : std_logic;
+signal en_2_2 : std_logic;
+signal en_3_1 : std_logic;
+signal en_4_1 : std_logic;
 
-signal P_3_1 : unsigned(7 downto 0);
-signal I_3_1 : unsigned(3 downto 0);
+signal P_3_1 : std_logic_vector(7 downto 0);
+signal I_3_1 : std_logic_vector(3 downto 0);
 signal d_3_1 : std_logic;
 
-signal P_4_1 : unsigned(7 downto 0);
+signal P_4_1 : std_logic_vector(7 downto 0);
 
 begin 
 
@@ -84,8 +91,8 @@ begin
 			I_P2	=> I_P2,
 			I_I1 	=> "0001",
 			I_I2	=> "0010",
-			O_I		=> std_logic_vector(I_1_1), 
-			O_P		=> std_logic_vector(P_1_1),
+			O_I		=> I_1_1, 
+			O_P		=> P_1_1,
 			O_done 	=> d_1_1
 		);
 
@@ -98,8 +105,8 @@ begin
 			I_P2	=> I_P4,
 			I_I1 	=> "0011",
 			I_I2	=> "0100",
-			O_I		=> std_logic_vector(I_1_2), 
-			O_P		=> std_logic_vector(P_1_2),
+			O_I		=> I_1_2, 
+			O_P		=> P_1_2,
 			O_done 	=> d_1_2
 		);
 
@@ -112,8 +119,8 @@ begin
 			I_P2	=> I_P6,
 			I_I1 	=> "0101",
 			I_I2	=> "0110",
-			O_I		=> std_logic_vector(I_1_3), 
-			O_P		=> std_logic_vector(P_1_3),
+			O_I		=> I_1_3, 
+			O_P		=> P_1_3,
 			O_done 	=> d_1_3
 		);
 	
@@ -126,8 +133,8 @@ begin
 			I_P2	=> I_P8,
 			I_I1 	=> "0111",
 			I_I2	=> "1000",
-			O_I		=> std_logic_vector(I_1_4), 
-			O_P		=> std_logic_vector(P_1_4),
+			O_I		=> I_1_4, 
+			O_P		=> P_1_4,
 			O_done 	=> d_1_4
 		);
 
@@ -140,8 +147,8 @@ begin
 			I_P2	=> I_P10,
 			I_I1 	=> "1001",
 			I_I2	=> "1010",
-			O_I		=> std_logic_vector(I_1_5), 
-			O_P		=> std_logic_vector(P_1_5),
+			O_I		=> I_1_5, 
+			O_P		=> P_1_5,
 			O_done 	=> d_1_5
 		);
 
@@ -150,13 +157,13 @@ begin
 		port map(
 			I_clk 	=> I_clk, 
 			I_rst 	=> I_rst,
-			I_en 	=> d_1_1*d_1_2,
-			I_P1 	=> std_logic_vector(P_1_1),
-			I_P2	=> std_logic_vector(P_1_2),
-			I_I1 	=> std_logic_vector(I_1_1),
-			I_I2	=> std_logic_vector(I_1_2),
-			O_I		=> std_logic_vector(I_2_1), 
-			O_P		=> std_logic_vector(P_2_1),
+			I_en 	=> en_2_1,
+			I_P1 	=> P_1_1,
+			I_P2	=> P_1_2,
+			I_I1 	=> I_1_1,
+			I_I2	=> I_1_2,
+			O_I		=> I_2_1, 
+			O_P		=> P_2_1,
 			O_done 	=> d_2_1
 		);
 
@@ -164,13 +171,13 @@ begin
 		port map(
 			I_clk 	=> I_clk, 
 			I_rst 	=> I_rst,
-			I_en 	=> d_1_3*d_1_4,
-			I_P1 	=> std_logic_vector(P_1_3),
-			I_P2	=> std_logic_vector(P_1_4),
-			I_I1 	=> std_logic_vector(I_1_3),
-			I_I2	=> std_logic_vector(I_1_4),
-			O_I		=> std_logic_vector(I_2_2), 
-			O_P		=> std_logic_vector(P_2_2),
+			I_en 	=> en_2_2,
+			I_P1 	=> P_1_3,
+			I_P2	=> P_1_4,
+			I_I1 	=> I_1_3,
+			I_I2	=> I_1_4,
+			O_I		=> I_2_2, 
+			O_P		=> P_2_2,
 			O_done 	=> d_2_1
 		);
 
@@ -179,13 +186,13 @@ begin
 		port map(
 			I_clk 	=> I_clk, 
 			I_rst 	=> I_rst,
-			I_en 	=> d_1_5*d_2_2,
-			I_P1 	=> std_logic_vector(P_1_5),
-			I_P2	=> std_logic_vector(P_2_2),
-			I_I1 	=> std_logic_vector(I_1_5),
-			I_I2	=> std_logic_vector(I_2_2),
-			O_I		=> std_logic_vector(I_3_1), 
-			O_P		=> std_logic_vector(P_3_1),
+			I_en 	=> en_3_1,
+			I_P1 	=> P_1_5,
+			I_P2	=> P_2_2,
+			I_I1 	=> I_1_5,
+			I_I2	=> I_2_2,
+			O_I		=> I_3_1, 
+			O_P		=> P_3_1,
 			O_done 	=> d_3_1
 		);
 
@@ -194,13 +201,42 @@ begin
 		port map(
 			I_clk 	=> I_clk, 
 			I_rst 	=> I_rst,
-			I_en 	=> d_2_1*d_3_1,
-			I_P1 	=> std_logic_vector(P_2_1),
-			I_P2	=> std_logic_vector(P_3_1),
-			I_I1 	=> std_logic_vector(I_2_1),
-			I_I2	=> std_logic_vector(I_3_1),
+			I_en 	=> en_4_1,
+			I_P1 	=> P_2_1,
+			I_P2	=> P_3_1,
+			I_I1 	=> I_2_1,
+			I_I2	=> I_3_1,
 			O_I 	=> O_I,
 			O_P		=> P_4_1,
 			O_done 	=> O_done
 		);
+
+
+process 
+    begin 
+        if (d_2_1 = '1' and d_3_1 = '1') then 
+                en_4_1 <= '1';
+        else 
+                en_4_1 <= '0';
+        end if;
+
+        if (d_1_5 ='1' and d_2_2 = '1') then 
+            en_3_1 <= '1';
+        else 
+            en_3_1 <= '0';
+        end if;
+       
+        if (d_1_3 = '1' and d_1_4 = '1') then 
+            en_2_2 <= '1';
+        else 
+            en_2_2 <= '0';
+        end if;
+        
+        if (d_1_1 = '1' and d_1_2 = '1') then
+            en_2_1 <= '1';
+        else 
+            en_2_2 <= '0';
+        end if;
+end process;
+
 end Behavioral;

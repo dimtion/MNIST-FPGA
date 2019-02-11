@@ -1,4 +1,4 @@
-library IEEE
+library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
@@ -29,9 +29,9 @@ begin
 		tmp_value <= (others => '0');
 	else 
 		if I_load = '0' then 
-			tmp_value <= tmp_value + to_unsigned(I_d,size);
+			tmp_value <= tmp_value + unsigned(I_d);
 		else 
-			tmp_value <= to_unsigned(I_d,size);
+			tmp_value <= unsigned(I_d);
 		end if;
 	end if;
 

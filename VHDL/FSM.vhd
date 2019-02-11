@@ -1,4 +1,4 @@
-library IEEE
+library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
@@ -182,7 +182,7 @@ begin
 				O_N_2_en 		<= '0';
 				O_classifValid 	<= '0';
 				SC_Futur <= ST_Wait;
-				if (to_integer(to_unsigned(I_N_3))=9) then
+				if (to_integer(unsigned(I_N_3))=9) then
 					SC_Futur <= ST_Class;
 					O_N_3_en <= '1';
 					O_arg 	<= '1';
