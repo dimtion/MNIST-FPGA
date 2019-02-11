@@ -16,7 +16,6 @@ entity Acc is
 end Acc;
 
 architecture Behavioral of Acc is 
-`
 
 signal tmp_value : unsigned(size-1 downto 0);
 

@@ -61,7 +61,7 @@ begin
 			O_value => O_I
 		);
 
-process
+process(I_clk,I_P1, I_P2)
 
 begin
     if (Unsigned(I_P1) - Unsigned(I_P2) > 0) then
