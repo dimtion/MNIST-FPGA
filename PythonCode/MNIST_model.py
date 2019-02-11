@@ -180,7 +180,7 @@ class Net(nn.Module):
         test_loss /= len(test_loader.dataset)
         accuracy = 100.0 * correct / len(test_loader.dataset)
         print(
-            "\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.2f}%)\n".format(
+            "\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.2f}%)".format(
                 test_loss, correct, len(test_loader.dataset), accuracy
             )
         )
@@ -204,7 +204,7 @@ def quantize_layer(weight, n_bits, n_shift):
     quant_weigth = quant_weigth.clamp(
         -max_quantized - 1, max_quantized
     )  # clamp for storage
-    quant_weigth = quant_weigth * quantum
+    quant_weigth = quant_weigth # * quantum
 
     return quant_weigth
 
@@ -212,8 +212,11 @@ def quantize_layer(weight, n_bits, n_shift):
 def quant_model(model, n_bits, shift):
     q_model = copy.deepcopy(model)
     q_model.l1.weight.data = quantize_layer(q_model.l1.weight.data, n_bits, shift[0])
+    q_model.l1.bias.data = quantize_layer(q_model.l1.bias.data, n_bits, shift[0])
     q_model.l2.weight.data = quantize_layer(q_model.l2.weight.data, n_bits, shift[1])
+    q_model.l2.bias.data = quantize_layer(q_model.l2.bias.data, n_bits, shift[1])
     q_model.l3.weight.data = quantize_layer(q_model.l3.weight.data, n_bits, shift[2])
+    q_model.l3.bias.data = quantize_layer(q_model.l3.bias.data, n_bits, shift[2])
     return q_model
 
 
@@ -235,19 +238,23 @@ def best_shift(model, n_bits, test_loader, criterion):
     return best_score_k, best_model
 
 
-def write_layer(layer, filename, word_size):
+def write_layer(weight, bias, filename, word_size):
     files = []
-    n_files = word_size 
+    n_files = word_size
 
+    bias_file = open(filename + "_bias.lut", "w")
     for i in range(n_files):
         f = open(filename + "_%i.lut" % i, "w")
         files.append(f)
 
-    for neuron in layer:
+    for neuron in weight:
         for i, weight in enumerate(neuron):
             # print(filename, n_files, i % word_size)
             f = files[i % word_size]
             f.write("%i\n" % int(weight.numpy()))
+
+    for neuron in bias:
+        bias_file.write("%i\n" % int(neuron.numpy()))
 
     for f in files:
         f.close()
@@ -255,9 +262,24 @@ def write_layer(layer, filename, word_size):
 
 def write_weigths(model, folder, model_name):
     os.system("mkdir -p %s" % os.path.join(folder, model_name))
-    write_layer(model.l1.weight.data, os.path.join(folder, model_name, "l1"), word_size=28)
-    write_layer(model.l2.weight.data, os.path.join(folder, model_name, "l2"), word_size=20)
-    write_layer(model.l3.weight.data, os.path.join(folder, model_name, "l3"), word_size=20)
+    write_layer(
+        model.l1.weight.data,
+        model.l1.bias.data,
+        os.path.join(folder, model_name, "l1"),
+        word_size=28,
+    )
+    write_layer(
+        model.l2.weight.data,
+        model.l2.bias.data,
+        os.path.join(folder, model_name, "l2"),
+        word_size=20,
+    )
+    write_layer(
+        model.l3.weight.data,
+        model.l3.bias.data,
+        os.path.join(folder, model_name, "l3"),
+        word_size=20,
+    )
 
 
 def main():
@@ -293,13 +315,15 @@ def main():
         q_model.save_torch(model_name + "q_%i" % n_bits)
 
         # n_bits = 4
-        # quant = (1, 1, 0)
+        # quant = shift
         # q_model = quant_model(model, n_bits, quant)
-        # # quant, q_model = best_shift(model, n_bits, test_loader, criterion)
+        # quant, q_model = best_shift(model, n_bits, test_loader, criterion)
         # print("Best shift %i bits: %i, %i, %i" % (n_bits, *quant))
         # q_model.test_(test_loader, criterion)
         # q_model.test_(test_loader, criterion)
         # q_model.save_torch(model_name + "q_&%i" % n_bits)
+
+        # finally adapt the weights
 
     if do_save_fpga:
         write_weigths(q_model, output_quant, model_name)
