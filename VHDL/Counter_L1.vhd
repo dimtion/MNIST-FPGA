@@ -4,8 +4,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Counter_L1 is 
 	generic (
-		address_W_size : NATURAL := 10;
-		address_I_size : NATURAL := 10;
 		N_size : NATURAL := 5;
 		W_size : NATURAL := 5
 	);
@@ -14,8 +12,6 @@ entity Counter_L1 is
 		I_rst 		: in std_logic;
 		I_N_1_en 	: in std_logic;
 		I_W_1_en 	: in std_logic;
-		O_addr_W_1 	: out std_logic_vector(address_W_size -1 downto 0);
-		O_addr_I_1	: out std_logic_vector(address_I_size -1 downto 0);
 		O_N_1 		: out std_logic_vector(N_size -1 downto 0); 
 		O_W_1		: out std_logic_vector(W_size -1 downto 0)
 	);
@@ -70,8 +66,6 @@ begin
 
 O_N_1 <= std_logic_vector(value_counter_40);
 O_W_1 <= std_logic_vector(value_counter_28);
-O_addr_W_1 <= std_logic_vector(to_unsigned(to_integer(value_counter_28)*(28*5) + to_integer(value_counter_40)*(28*28*8), address_W_size));
-O_addr_I_1 <= std_logic_vector(to_unsigned(to_integer(value_counter_28) * (28*8), address_I_size));
 
 u_en <= I_N_1_en when(to_integer(value_counter_40) = 27) else '0';
 l_value_counter_40 <= std_logic_vector(value_counter_40);

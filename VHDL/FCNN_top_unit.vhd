@@ -15,8 +15,8 @@ entity FCNN_top_unit is
     Port ( 
     
          -------------------------- CLOCK AND RESET -------------------------
-         I_clk        : in  STD_LOGIC;   -- System clock.
-			I_aync_rst   : in  STD_LOGIC;   -- Asnchronous reset.
+        I_clk        : in  STD_LOGIC;   -- System clock.
+		I_aync_rst   : in  STD_LOGIC;   -- Asnchronous reset.
          --------------------------------------------------------------------
            
          -------------------------- CONTROL SIGNALS -------------------------   
@@ -68,9 +68,6 @@ architecture Behavioral of FCNN_top_unit is
     end component;
 
     Component CreateWord is
-        generic (
-		    address_size : natural 
-	    );
 	    port (
             I_clk       : in std_logic;
             I_rst       : in std_logic;
@@ -78,7 +75,6 @@ architecture Behavioral of FCNN_top_unit is
 		    I_en_load 	: in std_logic;
 		    I_en_C_P	: in std_logic;
 		    I_en_C_W 	: in std_logic;
-		    O_addr_I_0	: out std_logic_vector(address_size -1 downto 0);
 		    O_I_0		: out std_logic_vector(223 downto 0);
 		    O_en_I_0 	: out std_logic
 	    );
@@ -99,8 +95,6 @@ architecture Behavioral of FCNN_top_unit is
 
     component Counter_L1 is 
         generic (
-		    address_W_size : NATURAL := 10;
-		    address_I_size : NATURAL := 10;
 		    N_size : NATURAL := 5;
 		    W_size : NATURAL := 5
 	    );
@@ -109,8 +103,6 @@ architecture Behavioral of FCNN_top_unit is
 		    I_rst 		: in std_logic;
 		    I_N_1_en 	: in std_logic;
 		    I_W_1_en 	: in std_logic;
-		    O_addr_W_1 	: out std_logic_vector(address_W_size -1 downto 0);
-		    O_addr_I_1	: out std_logic_vector(address_I_size -1 downto 0);
 		    O_N_1 		: out std_logic_vector(N_size -1 downto 0); 
 		    O_W_1		: out std_logic_vector(W_size -1 downto 0)
 	    );
@@ -130,8 +122,6 @@ architecture Behavioral of FCNN_top_unit is
 
     Component Counter_L2 is
         generic (
-		    address_W_size : NATURAL := 10;
-		    address_I_size : NATURAL := 10;
 		    N_size : NATURAL := 5;
 		    W_size : NATURAL := 5
 	    );
@@ -140,7 +130,6 @@ architecture Behavioral of FCNN_top_unit is
 		    I_rst 		: in std_logic;
 		    I_N_2_en 	: in std_logic;
 		    I_W_2_en 	: in std_logic;
-		    O_addr_W_2 	: out std_logic_vector(address_W_size -1 downto 0);
 		    O_N_2 		: out std_logic_vector(N_size -1 downto 0); 
 		    O_W_2		: out std_logic_vector(W_size -1 downto 0)
 	);
@@ -213,14 +202,10 @@ architecture Behavioral of FCNN_top_unit is
     end component;
 
     component Counter_L3 is 
-	    generic (
-		    address_W_size : NATURAL := 10
-	    );
 	    port (
 		    I_clk		: in std_logic;
 		    I_rst		: in std_logic;
 		    I_N_3_en 	: in std_logic;
-		    O_addr_W_3 	: out std_logic_vector(address_W_size-1 downto 0);
             O_N_3       : out std_logic_vector(3 downto 0)
         );
     end Component;
@@ -287,10 +272,72 @@ architecture Behavioral of FCNN_top_unit is
 	--------------------------------------------------
 
 	-- Signals are defined here..
-	
+
+
+signal I_W_0 : std_logic_vector(5 downto 0);
+signal I_P_0 : std_logic_vector(5 downto 0);
+signal I_N_1 : std_logic_vector(6 downto 0);
+signal I_W_1 : std_logic_vector(5 downto 0);
+signal I_N_2 : std_logic_vector(5 downto 0);
+signal I_W_2 : std_logic_vector(1 downto 0);
+signal I_N_3 : std_logic_vector(4 downto 0);
+signal I_arg : std_logic;
+
+signal en_load : std_logic;
+signal en_C_P : std_logic;
+signal en_C_W : std_logic;
+signal W_1_en : std_logic;
+signal N_1_en : std_logic;
+signal W_2_en : std_logic;
+signal N_2_en : std_logic;
+signal N_3_en : std_logic;
+signal O_arg : std_logic;
+
+signal I_O : std_logic_vector(223 downto 0);
+signal en_I_O : std_logic;
+
 begin
 
+    Fsm_top : FSM
+        port map(    
+            i_clk   => I_clk,
+		    I_rst   => I_aync_rst,
+		    i_ack   => I_ackPixel,
+		    i_w_0   => I_W_0,
+		    i_p_0   => I_P_0,
+		    i_n_1   => I_N_1,
+		    i_w_1   => I_W_1,
+		    i_n_2   => I_N_2,
+		    i_w_2   => I_W_2,
+		    i_n_3   => I_N_3,
+		    i_arg   => I_arg,
+		    o_request => O_requestPixel,		
+		    o_en_load => en_load,		
+		    o_en_c_w => en_C_W,		
+		    o_en_c_p => en_C_P,
+		    o_w_1_en => W_1_en,		
+		    o_n_1_en => N_1_en,
+		    o_w_2_en => W_2_en,
+		    o_n_2_en => N_2_en,
+		    o_n_3_en => N_3_en,
+		    o_classifvalid => O_classifValid,
+		    o_arg => O_arg
+		);
+    
+    CreateWord_1 : CreateWord 
+	port map(
+            I_clk       => I_clk,
+            I_rst       => I_aync_rst,
+	    	I_pixel     => I_pixel,	
+		    I_en_load   => en_load,
+		    I_en_C_P	=> en_C_P,
+		    I_en_C_W 	=> en_C_W,
+		    O_I_0		=> I_O,
+		    O_en_I_0 	=> en_I_O
+	    );
 
-	
+
+        
+
 end Behavioral;
 

@@ -65,7 +65,8 @@ begin
 			I_d		=> l_add_5,
 			O_d 	=> l_out_acc
 		);
-process
+
+process(I_clk)
 begin
 -- multiplicateur
     mult_loop : for Index_m in 0 to 19 loop
@@ -104,7 +105,7 @@ out_acc <= unsigned(l_out_acc);
 
 -- Out with Relu
 
-process 
+process(I_clk)
 begin
     if (add_r(7) = '0') then
         O_d <= std_logic_vector(add_r);
@@ -113,7 +114,7 @@ begin
     end if;
 end process;
 
-process 
+process(I_clk) 
 begin 
     if (to_integer(Unsigned(I_C)) = 0) then
         en_Acc <= '1'; 

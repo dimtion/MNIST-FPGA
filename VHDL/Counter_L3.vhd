@@ -3,14 +3,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity Counter_L3 is 
-	generic (
-		address_W_size : NATURAL := 10
-	);
 	port (
 		I_clk		: in std_logic;
 		I_rst		: in std_logic;
 		I_N_3_en 	: in std_logic;
-		O_addr_W_3 	: out std_logic_vector(address_W_size-1 downto 0);
         O_N_3       : out std_logic_vector(3 downto 0)
     );
 end Counter_L3;
@@ -47,7 +43,6 @@ begin
 		);
 
 O_N_3 <= std_logic_vector(value_counter_10);
-O_addr_W_3 <= std_logic_vector(to_unsigned(to_integer(value_counter_10)*(10*5) ,address_W_size));
-
 l_value_counter_10 <= std_logic_vector(value_counter_10);
+
 end Behavioral;
