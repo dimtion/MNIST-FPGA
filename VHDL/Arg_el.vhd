@@ -51,7 +51,7 @@ begin
 	
 	Reg_I : RegWen
 		generic map(
-			size => 3
+			size => 4
 		)
 		port map(
 			I_clk => I_clk,

@@ -24,7 +24,7 @@ end Argmax;
 
 architecture Behavioral of Argmax is 
 
-	component Arg_el 
+	component Arg_el
 		port(
 			I_clk 	: in std_logic;
 			I_rst 	: in std_logic;
@@ -210,7 +210,7 @@ begin
 		);
 
 
-process 
+process(I_clk, d_2_1, d_3_1, d_2_2, d_1_4, d_1_2, d_1_1)
     begin 
         if (d_2_1 = '1' and d_3_1 = '1') then 
                 en_4_1 <= '1';

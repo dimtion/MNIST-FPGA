@@ -10,13 +10,13 @@ entity Acc is
 		I_clk 	: in std_logic;
 		I_rst 	: in std_logic;
 		I_load 	: in std_logic;
-		I_d 	: in std_logic_vector(size -1 downto 0);
-		O_d		: out std_logic_vector(size-1 downto 0)
+		I_d : in std_logic_vector(size-1 downto 0);
+		O_d	: out std_logic_vector(size-1 downto 0)
 		);
 end Acc;
 
 architecture Behavioral of Acc is 
-
+`
 
 signal tmp_value : unsigned(size-1 downto 0);
 
