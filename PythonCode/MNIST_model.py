@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import copy
 import itertools
 from functools import lru_cache
@@ -23,13 +24,21 @@ import numpy as np
 batch_size = 64
 n_epochs = 50
 
-do_train = True
+do_train = False
 do_quant = True
+do_save_fpga = True
 
-model_name = "32_16_10.torch"
-layer_sizes = (28 * 28, 32, 16, 10)
-momentum = 0.4
-learning_rate = 0.0005
+# model_name = "models/32_16_10_unquant-97.02.torch"
+model_name = "models/40_20_10_quant-97.04.torch"
+# layer_sizes = (28 * 28, 32, 16, 10)
+layer_sizes = (28 * 28, 40, 20, 10)
+shift = (0, 0, 0)  # 40_20_10
+# shift = (1, 1, 0)  # 32_16_10
+momentum = 0.8
+learning_rate = 0.0001
+
+# For VHDL
+output_quant = "weights"
 
 
 class ElasticDataset(Dataset):
@@ -226,6 +235,31 @@ def best_shift(model, n_bits, test_loader, criterion):
     return best_score_k, best_model
 
 
+def write_layer(layer, filename, word_size):
+    files = []
+    n_files = word_size 
+
+    for i in range(n_files):
+        f = open(filename + "_%i.lut" % i, "w")
+        files.append(f)
+
+    for neuron in layer:
+        for i, weight in enumerate(neuron):
+            # print(filename, n_files, i % word_size)
+            f = files[i % word_size]
+            f.write("%i\n" % int(weight.numpy()))
+
+    for f in files:
+        f.close()
+
+
+def write_weigths(model, folder, model_name):
+    os.system("mkdir -p %s" % os.path.join(folder, model_name))
+    write_layer(model.l1.weight.data, os.path.join(folder, model_name, "l1"), word_size=28)
+    write_layer(model.l2.weight.data, os.path.join(folder, model_name, "l2"), word_size=20)
+    write_layer(model.l3.weight.data, os.path.join(folder, model_name, "l3"), word_size=20)
+
+
 def main():
     model = Net(layer_sizes=layer_sizes)
     criterion = nn.CrossEntropyLoss()
@@ -247,7 +281,8 @@ def main():
 
     if do_quant:
         n_bits = 5
-        quant = (0, 0, 0)
+        # quant = (1, 1, 0)
+        quant = shift
         q_model = quant_model(model, n_bits, quant)
         # quant, q_model = best_shift(model, n_bits, test_loader, criterion)
         # q_model = Net(layer_sizes=layer_sizes)
@@ -255,15 +290,19 @@ def main():
 
         print("Best shift %i bits: %i, %i, %i" % (n_bits, *quant))
         q_model.test_(test_loader, criterion)
-        q_model.save_torch("q_%i_" % n_bits + model_name)
+        q_model.save_torch(model_name + "q_%i" % n_bits)
 
-        n_bits = 4
-        quant = (1, 1, 1)
-        q_model = quant_model(model, n_bits, quant)
-        print("Best shift %i bits: %i, %i, %i" % (n_bits, *quant))
-        q_model.test_(test_loader, criterion)
-        q_model.test_(test_loader, criterion)
-        q_model.save_torch("q_%i_" % n_bits + model_name)
+        # n_bits = 4
+        # quant = (1, 1, 0)
+        # q_model = quant_model(model, n_bits, quant)
+        # # quant, q_model = best_shift(model, n_bits, test_loader, criterion)
+        # print("Best shift %i bits: %i, %i, %i" % (n_bits, *quant))
+        # q_model.test_(test_loader, criterion)
+        # q_model.test_(test_loader, criterion)
+        # q_model.save_torch(model_name + "q_&%i" % n_bits)
+
+    if do_save_fpga:
+        write_weigths(q_model, output_quant, model_name)
 
 
 if __name__ == "__main__":
