@@ -67,7 +67,7 @@ begin
 		);
 
 -- multiplicateur
-process
+process(I_clk)
 
 begin
     mult_loop : for Index_m in 0 to 19 loop
@@ -108,7 +108,7 @@ add_r <= resize(add_b,8);
 out_acc <= unsigned(l_out_acc);
 
 -- Out with Relu
-process 
+process(I_clk)
 
 begin
     If(add_r(7) = '0') then 
@@ -118,7 +118,7 @@ begin
     end if;
 end process;
 
-process
+process(I_clk)
 begin
     if (to_integer(Unsigned(I_C)) = 0) then
         en_Acc <= '1';

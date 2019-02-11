@@ -68,7 +68,7 @@ begin
 		);
 
 -- multiplicateur
-process
+process(I_clk,I_data)
 
 begin
 
@@ -108,7 +108,7 @@ add_b <= out_acc + Unsigned(I_biais);
 add_r <= resize(add_b,8);
 
 
-process 
+process (I_clk,I_C)
 
 begin 
     If(to_integer(Unsigned(I_C)) = 0) then
@@ -119,7 +119,7 @@ begin
 end process;
 
 
-process
+process(I_clk, add_r)
 begin
     if (add_r(7) = '0') then
         O_d <= std_logic_vector(add_r);

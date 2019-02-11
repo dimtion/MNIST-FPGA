@@ -3,9 +3,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity CreateWord is 
-	generic (
-		address_size : natural 
-	);
 	port (
         I_clk       : in std_logic;
         I_rst       : in std_logic;
@@ -13,7 +10,6 @@ entity CreateWord is
 		I_en_load 	: in std_logic;
 		I_en_C_P	: in std_logic;
 		I_en_C_W 	: in std_logic;
-		O_addr_I_0	: out std_logic_vector(address_size -1 downto 0);
 		O_I_0		: out std_logic_vector(223 downto 0);
 		O_en_I_0 	: out std_logic
 	);
@@ -93,7 +89,7 @@ begin
 			I_data 	=> temp_I,
 			O_value => temp_I
 		);
-process 
+process(I_clk,I_pixel) 
     begin
         temp_I(223 - (to_integer(value_W_28) * 8 ) downto 216 - (to_integer(value_W_28)*8)) <= I_pixel;
 end process;
@@ -101,13 +97,11 @@ end process;
 O_I_0 <= temp_I;
 
 O_en_I_0 <= '1' when (to_integer(value_W_28) = 27) else '0';
-O_addr_I_0 <= std_logic_vector(to_unsigned(to_integer(value_P_28)*(28*8),address_size));
-
 l_value_W_28 <= std_logic_vector(value_W_28);
 l_value_P_28 <= std_logic_vector(value_P_28);
 
 
-process 
+process(I_clk,value_W_28) 
 
 begin 
 
