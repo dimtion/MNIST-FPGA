@@ -45,6 +45,8 @@ signal P_1_3 : std_logic_vector(7 downto 0);
 signal P_1_4 : std_logic_vector(7 downto 0);
 signal P_1_5 : std_logic_vector(7 downto 0);
 
+
+
 signal I_1_1 : std_logic_vector(3 downto 0);
 signal I_1_2 : std_logic_vector(3 downto 0);
 signal I_1_3 : std_logic_vector(3 downto 0);
@@ -89,7 +91,7 @@ begin
 			I_P2	=> I_P2,
 			I_I1 	=> "0001",
 			I_I2	=> "0010",
-			O_I		=> I_1_1, 
+			O_I		=> I_1_1,
 			O_P		=> P_1_1,
 			O_done 	=> d_1_1
 		);
@@ -176,7 +178,7 @@ begin
 			I_I2	=> I_1_4,
 			O_I		=> I_2_2, 
 			O_P		=> P_2_2,
-			O_done 	=> d_2_1
+			O_done 	=> d_2_2
 		);
 
 -- third stage 
@@ -210,11 +212,11 @@ begin
 		);
 
 
-process(I_clk, d_2_1, d_3_1, d_2_2, d_1_4, d_1_2, d_1_1)
+process(I_clk, d_2_1, d_3_1, d_2_2, d_1_4, d_1_2, d_1_1, d_1_5, d_1_3)
     begin 
         if (d_2_1 = '1' and d_3_1 = '1') then 
                 en_4_1 <= '1';
-        else 
+        else
                 en_4_1 <= '0';
         end if;
 

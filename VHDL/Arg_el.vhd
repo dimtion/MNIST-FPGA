@@ -64,7 +64,7 @@ begin
 process(I_clk,I_P1, I_P2)
 
 begin
-    if (Unsigned(I_P1) - Unsigned(I_P2) > 0) then
+    if (Unsigned(I_P1) > Unsigned(I_P2)) then
 	    max_P <= Unsigned(I_P1);
 	    max_I <= Unsigned(I_I1);
     else 
