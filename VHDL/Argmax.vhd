@@ -45,8 +45,6 @@ signal P_1_3 : std_logic_vector(7 downto 0);
 signal P_1_4 : std_logic_vector(7 downto 0);
 signal P_1_5 : std_logic_vector(7 downto 0);
 
-
-
 signal I_1_1 : std_logic_vector(3 downto 0);
 signal I_1_2 : std_logic_vector(3 downto 0);
 signal I_1_3 : std_logic_vector(3 downto 0);
