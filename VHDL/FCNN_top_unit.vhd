@@ -338,7 +338,7 @@ signal img_l1 : std_logic_vector(224-1 downto 0);
 signal O_W_1 : std_logic_vector(5 downto 0);
 signal W_1 : std_logic_vector(140-1 downto 0);
 signal B_1 : std_logic_vector(5-1 downto 0);
-signal O_N_1 : std_logic_vector(5-1 downto 0);
+signal O_N_1 : std_logic_vector(5 downto 0);
 signal O_W_N_1 : std_logic_vector(10 downto 0);
 signal O_W_N_2 : std_logic_vector(8 downto 0);
 
@@ -421,6 +421,10 @@ begin
 		);
 
 	Counter_L1_1 : Counter_L1
+	    generic map(
+		N_size => 6,
+		W_size => 6
+	    )		
 	    port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
