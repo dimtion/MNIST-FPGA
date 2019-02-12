@@ -13,7 +13,8 @@ entity Counter_L2 is
 		I_N_2_en 	: in std_logic;
 		I_W_2_en 	: in std_logic;
 		O_N_2 		: out std_logic_vector(N_size -1 downto 0); 
-		O_W_2		: out std_logic_vector(W_size -1 downto 0)
+		O_W_2		: out std_logic_vector(W_size -1 downto 0);
+		O_W_N 		: out std_logic_vector(8 downto 0)
 	);
 end Counter_L2;
 
@@ -70,6 +71,7 @@ O_N_2 <= std_logic_vector(value_counter_20);
 O_W_2 <= std_logic_vector(value_counter_2);
 l_value_counter_20 <= std_logic_vector(value_counter_20);
 l_value_counter_2 <= std_logic_vector(value_counter_2);
+O_W_N <= std_logic_vector(resize(value_counter_20*value_counter_2+1,9));
 
 process(I_clk)
 

@@ -13,8 +13,9 @@ entity Counter_L1 is
 		I_N_1_en 	: in std_logic;
 		I_W_1_en 	: in std_logic;
 		O_N_1 		: out std_logic_vector(N_size -1 downto 0); 
-		O_W_1		: out std_logic_vector(W_size -1 downto 0)
-	);
+		O_W_1		: out std_logic_vector(W_size -1 downto 0);
+        O_W_N       : out std_logic_vector(10 downto 0)
+    );
 end Counter_L1;
 
 architecture Behavioral of Counter_L1 is 
@@ -66,6 +67,7 @@ begin
 
 O_N_1 <= std_logic_vector(value_counter_40);
 O_W_1 <= std_logic_vector(value_counter_28);
+O_W_N <= std_logic_vector(resize(value_counter_40 *( value_counter_28 +1),11)); 
 
 u_en <= I_N_1_en when(to_integer(value_counter_40) = 27) else '0';
 l_value_counter_40 <= std_logic_vector(value_counter_40);

@@ -76,7 +76,8 @@ architecture Behavioral of FCNN_top_unit is
 		    I_en_C_P	: in std_logic;
 		    I_en_C_W 	: in std_logic;
 		    O_I_0		: out std_logic_vector(223 downto 0);
-		    O_en_I_0 	: out std_logic
+		    O_en_I_0 	: out std_logic;
+            O_pixelCount : out std_logic_vector(5 downto 0)
 	    );
     end component;
 
@@ -131,7 +132,8 @@ architecture Behavioral of FCNN_top_unit is
 		    I_N_2_en 	: in std_logic;
 		    I_W_2_en 	: in std_logic;
 		    O_N_2 		: out std_logic_vector(N_size -1 downto 0); 
-		    O_W_2		: out std_logic_vector(W_size -1 downto 0)
+		    O_W_2		: out std_logic_vector(W_size -1 downto 0);
+		    O_W_N 		: out std_logic_vector(8 downto 0)
 	);
     end component;
 
@@ -324,7 +326,11 @@ signal O_W_1 : std_logic_vector(7-1 downto 0);
 signal W_1 : std_logic_vector(140-1 downto 0);
 signal B_1 : std_logic_vector(5-1 downto 0);
 signal O_N_1 : std_logic_vector(5-1 downto 0);
+signal O_W_N_1 : std_logic_vector(10 downto 0);
+signal O_W_N_2 : std_logic_vector(8 downto 0);
 
+signal O_W_2 : std_logic_vector(1 downto 0);
+signal O_N_2 : std_logic_vector(5 downto 0);
 
 -- SubNeuron1 outputs
 signal O_Subneurone : std_logic_vector(7 downto 0);
@@ -366,63 +372,84 @@ begin
 		I_en_C_P	=> en_C_P,
 		I_en_C_W 	=> en_C_W,
 		O_I_0		=> I_O,
-		O_en_I_0 	=> en_I_O
-	    );
-		Ram_W_1_1 : Ram_W_1
-	generic map (
+		O_en_I_0 	=> en_I_O,
+        O_pixelCount => pixel_count
+    );
+
+	Ram_W_1_1 : Ram_W_1
+	    generic map (
 			size_w  => 140,
-			addr_size => 1120
+			addr_size => 11
 		)
-	port map (
+	    port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
-			addr_r => O_W_1,
+			addr_r => O_W_N_1,
 			data_r => W_1	
 		);
+
 	Ram_B_1_1 : Ram_B_1
-	generic map (
+	    generic map (
 			size_w  => 5,
 			addr_size => 200
 		)
-	port map (
+	    port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
 			addr_r => O_W_1,
 			data_r => B_1	
 		);
+
 	Counter_L1_1 : Counter_L1
-	port map (
+	    port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
 			I_N_1_en => W_1_en,
 			I_W_1_en => N_1_en,
 			O_N_1 => O_N_1,
-			O_W_1 => O_W_1
-	);
-	SubNeurone_L1_1 : SubNeurone_l1
-	port map (
-		I_clk => I_clk,
-		I_rst => I_aync_rst,
-		I_data => img_l1,
-		I_W => W_1,
-		I_C => O_W_1,
-		I_biais => B_1,
-		O_d => O_Subneurone
-	);
-  Ram_I : DualPort_RAM 
-  generic map(
-    G_DEPTH         => 28,
-    G_WordLength    => 224,
-    G_STYLE         => "distributed"
-  )
-  port map(
-    I_clk => I_clk,
-    I_write => en_I_O,
-    I_addr_write =>  unsigned(O_W_1), -- word counter L1
-    I_dataWrite => I_O,
-    I_addr_read => unsigned(pixel_count),  -- pixel counter
-    O_dataRead => img_l1
-	);
+			O_W_1 => O_W_1,
+			O_W_N => O_W_N_1
+	    );
 
+	SubNeurone_L1_1 : SubNeurone_l1
+	    port map (
+		    I_clk => I_clk,
+		    I_rst => I_aync_rst,
+		    I_data => img_l1,
+		    I_W => W_1,
+		    I_C => O_W_1,
+		    I_biais => B_1,
+		    O_d => O_Subneurone
+	    );
+
+    Ram_I : DualPort_RAM 
+        generic map(
+            G_DEPTH         => 28,
+            G_WordLength    => 224,
+            G_STYLE         => "distributed"
+        )
+        port map(
+            I_clk => I_clk,
+            I_write => en_I_O,
+            I_addr_write =>  unsigned(O_W_1), -- word counter L1
+            I_dataWrite => I_O,
+            I_addr_read => unsigned(pixel_count),  -- pixel counter
+            O_dataRead => img_l1
+	    );
+
+	Counter_L2_1 : Counter_L2
+		generic map(
+			N_size => 6,
+			W_size => 1	
+		)
+		port map(
+			I_clk => I_clk,
+			I_rst => I_aync_rst,
+			I_N_2_en => N_2_en,
+			I_W_2_en => W_2_en,
+			O_N_2 => O_N_2,
+			O_W_2 => O_W_2,
+			O_W_N => O_W_N_2	
+		);
 end Behavioral;
 

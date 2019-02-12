@@ -29,8 +29,8 @@ architecture Behavioral of testbench_MNIST_FCNN is
   -- /!\ TO BE MODIFIED /!\ 
 	constant C_NUM_CLASSIF_SIMUL  : NATURAL := 100;                                  -- number of image classification to test. /!\ simulation time /!\ .
    constant C_PROCESSING_SPEED   : NATURAL := 2;
-	constant C_IMAGE_FILEPATH     : STRING  := "../testbench_files/PixelData/PixelData";  -- File path where the pixel data are stored.
-	constant C_TARGET_FILEPATH    : STRING  := "../testbench_files/Targets.tb";           -- File path where the class target for each image are stored.
+	constant C_IMAGE_FILEPATH     : STRING  := "./VHDL/testbench_files/PixelData/PixelData";  -- File path where the pixel data are stored.
+	constant C_TARGET_FILEPATH    : STRING  := "./VHDL/testbench_files/Targets.tb";           -- File path where the class target for each image are stored.
    
    --------------------------------------------------
 	--	      HARD CONSTANT /!\ DO NOT TOUCH /!\     --
