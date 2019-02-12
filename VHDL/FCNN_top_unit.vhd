@@ -105,8 +105,9 @@ architecture Behavioral of FCNN_top_unit is
 		    I_N_1_en 	: in std_logic;
 		    I_W_1_en 	: in std_logic;
 		    O_N_1 		: out std_logic_vector(N_size -1 downto 0); 
-		    O_W_1		: out std_logic_vector(W_size -1 downto 0)
-	    );
+		    O_W_1		: out std_logic_vector(W_size -1 downto 0);
+	    	    O_W_N		: out std_logic_vector(10 downto 0)
+		);
     end component;
 
     Component SubNeurone_l1 is 
@@ -115,7 +116,7 @@ architecture Behavioral of FCNN_top_unit is
 		    I_rst 	: in std_logic;
 		    I_data  : in std_logic_vector(28*8-1 downto 0);
 		    I_W 	: in std_logic_vector(28*5 -1 downto 0);
-		    I_C 	: in std_logic_vector(6 downto 0);
+		    I_C 	: in std_logic_vector(5 downto 0);
 		    I_biais	: in std_logic_vector(4 downto 0);
         O_d     : out std_logic_vector(7 downto 0)
         );
@@ -322,7 +323,7 @@ signal pixel_count : std_logic_vector(5 downto 0);
 
 -- RAM outputs
 signal img_l1 : std_logic_vector(224-1 downto 0);
-signal O_W_1 : std_logic_vector(7-1 downto 0);
+signal O_W_1 : std_logic_vector(5 downto 0);
 signal W_1 : std_logic_vector(140-1 downto 0);
 signal B_1 : std_logic_vector(5-1 downto 0);
 signal O_N_1 : std_logic_vector(5-1 downto 0);
@@ -391,7 +392,7 @@ begin
 	Ram_B_1_1 : Ram_B_1
 	    generic map (
 			size_w  => 5,
-			addr_size => 200
+			addr_size => 6
 		)
 	    port map (
 			I_clk => I_clk,

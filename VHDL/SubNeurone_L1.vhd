@@ -8,7 +8,7 @@ entity SubNeurone_l1 is
 		I_rst 	: in std_logic;
 		I_data  : in std_logic_vector(28*8-1 downto 0);
 		I_W 	: in std_logic_vector(28*5 -1 downto 0);
-		I_C 	: in std_logic_vector(6 downto 0);
+		I_C 	: in std_logic_vector(5 downto 0);
 		I_biais	: in std_logic_vector(4 downto 0);
         O_d     : out std_logic_vector(7 downto 0)
     );
