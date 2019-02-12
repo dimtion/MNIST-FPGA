@@ -11,8 +11,9 @@ entity CreateWord is
 		I_en_C_P	: in std_logic;
 		I_en_C_W 	: in std_logic;
 		O_I_0		: out std_logic_vector(223 downto 0);
-		O_en_I_0 	: out std_logic
-	);
+		O_en_I_0 	: out std_logic;
+        O_pixelCount : out std_logic_vector(5 downto 0)
+    );
 end CreateWord;
 
 architecture Behavioral of CreateWord is 
@@ -56,7 +57,7 @@ begin
 
 	Counter_W_28 : Counter
 		generic map (
-			val_max => 28,
+			val_max => 29,
 			nb_bits => 6
 		)
 		port map (
@@ -91,16 +92,21 @@ begin
 			O_data => O_I_0
 		);
 
+value_W_28 <= Unsigned(l_value_W_28);
+value_P_28 <= Unsigned(l_value_P_28);
+O_pixelCount <= std_logic_vector(value_P_28);
 
-O_en_I_0 <= '1' when (to_integer(value_W_28) = 27) else '0';
-l_value_W_28 <= std_logic_vector(value_W_28);
-l_value_P_28 <= std_logic_vector(value_P_28);
-
-process(I_clk,value_W_28) 
+process(I_clk,value_W_28, value_P_28) 
 
 begin 
 
-    if (to_integer(value_W_28) = 27) then
+    if ( to_integer(value_W_28) = 28) then
+        O_en_I_0 <= '1';
+    else 
+        O_en_I_0 <= '0';
+    end if;
+
+    if (to_integer(value_W_28) = 29) then
         I_P_28 <= '1';    
     else 
         I_P_28 <= '0';

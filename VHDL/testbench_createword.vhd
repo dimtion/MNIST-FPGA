@@ -39,10 +39,10 @@ architecture Testbench_createword of testbench_createword is
       O_en_I_0 => SC_en_I_0
       );
       
-    SR_clock <= not SR_clock after 7 ns;
+    SR_clock <= not SR_clock after 10 ns;
     SR_reset <= '1' , '0' after 29 ns;
-    SR_pixel <= "00000000", "00000001" after 40 ns;
+    SR_pixel <= "01000000", "00000001" after 41 ns, "00001000" after 52 ns;
     SR_en_load <= '0', '1' after 45 ns;
-    SR_en_C_P <= '0';
-    SR_en_C_W <= '0';
+    SR_en_C_P <= '0', '1' after 45 ns;
+    SR_en_C_W <= '0', '1' after 45 ns;
 end Testbench_createword;
