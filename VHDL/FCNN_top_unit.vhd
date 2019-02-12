@@ -62,7 +62,7 @@ architecture Behavioral of FCNN_top_unit is
 		O_W_2_en 		: out std_logic;
 		O_N_2_en 		: out std_logic;
 		O_N_3_en		: out std_logic;
-		O_classifValid 	: out std_logic;
+		O_classifValid 		: out std_logic;
 		O_arg 			: out std_logic
 		);
     end component;
@@ -77,7 +77,7 @@ architecture Behavioral of FCNN_top_unit is
 		    I_en_C_W 	: in std_logic;
 		    O_I_0		: out std_logic_vector(223 downto 0);
 		    O_en_I_0 	: out std_logic;
-            O_pixelCount : out std_logic_vector(5 downto 0)
+            	    O_pixelCount : out std_logic_vector(4 downto 0)
 	    );
     end component;
 
@@ -96,8 +96,8 @@ architecture Behavioral of FCNN_top_unit is
 
     component Counter_L1 is 
         generic (
-		    N_size : NATURAL := 5;
-		    W_size : NATURAL := 7
+		    N_size : NATURAL;
+		    W_size : NATURAL 
 	    );
 	    port (
 		    I_clk 		: in std_logic;
@@ -116,7 +116,7 @@ architecture Behavioral of FCNN_top_unit is
 		    I_rst 	: in std_logic;
 		    I_data  : in std_logic_vector(28*8-1 downto 0);
 		    I_W 	: in std_logic_vector(28*5 -1 downto 0);
-		    I_C 	: in std_logic_vector(5 downto 0);
+		    I_C 	: in std_logic_vector(4 downto 0);
 		    I_biais	: in std_logic_vector(4 downto 0);
         O_d     : out std_logic_vector(7 downto 0)
         );
@@ -134,7 +134,7 @@ architecture Behavioral of FCNN_top_unit is
 		    I_W_2_en 	: in std_logic;
 		    O_N_2 		: out std_logic_vector(N_size -1 downto 0); 
 		    O_W_2		: out std_logic_vector(W_size -1 downto 0);
-		    O_W_N 		: out std_logic_vector(8 downto 0)
+		    O_W_N 		: out std_logic_vector(5 downto 0)
 	);
     end component;
 
@@ -239,7 +239,7 @@ architecture Behavioral of FCNN_top_unit is
 		    I_rst 	: in std_logic;
 		    I_data  : in std_logic_vector(20*8-1 downto 0);
 		    I_W 	: in std_logic_vector(20*5 -1 downto 0);
-		    I_C 	: in std_logic_vector(6 downto 0);
+		    I_C 	: in std_logic_vector(1 downto 0);
 		    I_biais	: in std_logic_vector(4 downto 0);
             O_d     : out std_logic_vector(7 downto 0)
         );
@@ -249,9 +249,8 @@ architecture Behavioral of FCNN_top_unit is
 	    port (
 		    I_clk	: in std_logic;
 		    I_rst 	: in std_logic;
-		    I_data  : in std_logic_vector(28*8-1 downto 0);
-		    I_W 	: in std_logic_vector(28*5 -1 downto 0);
-		    I_C 	: in std_logic_vector(6 downto 0);
+		    I_data  	: in std_logic_vector(20*8-1 downto 0);
+		    I_W 	: in std_logic_vector(20*5 -1 downto 0);
 		    I_biais	: in std_logic_vector(4 downto 0);
 	        O_d     : out std_logic_vector(7 downto 0)
         );
@@ -274,26 +273,27 @@ architecture Behavioral of FCNN_top_unit is
         );
     end component;
 
-		component NeuronCombinator is
-				generic (
-					nb_neurons : natural;
-					size_w : natural
-				);
-				port (
-					I_clk : in std_logic;
-					I_rst : in std_logic;
-					I_en : in std_logic;
-					I_data : in std_logic_vector(size_w-1 downto 0);
-					I_ouputswitch : in std_logic;
-					O_data : out std_logic_vector((nb_neurons*size_w)/2-1 downto 0)
-  			);
-		end component;
+    component NeuronCombinator is
+	generic (
+		nb_neurons 	: natural;
+		size_w 		: natural;
+		is_not_divided 	: natural
+	);
+	port (
+		I_clk 		: in std_logic;
+		I_rst 		: in std_logic;
+		I_en 		: in std_logic;
+		I_data 		: in std_logic_vector(size_w-1 downto 0);
+		I_ouputswitch 	: in std_logic;
+		O_data 		: out std_logic_vector((nb_neurons*size_w)/(2-is_not_divided)-1 downto 0)
+  	);
+	end component;
 
 	--------------------------------------------------
 	--					CONSTANT DECLARATION	    --
 	--------------------------------------------------
 	
-   -- Constant are defined here.
+   -- Constant are defined here5.
 	
  	--------------------------------------------------
 	--				  TYPE DECLARATION              --
@@ -331,31 +331,68 @@ signal I_O : std_logic_vector(223 downto 0);
 signal en_I_O : std_logic;
 signal I_1 : std_logic_vector(223 downto 0);
 
-signal pixel_count : std_logic_vector(5 downto 0);
+signal pixel_count : std_logic_vector(4 downto 0);
 
 -- RAM outputs
 signal img_l1 : std_logic_vector(224-1 downto 0);
-signal O_W_1 : std_logic_vector(5 downto 0);
+signal O_W_1 : std_logic_vector(4 downto 0);
 signal W_1 : std_logic_vector(140-1 downto 0);
 signal B_1 : std_logic_vector(5-1 downto 0);
+signal W_2 : std_logic_vector(99 downto 0);
+signal B_2 : std_logic_vector(4 downto 0);
+signal W_3 : std_logic_vector(99 downto 0);
+signal B_3 : std_logic_vector(4 downto 0);
+
 signal O_N_1 : std_logic_vector(5 downto 0);
 signal O_W_N_1 : std_logic_vector(10 downto 0);
-signal O_W_N_2 : std_logic_vector(8 downto 0);
+signal O_W_N_2 : std_logic_vector(5 downto 0);
 
 signal O_W_2 : std_logic_vector(1 downto 0);
-signal O_N_2 : std_logic_vector(5 downto 0);
+signal O_N_2 : std_logic_vector(3 downto 0);
 
+signal O_N_3 : std_logic_vector(3 downto 0);
 -- SubNeuron1 outputs
-signal O_Subneurone : std_logic_vector(7 downto 0);
-signal O_l1 : std_logic_vector(20-1 downto 0);
-signal load_subneuron_val : std_logic;
+signal O_Subneurone_1 : std_logic_vector(7 downto 0);
+signal O_Subneurone_2 : std_logic_vector(7 downto 0);
+signal O_Subneurone_3 : std_logic_vector(7 downto 0);
+signal O_l1 : std_logic_vector(8*40/2-1 downto 0);
+signal O_l2 : std_logic_vector(8*20-1 downto 0);
+signal O_l3 : std_logic_vector(8*10-1 downto 0);
+signal load_subneuron_val_1 : std_logic;
+signal load_subneuron_val_2 : std_logic;
 
+signal Class_1 	: std_logic_vector(7 downto 0);
+signal Class_2 	: std_logic_vector(7 downto 0);
+signal Class_3 	: std_logic_vector(7 downto 0);
+signal Class_4 	: std_logic_vector(7 downto 0);
+signal Class_5 	: std_logic_vector(7 downto 0);
+signal Class_6 	: std_logic_vector(7 downto 0);
+signal Class_7 	: std_logic_vector(7 downto 0);
+signal Class_8	: std_logic_vector(7 downto 0);
+signal Class_9 	: std_logic_vector(7 downto 0);
+signal Class_10 : std_logic_vector(7 downto 0);
 
+signal classifValid : std_logic;
 -- layer 2 outputs
 signal input_first_part : std_logic;
 
 begin
-		load_subneuron_val <= '1' when unsigned(O_W_N_1) = 28 else '0';
+
+load_subneuron_val_1 <= '1' when to_integer(unsigned(O_W_N_1)) = 28 else '0';
+load_subneuron_val_2 <= '1' when to_integer(unsigned(O_W_N_2)) = 1 else '0';
+Class_1	 <= O_l3(8*10-1 downto 8*9);
+Class_2	 <= O_l3(8*9-1 downto 8*8);
+Class_3	 <= O_l3(8*8-1 downto 8*7);
+Class_4	 <= O_l3(8*7-1 downto 8*6);
+Class_5	 <= O_l3(8*6-1 downto 8*5);
+Class_6	 <= O_l3(8*5-1 downto 8*4);
+Class_7	 <= O_l3(8*4-1 downto 8*3);
+Class_8	 <= O_l3(8*3-1 downto 8*2);
+Class_9	 <= O_l3(8*2-1 downto 8*1);
+Class_10 <= O_l3(8*1-1 downto 0);
+
+O_readyClassif <= classifvalid;
+O_classifvalid <= classifvalid;
 
     Fsm_top : FSM
         port map(    
@@ -379,7 +416,7 @@ begin
 		o_w_2_en => W_2_en,
 		o_n_2_en => N_2_en,
 		o_n_3_en => N_3_en,
-		o_classifvalid => O_classifValid,
+		o_classifvalid => classifValid,
 		o_arg => O_arg
 		);
     
@@ -393,7 +430,7 @@ begin
 		I_en_C_W 	=> en_C_W,
 		O_I_0		=> I_O,
 		O_en_I_0 	=> en_I_O,
-        O_pixelCount => pixel_count
+        	O_pixelCount => pixel_count
     );
 
 	Ram_W_1_1 : Ram_W_1
@@ -416,48 +453,49 @@ begin
 	    port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
-			addr_r => O_W_1,
+			addr_r => O_N_1,
 			data_r => B_1	
 		);
 
 	Counter_L1_1 : Counter_L1
 	    generic map(
-		N_size => 6,
-		W_size => 6
+		N_size => 6, 	-- 40 neurones
+		W_size => 5 	-- 28 mots
 	    )		
 	    port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
-			I_N_1_en => W_1_en,
-			I_W_1_en => N_1_en,
-			O_N_1 => O_N_1,
-			O_W_1 => O_W_1,
-			O_W_N => O_W_N_1
+			I_N_1_en => W_1_en, 	-- en neurone
+			I_W_1_en => N_1_en, 	-- en mots
+			O_N_1 => O_N_1, 	-- compteur neurone
+			O_W_1 => O_W_1, 	-- compteur mots
+			O_W_N => O_W_N_1 	-- mult mots+(neurone*nb_mot) pour Ram_W_1
 	    );
 
 	SubNeurone_L1_1 : SubNeurone_l1
-	    port map (
+		port map (
 		    I_clk => I_clk,
 		    I_rst => I_aync_rst,
 		    I_data => img_l1,
 		    I_W => W_1,
 		    I_C => O_W_1,
 		    I_biais => B_1,
-		    O_d => O_Subneurone
+		    O_d => O_Subneurone_1
 	    );
 	NeuronCombinator_1 : NeuronCombinator
-			generic map (
-				nb_neurons => 40,
-				size_w => 8
-			)
-			port map (
-				I_clk => I_clk,
-				I_rst => I_aync_rst,
-				I_en => load_subneuron_val,
-				I_data => O_Subneurone,
-				I_ouputswitch => input_first_part,
-				O_data => O_l1
-			);
+		generic map (
+			nb_neurons => 40,
+			size_w => 8,
+			is_not_divided => 0
+		)
+		port map (
+			I_clk => I_clk,
+			I_rst => I_aync_rst,
+			I_en => load_subneuron_val_1,
+			I_data => O_Subneurone_1,
+			I_ouputswitch => input_first_part,
+			O_data => O_l1
+		);
     Ram_I : DualPort_RAM 
         generic map(
             G_DEPTH         => 28,
@@ -475,17 +513,132 @@ begin
 
 	Counter_L2_1 : Counter_L2
 		generic map(
-			N_size => 6,
-			W_size => 1	
+			N_size => 4,
+			W_size => 2	
 		)
 		port map(
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
 			I_N_2_en => N_2_en,
 			I_W_2_en => W_2_en,
-			O_N_2 => O_N_2,
-			O_W_2 => O_W_2,
+			O_N_2 => O_N_2, 	-- 20 neurones
+			O_W_2 => O_W_2,		-- 2 mots
 			O_W_N => O_W_N_2	
 		);
+	SubNeurone_L2_1 : SubNeurone_l2
+		port map (
+			I_clk => I_clk,
+			I_rst => I_aync_rst,
+			I_data => O_l1, 
+			I_W => W_2,
+			I_C => O_W_2,
+			I_biais => b_2,
+			O_d => O_Subneurone_2
+		);	
+
+	Ram_W_2_1 : Ram_W_2
+	    generic map (
+			size_w  => 100,
+			addr_size => 6 
+		)
+	    port map (
+			I_clk => I_clk,
+			I_rst => I_aync_rst,
+			addr_r => O_W_N_2,
+			data_r => W_2
+		);
+	
+	NeuronCombinator_2 : NeuronCombinator
+		generic map (
+			nb_neurons => 20,
+			size_w => 8,
+			is_not_divided => 1
+		)
+		port map (
+			I_clk => I_clk,
+			I_rst => I_aync_rst,
+			I_en => load_subneuron_val_2,
+			I_data => O_Subneurone_2,
+			I_ouputswitch => '0', 
+			O_data => O_l2
+		);
+	
+	Counter_L3_1 : Counter_L3
+		port map(
+			I_clk => I_clk,
+			I_rst => I_aync_rst,
+			I_N_3_en => N_3_en,
+			O_N_3 => O_N_3 	-- 10 neurones
+		);
+	SubNeurone_L3_1 : SubNeurone_l3
+		port map (
+			I_clk => I_clk,
+			I_rst => I_aync_rst,
+			I_data => O_l1, 
+			I_W => W_3,
+			I_biais => b_3,
+			O_d => O_Subneurone_3
+		);	
+
+	Ram_W_3_1 : Ram_W_3
+	    generic map (
+			size_w  => 100,
+			addr_size => 4
+		)
+	    port map (
+			I_clk => I_clk,
+			I_rst => I_aync_rst,
+			addr_r => O_N_3, 
+			data_r => W_3
+		);
+	Ram_b_3_1 : Ram_b_3
+		generic map(
+			size_w => 5,
+			addr_size => 4
+		)
+		port map (
+			I_clk => I_clk,
+			I_rst => I_aync_rst,
+			addr_r => O_N_3,
+			data_r => B_3
+		);
+
+	Argmax_1 : Argmax  
+	    Port map(
+		    I_clk 	=> I_clk,	
+	    	    I_rst 	=> I_aync_rst,
+		    I_P1 	=> Class_1,
+		    I_P2 	=> Class_2,
+		    I_P3 	=> Class_3,
+		    I_P4 	=> Class_4,
+		    I_P5 	=> Class_5,
+		    I_P6 	=> Class_6,
+		    I_P7 	=> Class_7,
+		    I_P8 	=> Class_8,
+		    I_P9 	=> Class_9,
+		    I_P10 	=> Class_10,
+		    I_en  	=> O_arg,	
+		    O_I 	=> O_Classif,
+		    O_done	=> I_arg 
+		    );
+
+	NeuronCombinator_3 : NeuronCombinator
+		generic map (
+			nb_neurons => 10,
+			size_w => 8,
+			is_not_divided => 1
+		)
+		port map (
+			I_clk => I_clk,
+			I_rst => I_aync_rst,
+			I_en => '1',
+			I_data => O_Subneurone_3,
+			I_ouputswitch => '0', 
+			O_data => O_l3
+		);
+
+input_first_part <= O_W_2(0);
+
+	
 end Behavioral;
 

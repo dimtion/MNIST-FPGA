@@ -7,7 +7,7 @@ entity Counter_L3 is
 		I_clk		: in std_logic;
 		I_rst		: in std_logic;
 		I_N_3_en 	: in std_logic;
-        O_N_3       : out std_logic_vector(3 downto 0)
+        	O_N_3       	: out std_logic_vector(3 downto 0)
     );
 end Counter_L3;
 
@@ -33,7 +33,7 @@ begin
 	Counter_10 : Counter 
 		generic map (
 			val_max => 1,
-			nb_bits => 3
+			nb_bits => 4
 		)
 		port map (
 			I_clk => I_clk,

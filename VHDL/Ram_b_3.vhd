@@ -41,7 +41,7 @@ begin
     
        Lut_b_1 : generic_LUT_unit  
             generic map(
-                G_FILEPATH      => "./PythonCode/weights/models/40_20_10_quant-97.23.torch/l3_bias.lut",
+                G_FILEPATH      => "../PythonCode/weights/models/40_20_10_quant-97.23.torch/l3_bias.lut",
                 G_DEPTH_LUT     => 10,
                 G_NBIT_LUT      => 5,
                 G_STYLE         => "distributed",

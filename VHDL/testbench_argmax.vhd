@@ -43,7 +43,7 @@ architecture Testbench_argmax of testbench_argmax is
 	 
 	begin
 	  SR_clock <= not SR_clock after 7 ns;
-	  SR_reset <= '1' , '0' after 39 ns;
+	  SR_reset <= '0' , '1' after 39 ns;
 	  SR_enable <= '0',  '1' after 50 ns;
 	  
 	  argmax_instance : Argmax

@@ -12,7 +12,7 @@ entity CreateWord is
 		I_en_C_W 	: in std_logic;
 		O_I_0		: out std_logic_vector(223 downto 0);
 		O_en_I_0 	: out std_logic;
-        O_pixelCount : out std_logic_vector(5 downto 0)
+        	O_pixelCount : out std_logic_vector(4 downto 0)
     );
 end CreateWord;
 
@@ -28,7 +28,7 @@ architecture Behavioral of CreateWord is
 		    I_rst 	: in std_logic;
 		    I_en 	: in std_logic;
 		    I_data 	: in std_logic_vector(size_w-1 downto 0);
-		    O_data  : out std_logic_vector(size_w-1 downto 0)
+		    O_data  : out std_logic_vector(nb_reg*size_w-1 downto 0)
 	    );
     end component;
 
@@ -47,10 +47,10 @@ architecture Behavioral of CreateWord is
 		
 -- signals 
 
-signal value_W_28 	: unsigned(5 downto 0);
-signal value_P_28 	: unsigned(5 downto 0);
-signal l_value_W_28 : std_logic_vector(5 downto 0);
-signal l_value_P_28 : std_logic_vector(5 downto 0);
+signal value_W_28 	: unsigned(4 downto 0);
+signal value_P_28 	: unsigned(4 downto 0);
+signal l_value_W_28 : std_logic_vector(4 downto 0);
+signal l_value_P_28 : std_logic_vector(4 downto 0);
 signal I_P_28       : std_logic;
 
 begin
@@ -58,7 +58,7 @@ begin
 	Counter_W_28 : Counter
 		generic map (
 			val_max => 29,
-			nb_bits => 6
+			nb_bits => 5
 		)
 		port map (
 			I_clk 	=> I_clk,
@@ -70,7 +70,7 @@ begin
 	Counter_C_P_28 : Counter 
 		generic map (
 			val_max => 28,
-			nb_bits => 6
+			nb_bits => 5
 		)
 		port map (
 			I_clk 	=> I_clk,
@@ -82,7 +82,7 @@ begin
 	Reg_I : ShiftReg_0
 		generic map (
 			nb_reg => 28,
-            size_w => 8
+            		size_w => 8
 		)
 		port map (
 			I_clk 	=> I_clk,
@@ -96,7 +96,7 @@ value_W_28 <= Unsigned(l_value_W_28);
 value_P_28 <= Unsigned(l_value_P_28);
 O_pixelCount <= std_logic_vector(value_P_28);
 
-process(I_clk,value_W_28, value_P_28) 
+process(value_W_28, value_P_28) 
 
 begin 
 

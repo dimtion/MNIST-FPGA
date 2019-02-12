@@ -38,7 +38,7 @@ begin
 
 	process(I_clk, I_rst)
 	begin 
-		if (I_rst = '1') then
+		if (I_rst = '0') then
 			SR_Present <= ST_Reset;
 		elsif (rising_edge(I_clk)) then
 			SR_Present <= SC_Futur;
@@ -86,12 +86,10 @@ begin
 					SC_Futur 	<= ST_Load;
 					O_en_C_W	<= '1';
 					O_en_C_P 	<= '1';
-					O_request 	<= '0';
 				else 
 					SC_Futur 	<= ST_Wait;
 					O_en_C_W 	<= '0';
 					O_en_C_P 	<= '0';
-					O_request	<= '1';
 				end if;
 
 			when ST_Load =>

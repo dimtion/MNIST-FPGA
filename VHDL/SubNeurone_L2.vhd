@@ -8,7 +8,7 @@ entity SubNeurone_l2 is
 		I_rst 	: in std_logic;
 		I_data  : in std_logic_vector(20*8-1 downto 0);
 		I_W 	: in std_logic_vector(20*5 -1 downto 0);
-		I_C 	: in std_logic_vector(6 downto 0);
+		I_C 	: in std_logic_vector(1 downto 0);
 		I_biais	: in std_logic_vector(4 downto 0);
         O_d     : out std_logic_vector(7 downto 0)
     );
@@ -67,11 +67,11 @@ begin
 		);
 
 -- multiplicateur
-process(I_clk)
+process(I_data)
 
 begin
     mult_loop : for Index_m in 0 to 19 loop
-	    mult(Index_m) <= unsigned(I_data(159 - Index_m*8 downto 151 - Index_m*8)) * unsigned(I_W(99 - Index_m*5 downto 95-Index_m*5));
+	    mult(Index_m) <= unsigned(I_data(159 - Index_m*8 downto 152 - Index_m*8)) * unsigned(I_W(99 - Index_m*5 downto 95-Index_m*5));
     end loop mult_loop;
 
 -- additionneurs premier etage
@@ -81,7 +81,7 @@ begin
 
 -- additionneur 2eme etage
     add_2_loop : for Index_a2 in 0 to 4 loop
-	    add_2(Index_a2) <= add_1(Index_a2*2) + add_2(Index_a2*2+1);
+	    add_2(Index_a2) <= add_1(Index_a2*2) + add_1(Index_a2*2+1);
     end loop add_2_loop;
 
 --additionneur 3eme etage
@@ -108,23 +108,8 @@ add_r <= resize(add_b,8);
 out_acc <= unsigned(l_out_acc);
 
 -- Out with Relu
-process(I_clk)
+O_d <= std_logic_vector(add_r) when(add_r(7)='0') else (others => '0');
 
-begin
-    If(add_r(7) = '0') then 
-        O_d <= std_logic_vector(add_r);
-    else 
-        O_d <= "00000000";
-    end if;
-end process;
-
-process(I_clk)
-begin
-    if (to_integer(Unsigned(I_C)) = 0) then
-        en_Acc <= '1';
-    else 
-        en_Acc <= '0';
-    end if;
-end process;
+en_Acc <= '1' when(to_integer(Unsigned(I_C)) = 0) else '0';
 
 end Behavioral;

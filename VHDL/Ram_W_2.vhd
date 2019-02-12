@@ -43,7 +43,7 @@ begin
     L1 : FOR index in 0 to 19 GENERATE 
         lut:generic_LUT_unit 
             generic map(
-                G_FILEPATH      => "./PythonCode/weights/models/40_20_10_quant-97.23.torch/l2_" & integer'image(index) & ".lut",
+                G_FILEPATH      => "../PythonCode/weights/models/40_20_10_quant-97.23.torch/l2_" & integer'image(index) & ".lut",
                 G_DEPTH_LUT     => 20 *2,
                 G_NBIT_LUT      => 5,
                 G_STYLE         => "distributed",
@@ -60,7 +60,7 @@ begin
 process(addr_r) 
 begin 
     word_loop : for indexW in 0 to 19 loop 
-        data_r((size_w-indexW*5) downto (size_w-5-indexW*5)) <= O_L_1(indexW);
+        data_r((size_w-1-indexW*5) downto (size_w-5-indexW*5)) <= O_L_1(indexW);
     end loop word_loop;
 end  process;
 end Behavioral;

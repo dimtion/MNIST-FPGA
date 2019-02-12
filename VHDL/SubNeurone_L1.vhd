@@ -8,7 +8,7 @@ entity SubNeurone_l1 is
 		I_rst 	: in std_logic;
 		I_data  : in std_logic_vector(28*8-1 downto 0);
 		I_W 	: in std_logic_vector(28*5 -1 downto 0);
-		I_C 	: in std_logic_vector(5 downto 0);
+		I_C 	: in std_logic_vector(4 downto 0);
 		I_biais	: in std_logic_vector(4 downto 0);
         O_d     : out std_logic_vector(7 downto 0)
     );
@@ -68,7 +68,7 @@ begin
 		);
 
 -- multiplicateur
-process(I_clk,I_data)
+process(I_data)
 
 begin
 
@@ -83,7 +83,7 @@ begin
 
 -- additionneur 2eme etage
     add_2_loop : for Index_a2 in 0 to 6 loop
-	    add_2(Index_a2) <= add_1(Index_a2*2) + add_2(Index_a2*2+1);
+	    add_2(Index_a2) <= add_1(Index_a2*2) + add_1(Index_a2*2+1);
     end loop add_2_loop;
 
 
@@ -107,26 +107,9 @@ add_b <= out_acc + Unsigned(I_biais);
 -- resize 
 add_r <= resize(add_b,8);
 
+en_Acc <= '1' when(Unsigned(I_C) = 0) else '0';
 
-process (I_clk,I_C)
-
-begin 
-    If(to_integer(Unsigned(I_C)) = 0) then
-        en_Acc <= '1';
-    else 
-        en_Acc <= '0';
-    end if;
-end process;
-
-
-process(I_clk, add_r)
-begin
-    if (add_r(7) = '0') then
-        O_d <= std_logic_vector(add_r);
-    else 
-        O_d <= "00000000";
-    end if;
-end process;
+O_d <= std_logic_vector(add_r) when(add_r(7)='0') else (others => '0');
 
 l_add_5     <= std_logic_vector(add_5);
 l_out_acc   <= std_logic_vector(out_acc);

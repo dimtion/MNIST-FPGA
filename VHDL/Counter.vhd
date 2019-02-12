@@ -25,7 +25,7 @@ begin
 process(I_clk,I_rst)
 
 begin
-	if I_rst = '1' then	
+	if I_rst = '0' then	
 		temp_value <= (others => '0'); 
 	else 
 		if (rising_edge(I_clk)) then 

@@ -76,7 +76,7 @@ end process;
 process(I_clk, I_rst) 
 
 begin
-	If (I_rst = '1') then
+	If (I_rst = '0') then
 		O_done <= '0';
 	else
 		if (rising_edge(I_clk)) then

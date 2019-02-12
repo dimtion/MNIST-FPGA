@@ -24,7 +24,7 @@ begin
 process(I_clk,I_rst) 
 
 begin 
-	If I_rst = '1' then
+	If I_rst = '0' then
 		tmp_value <= (others => '0');
 	else 
 		if I_load = '0' then 
