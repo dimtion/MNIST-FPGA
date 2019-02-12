@@ -254,6 +254,25 @@ architecture Behavioral of FCNN_top_unit is
         );
     end component;
 
+    component DualPort_RAM is
+        generic (
+            G_DEPTH      : NATURAL 
+            G_WordLength : NATURAL  
+            G_STYLE      : STRING   
+        );
+        port (
+       
+            I_clk   : in  STD_LOGIC;
+            I_write           : in  STD_LOGIC;
+            I_addr_write      : in  UNSIGNED(log2(G_DEPTH)-1 downto 0);
+            I_dataWrite       : in  STD_LOGIC_VECTOR(G_WordLength-1 downto 0);
+            I_addr_read       : in  UNSIGNED(log2(G_DEPTH)-1 downto 0);
+            O_dataRead        : out STD_LOGIC_VECTOR(G_WordLength-1 downto 0)
+        );
+
+    end component;
+
+
 
 	--------------------------------------------------
 	--					CONSTANT DECLARATION	    --
@@ -296,6 +315,9 @@ signal O_arg : std_logic;
 signal I_O : std_logic_vector(223 downto 0);
 signal en_I_O : std_logic;
 
+signal I_1 : std_logic_vector(223 downto 0);
+
+
 begin
 
     Fsm_top : FSM
@@ -337,7 +359,19 @@ begin
 	    );
 
 
-        
-
+       
+    Ram_I : DualPort_RAM 
+        generic map(
+            G_DEPTH         => 28,
+            G_WordLength    => 224,
+            G_STYLE         => "distributed"
+        );
+        port map(
+            I_clk => I_clk,
+            I_write => 
+            I_addr_wite => 
+            I_dataWrite => 
+            I_addr_read => 
+            O_dataRead => 
 end Behavioral;
 

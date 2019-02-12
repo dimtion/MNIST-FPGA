@@ -17,16 +17,17 @@ end CreateWord;
 
 architecture Behavioral of CreateWord is 
 
-    component RegWen is 
+    component ShiftReg_0 is 
 	    generic (
-		    size : natural 
-	    );
+	        nb_reg : natural;
+            size_w : natural
+        );
 	    port (
 		    I_clk 	: in std_logic;
 		    I_rst 	: in std_logic;
 		    I_en 	: in std_logic;
-		    I_data 	: in std_logic_vector(size-1 downto 0);
-		    O_value : out std_logic_vector(size-1 downto 0)
+		    I_data 	: in std_logic_vector(size_w-1 downto 0);
+		    O_data  : out std_logic_vector(size_w-1 downto 0)
 	    );
     end component;
 
@@ -45,7 +46,6 @@ architecture Behavioral of CreateWord is
 		
 -- signals 
 
-signal temp_I		: std_logic_vector(223 downto 0);
 signal value_W_28 	: unsigned(5 downto 0);
 signal value_P_28 	: unsigned(5 downto 0);
 signal l_value_W_28 : std_logic_vector(5 downto 0);
@@ -78,28 +78,23 @@ begin
 			O_value	=> l_value_P_28
 		);
 
-	Reg_I : RegWEn 
+	Reg_I : ShiftReg_0
 		generic map (
-			size => 224
+			nb_reg => 28,
+            size_w => 8
 		)
 		port map (
 			I_clk 	=> I_clk,
 			I_rst 	=> I_rst,
 			I_en 	=> I_en_load,
-			I_data 	=> temp_I,
-			O_value => temp_I
+			I_data 	=> I_pixel,
+			O_data => O_I_0
 		);
-process(I_clk,I_pixel) 
-    begin
-        temp_I(223 - (to_integer(value_W_28) * 8 ) downto 216 - (to_integer(value_W_28)*8)) <= I_pixel;
-end process;
 
-O_I_0 <= temp_I;
 
 O_en_I_0 <= '1' when (to_integer(value_W_28) = 27) else '0';
 l_value_W_28 <= std_logic_vector(value_W_28);
 l_value_P_28 <= std_logic_vector(value_P_28);
-
 
 process(I_clk,value_W_28) 
 
