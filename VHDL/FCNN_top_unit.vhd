@@ -16,7 +16,7 @@ entity FCNN_top_unit is
     
          -------------------------- CLOCK AND RESET -------------------------
         I_clk        : in  STD_LOGIC;   -- System clock.
-		I_aync_rst   : in  STD_LOGIC;   -- Asnchronous reset.
+				I_aync_rst   : in  STD_LOGIC;   -- Asnchronous reset.
          --------------------------------------------------------------------
            
          -------------------------- CONTROL SIGNALS -------------------------   
@@ -272,10 +272,22 @@ architecture Behavioral of FCNN_top_unit is
             I_addr_read       : in  UNSIGNED(log2(G_DEPTH)-1 downto 0);
             O_dataRead        : out STD_LOGIC_VECTOR(G_WordLength-1 downto 0)
         );
-
     end component;
 
-
+		component NeuronCombinator is
+				generic (
+					nb_neurons : natural;
+					size_w : natural
+				);
+				port (
+					I_clk : in std_logic;
+					I_rst : in std_logic;
+					I_en : in std_logic;
+					I_data : in std_logic_vector(size_w-1 downto 0);
+					I_ouputswitch : in std_logic;
+					O_data : out std_logic_vector((nb_neurons*size_w)/2-1 downto 0)
+  			);
+		end component;
 
 	--------------------------------------------------
 	--					CONSTANT DECLARATION	    --
@@ -335,8 +347,15 @@ signal O_N_2 : std_logic_vector(5 downto 0);
 
 -- SubNeuron1 outputs
 signal O_Subneurone : std_logic_vector(7 downto 0);
+signal O_l1 : std_logic_vector(20-1 downto 0);
+signal load_subneuron_val : std_logic;
+
+
+-- layer 2 outputs
+signal input_first_part : std_logic;
 
 begin
+		load_subneuron_val <= '1' when unsigned(O_W_N_1) = 28 else '0';
 
     Fsm_top : FSM
         port map(    
@@ -422,7 +441,19 @@ begin
 		    I_biais => B_1,
 		    O_d => O_Subneurone
 	    );
-
+	NeuronCombinator_1 : NeuronCombinator
+			generic map (
+				nb_neurons => 40,
+				size_w => 8
+			)
+			port map (
+				I_clk => I_clk,
+				I_rst => I_aync_rst,
+				I_en => load_subneuron_val,
+				I_data => O_Subneurone,
+				I_ouputswitch => input_first_part,
+				O_data => O_l1
+			);
     Ram_I : DualPort_RAM 
         generic map(
             G_DEPTH         => 28,
