@@ -44,6 +44,7 @@ architecture Testbench_argmax of testbench_argmax is
 	begin
 	  SR_clock <= not SR_clock after 7 ns;
 	  SR_reset <= '1' , '0' after 39 ns;
+	  SR_enable <= '0',  '1' after 50 ns;
 	  
 	  argmax_instance : Argmax
 	     port map (
@@ -63,9 +64,15 @@ architecture Testbench_argmax of testbench_argmax is
 	       O_I => SC_I,
 	       O_done => SC_done
 	      );
-	 --process
-	  --begin
-	  SR_enable <= '1';
-	  
-	 --end process;
+	      
+	 SR_P1 <= std_logic_vector(to_unsigned(2, 8));
+	 SR_P2 <= std_logic_vector(to_unsigned(2, 8));
+	 SR_P3 <= std_logic_vector(to_unsigned(5, 8));
+	 SR_P4 <= std_logic_vector(to_unsigned(2, 8));
+	 SR_P5 <= std_logic_vector(to_unsigned(1, 8));
+	 SR_P6 <= std_logic_vector(to_unsigned(7, 8));
+	 SR_P7 <= std_logic_vector(to_unsigned(2, 8));
+	 SR_P8 <= std_logic_vector(to_unsigned(2, 8));
+	 SR_P9 <= std_logic_vector(to_unsigned(2, 8));
+	 SR_P10 <= std_logic_vector(to_unsigned(6, 8));
 end Testbench_argmax;
