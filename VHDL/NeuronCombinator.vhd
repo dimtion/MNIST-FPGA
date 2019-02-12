@@ -5,7 +5,8 @@ use IEEE.NUMERIC_STD.all;
 entity NeuronCombinator is
 	generic (
 		nb_neurons : natural;
-		size_w : natural
+		size_w : natural;
+		is_divided : natural -- 1 if we want 2 ouputs, 0 if we want one output
 	);
 	port (
 		I_clk : in std_logic;
@@ -13,7 +14,7 @@ entity NeuronCombinator is
 		I_en : in std_logic;
 		I_data : in std_logic_vector(size_w-1 downto 0);
 		I_ouputswitch : in std_logic;  -- tel if we return first or second half of ouput
-		O_data : out std_logic_vector((nb_neurons*size_w)/2-1 downto 0)
+		O_data : out std_logic_vector((nb_neurons*size_w)/(2-is_divided)-1 downto 0)
   );
 end NeuronCombinator;
 
@@ -28,10 +29,12 @@ architecture Behavioral  of NeuronCombinator is
 			if (I_en = '1') then
 				SR_reg <= I_data & SR_reg(nb_neurons*size_w - 1 downto size_w);
 			end if;
-			if (I_ouputswitch  = '0') then
+			if (I_ouputswitch = '0' and is_divided = 1) then
 				O_data <= SR_reg(nb_neurons*size_w-1 downto nb_neurons*size_w/2);
-			else
+			elsif (is_divided = 1) then
 				O_data <= SR_reg(nb_neurons*size_w/2-1 downto 0);
+			else
+				O_data <= SR_reg;
 			end if;
 		end if;
 	end process;
