@@ -57,13 +57,13 @@ begin
 process(I_en,I_data )
 
 begin 
-    ShiftLoop : for indexShiftLoop in 1 to nb_reg-1 loop
+    ShiftLoop : for indexShiftLoop in 0 to nb_reg-2 loop
    --     En_signal(indexShiftLoop) <= '1';
-        Reg_I(indexShiftLoop) <= Reg_O(indexShiftLoop-1);
+        Reg_I(indexShiftLoop) <= Reg_O(indexShiftLoop+1);
     end loop ShiftLoop;
         
     --En_signal(0)    <= I_en;
-    Reg_I(0)        <= I_data;
+    Reg_I(nb_reg-1)        <= I_data;
 
     Out_loop : for index_o_loop in 0 to nb_reg-1 loop
         O_data((nb_reg*size_w-1 -index_o_loop*size_w) downto ((nb_reg-1)*size_w-index_o_loop*size_w)) <= Reg_O(index_o_loop);

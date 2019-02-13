@@ -29,33 +29,33 @@ component Acc is
         );
 end component;
 
-signal out_acc 	: unsigned(12 downto 0);
-signal l_out_acc : std_logic_vector(12 downto 0);
-type MULT_X is array(0 to 19) of unsigned(12 downto 0);
+signal out_acc 	: signed(17 downto 0);
+signal l_out_acc : std_logic_vector(17 downto 0);
+type MULT_X is array(0 to 19) of signed(13 downto 0);
 signal mult : MULT_X;
 
-type ADDS_1 is array(0 to 9) of unsigned(12 downto 0);
-type ADDS_2 is array(0 to 4) of unsigned(12 downto 0);
-type ADDS_3 is array(0 to 2) of unsigned(12 downto 0);
-type ADDS_4 is array(0 to 1) of unsigned(12 downto 0);
+type ADDS_1 is array(0 to 9) of signed(14 downto 0);
+type ADDS_2 is array(0 to 4) of signed(15 downto 0);
+type ADDS_3 is array(0 to 2) of signed(16 downto 0);
+type ADDS_4 is array(0 to 1) of signed(17 downto 0);
 
 signal add_1 : ADDS_1;
 signal add_2 : ADDS_2;
 signal add_3 : ADDS_3;
 signal add_4 : ADDS_4;
-signal add_5 : unsigned(12 downto 0);
-signal l_add_5 : std_logic_vector(12 downto 0);
+signal add_5 : signed(17 downto 0);
+signal l_add_5 : std_logic_vector(17 downto 0);
 
 signal en_Acc : std_logic;
 
-signal add_b : unsigned(12 downto 0);
-signal add_r : unsigned(7 downto 0);
+signal add_b : signed(17 downto 0);
+signal add_r : signed(7 downto 0);
 
 begin 
 
 	Acc_1 : Acc 
 		generic map (
-			size => 13
+			size => 18
 		)
 		port map (
 			I_clk 	=> I_clk,
@@ -65,42 +65,42 @@ begin
 			O_d 	=> l_out_acc
 		);
 
-process(I_data)
+process(I_clk,I_data)
 begin
 -- multiplicateur
     mult_loop : for Index_m in 0 to 19 loop
-	    mult(Index_m) <= unsigned(I_data(159 - Index_m*8 downto 152 - Index_m*8)) * unsigned(I_W(99 - Index_m*5 downto 95-Index_m*5));
+	    mult(Index_m) <= signed( '0' & I_data(159 - Index_m*8 downto 152 - Index_m*8)) * signed(I_W(99 - Index_m*5 downto 95-Index_m*5));
     end loop mult_loop;
 
 -- additionneurs premier etage
     add_1_loop : for Index_a1 in 0 to 9 loop
-	    add_1(Index_a1) <= mult(Index_a1*2) + mult(Index_a1*2+1);
+	    add_1(Index_a1) <= resize(mult(Index_a1*2),15) + resize(mult(Index_a1*2+1),15);
     end loop add_1_loop;
 
 -- additionneur 2eme etage
     add_2_loop : for Index_a2 in 0 to 4 loop
-	    add_2(Index_a2) <= add_1(Index_a2*2) + add_1(Index_a2*2+1);
+	    add_2(Index_a2) <= resize(add_1(Index_a2*2),16) + resize(add_1(Index_a2*2+1),16);
     end loop add_2_loop;
 
 --additionneur 3eme etage
-    add_3(0) <= add_2(0) + add_2(1);
-    add_3(1) <= add_2(2) + add_2(3);
-    add_3(2) <= add_2(4);
+    add_3(0) <= resize(add_2(0),17) + resize(add_2(1),17);
+    add_3(1) <= resize(add_2(2),17) + resize(add_2(3),17);
+    add_3(2) <= resize(add_2(4),17);
 
 -- addtionneur 4eme etage 
-    add_4(0) <= add_3(0) + add_3(1);
-    add_4(1) <= add_3(2);
+    add_4(0) <= resize(add_3(0),18) + resize(add_3(1),18);
+    add_4(1) <= resize(add_3(2),18);
 
     add_5 <= add_4(0) + add_4(1);
 
 end process;
 -- biais 
-add_b <= out_acc + Unsigned(I_biais);
+add_b <= out_acc + signed(I_biais);
 
 -- resize 
 add_r <= resize(add_b,8);
 
-out_acc <= unsigned(l_out_acc);
+out_acc <= signed(l_out_acc);
 
 -- Out with Relu
 O_d <= std_logic_vector(add_r) when (add_r(7)='0') else (others => '0');

@@ -43,6 +43,6 @@ begin
 		);
 
 O_N_3 <= std_logic_vector(value_counter_10);
-l_value_counter_10 <= std_logic_vector(value_counter_10);
+value_counter_10 <= unsigned(l_value_counter_10);
 
 end Behavioral;

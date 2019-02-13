@@ -69,10 +69,10 @@ begin
 
 O_N_2 <= std_logic_vector(value_counter_20);
 O_W_2 <= std_logic_vector(value_counter_2);
-l_value_counter_20 <= std_logic_vector(value_counter_20);
-l_value_counter_2 <= std_logic_vector(value_counter_2);
 O_W_N <= std_logic_vector(resize(to_unsigned(to_integer(value_counter_20)+(to_integer(value_counter_2)*20),6 ),6)); 
 
+value_counter_20 <= unsigned(value_counter_20);
+value_counter_2 <= unsigned(value_counter_2);
 I_en_20 <= I_N_2_en when(to_integer(value_counter_20) = 19) else '0';
 
 end Behavioral;

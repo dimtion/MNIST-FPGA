@@ -7,11 +7,11 @@ entity FSM is
 		i_clk	: in std_logic;
 		i_rst	: in std_logic;
 		i_ack 	: in std_logic;
-		i_w_0	: in std_logic_vector(5 downto 0); 
-		i_p_0	: in std_logic_vector(5 downto 0);
-		i_n_1 	: in std_logic_vector(6 downto 0);
-		i_w_1 	: in std_logic_vector(5 downto 0);
-		i_n_2	: in std_logic_vector(5 downto 0);
+		i_w_0	: in std_logic_vector(4 downto 0); 
+		i_p_0	: in std_logic_vector(4 downto 0);
+		i_n_1 	: in std_logic_vector(5 downto 0);
+		i_w_1 	: in std_logic_vector(4 downto 0);
+		i_n_2	: in std_logic_vector(3 downto 0);
 		i_w_2 	: in std_logic_vector(1 downto 0);
 		i_n_3 	: in std_logic_vector(4 downto 0);
 		i_arg	: in std_logic;
@@ -19,6 +19,7 @@ entity FSM is
 		o_en_load 		: out std_logic;
 		o_en_c_w		: out std_logic;
 		o_en_c_p		: out std_logic;
+		o_clean_P		: out std_logic;
 		o_w_1_en		: out std_logic;
 		o_n_1_en 		: out std_logic;
 		o_w_2_en 		: out std_logic;
@@ -70,6 +71,7 @@ begin
 				O_N_3_en		<= '0';
 				O_classifValid 	<= '0';
 				O_arg 			<= '0';
+				O_clean_P <= '0';
 				SC_Futur <= ST_Wait;
 
 			when ST_Wait =>
@@ -80,10 +82,11 @@ begin
 				O_W_2_en 		<= '0';
 				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
-				O_classifValid 		<= '0';
+				O_classifValid 	<= '0';
 				O_arg 			<= '0';
 				O_en_C_W 	<= '0';
 				O_en_C_P 	<= '0';
+				O_clean_P <= '0';
 				if I_ack = '1' then
 					SC_Futur 	<= ST_Load;
 				else 
@@ -91,7 +94,7 @@ begin
 				end if;
 
 			when ST_Load =>
-				O_en_load 		<= '0';
+				O_en_load 		<= '1';
 				O_en_C_W		<= '0';
 				O_en_C_P		<= '0';
 				O_W_1_en		<= '0';
@@ -106,8 +109,9 @@ begin
 				O_request 	<= '0';
 				O_W_1_en	<= '0';
 				O_N_1_en	<= '0';
-				if (to_integer(Unsigned(I_W_0)) = 27 and 
-						to_integer(Unsigned(I_P_0)) = 27) then 
+				O_clean_P <= '0';
+				if (to_integer(Unsigned(I_W_0)) = 28 and 
+						to_integer(Unsigned(I_P_0)) = 28) then 
 					SC_Futur 	<= ST_L1;
 
 				else 
@@ -126,19 +130,17 @@ begin
 				O_N_3_en		<= '0';
 				O_classifValid 	<= '0';
 				O_arg 			<= '0';
+				O_clean_P <= '0';
+				O_W_1_en <= '1';
+				O_N_1_en <= '1';
+				O_W_2_en <= '0';
+				O_N_2_en <= '0';
+
 				if ( 	to_integer(Unsigned(I_W_1)) = 27 and 
-						to_integer(Unsigned(I_N_1)) = 27) then 
-					O_W_1_en <= '0';
-					O_N_1_en <= '0';
+						to_integer(Unsigned(I_N_1)) = 39) then 
 					SC_Futur <= ST_L2;
-					O_W_2_en <= '1';
-					O_N_2_en <= '1';
 				else 
 					SC_Futur <= ST_L1;
-					O_W_1_en <= '1';
-					O_N_1_en <= '1';
-					O_W_2_en <= '0';
-					O_N_2_en <= '0';
 				end if;
 
 			when ST_L2 =>
@@ -146,27 +148,21 @@ begin
 				O_en_load 		<= '0';
 				O_en_C_W		<= '0';
 				O_en_C_P		<= '0';
-				O_W_1_en		<= '0';
-				O_N_1_en		<= '0';
-				O_W_2_en 		<= '0';
-				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
 				O_classifValid 	<= '0';
 				O_arg 			<= '0';
+				O_clean_P <= '0';
+				O_W_1_en <= '0';
+				O_N_1_en <= '0';
+				O_W_2_en <= '1';
+				O_N_2_en <= '1';
+
 				if ( 	to_integer(Unsigned(I_W_2)) = 1 and 
 						to_integer(Unsigned(I_N_2)) = 19)  then 
 				
 					SC_Futur 	<= ST_L3;
-					O_W_2_en 	<= '0';
-					O_N_2_en 	<= '0';
-					O_N_3_en	<= '1';
-
 				else 
 					SC_Futur 	<= ST_L2;
-					O_W_2_en 	<= '1';
-					O_N_2_en 	<= '1';
-					O_N_3_en	<= '0';
-
 				end if;
 
 			when ST_L3 =>
@@ -180,14 +176,13 @@ begin
 				O_N_2_en 		<= '0';
 				O_classifValid 	<= '0';
 				SC_Futur <= ST_Wait;
+				O_clean_P <= '1';
+				O_N_3_en 	<= '1';
+				O_arg <= '0';
 				if (to_integer(unsigned(I_N_3))=9) then
 					SC_Futur <= ST_Class;
-					O_N_3_en <= '1';
-					O_arg 	<= '1';
 				else 
 					SC_Futur <= ST_L3;
-					O_N_3_en <= '0';
-					O_arg <= '0';
 				end if;
 
 			when ST_Class =>
@@ -201,12 +196,12 @@ begin
 				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
 				O_classifValid 	<= '0';
+				O_clean_P <= '0';
+				O_arg <= '1';
 				if (I_arg = '0') then
 					SC_Futur <= ST_Class;
-					O_arg <= '1';
 				else 
 					SC_Futur <= ST_Out;
-					O_arg <= '0';
 				end if;
 
 			when ST_Out =>
@@ -222,6 +217,7 @@ begin
 				O_arg 			<= '0';
 				O_classifValid 	<= '1';
 				SC_Futur <= ST_Wait;
+				O_clean_P <= '0';
 
 			when others => SC_Futur <= ST_Reset;
 	end case;

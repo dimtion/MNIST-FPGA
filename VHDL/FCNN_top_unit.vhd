@@ -45,11 +45,11 @@ architecture Behavioral of FCNN_top_unit is
 		I_clk	: in std_logic;
 		I_rst	: in std_logic;
 		I_ack 	: in std_logic;
-		I_W_0	: in std_logic_vector(5 downto 0); 
-		I_P_0	: in std_logic_vector(5 downto 0);
-		I_N_1 	: in std_logic_vector(6 downto 0);
-		I_W_1 	: in std_logic_vector(5 downto 0);
-		I_N_2	: in std_logic_vector(5 downto 0);
+		I_W_0	: in std_logic_vector(4 downto 0); 
+		I_P_0	: in std_logic_vector(4 downto 0);
+		I_N_1 	: in std_logic_vector(5 downto 0);
+		I_W_1 	: in std_logic_vector(4 downto 0);
+		I_N_2	: in std_logic_vector(3 downto 0);
 		I_W_2 	: in std_logic_vector(1 downto 0);
 		I_N_3 	: in std_logic_vector(4 downto 0);
 		I_arg	: in std_logic;
@@ -63,6 +63,7 @@ architecture Behavioral of FCNN_top_unit is
 		O_N_2_en 		: out std_logic;
 		O_N_3_en		: out std_logic;
 		O_classifValid 		: out std_logic;
+		O_clean_P 		: out std_logic;
 		O_arg 			: out std_logic
 		);
     end component;
@@ -75,10 +76,12 @@ architecture Behavioral of FCNN_top_unit is
 		    I_en_load 	: in std_logic;
 		    I_en_C_P	: in std_logic;
 		    I_en_C_W 	: in std_logic;
-		    O_I_0		: out std_logic_vector(223 downto 0);
+		    I_clean_P 	: in std_logic;
+			O_I_0		: out std_logic_vector(223 downto 0);
 		    O_en_I_0 	: out std_logic;
-            	    O_pixelCount : out std_logic_vector(4 downto 0)
-	    );
+            O_pixelCount : out std_logic_vector(4 downto 0);
+	    	O_W_0 		: out std_logic_vector(4 downto 0)
+		);
     end component;
 
     Component Ram_W_1 is 
@@ -106,7 +109,7 @@ architecture Behavioral of FCNN_top_unit is
 		    I_W_1_en 	: in std_logic;
 		    O_N_1 		: out std_logic_vector(N_size -1 downto 0); 
 		    O_W_1		: out std_logic_vector(W_size -1 downto 0);
-	    	    O_W_N		: out std_logic_vector(10 downto 0)
+	    	O_W_N		: out std_logic_vector(10 downto 0)
 		);
     end component;
 
@@ -308,11 +311,7 @@ architecture Behavioral of FCNN_top_unit is
 	-- Signals are defined here..
 
 
-signal I_W_0 : std_logic_vector(5 downto 0);
-signal I_P_0 : std_logic_vector(5 downto 0);
-signal I_N_1 : std_logic_vector(6 downto 0);
-signal I_W_1 : std_logic_vector(5 downto 0);
-signal I_N_2 : std_logic_vector(5 downto 0);
+signal I_W_0 : std_logic_vector(4 downto 0);
 signal I_W_2 : std_logic_vector(1 downto 0);
 signal I_N_3 : std_logic_vector(4 downto 0);
 signal I_arg : std_logic;
@@ -371,6 +370,7 @@ signal Class_7 	: std_logic_vector(7 downto 0);
 signal Class_8	: std_logic_vector(7 downto 0);
 signal Class_9 	: std_logic_vector(7 downto 0);
 signal Class_10 : std_logic_vector(7 downto 0);
+signal clean_p : std_logic;
 
 signal classifValid : std_logic;
 -- layer 2 outputs
@@ -378,8 +378,9 @@ signal input_first_part : std_logic;
 
 begin
 
-load_subneuron_val_1 <= '1' when to_integer(unsigned(O_W_N_1)) = 28 else '0';
+load_subneuron_val_1 <= '1' when (to_integer(unsigned(O_W_1)) = '0' and to_integer(unsigned(O_N_1)) /='0')  else '0';
 load_subneuron_val_2 <= '1' when to_integer(unsigned(O_W_N_2)) = 1 else '0';
+
 Class_1	 <= O_l3(8*10-1 downto 8*9);
 Class_2	 <= O_l3(8*9-1 downto 8*8);
 Class_3	 <= O_l3(8*8-1 downto 8*7);
@@ -400,10 +401,10 @@ O_classifvalid <= classifvalid;
 		I_rst   => I_aync_rst,
 		i_ack   => I_ackPixel,
 		i_w_0   => I_W_0,
-		i_p_0   => I_P_0,
-		i_n_1   => I_N_1,
-		i_w_1   => I_W_1,
-		i_n_2   => I_N_2,
+		i_p_0   => pixel_count,
+		i_n_1   => O_N_1,
+		i_w_1   => O_W_1,
+		i_n_2   => O_N_2,
 		i_w_2   => I_W_2,
 		i_n_3   => I_N_3,
 		i_arg   => I_arg,
@@ -416,6 +417,7 @@ O_classifvalid <= classifvalid;
 		o_w_2_en => W_2_en,
 		o_n_2_en => N_2_en,
 		o_n_3_en => N_3_en,
+		o_clean_p	=> clean_P,
 		o_classifvalid => classifValid,
 		o_arg => O_arg
 		);
@@ -428,10 +430,12 @@ O_classifvalid <= classifvalid;
 		I_en_load   => en_load,
 		I_en_C_P	=> en_C_P,
 		I_en_C_W 	=> en_C_W,
+		I_clean_P 	=> clean_P,
 		O_I_0		=> I_O,
 		O_en_I_0 	=> en_I_O,
-        	O_pixelCount => pixel_count
-    );
+        O_pixelCount => pixel_count,
+    	O_W_0 		=> I_W_0
+	);
 
 	Ram_W_1_1 : Ram_W_1
 	    generic map (
@@ -465,8 +469,8 @@ O_classifvalid <= classifvalid;
 	    port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
-			I_N_1_en => W_1_en, 	-- en neurone
-			I_W_1_en => N_1_en, 	-- en mots
+			I_N_1_en => N_1_en, 	-- en neurone
+			I_W_1_en => W_1_en, 	-- en mots
 			O_N_1 => O_N_1, 	-- compteur neurone
 			O_W_1 => O_W_1, 	-- compteur mots
 			O_W_N => O_W_N_1 	-- mult mots+(neurone*nb_mot) pour Ram_W_1
@@ -505,9 +509,9 @@ O_classifvalid <= classifvalid;
         port map(
             I_clk => I_clk,
             I_write => en_I_O,
-            I_addr_write =>  unsigned(O_W_1), -- word counter L1
+            I_addr_write =>  unsigned(pixel_count), -- pixel counter 
             I_dataWrite => I_O,
-            I_addr_read => unsigned(pixel_count),  -- pixel counter
+            I_addr_read => unsigned(O_W_1),  -- pixel counter
             O_dataRead => img_l1
 	    );
 
