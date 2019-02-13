@@ -4,30 +4,30 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity FSM is 
 	port (
-		I_clk	: in std_logic;
-		I_rst	: in std_logic;
-		I_ack 	: in std_logic;
-		I_W_0	: in std_logic_vector(5 downto 0); 
-		I_P_0	: in std_logic_vector(5 downto 0);
-		I_N_1 	: in std_logic_vector(6 downto 0);
-		I_W_1 	: in std_logic_vector(5 downto 0);
-		I_N_2	: in std_logic_vector(5 downto 0);
-		I_W_2 	: in std_logic_vector(1 downto 0);
-		I_N_3 	: in std_logic_vector(4 downto 0);
-		I_arg	: in std_logic;
-		O_request 		: out std_logic;
-		O_en_load 		: out std_logic;
-		O_en_C_W		: out std_logic;
-		O_en_C_P		: out std_logic;
-		O_W_1_en		: out std_logic;
-		O_N_1_en 		: out std_logic;
-		O_W_2_en 		: out std_logic;
-		O_N_2_en 		: out std_logic;
-		O_N_3_en		: out std_logic;
-		O_classifValid 	: out std_logic;
-		O_arg 			: out std_logic
+		i_clk	: in std_logic;
+		i_rst	: in std_logic;
+		i_ack 	: in std_logic;
+		i_w_0	: in std_logic_vector(5 downto 0); 
+		i_p_0	: in std_logic_vector(5 downto 0);
+		i_n_1 	: in std_logic_vector(6 downto 0);
+		i_w_1 	: in std_logic_vector(5 downto 0);
+		i_n_2	: in std_logic_vector(5 downto 0);
+		i_w_2 	: in std_logic_vector(1 downto 0);
+		i_n_3 	: in std_logic_vector(4 downto 0);
+		i_arg	: in std_logic;
+		o_request 		: out std_logic;
+		o_en_load 		: out std_logic;
+		o_en_c_w		: out std_logic;
+		o_en_c_p		: out std_logic;
+		o_w_1_en		: out std_logic;
+		o_n_1_en 		: out std_logic;
+		o_w_2_en 		: out std_logic;
+		o_n_2_en 		: out std_logic;
+		o_n_3_en		: out std_logic;
+		o_classifvalid 	: out std_logic;
+		o_arg 			: out std_logic
 		);
-end FSM;
+end fsm;
 
 architecture Behavioral of FSM is 
 
@@ -80,16 +80,14 @@ begin
 				O_W_2_en 		<= '0';
 				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
-				O_classifValid 	<= '0';
+				O_classifValid 		<= '0';
 				O_arg 			<= '0';
+				O_en_C_W 	<= '0';
+				O_en_C_P 	<= '0';
 				if I_ack = '1' then
 					SC_Futur 	<= ST_Load;
-					O_en_C_W	<= '1';
-					O_en_C_P 	<= '1';
 				else 
 					SC_Futur 	<= ST_Wait;
-					O_en_C_W 	<= '0';
-					O_en_C_P 	<= '0';
 				end if;
 
 			when ST_Load =>
@@ -101,24 +99,26 @@ begin
 				O_W_2_en 		<= '0';
 				O_N_2_en 		<= '0';
 				O_N_3_en		<= '0';
-				O_classifValid 	<= '0';	
+				O_classifValid 		<= '0';	
 				O_arg 			<= '0';
-				if ( 	to_integer(Unsigned(I_W_0)) = 27 and 
+				O_en_C_W 		<= '1';
+				O_en_C_P 		<= '1';
+				O_request 	<= '0';
+				O_W_1_en	<= '0';
+				O_N_1_en	<= '0';
+				if (to_integer(Unsigned(I_W_0)) = 27 and 
 						to_integer(Unsigned(I_P_0)) = 27) then 
 					SC_Futur 	<= ST_L1;
-					O_request 	<= '0';
-					O_W_1_en	<= '1';
-					O_N_1_en	<= '1';
 
 				else 
 					SC_Futur 	<= ST_Wait;
-					O_request 	<= '1';
-					O_W_1_en	<= '0';
-					O_N_1_en	<= '0';
 				end if;
 
 
 			when ST_L1 =>
+			O_request 	<= '0';
+			O_W_1_en	<= '1';
+			O_N_1_en	<= '1';
 				O_request 		<= '0';
 				O_en_load 		<= '0';
 				O_en_C_W		<= '0';
