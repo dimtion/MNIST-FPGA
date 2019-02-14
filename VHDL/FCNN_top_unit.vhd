@@ -378,7 +378,7 @@ signal input_first_part : std_logic;
 
 begin
 
-load_subneuron_val_1 <= '1' when (to_integer(unsigned(O_W_1)) = '0' and to_integer(unsigned(O_N_1)) /='0')  else '0';
+load_subneuron_val_1 <= '1' when ((to_integer(unsigned(O_W_1)) = 0) and (to_integer(unsigned(O_N_1)) = 0))  else '0';
 load_subneuron_val_2 <= '1' when to_integer(unsigned(O_W_N_2)) = 1 else '0';
 
 Class_1	 <= O_l3(8*10-1 downto 8*9);

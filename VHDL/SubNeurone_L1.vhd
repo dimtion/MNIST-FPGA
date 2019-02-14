@@ -104,12 +104,13 @@ end process;
 -- biais 
 add_b <= out_acc + resize(signed(I_biais),18);
 
--- resize 
-add_r <= resize(add_b,8);
+--relu
+add_r <= add_b when(add_b(17) = '0') else (others => 0); 
+
+-- resize add_r est ecrit en (14,4) selection de la partie decimale.
+O_d <=  std_logic_vector(add_r(11 downto 4)) when(to_integer(signed(add_r)) <= 255  ) else "11111111";
 
 en_Acc <= '1' when(Unsigned(I_C) = 0) else '0';
-
-O_d <= std_logic_vector(add_r) when(add_r(7)='0') else (others => '0');
 
 l_add_5     <= std_logic_vector(add_5);
 out_acc   <= signed(l_out_acc);
