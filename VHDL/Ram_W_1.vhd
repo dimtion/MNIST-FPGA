@@ -57,10 +57,10 @@ begin
 
     end GENERATE L1;
 
-process(I_clk,addr_r)
+process(addr_r)
 begin 
-    word_loop : for indexW in 0 to 27 loop 
-        data_r((size_w-1-indexW*5) downto (size_w-5-indexW*5)) <= O_L_1(indexW);
-    end loop word_loop;
+		word_loop : for indexW in 0 to 27 loop 
+        	data_r((size_w-1-indexW*5) downto (size_w-5-indexW*5)) <= O_L_1(indexW);
+    	end loop word_loop;
 end  process;
 end Behavioral;

@@ -32,7 +32,7 @@ end fsm;
 
 architecture Behavioral of FSM is 
 
-	type T_State is (ST_Reset, ST_Wait, ST_Load, ST_L1, ST_L2, ST_L3, ST_Class, ST_Out);
+	type T_State is (ST_Reset, ST_Wait, ST_Load, ST_WriteRam, ST_L1, ST_L2, ST_L3, ST_Class, ST_Out);
 	signal SC_Futur 	: T_State;
 	signal SR_Present 	: T_State;
 begin
@@ -110,14 +110,34 @@ begin
 				O_W_1_en	<= '0';
 				O_N_1_en	<= '0';
 				O_clean_P <= '0';
-				if (to_integer(Unsigned(I_W_0)) = 28 and 
-						to_integer(Unsigned(I_P_0)) = 28) then 
-					SC_Futur 	<= ST_L1;
-
+				if (to_integer(Unsigned(I_W_0)) = 27 ) then 
+					SC_Futur 	<= ST_WriteRam;
 				else 
 					SC_Futur 	<= ST_Wait;
 				end if;
-
+		
+		when ST_WriteRam =>
+				O_en_load 		<= '0';
+				O_en_C_W		<= '0';
+				O_en_C_P		<= '0';
+				O_W_1_en		<= '0';
+				O_N_1_en		<= '0';
+				O_W_2_en 		<= '0';
+				O_N_2_en 		<= '0';
+				O_N_3_en		<= '0';
+				O_classifValid 	<= '0';	
+				O_arg 			<= '0';
+				O_en_C_W 		<= '1';
+				O_en_C_P 		<= '1';
+				O_request 	<= '0';
+				O_W_1_en	<= '0';
+				O_N_1_en	<= '0';
+				O_clean_P 	<= '0';
+				if (to_integer(Unsigned(I_P_0))) = 27 then 
+					SC_Futur 	<= ST_L1;
+				else 
+					SC_Futur 	<= ST_Wait;
+				end if;
 
 			when ST_L1 =>
 			O_request 	<= '0';

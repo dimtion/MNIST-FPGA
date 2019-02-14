@@ -27,10 +27,12 @@ begin
 	If I_rst = '0' then
 		tmp_value <= (others => '0');
 	else 
-		if I_load = '0' then 
-			tmp_value <= tmp_value + unsigned(I_d);
-		else 
-			tmp_value <= unsigned(I_d);
+		if(rising_edge(I_clk)) then
+			if I_load = '0' then 
+				tmp_value <= tmp_value + unsigned(I_d);
+			else 
+				tmp_value <= unsigned(I_d);
+			end if;
 		end if;
 	end if;
 

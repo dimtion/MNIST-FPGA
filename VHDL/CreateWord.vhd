@@ -114,7 +114,7 @@ begin
 	Reg_I : ShiftReg_0
 		generic map (
 			nb_reg => 28,
-            		size_w => 8
+       		size_w => 8
 		)
 		port map (
 			I_clk 	=> I_clk,
@@ -143,7 +143,7 @@ O_pixelCount <= std_logic_vector(value_P_28);
 O_W_0 <= std_logic_vector(value_W_28);
 I_P_28_temp(0) <= I_P_28;
 I_P_28 <= '1' when (to_integer(value_W_28) = 28 and out_Reg_Temp = "0") else '0';
-O_en_I_0 <= '1' when (to_integer(value_W_28) = 27) else '0';
+O_en_I_0 <= '1' when (to_integer(value_W_28) = 28) else '0';
 
 end Behavioral;
 

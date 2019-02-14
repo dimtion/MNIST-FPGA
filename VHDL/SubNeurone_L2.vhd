@@ -67,48 +67,80 @@ begin
 		);
 
 -- multiplicateur
-process(I_clk,I_data)
+process(I_data)
 
 begin
     mult_loop : for Index_m in 0 to 19 loop
 	    mult(Index_m) <= signed('0' & I_data(159 - Index_m*8 downto 152 - Index_m*8)) * signed(I_W(99 - Index_m*5 downto 95-Index_m*5));
     end loop mult_loop;
+end process;
 
+process(I_data,mult)
+begin
 -- additionneurs premier etage
     add_1_loop : for Index_a1 in 0 to 9 loop
 	    add_1(Index_a1) <= resize(mult(Index_a1*2),15) + resize(mult(Index_a1*2+1),15);
     end loop add_1_loop;
+end process;
 
+process(I_data,add_1)
+begin
 -- additionneur 2eme etage
     add_2_loop : for Index_a2 in 0 to 4 loop
 	    add_2(Index_a2) <= resize(add_1(Index_a2*2),16) + resize(add_1(Index_a2*2+1),16);
     end loop add_2_loop;
+end process;
 
+process(I_data,add_2)
+begin
 --additionneur 3eme etage
     add_3(0) <= resize(add_2(0),17) + resize(add_2(1),17);
     add_3(1) <= resize(add_2(2),17) + resize(add_2(3),17);
     add_3(2) <= resize(add_2(4),17);
+end process;
 
+process(I_data,add_3)
+begin
 -- addtionneur 4eme etage 
     add_4(0) <= resize(add_3(0),18) + resize(add_3(1),18);
     add_4(1) <= resize(add_3(2),18);
+end process;
 
+process(I_data,add_4)
+begin
 --additionneur 5eme etage 
     add_5 <= add_4(0) + add_4(1);
-    l_add_5 <= std_logic_vector(add_5);
+end process;
+process(add_5)
+begin
+	l_add_5 <= std_logic_vector(add_5);
 
 end process;
 
--- biais 
-add_b <= out_acc + signed(I_biais);
-
+-- biais
+process(out_acc, I_biais)
+begin
+	add_b <= out_acc + signed(I_biais);
+end process;
 -- resize 
-add_r <= resize(add_b,8);
+process(add_b)
+begin
+	add_r <= resize(add_b,8);
+end process;
 
-out_acc <= signed(l_out_acc);
-
+process(l_out_acc)
+begin
+	out_acc <= signed(l_out_acc);
+end process;
 -- Out with Relu
-O_d <= std_logic_vector(add_r) when(add_r(7)='0') else (others => '0');
+process(add_r)
+begin
+	if (add_r(7)='0') then
+		O_d <= std_logic_vector(add_r);
+	else 
+		O_d <= (others => '0');
+	end if;
+end process;
 
 en_Acc <= '1' when(to_integer(Unsigned(I_C)) = 0) else '0';
 

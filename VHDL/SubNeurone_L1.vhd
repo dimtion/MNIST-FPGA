@@ -68,52 +68,84 @@ begin
 		);
 
 -- multiplicateur
-process(I_data,I_clk)
+
+process(I_data,I_W)
 
 begin
 
     mult_loop : for Index_m in 0 to 27 loop
 	    mult_d(Index_m) <= signed('0' & I_data((223-Index_m*8) downto (216-Index_m*8))) * signed(I_W((139-Index_m*5) downto (135-Index_m*5)));
     end loop mult_loop;
+end process;
 
+process(mult_d)
+begin
 -- additionneurs premier etage
     add_1_loop : for Index_a1 in 0 to 13 loop
 	    add_1(Index_a1) <= resize(mult_d(Index_a1*2),15) + resize(mult_d(Index_a1*2+1),15);
     end loop add_1_loop;
+end process;
 
+process(add_1)
+begin
 -- additionneur 2eme etage
     add_2_loop : for Index_a2 in 0 to 6 loop
 	    add_2(Index_a2) <= resize(add_1(Index_a2*2),16) + resize(add_1(Index_a2*2+1),16);
     end loop add_2_loop;
+end process;
 
-
+process(add_2)
+begin
 --additionneur 3eme etage
     add_3_loop : for index_a3 in 0 to 2 loop
 	    add_3(index_a3) <= resize(add_2(Index_a3*2),17) + resize(add_2(Index_a3*2+1),17);
     end loop add_3_loop;
     add_3(3) <= resize(add_2(6),17);
+end process;
 
+process(add_3)
+begin
 -- additionneur 4eme etage
     add_4(0) <= resize(add_3(0),18) + resize(add_3(1),18);
     add_4(1) <= resize(add_3(2),18) + resize(add_3(3),18);
+end process;
 
+process(add_4)
+begin
 -- addtionneur 5eme etage 
     add_5 <= add_4(0) + add_4(1);
 
 end process;
 -- biais 
-add_b <= out_acc + resize(signed(I_biais),18);
-
+process (I_biais,out_acc)
+begin
+	add_b <= out_acc + resize(signed(I_biais),18);
+end process;
 --relu
-add_r <= add_b when(add_b(17) = '0') else (others => '0'); 
-
+process(add_b) 
+begin
+	if (add_b(17)='0') then 
+		add_r <= add_b;
+	else 
+		add_r <= (others => '0'); 
+	end if;
+end process;
 -- resize add_r est ecrit en (14,4) selection de la partie decimale.
 -- O_d <=  std_logic_vector(add_r(11 downto 4)) when(to_integer(signed(add_r)) <= 255) else "11111111";
-O_d <=  std_logic_vector(add_r(11 downto 4));
+process (add_r)
+begin
+	O_d <=  std_logic_vector(add_r(11 downto 4));
+end process;
 
 en_Acc <= '1' when(Unsigned(I_C) = 0) else '0';
 
-l_add_5     <= std_logic_vector(add_5);
-out_acc   <= signed(l_out_acc);
+process(add_5)
+begin
+	l_add_5     <= std_logic_vector(add_5);
+end process;
 
+process(l_out_acc)
+begin
+	out_acc   <= signed(l_out_acc);
+end process;
 end Behavioral;

@@ -348,7 +348,7 @@ signal B_3 : std_logic_vector(4 downto 0);
 signal O_N_1 : std_logic_vector(5 downto 0);
 signal O_W_N_1 : std_logic_vector(10 downto 0);
 signal O_W_N_2 : std_logic_vector(5 downto 0);
-
+signal I_read_W_l1 : std_logic_vector(10 downto 0); 
 signal O_W_2 : std_logic_vector(1 downto 0);
 signal O_N_2 : std_logic_vector(3 downto 0);
 
@@ -398,7 +398,7 @@ Class_10 <= O_l3(8*1-1 downto 0);
 O_readyClassif <= classifvalid;
 O_classifvalid <= classifvalid;
 
-I_ram_read_W_l1 <= O_W_1 when (to_integer(unsigned(O_W_1)) /= 28) else (others => '0');
+--I_ram_read_W_l1 <= O_W_1 when (to_integer(unsigned(O_W_1)) /= 28) else (others => '0');
 
     Fsm_top : FSM
         port map(    
@@ -450,7 +450,7 @@ I_ram_read_W_l1 <= O_W_1 when (to_integer(unsigned(O_W_1)) /= 28) else (others =
 	    port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
-			addr_r => O_W_N_1,
+			addr_r => I_read_W_l1,
 			data_r => W_1	
 		);
 
@@ -648,6 +648,32 @@ I_ram_read_W_l1 <= O_W_1 when (to_integer(unsigned(O_W_1)) /= 28) else (others =
 
 input_first_part <= O_W_2(0);
 
-	
+process(O_W_N_1, W_1_en)
+begin 
+	if to_integer(unsigned(O_W_N_1) )<1119 then
+		if (W_1_en ='1') then	
+			I_read_W_l1 <= std_logic_vector(to_unsigned(to_integer(unsigned(O_W_N_1))+1,11));
+		else 
+			I_read_W_l1 <= O_W_N_1;
+		end if;
+	else 
+		I_read_W_l1 <= (others => '0');
+	end if;
+end process;
+
+process(O_W_1,w_1_en)
+begin 
+	if to_integer(unsigned(O_W_1)) < 27 then 
+		if (w_1_en = '1') then 
+			I_ram_read_W_l1 <= std_logic_vector(to_unsigned(to_integer(unsigned(O_W_1))+1,5));
+		else 
+			I_ram_read_W_l1 <= O_W_1;
+		end if ;
+
+	else 
+		I_ram_read_W_l1 <= (others => '0');
+	end if; 
+end process;
+--I_ram_read_W_l1 <= O_W_1 when (to_integer(unsigned(O_W_1)) /= 28) else (others => '0');
 end Behavioral;
 

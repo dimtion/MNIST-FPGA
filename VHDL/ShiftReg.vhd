@@ -54,7 +54,7 @@ begin
             );
     end GENERATE R1;
     
-process(I_en,I_data )
+process(I_en,I_data,I_clk)
 
 begin 
     ShiftLoop : for indexShiftLoop in 0 to nb_reg-2 loop

@@ -65,13 +65,16 @@ begin
 			O_d 	=> l_out_acc
 		);
 
-process(I_clk,I_data)
+process(I_W,I_data)
 begin
 -- multiplicateur
     mult_loop : for Index_m in 0 to 19 loop
 	    mult(Index_m) <= signed( '0' & I_data(159 - Index_m*8 downto 152 - Index_m*8)) * signed(I_W(99 - Index_m*5 downto 95-Index_m*5));
     end loop mult_loop;
+end process;
 
+process(add_1)
+begin
 -- additionneurs premier etage
     add_1_loop : for Index_a1 in 0 to 9 loop
 	    add_1(Index_a1) <= resize(mult(Index_a1*2),15) + resize(mult(Index_a1*2+1),15);
