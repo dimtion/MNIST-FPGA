@@ -332,6 +332,9 @@ signal I_1 : std_logic_vector(223 downto 0);
 
 signal pixel_count : std_logic_vector(4 downto 0);
 
+-- RAM input
+signal I_ram_read_W_l1 : std_logic_vector(4 downto 0);
+
 -- RAM outputs
 signal img_l1 : std_logic_vector(224-1 downto 0);
 signal O_W_1 : std_logic_vector(4 downto 0);
@@ -378,7 +381,7 @@ signal input_first_part : std_logic;
 
 begin
 
-load_subneuron_val_1 <= '1' when ((to_integer(unsigned(O_W_1)) = 0) and (to_integer(unsigned(O_N_1)) = 0))  else '0';
+load_subneuron_val_1 <= '1' when ((to_integer(unsigned(O_W_1)) = 28))  else '0';
 load_subneuron_val_2 <= '1' when to_integer(unsigned(O_W_N_2)) = 1 else '0';
 
 Class_1	 <= O_l3(8*10-1 downto 8*9);
@@ -394,6 +397,8 @@ Class_10 <= O_l3(8*1-1 downto 0);
 
 O_readyClassif <= classifvalid;
 O_classifvalid <= classifvalid;
+
+I_ram_read_W_l1 <= O_W_1 when (to_integer(unsigned(O_W_1)) /= 28) else (others => '0');
 
     Fsm_top : FSM
         port map(    
@@ -511,7 +516,7 @@ O_classifvalid <= classifvalid;
             I_write => en_I_O,
             I_addr_write =>  unsigned(pixel_count), -- pixel counter 
             I_dataWrite => I_O,
-            I_addr_read => unsigned(O_W_1),  -- pixel counter
+            I_addr_read => unsigned(I_ram_read_W_l1),  -- pixel counter
             O_dataRead => img_l1
 	    );
 

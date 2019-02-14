@@ -55,7 +55,7 @@ begin
 
 	Counter_28 : Counter 
 		generic map (
-			val_max => 27,
+			val_max => 28,
 			nb_bits => 5
 		)
 		port map (
@@ -69,7 +69,7 @@ O_N_1 <= std_logic_vector(value_counter_40);
 O_W_1 <= std_logic_vector(value_counter_28);
 O_W_N <= std_logic_vector(resize(to_unsigned(to_integer(value_counter_28)+(to_integer(value_counter_40)*28),11 ),11)); 
 
-u_en <= I_N_1_en when(to_integer(value_counter_28) = 27) else '0';
+u_en <= I_N_1_en when(to_integer(value_counter_28) = 28) else '0';
 value_counter_40 <= unsigned(l_value_counter_40);
 value_counter_28 <= unsigned(l_value_counter_28);
 

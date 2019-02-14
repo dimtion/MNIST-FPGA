@@ -49,7 +49,7 @@ signal l_add_5 : std_logic_vector(17 downto 0);
 signal l_out_acc : std_logic_vector(17 downto 0);
 
 signal add_b : signed(17 downto 0);
-signal add_r : signed(7 downto 0);
+signal add_r : signed(17 downto 0);
 
 signal en_Acc : std_logic;
 
@@ -105,10 +105,11 @@ end process;
 add_b <= out_acc + resize(signed(I_biais),18);
 
 --relu
-add_r <= add_b when(add_b(17) = '0') else (others => 0); 
+add_r <= add_b when(add_b(17) = '0') else (others => '0'); 
 
 -- resize add_r est ecrit en (14,4) selection de la partie decimale.
-O_d <=  std_logic_vector(add_r(11 downto 4)) when(to_integer(signed(add_r)) <= 255  ) else "11111111";
+-- O_d <=  std_logic_vector(add_r(11 downto 4)) when(to_integer(signed(add_r)) <= 255) else "11111111";
+O_d <=  std_logic_vector(add_r(11 downto 4));
 
 en_Acc <= '1' when(Unsigned(I_C) = 0) else '0';
 
