@@ -49,9 +49,15 @@ architecture Behavioral of FCNN_top_unit is
 		I_P_0	: in std_logic_vector(4 downto 0);
 		I_N_1 	: in std_logic_vector(5 downto 0);
 		I_W_1 	: in std_logic_vector(4 downto 0);
+<<<<<<< HEAD
 		I_N_2	: in std_logic_vector(4 downto 0);
 		I_W_2 	: in std_logic_vector(1 downto 0);
 		I_N_3 	: in std_logic_vector(3 downto 0);
+=======
+		I_N_2	: in std_logic_vector(3 downto 0);
+		I_W_2 	: in std_logic_vector(1 downto 0);
+		I_N_3 	: in std_logic_vector(4 downto 0);
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 		I_arg	: in std_logic;
 		O_request 		: out std_logic;
 		O_en_load 		: out std_logic;
@@ -59,6 +65,7 @@ architecture Behavioral of FCNN_top_unit is
 		O_en_C_P		: out std_logic;
 		O_W_1_en		: out std_logic;
 		O_N_1_en 		: out std_logic;
+<<<<<<< HEAD
 		O_clean_N_1		: out std_logic;
 		O_clean_W_1		: out std_logic;
 		O_W_2_en 		: out std_logic;
@@ -68,6 +75,12 @@ architecture Behavioral of FCNN_top_unit is
 		O_N_3_en		: out std_logic;
 		O_clean_N_3		: out std_logic;
 		O_classifValid 	: out std_logic;
+=======
+		O_W_2_en 		: out std_logic;
+		O_N_2_en 		: out std_logic;
+		O_N_3_en		: out std_logic;
+		O_classifValid 		: out std_logic;
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 		O_clean_P 		: out std_logic;
 		O_arg 			: out std_logic
 		);
@@ -112,8 +125,11 @@ architecture Behavioral of FCNN_top_unit is
 		    I_rst 		: in std_logic;
 		    I_N_1_en 	: in std_logic;
 		    I_W_1_en 	: in std_logic;
+<<<<<<< HEAD
 			I_W_Clean 	: in std_logic;
 			I_N_Clean 	: in std_logic;
+=======
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 		    O_N_1 		: out std_logic_vector(N_size -1 downto 0); 
 		    O_W_1		: out std_logic_vector(W_size -1 downto 0);
 	    	O_W_N		: out std_logic_vector(10 downto 0)
@@ -142,8 +158,11 @@ architecture Behavioral of FCNN_top_unit is
 		    I_rst 		: in std_logic;
 		    I_N_2_en 	: in std_logic;
 		    I_W_2_en 	: in std_logic;
+<<<<<<< HEAD
 			I_clean_N	: in std_logic;
 			I_clean_W	: in std_logic;
+=======
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 		    O_N_2 		: out std_logic_vector(N_size -1 downto 0); 
 		    O_W_2		: out std_logic_vector(W_size -1 downto 0);
 		    O_W_N 		: out std_logic_vector(5 downto 0)
@@ -221,7 +240,10 @@ architecture Behavioral of FCNN_top_unit is
 		    I_clk		: in std_logic;
 		    I_rst		: in std_logic;
 		    I_N_3_en 	: in std_logic;
+<<<<<<< HEAD
 			I_clean_N 	: in std_logic;
+=======
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
             O_N_3       : out std_logic_vector(3 downto 0)
         );
     end Component;
@@ -322,6 +344,11 @@ architecture Behavioral of FCNN_top_unit is
 
 
 signal I_W_0 : std_logic_vector(4 downto 0);
+<<<<<<< HEAD
+=======
+signal I_W_2 : std_logic_vector(1 downto 0);
+signal I_N_3 : std_logic_vector(4 downto 0);
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 signal I_arg : std_logic;
 
 signal en_load : std_logic;
@@ -336,6 +363,10 @@ signal O_arg : std_logic;
 
 signal I_O : std_logic_vector(223 downto 0);
 signal en_I_O : std_logic;
+<<<<<<< HEAD
+=======
+signal I_1 : std_logic_vector(223 downto 0);
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 
 signal pixel_count : std_logic_vector(4 downto 0);
 
@@ -356,6 +387,7 @@ signal O_N_1 : std_logic_vector(5 downto 0);
 signal O_W_N_1 : std_logic_vector(10 downto 0);
 signal O_W_N_2 : std_logic_vector(5 downto 0);
 signal I_read_W_l1 : std_logic_vector(10 downto 0); 
+<<<<<<< HEAD
 signal I_read_W_l2 : std_logic_vector(5 downto 0);
 signal O_W_2 : std_logic_vector(1 downto 0);
 signal O_N_2 : std_logic_vector(4 downto 0);
@@ -364,6 +396,12 @@ signal O_N_3 : std_logic_vector(3 downto 0);
 signal I_read_W_l3 : std_logic_vector(3 downto 0);
 signal I_read_B_3 : std_logic_vector(3 downto 0);
 
+=======
+signal O_W_2 : std_logic_vector(1 downto 0);
+signal O_N_2 : std_logic_vector(3 downto 0);
+
+signal O_N_3 : std_logic_vector(3 downto 0);
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 -- SubNeuron1 outputs
 signal O_Subneurone_1 : std_logic_vector(7 downto 0);
 signal O_Subneurone_2 : std_logic_vector(7 downto 0);
@@ -384,6 +422,7 @@ signal Class_7 	: std_logic_vector(7 downto 0);
 signal Class_8	: std_logic_vector(7 downto 0);
 signal Class_9 	: std_logic_vector(7 downto 0);
 signal Class_10 : std_logic_vector(7 downto 0);
+<<<<<<< HEAD
 
 signal clean_p : std_logic;
 signal clean_W_1 : std_logic;
@@ -391,6 +430,9 @@ signal clean_N_1 : std_logic;
 signal clean_W_2 : std_logic;
 signal clean_N_2 : std_logic;
 signal clean_N_3 : std_logic;
+=======
+signal clean_p : std_logic;
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 
 signal classifValid : std_logic;
 -- layer 2 outputs
@@ -398,8 +440,13 @@ signal input_first_part : std_logic;
 
 begin
 
+<<<<<<< HEAD
 load_subneuron_val_1 <= '1' when (to_integer(unsigned(O_W_1)) = 28)  else '0';
 load_subneuron_val_2 <= '1' when to_integer(unsigned(O_W_N_2)) = 2 else '0';
+=======
+load_subneuron_val_1 <= '1' when ((to_integer(unsigned(O_W_1)) = 28))  else '0';
+load_subneuron_val_2 <= '1' when to_integer(unsigned(O_W_N_2)) = 1 else '0';
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 
 Class_1	 <= O_l3(8*10-1 downto 8*9);
 Class_2	 <= O_l3(8*9-1 downto 8*8);
@@ -427,8 +474,13 @@ O_classifvalid <= classifvalid;
 		i_n_1   => O_N_1,
 		i_w_1   => O_W_1,
 		i_n_2   => O_N_2,
+<<<<<<< HEAD
 		i_w_2   => O_W_2,
 		i_n_3   => O_N_3,
+=======
+		i_w_2   => I_W_2,
+		i_n_3   => I_N_3,
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 		i_arg   => I_arg,
 		o_request => O_requestPixel,		
 		o_en_load => en_load,		
@@ -436,6 +488,7 @@ O_classifvalid <= classifvalid;
 		o_en_c_p => en_C_P,
 		o_w_1_en => W_1_en,		
 		o_n_1_en => N_1_en,
+<<<<<<< HEAD
 		o_clean_n_1	=> clean_n_1,
 		o_clean_w_1	=> clean_w_1,
 		o_w_2_en => W_2_en,
@@ -444,6 +497,11 @@ O_classifvalid <= classifvalid;
 		o_clean_W_2	=> clean_W_2,
 		o_n_3_en => N_3_en,
 		O_clean_N_3 => clean_N_3,
+=======
+		o_w_2_en => W_2_en,
+		o_n_2_en => N_2_en,
+		o_n_3_en => N_3_en,
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 		o_clean_p	=> clean_P,
 		o_classifvalid => classifValid,
 		o_arg => O_arg
@@ -500,8 +558,11 @@ O_classifvalid <= classifvalid;
 			I_W_1_en => W_1_en, 	-- en mots
 			O_N_1 => O_N_1, 	-- compteur neurone
 			O_W_1 => O_W_1, 	-- compteur mots
+<<<<<<< HEAD
 			I_W_Clean => clean_W_1,
 			I_N_Clean => clean_N_1,
+=======
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 			O_W_N => O_W_N_1 	-- mult mots+(neurone*nb_mot) pour Ram_W_1
 	    );
 
@@ -546,7 +607,11 @@ O_classifvalid <= classifvalid;
 
 	Counter_L2_1 : Counter_L2
 		generic map(
+<<<<<<< HEAD
 			N_size => 5,
+=======
+			N_size => 4,
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 			W_size => 2	
 		)
 		port map(
@@ -554,8 +619,11 @@ O_classifvalid <= classifvalid;
 			I_rst => I_aync_rst,
 			I_N_2_en => N_2_en,
 			I_W_2_en => W_2_en,
+<<<<<<< HEAD
 			I_clean_N => clean_N_2,
 			I_clean_W => clean_W_2,
+=======
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 			O_N_2 => O_N_2, 	-- 20 neurones
 			O_W_2 => O_W_2,		-- 2 mots
 			O_W_N => O_W_N_2	
@@ -579,6 +647,7 @@ O_classifvalid <= classifvalid;
 	    port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
+<<<<<<< HEAD
 			addr_r => I_read_W_l2,
 			data_r => W_2
 		);
@@ -594,6 +663,11 @@ O_classifvalid <= classifvalid;
 			addr_r => O_N_2,
 			data_r => B_2	
 		);
+=======
+			addr_r => O_W_N_2,
+			data_r => W_2
+		);
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 	
 	NeuronCombinator_2 : NeuronCombinator
 		generic map (
@@ -615,14 +689,21 @@ O_classifvalid <= classifvalid;
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
 			I_N_3_en => N_3_en,
+<<<<<<< HEAD
 			I_clean_N => clean_N_3,
+=======
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 			O_N_3 => O_N_3 	-- 10 neurones
 		);
 	SubNeurone_L3_1 : SubNeurone_l3
 		port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
+<<<<<<< HEAD
 			I_data => O_l2, 
+=======
+			I_data => O_l1, 
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 			I_W => W_3,
 			I_biais => b_3,
 			O_d => O_Subneurone_3
@@ -636,7 +717,11 @@ O_classifvalid <= classifvalid;
 	    port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
+<<<<<<< HEAD
 			addr_r => I_read_W_l3, 
+=======
+			addr_r => O_N_3, 
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 			data_r => W_3
 		);
 	Ram_b_3_1 : Ram_b_3
@@ -647,7 +732,11 @@ O_classifvalid <= classifvalid;
 		port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
+<<<<<<< HEAD
 			addr_r => I_read_B_3,
+=======
+			addr_r => O_N_3,
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 			data_r => B_3
 		);
 
@@ -679,12 +768,17 @@ O_classifvalid <= classifvalid;
 		port map (
 			I_clk => I_clk,
 			I_rst => I_aync_rst,
+<<<<<<< HEAD
 			I_en => N_3_en,
+=======
+			I_en => '1',
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 			I_data => O_Subneurone_3,
 			I_ouputswitch => '0', 
 			O_data => O_l3
 		);
 
+<<<<<<< HEAD
 --input_first_part <= O_W_2(0);
 
 process(O_W_2, W_2_en) 
@@ -695,6 +789,9 @@ begin
 		input_first_part <= O_W_2(0);
 	end if;
 end process;
+=======
+input_first_part <= O_W_2(0);
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 
 process(O_W_N_1, W_1_en)
 begin 
@@ -722,6 +819,7 @@ begin
 		I_ram_read_W_l1 <= (others => '0');
 	end if; 
 end process;
+<<<<<<< HEAD
 
 process(O_W_N_2,W_2_en)
 begin	
@@ -750,6 +848,8 @@ begin
 	end if;
 end process;
 
+=======
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 --I_ram_read_W_l1 <= O_W_1 when (to_integer(unsigned(O_W_1)) /= 28) else (others => '0');
 end Behavioral;
 

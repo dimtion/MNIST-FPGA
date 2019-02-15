@@ -12,8 +12,11 @@ entity Counter_L1 is
 		I_rst 		: in std_logic;
 		I_N_1_en 	: in std_logic;
 		I_W_1_en 	: in std_logic;
+<<<<<<< HEAD
 		I_N_clean 	: in std_logic;
 		I_W_clean 	: in std_logic;
+=======
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 		O_N_1 		: out std_logic_vector(N_size -1 downto 0); 
 		O_W_1		: out std_logic_vector(W_size -1 downto 0);
         	O_W_N       : out std_logic_vector(10 downto 0)
@@ -53,7 +56,10 @@ begin
 			I_clk 	=> I_clk,
 			I_rst 	=> I_rst,
 			I_en 	=> u_en,
+<<<<<<< HEAD
 			I_clean => I_N_clean,
+=======
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 			O_value => l_value_counter_40
 		);
 
@@ -66,7 +72,10 @@ begin
 			I_clk	=> I_clk,
 			I_rst 	=> I_rst,
 			I_en 	=> I_W_1_en,
+<<<<<<< HEAD
 			I_clean => I_W_clean,
+=======
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 			O_value => l_value_counter_28
 		);
 

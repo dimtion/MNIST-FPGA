@@ -1,0 +1,6 @@
+# vsim
+work/
+*.swp
+*.mpf
+*.mti
+*.wlf

@@ -47,7 +47,11 @@ signal add_3 : ADDS_3;
 signal add_4 : ADDS_4;
 signal add_5 : signed(17 downto 0);
 signal add_b : signed(17 downto 0);
+<<<<<<< HEAD
 signal add_r : signed(17 downto 0);
+=======
+signal add_r : signed(7 downto 0);
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 signal en_Acc : std_logic;
 signal l_add_5 : std_logic_vector(17 downto 0);
 signal l_out_acc : std_logic_vector(17 downto 0);
@@ -75,7 +79,11 @@ begin
     end loop mult_loop;
 end process;
 
+<<<<<<< HEAD
 process(mult)
+=======
+process(I_data,mult)
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 begin
 -- additionneurs premier etage
     add_1_loop : for Index_a1 in 0 to 9 loop
@@ -83,7 +91,11 @@ begin
     end loop add_1_loop;
 end process;
 
+<<<<<<< HEAD
 process(add_1)
+=======
+process(I_data,add_1)
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 begin
 -- additionneur 2eme etage
     add_2_loop : for Index_a2 in 0 to 4 loop
@@ -91,7 +103,11 @@ begin
     end loop add_2_loop;
 end process;
 
+<<<<<<< HEAD
 process(add_2)
+=======
+process(I_data,add_2)
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 begin
 --additionneur 3eme etage
     add_3(0) <= resize(add_2(0),17) + resize(add_2(1),17);
@@ -99,14 +115,22 @@ begin
     add_3(2) <= resize(add_2(4),17);
 end process;
 
+<<<<<<< HEAD
 process(add_3)
+=======
+process(I_data,add_3)
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 begin
 -- addtionneur 4eme etage 
     add_4(0) <= resize(add_3(0),18) + resize(add_3(1),18);
     add_4(1) <= resize(add_3(2),18);
 end process;
 
+<<<<<<< HEAD
 process(add_4)
+=======
+process(I_data,add_4)
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 begin
 --additionneur 5eme etage 
     add_5 <= add_4(0) + add_4(1);
@@ -120,6 +144,7 @@ end process;
 -- biais
 process(out_acc, I_biais)
 begin
+<<<<<<< HEAD
 	add_b <= out_acc + resize(signed(I_biais),18);
 end process;
 
@@ -131,6 +156,14 @@ begin
 	else 
 		add_r <= (others => '0'); 
 	end if;
+=======
+	add_b <= out_acc + signed(I_biais);
+end process;
+-- resize 
+process(add_b)
+begin
+	add_r <= resize(add_b,8);
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 end process;
 
 process(l_out_acc)
@@ -138,9 +171,19 @@ begin
 	out_acc <= signed(l_out_acc);
 end process;
 -- Out with Relu
+<<<<<<< HEAD
 process (add_r)
 begin
 	O_d <=  std_logic_vector(add_r(11 downto 4));
+=======
+process(add_r)
+begin
+	if (add_r(7)='0') then
+		O_d <= std_logic_vector(add_r);
+	else 
+		O_d <= (others => '0');
+	end if;
+>>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 end process;
 
 en_Acc <= '1' when(to_integer(Unsigned(I_C)) = 0) else '0';
