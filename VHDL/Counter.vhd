@@ -1,6 +1,6 @@
-library IEEE
-use IEEE.STD_LOGIC_1164.all
-use IEEE.NUMERIC_STD all
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
 
 
 entity Counter is 
@@ -22,10 +22,10 @@ signal temp_value : unsigned(nb_bits-1 downto 0);
 
 begin 
 
-process(clk,rst)
+process(I_clk,I_rst)
 
 begin
-	if I_rst = '1' then	
+	if I_rst = '0' then	
 		temp_value <= (others => '0'); 
 	else 
 		if (rising_edge(I_clk)) then 
@@ -34,7 +34,8 @@ begin
 					temp_value <= (others => '0');
 				else 
 					temp_value <= temp_value + 1;		
-			end if;
+			    end if;
+            end if;
 		end if;
 	end if;
 end process;
