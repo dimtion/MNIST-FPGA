@@ -71,7 +71,7 @@ process(I_data,I_W)
 
 begin
     mult_loop : for Index_m in 0 to 19 loop
-	    mult(Index_m) <= signed('0' & I_data(159 - Index_m*8 downto 152 - Index_m*8)) * signed(I_W(99 - Index_m*5 downto 95-Index_m*5));
+	    mult(Index_m) <= signed( '0' & I_data(159 - Index_m*8 downto 152 - Index_m*8)) * signed(I_W(99 - Index_m*5 downto 95-Index_m*5));
     end loop mult_loop;
 end process;
 
@@ -120,7 +120,7 @@ end process;
 -- biais
 process(out_acc, I_biais)
 begin
-	add_b <= out_acc + SHIFT_LEFT(resize(signed(I_biais),17),8);
+	add_b <= out_acc + resize(signed(I_biais),17);
 end process;
 
 -- resize 
@@ -140,7 +140,11 @@ end process;
 -- Out with Relu
 process (add_r)
 begin
-	O_d <=  std_logic_vector(add_r(11 downto 4));
+	if to_integer(add_r) >= 32640 then 
+		O_d <= "11111111";
+	else
+		O_d <=  std_logic_vector(add_r(14 downto 7));
+	end if;
 end process;
 
 en_Acc <= '1' when(to_integer(Unsigned(I_C)) = 0) else '0';

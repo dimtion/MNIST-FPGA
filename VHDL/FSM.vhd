@@ -37,7 +37,7 @@ end fsm;
 
 architecture Behavioral of FSM is 
 
-	type T_State is (ST_Reset, ST_Wait, ST_Load, ST_WriteRam, ST_L1, ST_L2, ST_L3, ST_Class, ST_Out);
+	type T_State is (ST_Reset, ST_Wait, ST_Load, ST_WriteRam, ST_L1, ST_temp_1, ST_L2,ST_temp_2,ST_L3, ST_Class, ST_Out);
 	signal SC_Futur 	: T_State;
 	signal SR_Present 	: T_State;
 begin
@@ -176,8 +176,6 @@ begin
 				O_classifValid 	<= '0';
 				O_arg 			<= '0';
 				O_clean_P <= '0';
-				O_W_1_en <= '1';
-				O_N_1_en <= '1';
 				O_W_2_en <= '0';
 				O_N_2_en <= '0';
 				O_clean_n_1 <= '0';
@@ -185,12 +183,32 @@ begin
 				O_clean_w_2 <= '0';
 				O_clean_n_2 <= '0';
 				o_clean_n_3 <= '0';
-				if ( 	to_integer(Unsigned(I_W_1)) = 27 and 
+				if ( 	to_integer(Unsigned(I_W_1)) = 28 and 
 						to_integer(Unsigned(I_N_1)) = 39) then 
-					SC_Futur <= ST_L2;
+					SC_Futur <= ST_temp_1;
 				else 
 					SC_Futur <= ST_L1;
 				end if;
+		when ST_temp_1 =>
+			O_request 	<= '0';
+			O_W_1_en	<= '0';
+			O_N_1_en	<= '0';
+				O_request 		<= '0';
+				O_en_load 		<= '0';
+				O_en_C_W		<= '0';
+				O_en_C_P		<= '0';
+				O_N_3_en		<= '0';
+				O_classifValid 	<= '0';
+				O_arg 			<= '0';
+				O_clean_P <= '0';
+				O_W_2_en <= '0';
+				O_N_2_en <= '0';
+				O_clean_n_1 <= '0';
+				O_clean_w_1 <= '0';
+				O_clean_w_2 <= '0';
+				O_clean_n_2 <= '0';
+				o_clean_n_3 <= '0';
+				SC_FUTUR <= ST_L2;
 
 			when ST_L2 =>
 				O_request 		<= '0';
@@ -212,10 +230,31 @@ begin
 				o_clean_n_3 <= '0';
 				if ( 	to_integer(Unsigned(I_W_2)) = 2 and 
 						to_integer(Unsigned(I_N_2)) = 19)  then 
-					SC_Futur 	<= ST_L3;
+					SC_Futur 	<= ST_temp_2;
 				else 
 					SC_Futur 	<= ST_L2;
 				end if;
+		
+		when ST_temp_2 =>
+				O_request 		<= '0';
+				O_en_load 		<= '0';
+				O_en_C_W		<= '0';
+				O_en_C_P		<= '0';
+				O_W_1_en		<= '0';
+				O_N_1_en		<= '0';
+				O_W_2_en 		<= '0';
+				O_N_2_en 		<= '0';
+				O_classifValid 	<= '0';
+				SC_Futur <= ST_Wait;
+				O_clean_P <= '0';
+				O_N_3_en 	<= '0';
+				O_arg <= '0';
+				O_clean_n_1 <= '0';
+				O_clean_w_1 <= '0';
+				O_clean_w_2 <= '0';
+				O_clean_n_2 <= '0';
+				o_clean_n_3 <= '0';
+				SC_futur <= ST_L3;
 
 			when ST_L3 =>
 				O_request 		<= '0';
@@ -236,7 +275,7 @@ begin
 				O_clean_w_2 <= '1';
 				O_clean_n_2 <= '1';
 				o_clean_n_3 <= '0';
-				if (to_integer(unsigned(I_N_3))=12) then
+				if (to_integer(unsigned(I_N_3))=10) then
 					SC_Futur <= ST_Class;
 				else 
 					SC_Futur <= ST_L3;

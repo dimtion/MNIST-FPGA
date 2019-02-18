@@ -690,7 +690,7 @@ O_classifvalid <= classifvalid;
 process(O_W_2, W_2_en) 
 begin
 	if (W_2_en = '1') then
-		input_first_part <= not O_W_2(0);
+		input_first_part <= (not O_W_2(0)) and ( not O_W_2(1));
 	else 
 		input_first_part <= O_W_2(0);
 	end if;

@@ -49,7 +49,6 @@ signal l_add_5 : std_logic_vector(16 downto 0);
 signal en_Acc : std_logic;
 
 signal add_b : signed(16 downto 0);
-signal add_r : signed(16 downto 0);
 
 begin 
 
@@ -112,13 +111,13 @@ end process;
 -- biais 
 process(I_biais,out_acc)
 begin
-	add_b <= out_acc + SHIFT_LEFT(resize(signed(I_biais),17),8);
+	add_b <= out_acc + resize(signed(I_biais),17);
 end process;
 -- resize 
 
-process (add_r)
+process (add_b)
 begin
-	O_d <=  std_logic_vector(add_r(11 downto 4));
+	O_d <= std_logic_vector(add_b(16) & add_b(13 downto 7));
 end process;
 
 process(l_out_acc)
@@ -128,15 +127,6 @@ end process;
 
 
 -- Out with Relu
-
-process(add_b) 
-begin
-	if (add_b(16)='0') then 
-		add_r <= add_b;
-	else 
-		add_r <= (others => '0'); 
-	end if;
-end process;
 
 process(add_5)
 begin

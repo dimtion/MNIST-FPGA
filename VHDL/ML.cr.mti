@@ -41,19 +41,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity Counter_L2
 -- Compiling architecture Behavioral of Counter_L2
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SinglePort_RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SinglePort_RAM.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package ATTRIBUTES
--- Loading package std_logic_misc
--- Loading package std_logic_textio
--- Loading package utils_pkg
--- Compiling entity SinglePort_RAM
--- Compiling architecture Behavioral of SinglePort_RAM
-
 } {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_3.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_3.vhd
 Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
 -- Loading package standard
@@ -67,6 +54,19 @@ Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
 -- Compiling entity ram_b_3
 -- Compiling architecture behavioral of ram_b_3
 
+} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SinglePort_RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SinglePort_RAM.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package std_logic_textio
+-- Loading package utils_pkg
+-- Compiling entity SinglePort_RAM
+-- Compiling architecture Behavioral of SinglePort_RAM
+
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_argmax.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_argmax.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -76,13 +76,14 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity testbench_argmax
 -- Compiling architecture Testbench_argmax of testbench_argmax
 
-} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FSM.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FSM.vhd
-Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
--- Loading package standard
+} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package numeric_std
--- Compiling entity fsm
--- Compiling architecture behavioral of fsm
+-- Loading package NUMERIC_STD
+-- Compiling entity Arg_el
+-- Compiling architecture Behavioral of Arg_el
 
 } {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_2.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_2.vhd
 Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
@@ -96,15 +97,6 @@ Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
 -- Loading package utils_pkg
 -- Compiling entity ram_w_2
 -- Compiling architecture behavioral of ram_w_2
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Arg_el
--- Compiling architecture Behavioral of Arg_el
 
 } {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/CreateWord.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/CreateWord.vhd
 Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
@@ -215,6 +207,19 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity Ram_W_2
 -- Compiling architecture Behavioral of Ram_W_2
 
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package attributes
+-- Loading package std_logic_misc
+-- Loading package textio
+-- Loading package std_logic_textio
+-- Loading package utils_pkg
+-- Compiling entity fcnn_top_unit
+-- Compiling architecture behavioral of fcnn_top_unit
+
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L2.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -278,6 +283,14 @@ Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
 -- Loading package numeric_std
 -- Compiling entity neuroncombinator
 -- Compiling architecture behavioral of neuroncombinator
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L3.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L3.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity counter_l3
+-- Compiling architecture behavioral of counter_l3
 
 } {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SinglePort_RAM.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SinglePort_RAM.vhd
 Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
@@ -481,22 +494,18 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity testbench_createword
 -- Compiling architecture Testbench_createword of testbench_createword
 
-} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_fsm.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_fsm.vhd
-Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package numeric_std
--- Compiling entity testbench_fsm
--- Compiling architecture tb_fsm of testbench_fsm
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter.vhd
+} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_3.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity Counter
--- Compiling architecture Behavioral of Counter
+-- Loading package std_logic_textio
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package utils_pkg
+-- Compiling entity Ram_W_3
+-- Compiling architecture Behavioral of Ram_W_3
 
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/generic_LUT_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/generic_LUT_unit.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -511,18 +520,22 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity generic_LUT_unit
 -- Compiling architecture Behavioral of generic_LUT_unit
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_3.vhd
+} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Loading package ATTRIBUTES
--- Loading package std_logic_misc
--- Loading package utils_pkg
--- Compiling entity Ram_W_3
--- Compiling architecture Behavioral of Ram_W_3
+-- Compiling entity Counter
+-- Compiling architecture Behavioral of Counter
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_fsm.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_fsm.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity testbench_fsm
+-- Compiling architecture tb_fsm of testbench_fsm
 
 } {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_MNIST_FCNN.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_MNIST_FCNN.vhd
 Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
@@ -548,6 +561,23 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity testbench_Ram_W_3
 -- Compiling architecture tb_ram_3 of testbench_Ram_W_3
 
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Acc.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Acc.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity acc
+-- Compiling architecture behavioral of acc
+
+} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L1.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SubNeurone_l1
+-- Compiling architecture Behavioral of SubNeurone_l1
+
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/utils_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/utils_pkg.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -560,23 +590,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling package utils_pkg
 -- Compiling package body utils_pkg
 -- Loading package utils_pkg
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L1.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SubNeurone_l1
--- Compiling architecture Behavioral of SubNeurone_l1
-
-} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Acc.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Acc.vhd
-Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package numeric_std
--- Compiling entity acc
--- Compiling architecture behavioral of acc
 
 } {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Argmax.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Argmax.vhd
 Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
@@ -594,14 +607,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading package NUMERIC_STD
 -- Compiling entity SubNeurone_l3
 -- Compiling architecture Behavioral of SubNeurone_l3
-
-} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd
-Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package numeric_std
--- Compiling entity subneurone_l1
--- Compiling architecture behavioral of subneurone_l1
 
 } {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd
 Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010

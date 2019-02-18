@@ -119,7 +119,7 @@ end process;
 -- biais 
 process (I_biais,out_acc)
 begin
-	add_b <= out_acc + SHIFT_LEFT(resize(signed(I_biais),17),8);
+	add_b <= out_acc + resize(signed(I_biais),17);
 end process;
 --relu
 process(add_b) 
@@ -134,7 +134,11 @@ end process;
 -- O_d <=  std_logic_vector(add_r(11 downto 4)) when(to_integer(signed(add_r)) <= 255) else "11111111";
 process (add_r)
 begin
-	O_d <=  std_logic_vector(add_r(11 downto 4));
+	if to_integer(add_r) >= 32640 then 
+		O_d <= "11111111";
+	else
+		O_d <=  std_logic_vector(add_r(14 downto 7));
+	end if;
 end process;
 
 en_Acc <= '1' when(Unsigned(I_C) = 0) else '0';

@@ -32,8 +32,8 @@ architecture Behavioral of Arg_el is
 		);
 	end component;
 
-signal max_P : unsigned(7 downto 0);
-signal max_I : unsigned(3 downto 0);
+signal max_P : std_logic_vector(7 downto 0);
+signal max_I : std_logic_vector(3 downto 0);
 
 begin
 
@@ -45,7 +45,7 @@ begin
 			I_clk => I_clk,
 			I_rst => I_rst,
 			I_en => I_en,
-			I_data => std_logic_vector(max_P),
+			I_data => max_P,
 			O_value => O_P
 		);
 	
@@ -57,19 +57,19 @@ begin
 			I_clk => I_clk,
 			I_rst => I_rst,
 			I_en => I_en,
-			I_data => std_logic_vector(max_I),
+			I_data =>max_I,
 			O_value => O_I
 		);
 
 process(I_clk,I_P1, I_P2)
 
 begin
-    if (Unsigned(I_P1) > Unsigned(I_P2)) then
-	    max_P <= Unsigned(I_P1);
-	    max_I <= Unsigned(I_I1);
+    if (signed(I_P1) > signed(I_P2)) then
+	    max_P <= I_P1;
+	    max_I <= I_I1;
     else 
-	    max_P <= Unsigned(I_P2);
-	    max_I <= unsigned(I_I2);
+	    max_P <= I_P2;
+	    max_I <= I_I2;
     end if;
 end process;
 
@@ -80,9 +80,7 @@ begin
 		O_done <= '0';
 	else
 		if (rising_edge(I_clk)) then
-			if (I_en = '1') then
-				O_done <= '1';
-			end if;
+			O_done <= I_en;
 		end if;		
 	end if;
 
