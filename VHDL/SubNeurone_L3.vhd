@@ -49,18 +49,18 @@ signal l_add_5 : std_logic_vector(16 downto 0);
 signal en_Acc : std_logic;
 
 signal add_b : signed(16 downto 0);
-signal add_r : signed(7 downto 0);
+signal add_r : signed(16 downto 0);
 
 begin 
 
 	Acc_1 : Acc 
 		generic map (
-			size => 18
+			size => 17
 		)
 		port map (
 			I_clk 	=> I_clk,
 			I_rst 	=> I_rst,
-			I_load 	=> '0', 
+			I_load 	=> '1', 
 			I_d	=> l_add_5,
 			O_d 	=> l_out_acc
 		);
@@ -69,7 +69,7 @@ process(I_W,I_data)
 begin
 -- multiplicateur
     mult_loop : for Index_m in 0 to 19 loop
-	    mult(Index_m) <= signed( '0' & I_data(159 - Index_m*8 downto 152 - Index_m*8)) * signed(I_W(99 - Index_m*5 downto 95-Index_m*5));
+	    mult(Index_m) <= signed('0' & I_data(159 - Index_m*8 downto 152 - Index_m*8)) * signed(I_W(99 - Index_m*5 downto 95-Index_m*5));
     end loop mult_loop;
 end process;
 
@@ -112,7 +112,7 @@ end process;
 -- biais 
 process(I_biais,out_acc)
 begin
-	add_b <= out_acc + SHIFT_LEFT(resize(signed(I_biais),17),4);
+	add_b <= out_acc + SHIFT_LEFT(resize(signed(I_biais),17),8);
 end process;
 -- resize 
 
@@ -137,4 +137,12 @@ begin
 		add_r <= (others => '0'); 
 	end if;
 end process;
+
+process(add_5)
+begin
+	l_add_5     <= std_logic_vector(add_5);
+end process;
+
 end Behavioral;
+
+

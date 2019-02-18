@@ -210,7 +210,7 @@ begin
 				O_clean_w_2 <= '0';
 				O_clean_n_2 <= '0';
 				o_clean_n_3 <= '0';
-				if ( 	to_integer(Unsigned(I_W_2)) = 1 and 
+				if ( 	to_integer(Unsigned(I_W_2)) = 2 and 
 						to_integer(Unsigned(I_N_2)) = 19)  then 
 					SC_Futur 	<= ST_L3;
 				else 
@@ -236,7 +236,7 @@ begin
 				O_clean_w_2 <= '1';
 				O_clean_n_2 <= '1';
 				o_clean_n_3 <= '0';
-				if (to_integer(unsigned(I_N_3))=9) then
+				if (to_integer(unsigned(I_N_3))=12) then
 					SC_Futur <= ST_Class;
 				else 
 					SC_Futur <= ST_L3;

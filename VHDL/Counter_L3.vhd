@@ -34,7 +34,7 @@ signal l_value_counter_10 : std_logic_vector(3 downto 0);
 begin 
 	Counter_10 : Counter_Clean 
 		generic map (
-			val_max => 10,
+			val_max => 12,
 			nb_bits => 4
 		)
 		port map (

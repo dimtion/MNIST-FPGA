@@ -399,7 +399,7 @@ signal input_first_part : std_logic;
 begin
 
 load_subneuron_val_1 <= '1' when (to_integer(unsigned(O_W_1)) = 28)  else '0';
-load_subneuron_val_2 <= '1' when to_integer(unsigned(O_W_N_2)) = 2 else '0';
+load_subneuron_val_2 <= '1' when to_integer(unsigned(O_W_2)) = 2 else '0';
 
 Class_1	 <= O_l3(8*10-1 downto 8*9);
 Class_2	 <= O_l3(8*9-1 downto 8*8);
@@ -512,7 +512,7 @@ O_classifvalid <= classifvalid;
 		    I_data => img_l1,
 		    I_W => W_1,
 		    I_C => O_W_1,
-		    I_biais => B_1,
+		   I_biais => (others => '0'), --B_1,
 		    O_d => O_Subneurone_1
 	    );
 	NeuronCombinator_1 : NeuronCombinator
@@ -567,7 +567,7 @@ O_classifvalid <= classifvalid;
 			I_data => O_l1, 
 			I_W => W_2,
 			I_C => O_W_2,
-			I_biais => b_2,
+			I_biais => (others => '0'), -- b_2,
 			O_d => O_Subneurone_2
 		);	
 
@@ -624,7 +624,7 @@ O_classifvalid <= classifvalid;
 			I_rst => I_aync_rst,
 			I_data => O_l2, 
 			I_W => W_3,
-			I_biais => b_3,
+			I_biais => (others => '0'), --b_3,
 			O_d => O_Subneurone_3
 		);	
 
@@ -654,7 +654,7 @@ O_classifvalid <= classifvalid;
 	Argmax_1 : Argmax  
 	    Port map(
 		    I_clk 	=> I_clk,	
-	    	    I_rst 	=> I_aync_rst,
+	    	I_rst 	=> I_aync_rst,
 		    I_P1 	=> Class_1,
 		    I_P2 	=> Class_2,
 		    I_P3 	=> Class_3,
@@ -726,7 +726,7 @@ end process;
 process(O_W_N_2,W_2_en)
 begin	
 	if to_integer(unsigned(O_W_N_2)) < 39 then
-		if(w_1_en = '1') then
+		if(w_2_en = '1') then
 			I_read_W_l2 <= std_logic_vector(to_unsigned(to_integer(unsigned(O_W_N_2))+1,6));
 		else 
 			I_read_W_l2 <= O_W_N_2;
@@ -741,11 +741,13 @@ begin
 	if to_integer(unsigned(O_N_3)) < 9 then
 		if(n_3_en = '1') then
 			I_read_W_l3 <= std_logic_vector(to_unsigned(to_integer(unsigned(O_N_3))+1,4));
+			I_read_B_3 <= std_logic_vector(to_unsigned(to_integer(unsigned(O_N_3))+1,4));
 		else 
 			I_read_W_l3 <= O_N_3;
+			I_read_B_3 <= O_N_3;
 		end if;
 	else 
-		I_read_B_3	<= "1001";
+		I_read_B_3	<= (others => '0');
 		I_read_W_l3 <= (others => '0');
 	end if;
 end process;

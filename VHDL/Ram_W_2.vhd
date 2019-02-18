@@ -44,11 +44,7 @@ begin
         lut:generic_LUT_unit 
             generic map(
                 G_FILEPATH      => "../PythonCode/weights/models/40_20_10_quant-97.23.torch/l2_" & integer'image(index) & ".lut",
-<<<<<<< HEAD
                 G_DEPTH_LUT     => 20*2,
-=======
-                G_DEPTH_LUT     => 20 *2,
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
                 G_NBIT_LUT      => 5,
                 G_STYLE         => "distributed",
                 G_PIPELINE_REG  => false

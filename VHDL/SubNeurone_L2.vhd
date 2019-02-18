@@ -30,7 +30,7 @@ architecture Behavioral of SubNeurone_l2 is
         );
     end component;
 
-signal out_acc 	: signed(17 downto 0);
+signal out_acc 	: signed(16 downto 0);
 
 type MULT_X is array(0 to 19) of signed(13 downto 0);
 signal mult : MULT_X;
@@ -38,7 +38,7 @@ signal mult : MULT_X;
 type ADDS_1 is array(0 to 9) of signed(14 downto 0);
 type ADDS_2 is array(0 to 4) of signed(15 downto 0);
 type ADDS_3 is array(0 to 2) of signed(16 downto 0);
-type ADDS_4 is array(0 to 1) of signed(17 downto 0);
+type ADDS_4 is array(0 to 1) of signed(16 downto 0);
 
 
 signal add_1 : ADDS_1;
@@ -67,7 +67,7 @@ begin
 		);
 
 -- multiplicateur
-process(I_data)
+process(I_data,I_W)
 
 begin
     mult_loop : for Index_m in 0 to 19 loop
@@ -102,8 +102,8 @@ end process;
 process(add_3)
 begin
 -- addtionneur 4eme etage 
-    add_4(0) <= resize(add_3(0),18) + resize(add_3(1),18);
-    add_4(1) <= resize(add_3(2),18);
+    add_4(0) <= resize(add_3(0),17) + resize(add_3(1),17);
+    add_4(1) <= resize(add_3(2),17);
 end process;
 
 process(add_4)
@@ -120,13 +120,13 @@ end process;
 -- biais
 process(out_acc, I_biais)
 begin
-	add_b <= out_acc + SHIFT_LEFT(resize(signed(I_biais),17),4);
+	add_b <= out_acc + SHIFT_LEFT(resize(signed(I_biais),17),8);
 end process;
 
 -- resize 
 process(add_b) 
 begin
-	if (add_b(17)='0') then 
+	if (add_b(16)='0') then 
 		add_r <= add_b;
 	else 
 		add_r <= (others => '0'); 

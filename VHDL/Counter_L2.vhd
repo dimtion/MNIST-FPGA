@@ -48,7 +48,7 @@ begin
 
 	Counter_20 : Counter_Clean 
 		generic map (
-			val_max => 20,
+			val_max => 19,
 			nb_bits => 5
 		)
 		port map (
@@ -74,7 +74,7 @@ begin
 
 O_N_2 <= std_logic_vector(l_value_counter_20);
 O_W_2 <= std_logic_vector(l_value_counter_2);
-O_W_N <= std_logic_vector(resize(to_unsigned(to_integer(value_counter_20)+(to_integer(value_counter_2)*20),6 ),6)); 
+O_W_N <= std_logic_vector(resize(to_unsigned(to_integer(value_counter_20)*2+(to_integer(value_counter_2)),6 ),6)); 
 
 value_counter_20 <= unsigned(l_value_counter_20);
 value_counter_2 <= unsigned(l_value_counter_2);
