@@ -11,15 +11,9 @@ entity FSM is
 		i_p_0	: in std_logic_vector(4 downto 0);
 		i_n_1 	: in std_logic_vector(5 downto 0);
 		i_w_1 	: in std_logic_vector(4 downto 0);
-<<<<<<< HEAD
 		i_n_2	: in std_logic_vector(4 downto 0);
 		i_w_2 	: in std_logic_vector(1 downto 0);
 		i_n_3 	: in std_logic_vector(3 downto 0);
-=======
-		i_n_2	: in std_logic_vector(3 downto 0);
-		i_w_2 	: in std_logic_vector(1 downto 0);
-		i_n_3 	: in std_logic_vector(4 downto 0);
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 		i_arg	: in std_logic;
 		o_request 		: out std_logic;
 		o_en_load 		: out std_logic;
@@ -28,7 +22,6 @@ entity FSM is
 		o_clean_P		: out std_logic;
 		o_w_1_en		: out std_logic;
 		o_n_1_en 		: out std_logic;
-<<<<<<< HEAD
 		o_clean_n_1		: out std_logic;
 		o_clean_w_1		: out std_logic;
 		o_w_2_en 		: out std_logic;
@@ -37,11 +30,6 @@ entity FSM is
 		o_clean_w_2		: out std_logic;
 		o_n_3_en		: out std_logic;
 		o_clean_n_3		: out std_logic;
-=======
-		o_w_2_en 		: out std_logic;
-		o_n_2_en 		: out std_logic;
-		o_n_3_en		: out std_logic;
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 		o_classifvalid 	: out std_logic;
 		o_arg 			: out std_logic
 		);
@@ -89,14 +77,11 @@ begin
 				O_classifValid 	<= '0';
 				O_arg 			<= '0';
 				O_clean_P <= '0';
-<<<<<<< HEAD
 				O_clean_n_1 <= '0';
 				O_clean_w_1 <= '0';
 				O_clean_w_2 <= '0';
 				O_clean_n_2 <= '0';
 				o_clean_n_3 <= '0';
-=======
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 				SC_Futur <= ST_Wait;
 
 			when ST_Wait =>
@@ -112,14 +97,11 @@ begin
 				O_en_C_W 	<= '0';
 				O_en_C_P 	<= '0';
 				O_clean_P <= '0';
-<<<<<<< HEAD
 				O_clean_n_1 <= '0';
 				O_clean_w_1 <= '0';
 				O_clean_w_2 <= '0';
 				O_clean_n_2 <= '0';
 				o_clean_n_3 <= '0';
-=======
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 				if I_ack = '1' then
 					SC_Futur 	<= ST_Load;
 				else 
@@ -143,14 +125,11 @@ begin
 				O_W_1_en	<= '0';
 				O_N_1_en	<= '0';
 				O_clean_P <= '0';
-<<<<<<< HEAD
 				O_clean_n_1 <= '0';
 				O_clean_w_1 <= '0';
 				O_clean_w_2 <= '0';
 				O_clean_n_2 <= '0';
 				o_clean_n_3 <= '0';
-=======
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 				if (to_integer(Unsigned(I_W_0)) = 27 ) then 
 					SC_Futur 	<= ST_WriteRam;
 				else 
@@ -174,14 +153,11 @@ begin
 				O_W_1_en	<= '0';
 				O_N_1_en	<= '0';
 				O_clean_P 	<= '0';
-<<<<<<< HEAD
 				O_clean_n_1 <= '0';
 				O_clean_w_1 <= '0';
 				O_clean_w_2 <= '0';
 				O_clean_n_2 <= '0';
 				o_clean_n_3 <= '0';
-=======
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 				if (to_integer(Unsigned(I_P_0))) = 27 then 
 					SC_Futur 	<= ST_L1;
 				else 
@@ -204,15 +180,11 @@ begin
 				O_N_1_en <= '1';
 				O_W_2_en <= '0';
 				O_N_2_en <= '0';
-<<<<<<< HEAD
 				O_clean_n_1 <= '0';
 				O_clean_w_1 <= '0';
 				O_clean_w_2 <= '0';
 				O_clean_n_2 <= '0';
 				o_clean_n_3 <= '0';
-=======
-
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 				if ( 	to_integer(Unsigned(I_W_1)) = 27 and 
 						to_integer(Unsigned(I_N_1)) = 39) then 
 					SC_Futur <= ST_L2;
@@ -233,15 +205,11 @@ begin
 				O_N_1_en <= '0';
 				O_W_2_en <= '1';
 				O_N_2_en <= '1';
-<<<<<<< HEAD
 				O_clean_n_1 <= '1';
 				O_clean_w_1 <= '1';
 				O_clean_w_2 <= '0';
 				O_clean_n_2 <= '0';
 				o_clean_n_3 <= '0';
-=======
-
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 				if ( 	to_integer(Unsigned(I_W_2)) = 1 and 
 						to_integer(Unsigned(I_N_2)) = 19)  then 
 					SC_Futur 	<= ST_L3;
@@ -263,14 +231,11 @@ begin
 				O_clean_P <= '1';
 				O_N_3_en 	<= '1';
 				O_arg <= '0';
-<<<<<<< HEAD
 				O_clean_n_1 <= '0';
 				O_clean_w_1 <= '0';
 				O_clean_w_2 <= '1';
 				O_clean_n_2 <= '1';
 				o_clean_n_3 <= '0';
-=======
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 				if (to_integer(unsigned(I_N_3))=9) then
 					SC_Futur <= ST_Class;
 				else 
@@ -290,14 +255,11 @@ begin
 				O_classifValid 	<= '0';
 				O_clean_P <= '0';
 				O_arg <= '1';
-<<<<<<< HEAD
 				O_clean_n_1 <= '0';
 				O_clean_w_1 <= '0';
 				O_clean_w_2 <= '0';
 				O_clean_n_2 <= '0';
 				o_clean_n_3 <= '1';
-=======
->>>>>>> 26c2af7e14c9fd458f7ccac976d2b4751231e480
 				if (I_arg = '0') then
 					SC_Futur <= ST_Class;
 				else 

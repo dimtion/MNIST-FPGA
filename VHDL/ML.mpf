@@ -1,8 +1,4 @@
-; vsim modelsim.ini file, version 10.4
-[Version]
-INIVersion = "10.4a"
-
-; Copyright 1991-2015 Mentor Graphics Corporation
+; Copyright 1991-2010 Mentor Graphics Corporation
 ;
 ; All Rights Reserved.
 ;
@@ -13,82 +9,34 @@ INIVersion = "10.4a"
 [Library]
 std = $MODEL_TECH/../std
 ieee = $MODEL_TECH/../ieee
-vital2000 = $MODEL_TECH/../vital2000
-;
-; VITAL concerns:
-;
-; The library ieee contains (among other packages) the packages of the
-; VITAL 2000 standard.  When a design uses VITAL 2000 exclusively, it should use
-; the physical library ieee (recommended), or use the physical library
-; vital2000, but not both.  The design can use logical library ieee and/or
-; vital2000 as long as each of these maps to the same physical library, either
-; ieee or vital2000.
-;
-; A design using the 1995 version of the VITAL packages, whether or not
-; it also uses the 2000 version of the VITAL packages, must have logical library
-; name ieee mapped to physical library vital1995.  (A design cannot use library
-; vital1995 directly because some packages in this library use logical name ieee
-; when referring to the other packages in the library.)  The design source
-; should use logical name ieee when referring to any packages there except the
-; VITAL 2000 packages.  Any VITAL 2000 present in the design must use logical
-; name vital2000 (mapped to physical library vital2000) to refer to those
-; packages.
-; ieee = $MODEL_TECH/../vital1995
-;
-; For compatiblity with previous releases, logical library name vital2000 maps
-; to library vital2000 (a different library than library ieee, containing the
-; same packages).
-; A design should not reference VITAL from both the ieee library and the
-; vital2000 library because the vital packages are effectively different.
-; A design that references both the ieee and vital2000 libraries must have
-; both logical names ieee and vital2000 mapped to the same library, either of
-; these:
-;   $MODEL_TECH/../ieee
-;   $MODEL_TECH/../vital2000
-;
 verilog = $MODEL_TECH/../verilog
+; to use Vital 1995 version of the standard
+; IEEE library must be mapped to the vital1995 library
+; one cannot use the vital1995 library directly because it assume that it
+; is the IEEE library.  If vital1995 and vital2000 are being mixed together then
+; ieee must be mapped to vital1995 and vital200 mapped to vital2000 
+; ieee = $MODEL_TECH/../vital1995
+; for compatiblity with previously the VITAL2000 maps to a seperate library from IEEE
+; if one should not reference vital from both the ieee library and the vital library becasue
+; the vital packages are effectively different.  If one needs to reference both libraies the
+; vital2000 and ieee MUST be mapped to the same library either $MODEL_TECH/../ieee
+; or $MODEL_TECH/../vital2000
+vital2000 = $MODEL_TECH/../vital2000
 std_developerskit = $MODEL_TECH/../std_developerskit
 synopsys = $MODEL_TECH/../synopsys
 modelsim_lib = $MODEL_TECH/../modelsim_lib
 sv_std = $MODEL_TECH/../sv_std
 mtiAvm = $MODEL_TECH/../avm
-mtiRnm = $MODEL_TECH/../rnm
-mtiOvm = $MODEL_TECH/../ovm-2.1.2
-mtiUvm = $MODEL_TECH/../uvm-1.1d
+mtiOvm = $MODEL_TECH/../ovm-2.1.1
 mtiUPF = $MODEL_TECH/../upf_lib
 mtiPA  = $MODEL_TECH/../pa_lib
 floatfixlib = $MODEL_TECH/../floatfixlib
 mc2_lib = $MODEL_TECH/../mc2_lib
-osvvm = $MODEL_TECH/../osvvm
-
-; added mapping for ADMS
-mgc_ams = $MODEL_TECH/../mgc_ams
-ieee_env = $MODEL_TECH/../ieee_env
-
 ;vhdl_psl_checkers = $MODEL_TECH/../vhdl_psl_checkers       // Source files only for this release
 ;verilog_psl_checkers = $MODEL_TECH/../verilog_psl_checkers // Source files only for this release
 ;mvc_lib = $MODEL_TECH/../mvc_lib
-infact = $MODEL_TECH/../infact
 
-
-vhdlopt_lib = $MODEL_TECH/../vhdlopt_lib
 work = work
-[DefineOptionset]
-; Define optionset entries for the various compilers, vmake, and vsim.
-; These option sets can be used with the "-optionset <optionsetname>" syntax.
-; i.e.
-;  vlog -optionset COMPILEDEBUG top.sv
-;  vsim -optionset UVMDEBUG my_top
-;
-; Following are some useful examples.
-
-; define a vsim optionset for uvm debugging
-UVMDEBUG = -uvmcontrol=all -msgmode both -displaymsgmode both -classdebug -onfinish stop
-
-; define a vopt optionset for debugging
-VOPTDEBUG = +acc -debugdb
-
-
 [vcom]
 ; VHDL93 variable selects language version as the default. 
 ; Default is VHDL-2002.
@@ -96,12 +44,7 @@ VOPTDEBUG = +acc -debugdb
 ; Value of 1 or 1993 for VHDL-1993.
 ; Default or value of 2 or 2002 for VHDL-2002.
 ; Value of 3 or 2008 for VHDL-2008
-; Value of 4 or ams99 for VHDL-AMS-1999
-; Value of 5 or ams07 for VHDL-AMS-2007
 VHDL93 = 2002
-
-; Ignore VHDL-2008 declaration of REAL_VECTOR in package STANDARD. Default is off.
-; ignoreStandardRealVector = 1
 
 ; Show source line containing error. Default is off.
 ; Show_source = 1
@@ -123,11 +66,6 @@ VHDL93 = 2002
 
 ; Turn off optimization for IEEE std_logic_1164 package. Default is on.
 ; Optimize_1164 = 0
-
-; Enable compiler statistics. Specify one or more arguments: 
-;                   [all,none,time,cmd,msg,perf,verbose,list]
-; Add '-' to disable specific statistics. Default is [time,cmd,msg].
-; Stats = time,cmd,msg
 
 ; Turn on resolving of ambiguous function overloading in favor of the
 ; "explicit" function declaration (not the one automatically created by
@@ -205,19 +143,23 @@ Explicit = 1
 ; scalar objects defined with subtypes.
 ; NoRangeCheck = 1
 
-; Set the prefix to be honored for synthesis/coverage pragma recognition.
-; Default is "".
-; AddPragmaPrefix = ""
+; Run the 0-in compiler on the VHDL source files
+; Default is off.
+; ZeroIn = 1
 
-; Ignore synthesis and coverage pragmas with this prefix.
+; Set the options to be passed to the 0-in compiler.
 ; Default is "".
-; IgnorePragmaPrefix = ""
+; ZeroInOptions = ""
+
+; Set the synthesis prefix to be honored for synthesis pragma recognition.
+; Default is "".
+; SynthPrefix = ""
 
 ; Turn on code coverage in VHDL design units. Default is off.
 ; Coverage = sbceft
 
 ; Turn off code coverage in VHDL subprograms. Default is on.
-; CoverSub = 0
+; CoverageSub = 0
 
 ; Automatically exclude VHDL case statement OTHERS choice branches.
 ; This includes OTHERS choices in selected signal assigment statements.
@@ -227,12 +169,6 @@ Explicit = 1
 ; Control compiler and VOPT optimizations that are allowed when
 ; code coverage is on.  Refer to the comment for this in the [vlog] area. 
 ; CoverOpt = 3
-
-; Turn on or off clkOpt optimization for code coverage. Default is on.
-; CoverClkOpt = 1
-
-; Turn on or off clkOpt optimization builtins for code coverage. Default is on.
-; CoverClkOptBuiltins = 0
 
 ; Inform code coverage optimizations to respect VHDL 'H' and 'L'
 ; values on signals in conditions and expressions, and to not automatically
@@ -249,36 +185,15 @@ Explicit = 1
 ; covered with FEC metric.
 ; CoverMaxFECRows = 192
 
-; Increase or decrease the limit on the size of expressions and conditions
-; considered for expression and condition coverages. Higher FecUdpEffort leads 
-; to higher compile, optimize and simulation time, but more expressions and 
-; conditions are considered for coverage in the design. FecUdpEffort can
-; be set to a number ranging from 1 (low) to 3 (high), defined as:
-;   1 - (low) Only small expressions and conditions considered for coverage.
-;   2 - (medium) Bigger expressions and conditions considered for coverage.
-;   3 - (high) Very large expressions and conditions considered for coverage.
-; The default setting is 1 (low).
-; FecUdpEffort = 1
-
 ; Enable or disable Focused Expression Coverage analysis for conditions and
 ; expressions. Focused Expression Coverage data is provided by default when
 ; expression and/or condition coverage is active.
 ; CoverFEC = 0
 
 ; Enable or disable UDP Coverage analysis for conditions and expressions.
-; UDP Coverage data is disabled by default when expression and/or condition
+; UDP Coverage data is provided by default when expression and/or condition
 ; coverage is active.
-; CoverUDP = 1
-
-; Enable or disable Rapid Expression Coverage mode for conditions and expressions.
-; Disabling this would convert non-masking conditions in FEC tables to matching
-; input patterns. 
-; CoverREC = 1
-
-; Enable or disable bit-blasting multi-bit operands of reduction prefix expressions
-; for expression/condition coverage.
-; NOTE: Enabling this may have a negative impact on simulation performance.
-; CoverExpandReductionPrefix = 0
+; CoverUDP = 0
 
 ; Enable or disable short circuit evaluation of conditions and expressions when
 ; condition or expression coverage is active. Short circuit evaluation is enabled
@@ -288,15 +203,6 @@ Explicit = 1
 ; Enable code coverage reporting of code that has been optimized away.
 ; The default is not to report.
 ; CoverReportCancelled = 1
-
-; Enable deglitching of code coverage in combinatorial, non-clocked, processes.
-; Default is no deglitching.
-; CoverDeglitchOn = 1
-
-; Control the code coverage deglitching period. A period of 0, eliminates delta
-; cycle glitches. The value of CoverDeglitchPeriod needs to be either be 0 or a
-; time string that includes time units. Examples: 0 or 10.0ps or "10.0 ps".
-; CoverDeglitchPeriod = 0
 
 ; Use this directory for compiler temporary files instead of "work/_temp"
 ; CompilerTempDir = /tmp
@@ -324,51 +230,11 @@ Explicit = 1
 ; Turn ON detection of FSM Implicit Transitions.
 ; FsmImplicitTrans = 1
 
-; Controls whether or not to show immediate assertions with constant expressions
-; in GUI/report/UCDB etc. By default, immediate assertions with constant
-; expressions are shown in GUI/report/UCDB etc. This does not affect
+; Do not show immediate assertions with constant expressions in 
+; GUI/report/UCDB etc. By default immediate assertions with constant 
+; expressions are shown in GUI/report/UCDB etc. This does not affect ;
 ; evaluation of immediate assertions.
-; ShowConstantImmediateAsserts = 0
-
-; Controls how VHDL basic identifiers are stored with the design unit.
-; Does not make the language case-sensitive, affects only how declarations
-; declared with basic identifiers have their names stored and printed
-; (in the GUI, examine, etc.).
-; Default is to preserve the case as originally depicted in the VHDL source.
-; Value of 0 indicates to change all basic identifiers to lower case.
-; PreserveCase = 0
-
-; For Configuration Declarations, controls the effect that USE clauses have
-; on visibility inside the configuration items being configured.  If 1
-; (the default), then use pre-10.0 behavior. If 0, then for stricter LRM-compliance,
-; extend the visibility of objects made visible through USE clauses into nested
-; component configurations.
-; OldVHDLConfigurationVisibility = 0
-
-; Allows VHDL configuration declarations to be in a different library from
-; the corresponding configured entity. Default is to not allow this for
-; stricter LRM-compliance.
-; SeparateConfigLibrary = 1;
-
-; Determine how mode OUT subprogram parameters of type array and record are treated.
-; If 0 (the default), then only VHDL 2008 will do this initialization.
-; If 1, always initialize the mode OUT parameter to its default value.
-; If 2, do not initialize the mode OUT out parameter.
-; Note that prior to release 10.1, all language versions did not initialize mode
-; OUT array and record type parameters, unless overridden here via this mechanism.
-; In release 10.1 and later, only files compiled with VHDL 2008 will cause this
-; initialization, unless overridden here.
-; InitOutCompositeParam = 0
-
-; Generate symbols debugging database in only some special cases to save on
-; the number of files in the library. For other design-units, this database is
-; generated on-demand in vsim. 
-; Default is to to generate debugging database for all design-units.
-; SmartDbgSym = 1
-
-; Enable or disable automatic creation of missing libraries.
-; Default is 1 (enabled)  
-; CreateLib = 1
+; ShowConstantImmediateAsserts = 0 
 
 [vlog]
 ; Turn off inclusion of debugging info within design units.
@@ -412,11 +278,6 @@ Explicit = 1
 ; Enable parsing of embedded PSL assertions. Default is enabled.
 ; EmbeddedPsl = 0
 
-; Enable compiler statistics. Specify one or more arguments: 
-;                   [all,none,time,cmd,msg,perf,verbose,list,kb]
-; Add '-' to disable specific statistics. Default is [time,cmd,msg].
-; Stats = time,cmd,msg
-
 ; Set the threshold for automatically identifying sparse Verilog memories.
 ; A memory with depth equal to or more than the sparse memory threshold gets
 ; marked as sparse automatically, unless specified otherwise in source code
@@ -425,13 +286,17 @@ Explicit = 1
 ; to or greater than 1M are marked as sparse)
 ; SparseMemThreshold = 1048576 
 
-; Set the prefix to be honored for synthesis and coverage pragma recognition.
-; Default is "".
-; AddPragmaPrefix = ""
+; Run the 0-in compiler on the Verilog source files
+; Default is off.
+; ZeroIn = 1
 
-; Ignore synthesis and coverage pragmas with this prefix.
+; Set the options to be passed to the 0-in compiler.
 ; Default is "".
-; IgnorePragmaPrefix = ""
+; ZeroInOptions = ""
+
+; Set the synthesis prefix to be honored for synthesis pragma recognition.
+; Default is "".
+; SynthPrefix = ""
 
 ; Set the option to treat all files specified in a vlog invocation as a
 ; single compilation unit. The default value is set to 0 which will treat
@@ -446,7 +311,7 @@ Explicit = 1
 ; CoverExcludeDefault = 1
 
 ; Increase or decrease the maximum number of rows allowed in a UDP table
-; implementing a VHDL condition coverage or expression coverage expression.
+; implementing a Verilog condition coverage or expression coverage expression.
 ; More rows leads to a longer compile time, but more expressions covered.
 ; CoverMaxUDPRows = 192
 
@@ -455,53 +320,24 @@ Explicit = 1
 ; covered with FEC metric.
 ; CoverMaxFECRows = 192
 
-; Increase or decrease the limit on the size of expressions and conditions
-; considered for expression and condition coverages. Higher FecUdpEffort leads 
-; to higher compile, optimize and simulation time, but more expressions and 
-; conditions are considered for coverage in the design. FecUdpEffort can
-; be set to a number ranging from 1 (low) to 3 (high), defined as:
-;   1 - (low) Only small expressions and conditions considered for coverage.
-;   2 - (medium) Bigger expressions and conditions considered for coverage.
-;   3 - (high) Very large expressions and conditions considered for coverage.
-; The default setting is 1 (low).
-; FecUdpEffort = 1
-
 ; Enable or disable Focused Expression Coverage analysis for conditions and
 ; expressions. Focused Expression Coverage data is provided by default when
 ; expression and/or condition coverage is active.
 ; CoverFEC = 0
 
 ; Enable or disable UDP Coverage analysis for conditions and expressions.
-; UDP Coverage data is disabled by default when expression and/or condition
+; UDP Coverage data is provided by default when expression and/or condition
 ; coverage is active.
-; CoverUDP = 1
-
-; Enable or disable Rapid Expression Coverage mode for conditions and expressions.
-; Disabling this would convert non-masking conditions in FEC tables to matching
-; input patterns. 
-; CoverREC = 1
-
-; Enable or disable bit-blasting multi-bit operands of reduction prefix expressions
-; for expression/condition coverage.
-; NOTE: Enabling this may have a negative impact on simulation performance.
-; CoverExpandReductionPrefix = 0
+; CoverUDP = 0
 
 ; Enable or disable short circuit evaluation of conditions and expressions when
 ; condition or expression coverage is active. Short circuit evaluation is enabled
 ; by default.
 ; CoverShortCircuit = 0
 
-; Enable deglitching of code coverage in combinatorial, non-clocked, processes.
-; Default is no deglitching.
-; CoverDeglitchOn = 1
 
-; Control the code coverage deglitching period. A period of 0, eliminates delta
-; cycle glitches. The value of CoverDeglitchPeriod needs to be either be 0 or a
-; time string that includes time units. Examples: 0 or 10.0ps or "10.0 ps".
-; CoverDeglitchPeriod = 0
-
-; Turn on code coverage in VLOG `celldefine modules, modules containing
-; specify blocks, and modules included using vlog -v and -y. Default is off.
+; Turn on code coverage in VLOG `celldefine modules and modules included
+; using vlog -v and -y. Default is off.
 ; CoverCells = 1
 
 ; Enable code coverage reporting of code that has been optimized away.
@@ -509,18 +345,18 @@ Explicit = 1
 ; CoverReportCancelled = 1
 
 ; Control compiler and VOPT optimizations that are allowed when
-; code coverage is on. This is a number from 0 to 5, with the following
+; code coverage is on. This is a number from 1 to 4, with the following
 ; meanings (the default is 3):
-;    5 -- All allowable optimizations are on.
-;    4 -- Turn off removing unreferenced code.
-;    3 -- Turn off process, always block and if statement merging.
-;    2 -- Turn off expression optimization, converting primitives
-;         to continuous assignments, VHDL subprogram inlining.
-;         and VHDL clkOpt (converting FF's to builtins).
-;    1 -- Turn off continuous assignment optimizations and clock suppression.
-;    0 -- Turn off Verilog module inlining and VHDL arch inlining.
-; HOWEVER, if fsm coverage is turned on, optimizations will be forced to
-; level 3, with also turning off converting primitives to continuous assigns.
+;    1 -- Turn off all optimizations that affect coverage reports.
+;    2 -- Allow optimizations that allow large performance improvements 
+;         by invoking sequential processes only when the data changes. 
+;         This may make major reductions in coverage counts.
+;    3 -- In addition, allow optimizations that may change expressions or 
+;         remove some statements. Allow constant propagation. Allow VHDL
+;         subprogram inlining and VHDL FF recognition. 
+;    4 -- In addition, allow optimizations that may remove major regions of 
+;         code by changing assignments to built-ins or removing unused
+;         signals. Change Verilog gates to continuous assignments.
 ; CoverOpt = 3
 
 ; Specify the override for the default value of "cross_num_print_missing"
@@ -563,6 +399,12 @@ Explicit = 1
 ; modelsim.ini variable "SVCovergroupStrobe" in the [vsim] section.
 ; SVCovergroupStrobeDefault = 0
 
+; Specify the override for the default value of "merge_instances" option for
+; the Covergroup Type. This is a compile time option which forces 
+; "merge_instances" to a user specified default value and supersedes 
+; SystemVerilog specified default value of '0'(zero).
+; SVCovergroupMergeInstancesDefault = 0
+
 ; Specify the override for the default value of "per_instance" option for the
 ; Covergroup variables. This is a compile time option which forces "per_instance"
 ; to a user specified default value and supersedes SystemVerilog specified
@@ -580,7 +422,7 @@ Explicit = 1
 ; packages.  The behavior is identical to using the "-L" switch.
 ; 
 ; LibrarySearchPath = <path/lib> [<path/lib> ...]
-LibrarySearchPath = mtiAvm mtiRnm mtiOvm mtiUvm mtiUPF infact
+LibrarySearchPath = mtiAvm mtiOvm mtiUPF
 
 ; The behavior is identical to the "-mixedansiports" switch.  Default is off.
 ; MixedAnsiPorts = 1
@@ -609,7 +451,7 @@ LibrarySearchPath = mtiAvm mtiRnm mtiOvm mtiUvm mtiUPF infact
 ; List of file suffixes which will be read as SystemVerilog.  White space
 ; in extensions can be specified with a back-slash: "\ ".  Back-slashes
 ; can be specified with two consecutive back-slashes: "\\";
-; SvFileSuffixes = sv svp svh
+; SVFileExtensions = sv svp svh
 
 ; This setting is the same as the vlog -sv command line switch.
 ; Enables SystemVerilog features and keywords when true (1).
@@ -640,28 +482,6 @@ LibrarySearchPath = mtiAvm mtiRnm mtiOvm mtiUvm mtiUPF infact
 ; Enable AMS wreal (wired real) extensions.  Default is 0.
 ; WrealType = 1
 
-; Controls SystemVerilog Language Extensions.  These options enable
-; some non-LRM compliant behavior.  Valid extensions are:
-; "acum", "atpi", "catx", "daoa", "feci", "fin0", "idcl",
-; "iddp", "pae", "sccts", "spsl", "stop0", "udm0", and "uslt".
-; SvExtensions = uslt,spsl,sccts
-
-; Generate symbols debugging database in only some special cases to save on
-; the number of files in the library. For other design-units, this database is
-; generated on-demand in vsim. 
-; Default is to to generate debugging database for all design-units.
-; SmartDbgSym = 1
-
-; Controls how $unit library entries are named.  Valid options are:
-; "file" (generate name based on the first file on the command line)
-; "du" (generate name based on first design unit following an item
-; found in $unit scope)
-; CUAutoName = file
-
-; Enable or disable automatic creation of missing libraries.
-; Default is 1 (enabled)  
-; CreateLib = 1
-
 [sccom]
 ; Enable use of SCV include files and library.  Default is off.
 ; UseScv = 1
@@ -673,10 +493,6 @@ LibrarySearchPath = mtiAvm mtiRnm mtiOvm mtiUvm mtiUPF infact
 ; The path should point directly at a compiler executable.
 ; CppPath = /usr/bin/g++
 
-; Specify the compiler version from the list of support GNU compilers.
-; examples 4.3.3, 4.5.0
-; CppInstall = 4.5.0
-
 ; Enable verbose messages from sccom.  Default is off.
 ; SccomVerbose = 1
 
@@ -685,18 +501,6 @@ LibrarySearchPath = mtiAvm mtiRnm mtiOvm mtiUvm mtiUPF infact
 
 ; Enable use of SC_MS include files and library.  Default is off.
 ; UseScMs = 1
-
-; Use SystemC-2.2 instead of the default SystemC-2.3. Default is off.
-; Sc22Mode = 1
-
-; Enable compiler statistics. Specify one or more arguments: 
-;                   [all,none,time,cmd,msg,perf,verbose,list,kb]
-; Add '-' to disable specific statistics. Default is [time,cmd,msg].
-; Stats = time,cmd,msg
-
-; Enable or disable automatic creation of missing libraries.
-; Default is 1 (enabled)  
-; CreateLib = 1
 
 [vopt]
 ; Turn on code coverage in vopt.  Default is off. 
@@ -707,7 +511,7 @@ LibrarySearchPath = mtiAvm mtiRnm mtiOvm mtiUvm mtiUPF infact
 ; CoverOpt = 3
 
 ; Increase or decrease the maximum number of rows allowed in a UDP table
-; implementing a VHDL condition coverage or expression coverage expression.
+; implementing a vopt condition coverage or expression coverage expression.
 ; More rows leads to a longer compile time, but more expressions covered.
 ; CoverMaxUDPRows = 192
 
@@ -716,34 +520,9 @@ LibrarySearchPath = mtiAvm mtiRnm mtiOvm mtiUvm mtiUPF infact
 ; covered with FEC metric.
 ; CoverMaxFECRows = 192
 
-; Increase or decrease the limit on the size of expressions and conditions
-; considered for expression and condition coverages. Higher FecUdpEffort leads 
-; to higher compile, optimize and simulation time, but more expressions and 
-; conditions are considered for coverage in the design. FecUdpEffort can
-; be set to a number ranging from 1 (low) to 3 (high), defined as:
-;   1 - (low) Only small expressions and conditions considered for coverage.
-;   2 - (medium) Bigger expressions and conditions considered for coverage.
-;   3 - (high) Very large expressions and conditions considered for coverage.
-; The default setting is 1 (low).
-; FecUdpEffort = 1
-
 ; Enable code coverage reporting of code that has been optimized away.
 ; The default is not to report.
 ; CoverReportCancelled = 1
-
-; Enable deglitching of code coverage in combinatorial, non-clocked, processes.
-; Default is no deglitching.
-; CoverDeglitchOn = 1
-
-; Enable compiler statistics. Specify one or more arguments: 
-;                   [all,none,time,cmd,msg,perf,verbose,list,kb]
-; Add '-' to disable specific statistics. Default is [time,cmd,msg].
-; Stats = time,cmd,msg
-
-; Control the code coverage deglitching period. A period of 0, eliminates delta
-; cycle glitches. The value of CoverDeglitchPeriod needs to be either be 0 or a
-; time string that includes time units. Examples: 0 or 10.0ps or "10.0 ps".
-; CoverDeglitchPeriod = 0
 
 ; Do not show immediate assertions with constant expressions in 
 ; GUI/reports/UCDB etc. By default immediate assertions with constant 
@@ -761,40 +540,23 @@ LibrarySearchPath = mtiAvm mtiRnm mtiOvm mtiUvm mtiUPF infact
 ; recursions.
 ; GenerateRecursionDepthMax = 200
 
-; Set the number of processes created during the code generation phase.
-; By default a heuristic is used to set this value.  This may be set to 0
-; to disable this feature completely.
-; ParallelJobs = 0 
-
-; Controls SystemVerilog Language Extensions.  These options enable
-; some non-LRM compliant behavior.  Valid extensions are "feci",
-; "pae", "uslt", "spsl", "fin0" and "sccts".
-; SvExtensions = uslt,spsl,sccts
-
-; Load the specified shared objects with the RTLD_GLOBAL flag.
-; This gives global visibility to all symbols in the shared objects,
-; meaning that subsequently loaded shared objects can bind to symbols
-; in the global shared objects.  The list of shared objects should
-; be whitespace delimited.  This option is not supported on the
-; Windows or AIX platforms.
-; GlobalSharedObjectList = example1.so example2.so example3.so
-
-; Disable SystemVerilog elaboration system task messages
-; IgnoreSVAInfo = 1 
-; IgnoreSVAWarning = 1
-; IgnoreSVAError = 1
-; IgnoreSVAFatal = 1
-
-; Enable or disable automatic creation of missing libraries.
-; Default is 1 (enabled)  
-; CreateLib = 1
-
 
 [vsim]
 ; vopt flow
 ; Set to turn on automatic optimization of a design.
 ; Default is on
 VoptFlow = 1
+
+; vopt automatic SDF
+; If automatic design optimization is on, enables automatic compilation
+; of SDF files.
+; Default is on, uncomment to turn off.
+; VoptAutoSDFCompile = 0
+
+; Automatic SDF compilation
+; Disables automatic compilation of SDF files in flows that support it.
+; Default is on, uncomment to turn off.
+; NoAutoSDFCompile = 1
 
 ; Simulator resolution
 ; Set to fs, ps, ns, us, ms, or sec with optional prefix of 1, 10, or 100.
@@ -816,17 +578,10 @@ Resolution = ns
 UserTimeUnit = default
 
 ; Default run length
-RunLength = 10 us
+RunLength = 100
 
 ; Maximum iterations that can be run without advancing simulation time
-IterationLimit = 10000000
-
-; Specify libraries to be searched for precompiled modules
-; LibrarySearchPath = <path/lib> [<path/lib> ...]
-
-; Set XPROP assertion fail limit. Default is 5.
-; Any positive integer, -1 for infinity.
-; XpropAssertionLimit = 5
+IterationLimit = 5000
 
 ; Control PSL and Verilog Assume directives during simulation
 ; Set SimulateAssumeDirectives = 0 to disable assume being simulated as asserts
@@ -843,121 +598,79 @@ IterationLimit = 10000000
 ; Set SimulateSVA = 1 to enable concurrent SVA simulation (default)
 ; SimulateSVA = 1 
 
-; Control SVA and VHDL immediate assertion directives during simulation
-; Set SimulateImmedAsserts = 0 to disable simulation of immediate asserts 
-; Set SimulateImmedAsserts = 1 to enable simulation of immediate asserts
-; SimulateImmedAsserts = 1 
-
-; License feature mappings for Verilog and VHDL
-; qhsimvh       Single language VHDL license
-; qhsimvl       Single language Verilog license
-; msimhdlsim    Language neutral license for either Verilog or VHDL
-; msimhdlmix    Second language only, language neutral license for either 
-;               Verilog or VHDL
-;
 ; Directives to license manager can be set either as single value or as
 ; space separated multi-values:
-; vhdl          Immediately checkout and hold a VHDL license (i.e., one of
-;               qhsimvh, msimhdlsim, or msimhdlmix)
-; vlog          Immediately checkout and hold a Verilog license (i.e., one of
-;               qhsimvl, msimhdlsim, or msimhdlmix)
-; plus          Immediately checkout and hold a VHDL license and a Verilog license
+; vhdl          Immediately reserve a VHDL license
+; vlog          Immediately reserve a Verilog license
+; plus          Immediately reserve a VHDL and Verilog license
 ; noqueue       Do not wait in the license queue when a license is not available
 ; viewsim       Try for viewer license but accept simulator license(s) instead
 ;               of queuing for viewer license (PE ONLY)
-; noviewer      Disable checkout of msimviewer license feature (PE ONLY)
-; noslvhdl      Disable checkout of qhsimvh license feature
-; noslvlog      Disable checkout of qhsimvl license feature
-; nomix         Disable checkout of msimhdlmix license feature
-; nolnl         Disable checkout of msimhdlsim license feature
-; mixedonly     Disable checkout of qhsimvh and qhsimvl license features
-; lnlonly       Disable checkout of qhsimvh,qhsimvl, and msimhdlmix license features
-;
-; Examples (remove ";" comment character to activate licensing directives):
-; Single directive:
+; noviewer	Disable checkout of msimviewer and vsim-viewer license 
+;		features (PE ONLY)
+; noslvhdl	Disable checkout of qhsimvh and vsim license features
+; noslvlog	Disable checkout of qhsimvl and vsimvlog license features
+; nomix		Disable checkout of msimhdlmix and hdlmix license features
+; nolnl		Disable checkout of msimhdlsim and hdlsim license features
+; mixedonly	Disable checkout of qhsimvh,qhsimvl,vsim,vsimvlog license 
+;		features
+; lnlonly	Disable checkout of qhsimvh,qhsimvl,vsim,vsimvlog,msimhdlmix,
+;		hdlmix license features
+; Single value:
 ; License = plus
-; Multi-directive (Note: space delimited directives):
+; Multi-value:
 ; License = noqueue plus
 
-; Severity level of a VHDL assertion message or of a SystemVerilog severity system task
-; which will cause a running simulation to stop.
-; VHDL assertions and SystemVerilog severity system task that occur with the
-; given severity or higher will cause a running simulation to stop.
-; This value is ignored during elaboration.
+; Stop the simulator after a VHDL assertion message. 
+; Or stop the simulator after SystemVerilog severity system task.
+; The severity of VHDL assertion or severity system task
+; should be higher or equal.
 ; 0 = Note  1 = Warning  2 = Error  3 = Failure  4 = Fatal
 BreakOnAssertion = 3
 
-; Severity level of a tool message which will cause a running simulation to 
-; stop. This value is ignored during elaboration. Default is to not break.
-; 0 = Note  1 = Warning  2 = Error  3 = Fatal
-;BreakOnMessage = 2
-
-; The class debug feature enables more visibility and tracking of class instances
-; during simulation.  By default this feature is disabled (0).  To enable this 
-; feature set ClassDebug to 1.
-; ClassDebug = 1
-
-; Message Format conversion specifications:
-; %S - Severity Level of message/assertion
-; %R - Text of message
-; %T - Time of message
-; %D - Delta value (iteration number) of Time
-; %K - Kind of path: Instance/Region/Signal/Process/Foreign Process/Unknown/Protected
-; %i - Instance/Region/Signal pathname with Process name (if available)
-; %I - shorthand for one of these:
-;      "  %K: %i"
-;      "  %K: %i File: %F" (when path is not Process or Signal)
-;      except that the %i in this case does not report the Process name
+; VHDL assertion Message Format
+; %S - Severity Level 
+; %R - Report Message
+; %T - Time of assertion
+; %D - Delta
+; %I - Instance or Region pathname (if available)
+; %i - Instance pathname with process
 ; %O - Process name
-; %P - Instance/Region path without leaf process
-; %F - File name
-; %L - Line number; if assertion message, then line number of assertion or, if
-;      assertion is in a subprogram, line from which the call is made
-; %u - Design unit name in form library.primary
-; %U - Design unit name in form library.primary(secondary)
-; %% - The '%' character itself
-;
-; If specific format for Severity Level is defined, use that format.
-; Else, for a message that occurs during elaboration:
-;   -- Failure/Fatal message in VHDL region that is not a Process, and in
-;      certain non-VHDL regions, uses MessageFormatBreakLine;
-;   -- Failure/Fatal message otherwise uses MessageFormatBreak;
-;   -- Note/Warning/Error message uses MessageFormat.
-; Else, for a message that occurs during runtime and triggers a breakpoint because
-; of the BreakOnAssertion setting:
-;   -- if in a VHDL region that is not a Process, uses MessageFormatBreakLine;
-;   -- otherwise uses MessageFormatBreak.
-; Else (a runtime message that does not trigger a breakpoint) uses MessageFormat.
-;
+; %K - Kind of object path is to return: Instance, Signal, Process or Unknown
+; %P - Instance or Region path without leaf process
+; %F - File
+; %L - Line number of assertion or, if assertion is in a subprogram, line
+;      from which the call is made
+; %% - Print '%' character
+; If specific format for assertion level is defined, use its format.
+; If specific format is not defined for assertion level:
+; - and if failure occurs during elaboration, use MessageFormatBreakLine;
+; - and if assertion triggers a breakpoint (controlled by BreakOnAssertion
+;   level), use MessageFormatBreak;
+; - otherwise, use MessageFormat.
+; MessageFormatBreakLine = "** %S: %R\n   Time: %T  Iteration: %D  %K: %i File: %F Line: %L\n"
+; MessageFormatBreak     = "** %S: %R\n   Time: %T  Iteration: %D  %K: %i File: %F\n"
+; MessageFormat          = "** %S: %R\n   Time: %T  Iteration: %D%I\n"
 ; MessageFormatNote      = "** %S: %R\n   Time: %T  Iteration: %D%I\n"
 ; MessageFormatWarning   = "** %S: %R\n   Time: %T  Iteration: %D%I\n"
 ; MessageFormatError     = "** %S: %R\n   Time: %T  Iteration: %D  %K: %i File: %F\n"
 ; MessageFormatFail      = "** %S: %R\n   Time: %T  Iteration: %D  %K: %i File: %F\n"
 ; MessageFormatFatal     = "** %S: %R\n   Time: %T  Iteration: %D  %K: %i File: %F\n"
-; MessageFormatBreakLine = "** %S: %R\n   Time: %T  Iteration: %D  %K: %i File: %F Line: %L\n"
-; MessageFormatBreak     = "** %S: %R\n   Time: %T  Iteration: %D  %K: %i File: %F\n"
-; MessageFormat          = "** %S: %R\n   Time: %T  Iteration: %D%I\n"
 
 ; Error File - alternate file for storing error messages
 ; ErrorFile = error.log
 
+
 ; Simulation Breakpoint messages
 ; This flag controls the display of function names when reporting the location
-; where the simulator stops because of a breakpoint or fatal error.
-; Example with function name:    # Break in Process ctr at counter.vhd line 44
-; Example without function name: # Break at counter.vhd line 44
-; Default value is 1.
+; where the simulator stops do to a breakpoint or fatal error.
+; Example w/function name:  # Break in Process ctr at counter.vhd line 44
+; Example wo/function name: # Break at counter.vhd line 44
 ShowFunctions = 1
 
 ; Default radix for all windows and commands.
-; Radix may be one of: symbolic, ascii, binary, octal, decimal, hex, unsigned
-; Flags may be one of: enumnumeric, showbase
-DefaultRadix = hexadecimal
-DefaultRadixFlags = showbase
-; Set to 1 for make the signal_force VHDL and Verilog functions use the 
-; default radix when processing the force value. Prior to 10.2 signal_force
-; used the default radix, now it always uses symbolic unless value explicitly indicates base
-;SignalForceFunctionUseDefaultRadix = 0
+; Set to symbolic, ascii, binary, octal, decimal, hex, unsigned
+DefaultRadix = symbolic
 
 ; VSIM Startup command
 ; Startup = do startup.do
@@ -968,16 +681,7 @@ DefaultRadixFlags = showbase
 ; To explicitly disable auto save:
 ; ShutdownFile = --disable-auto-save
 
-; Run simulator in batch mode as if -batch were specified on the command line if none of -c, -gui, or -i specified.
-; Simulator runs in interactive mode as if -i were specified if this option is 0. Default is 0.
-; BatchMode = 1
-
-; File for saving command transcript when -batch option used
-; This option is ignored when -c, -gui, or -i options are used or if BatchMode above is zero
-; default is unset so command transcript only goes to stdout for better performance
-; BatchTranscriptFile = transcript
-
-; File for saving command transcript, this option is ignored when -batch option is used
+; File for saving command transcript
 TranscriptFile = transcript
 
 ; File for saving command history
@@ -1039,10 +743,6 @@ DatasetSeparator = :
 ; the default is to update and propagate in the same iteration.
 ; ForceSigNextIter = 1
 
-; Enable simulation statistics. Specify one or more arguments: 
-;                   [all,none,time,cmd,msg,perf,verbose,list,kb,eor]
-; Add '-' to disable specific statistics. Default is [time,cmd,msg].
-; Stats = time,cmd,msg
 
 ; If zero, open files when elaborated; otherwise, open files on
 ; first read or write.  Default is 0.
@@ -1057,13 +757,6 @@ UnbufferedOutput = 0
 ; setting for max file descriptors.
 ;   0 = unlimited
 ConcurrentFileLimit = 40
-
-; If nonzero, close files as soon as there is either an explicit call to
-; file_close, or when the file variable's scope is closed. When zero, a
-; file opened in append mode is not closed in case it is immediately
-; reopened in append mode; otherwise, the file will be closed at the
-; point it is reopened.
-; AppendClose = 1
 
 ; Control the number of hierarchical regions displayed as
 ; part of a signal name shown in the Wave window.
@@ -1083,17 +776,17 @@ ConcurrentFileLimit = 40
 ; and numeric_bit packages.
 ; NumericStdNoWarnings = 1
 
-; Use old-style (pre-6.6) VHDL FOR GENERATE statement iteration names
+; Use old-style (pre-6.6) VHDL FOR generate statement iteration names
 ; in the design hierarchy.
 ; This style is controlled by the value of the GenerateFormat
 ; value described next.  Default is to use new-style names, which
 ; comprise the generate statement label, '(', the value of the generate
 ; parameter, and a closing ')'.
-; Set this to 1 to use old-style names.
+; Uncomment this to use old-style names.
 ; OldVhdlForGenNames = 1
 
 ; Control the format of the old-style VHDL FOR generate statement region
-; name for each iteration.  Do not quote the value.
+; name for each iteration.  Do not quote it.
 ; The format string here must contain the conversion codes %s and %d,
 ; in that order, and no other conversion codes.  The %s represents
 ; the generate statement label; the %d represents the generate parameter value
@@ -1104,28 +797,6 @@ ConcurrentFileLimit = 40
 ; loop iterations for a particular immediately enclosing scope so that name
 ; lookup can function properly.  The default is %s__%d.
 ; GenerateFormat = %s__%d
-
-; Enable more efficient logging of VHDL Variables.
-; Logging VHDL variables without this enabled, while possible, is very
-; inefficient.  Enabling this will provide a more efficient logging methodology
-; at the expense of more memory usage.  By default this feature is disabled (0).
-; To enabled this feature, set this variable to 1.
-; VhdlVariableLogging = 1
-
-; Enable logging of VHDL access type variables and their designated objects.
-; This setting will allow both variables of an access type ("access variables")
-; and their designated objects ("access objects") to be logged.  Logging a
-; variable of an access type will automatically also cause the designated
-; object(s) of that variable to be logged as the simulation progresses.
-; Further, enabling this allows access objects to be logged by name.  By default
-; this feature is disabled (0).  To enable this feature, set this variable to 1.
-; Enabling this will automatically enable the VhdlVariableLogging feature also.
-; AccessObjDebug = 1
-
-; Make each VHDL package in a PDU has its own separate copy of the package instead
-; of sharing the package between PDUs. The default is to share packages.
-; To ensure that each PDU has its own set of packages, set this variable to 1.
-; VhdlSeparatePduPackage = 1
 
 ; Specify whether checkpoint files should be compressed.
 ; The default is 1 (compressed).
@@ -1182,53 +853,9 @@ ConcurrentFileLimit = 40
 
 ; PliCompatDefault = VPI_COMPATIBILITY_VERSION_1800v2005
 
-; Specify whether the Verilog system task $fopen or vpi_mcd_open()
-; will create directories that do not exist when opening the file
-; in "a" or "w" mode.
-; The default is 0 (do not create non-existent directories)
-; CreateDirForFileAccess = 1
-
 ; Specify default options for the restart command. Options can be one
 ; or more of: -force -nobreakpoint -nolist -nolog -nowave -noassertions
 ; DefaultRestartOptions = -force
-
-
-; Specify default UVM-aware debug options if the vsim -uvmcontrol switch is not used.
-; Valid options include: all, none, verbose, disable, struct, msglog, trlog, certe.
-; Options can be enabled by just adding the name, or disabled by prefixing the option with a "-".
-; The list of options must be delimited by commas, without spaces or tabs.
-; The default is UVMControl = struct
-
-; Some examples
-; To turn on all available UVM-aware debug features:
-; UVMControl = all
-; To turn on the struct window, mesage logging, and transaction logging:
-; UVMControl = struct,msglog,trlog
-; To turn on all options except certe:
-; UVMControl = all,-certe
-; To completely disable all UVM-aware debug functionality:
-; UVMControl = disable
-
-; Specify the WildcardFilter setting.
-; A space separated list of object types to be excluded when performing
-; wildcard matches with log, wave, etc commands.  The default value for this variable is:
-;   "Variable Constant Generic Parameter SpecParam Memory Assertion Cover Endpoint ScVariable CellInternal ImmediateAssert VHDLFile"
-; See "Using the WildcardFilter Preference Variable" in the documentation for
-; details on how to use this variable and for descriptions of the filter types.
-WildcardFilter = Variable Constant Generic Parameter SpecParam Memory Assertion Cover Endpoint ScVariable CellInternal ImmediateAssert VHDLFile
-
-; Specify the WildcardSizeThreshold setting.
-; This integer setting specifies the size at which objects will be excluded when 
-; performing wildcard matches with log, wave, etc commands.  Objects of size equal
-; to or greater than the WildcardSizeThreshold will be filtered out from the wildcard
-; matches.  The size is a simple calculation of number of bits or items in the object.  
-; The default value is 8k (8192).  Setting this value to 0 will disable the checking 
-; of object size against this threshold and allow all objects of any size to be logged.
-WildcardSizeThreshold = 8192
-
-; Specify whether warning messages are output when objects are filtered out due to the
-; WildcardSizeThreshold.  The default is 0 (no messages generated).
-WildcardSizeThresholdVerbose = 0
 
 ; Turn on (1) or off (0) WLF file compression.
 ; The default is 1 (compress WLF file).
@@ -1258,6 +885,11 @@ WildcardSizeThresholdVerbose = 0
 ; The default is 0 (do not delete WLF file when simulation ends).
 ; WLFDeleteOnQuit = 1
 
+; Specify whether or not a WLF file should be indexed during 
+; simulation.  If set to 0, the WLF file will not be indexed.
+; The default is 1, indexed the WLF file.
+; WLFIndex = 0
+
 ; Specify whether or not a WLF file should be optimized during 
 ; simulation.  If set to 0, the WLF file will not be optimized.
 ; The default is 1, optimize the WLF file.
@@ -1267,29 +899,20 @@ WildcardSizeThresholdVerbose = 0
 ; The default is vsim.wlf
 ; WLFFilename = vsim.wlf
 
-; Specify whether to lock the WLF file.
+; Specify whether to lock the WLF file using system lockd locking mechanism.
 ; Locking the file prevents other invocations of ModelSim/Questa tools from
 ; inadvertently overwriting the WLF file.
 ; The default is 1, lock the WLF file.
 ; WLFFileLock = 0
 
-; Specify the update interval for the WLF file in live simulation.
-; The interval is given in seconds.
-; The value is the smallest interval between WLF file updates.  The WLF file
-; will be flushed (updated) after (at least) the interval has elapsed, ensuring
-; that the data is correct when viewed from a separate viewer.
-; A value of 0 means that no updating will occur.
-; The default value is 10 seconds.
-; WLFUpdateInterval = 10
-
-; Specify the WLF cache size limit for WLF files.
-; The value is given in megabytes.  A value of 0 turns off the cache.
-; On non-Windows platforms the default WLFCacheSize setting is 2000 (megabytes).
-; On Windows, the default value is 1000 (megabytes) to help to avoid filling
-; process memory.
-; WLFSimCacheSize allows a different cache size to be set for a live simulation
-; WLF file, independent of post-simulation WLF file viewing.  If WLFSimCacheSize
-; is not set, it defaults to the WLFCacheSize value.
+; Specify the WLF reader cache size limit for each open WLF file.  
+; The size is giving in megabytes.  A value of 0 turns off the
+; WLF cache. 
+; WLFSimCacheSize allows a different cache size to be set for 
+; simulation WLF file independent of post-simulation WLF file 
+; viewing.  If WLFSimCacheSize is not set it defaults to the
+; WLFCacheSize setting.
+; The default WLFCacheSize setting is enabled to 256M per open WLF file.
 ; WLFCacheSize = 2000
 ; WLFSimCacheSize = 500
 
@@ -1302,21 +925,10 @@ WildcardSizeThresholdVerbose = 0
 ; The default is 1.
 ; WLFCollapseMode = 0
 
-; Specify whether WLF file logging can use threads on multi-processor machines.
-; If 0, no threads will be used; if 1, threads will be used if the system has
-; more than one processor.
+; Specify whether WLF file logging can use threads on multi-processor machines
+; if 0, no threads will be used, if 1, threads will be used if the system has
+; more than one processor
 ; WLFUseThreads = 1
-
-; Specify the size of objects that will trigger "large object" messages
-; at log/wave/list time.  The size calculation of the object is the same as that
-; used by the WildcardSizeThreshold. The default LargeObjectSize size is 500,000.
-; Setting LargeObjectSize to 0 will disable these messages.
-; LargeObjectSize = 500000
-
-; Specify the depth of stack frames returned by $stacktrace([level]).
-; This depth will be picked up when the optional 'level' argument
-; is not specified or its value is not a positive integer. 
-; StackTraceDepth = 100
 
 ; Turn on/off undebuggable SystemC type warnings. Default is on.
 ; ShowUndebuggableScTypeWarning = 0
@@ -1346,13 +958,6 @@ ScTimeUnit = ns
 ; on the amount of data on the sc_main() stack and the memory required
 ; to succesfully execute the longest function call chain of sc_main().
 ScMainStackSize = 10 Mb
-
-; Set SystemC thread stack size. The stack size is set as an integer
-; number followed by the unit which can be Kb(Kilo-byte), Mb(Mega-byte) or
-; Gb(Giga-byte). The stack size for sc_thread depends
-; on the amount of data on the sc_thread stack and the memory required
-; to succesfully execute the thread.
-; ScStackSize = 1 Mb
 
 ; Turn on/off execution of remainder of sc_main upon quitting the current
 ; simulation session. If the cumulative length of sc_main() in terms of 
@@ -1393,17 +998,13 @@ OnFinish = ask
 ; instead of the reactive region where they are normally printed.
 ; OnFinishPendingAssert = 1;
 
-; Print "simstats" result. Default is 0.
-; 0 == do not print simstats
-; 1 == print at end of simulation
-; 2 == print at end of each run command and end of simulation
+; Print "simstats" result at the end of simulation before shutdown.
+; If this is enabled, the simstats result will be printed out before shutdown.
+; The default is off.
 ; PrintSimStats = 1
 
 ; Assertion File - alternate file for storing VHDL/PSL/Verilog assertion messages
 ; AssertFile = assert.log
-
-; Enable assertion counts. Default is off.
-; AssertionCover = 1
 
 ; Run simulator in assertion debug mode. Default is off.
 ; AssertionDebug = 1
@@ -1415,9 +1016,8 @@ OnFinish = ask
 ; Any positive integer, -1 for infinity.
 ; AssertionLimit = 1
 
-; Turn on/off concurrent assertion pass log. Default is off. 
-; Assertion pass logging is only enabled when assertion is browseable 
-; and assertion debug is enabled.
+; Turn on/off PSL concurrent assertion pass log. Default is off.
+; The flag does not affect SVA
 ; AssertionPassLog = 1
 
 ; Turn on/off PSL concurrent assertion fail log. Default is on.
@@ -1469,19 +1069,7 @@ OnFinish = ask
 ; to participate in Assertion Coverage calculations, whether attempted or not.
 ; UnattemptedImmediateAssertions = 0
 
-; By default immediate covers participate in Coverage calculations 
-; whether they are attempted or not. This switch causes all unattempted 
-; immediate covers in the design to stop participating in Coverage 
-; calculations.
-; UnattemptedImmediateCovers = 0
 
-; By default pass action block is not executed for assertions on vacuous 
-; success. The following variable is provided to enable execution of 
-; pass action block on vacuous success. The following variable is only effective
-; if the user does not disable pass action block execution by using either 
-; system tasks or CLI. Also there is a performance penalty for enabling 
-; the following variable. 
-;AssertionEnableVacuousPassActionBlock = 1
 
 ; As per strict 1850-2005 PSL LRM, an always property can either pass
 ; or fail. However, by default, Questa reports multiple passes and
@@ -1515,11 +1103,7 @@ OnFinish = ask
 ; Turn on/off code coverage
 ; CodeCoverage = 0
 
-; This option applies to condition and expression coverage UDP tables. It
-; has no effect unless UDP is enabled for coverage with vcom/vlog/vopt -coverudp.
-; If this option is used and a match occurs in more than one row in the UDP table,
-; none of the counts for all matching rows is incremented. By default, counts are
-; incremented for all matching rows.
+; Count all code coverage condition and expression truth table rows that match.
 ; CoverCountAll = 1
 
 ; Turn off automatic inclusion of VHDL integers in toggle coverage. Default
@@ -1561,10 +1145,6 @@ OnFinish = ask
 ; toggle coverage. Default is 0.
 ; ToggleVlogEnumBits = 0
 
-; Turn off automatic inclusion of VHDL records in toggle coverage.
-; Default is to include them.
-; ToggleVHDLRecords = 0
-
 ; Limit the widths of registers automatically tracked for toggle coverage. Default is 128.
 ; For unlimited width, set to 0.
 ; ToggleWidthLimit = 128
@@ -1580,26 +1160,6 @@ OnFinish = ask
 ; Mode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
 ; Mode 3: 0L->1H & 1H->0L & all 'Z' transitions.
 ; ExtendedToggleMode = 3
-
-; Enable toggle statistics collection only for ports. Default is 0.
-; TogglePortsOnly = 1
-
-; Limit the counts that are tracked for Focussed Expression Coverage. When a bin has
-; reached this count, further tracking of the input patterns linked to it is ignored.
-; Default is 1. For unlimited counts, set to 0.
-; NOTE: Changing this value from its default value may affect simulation performance.
-; FecCountLimit = 1
-
-; Limit the counts that are tracked for UDP Coverage. When a bin has
-; reached this count, further tracking of the input patterns linked to it is ignored.
-; Default is 1. For unlimited counts, set to 0.
-; NOTE: Changing this value from its default value may affect simulation performance.
-; UdpCountLimit = 1
-
-; Control toggle coverage deglitching period. A period of 0, eliminates delta
-; cycle glitches. This is the default. The value of ToggleDeglitchPeriod needs to be either 
-; 0 or a time string that includes time units. Examples: 0 or 10.0ps or "10.0 ps".
-; ToggleDeglitchPeriod = 10.0ps
 
 ; Turn on/off all PSL/SVA cover directive enables.  Default is on.
 ; CoverEnable = 0
@@ -1642,10 +1202,6 @@ OnFinish = ask
 ; covergroups in GUI. Default is 0, which means ignore "cross_num_print_missing".
 ; UseSVCrossNumPrintMissing = 0
 
-; Specify the threshold of Coverpoint wildcard bin value range size, above which 
-; a warning will be triggered. The default is 4K -- 12 wildcard bits.
-; SVCoverpointWildCardBinValueSizeWarn = 4096
-
 ; Specify the override for the value of "strobe" option for the
 ; Covergroup Type. If not specified then value in "type_option.strobe"
 ; will be used. This is runtime option which forces "strobe" to
@@ -1676,13 +1232,15 @@ OnFinish = ask
 ; drives compliance with the clarified behavior in the IEEE 1800-2009 standard.
 ; SVCovergroup63Compatibility = 0
 
-; Enforce the default behavior of covergroup get_coverage() builtin function, GUI
-; and report. This variable sets the default value of type_option.merge_instances.
+; Enforce the 6.5 default behavior of covergroup get_coverage() builtin 
+; functions, GUI, and report. This setting changes the default values of
+; type_option.merge_instances to ensure the 6.5 default behavior if explicit
+; assignments are not made on type_option.merge_instances by the user.
 ; There are two vsim command line options, -cvgmergeinstances and 
 ; -nocvgmergeinstances to override this setting from vsim command line.
-; The default value of this variable is 0. This default
+; The default value of this variable from release 6.6 onwards is 0. This default
 ; drives compliance with the clarified behavior in the IEEE 1800-2009 standard.
-; SVCovergroupMergeInstancesDefault = 0
+; SvCovergroupMergeInstancesDefault = 1
 
 ; Enable or disable generation of more detailed information about the sampling
 ; of covergroup, cross, and coverpoints. It provides the details of the number
@@ -1695,31 +1253,15 @@ OnFinish = ask
 ; all Covergroups.
 ; MaxSVCoverpointBinsDesign = 2147483648 
 
-; Specify maximum number of Coverpoint bins in any instance of a Covergroup, default is 2^10 bins
-; MaxSVCoverpointBinsInst = 1048576
+; Specify maximum number of Coverpoint bins in any instance of a Covergroup
+; MaxSVCoverpointBinsInst = 2147483648
 
 ; Specify the maximum number of Cross bins in whole design for
 ; all Covergroups.
 ; MaxSVCrossBinsDesign = 2147483648 
 
-; Specify maximum number of Cross bins in any instance of a Covergroup, default is 2^16 bins
-; MaxSVCrossBinsInst = 67108864
-
-; Specify whether vsim will collect the coverage data of zero-weight coverage items or not.
-; By default, this variable is set 0, in which case option.no_collect setting will take effect.
-; If this variable is set to 1, all zero-weight coverage items will not be saved.
-; Note that the usage of vsim switch -cvgzwnocollect, if present, will override the setting 
-; of this variable.
-; CvgZWNoCollect = 1
-
-; Specify a space delimited list of double quoted TCL style
-; regular expressions which will be matched against the text of all messages.
-; If any regular expression is found to be contained within any message, the 
-; status for that message will not be propagated to the UCDB TESTSTATUS. 
-; If no match is detected, then the status will be propagated to the
-; UCDB TESTSTATUS. More than one such regular expression text is allowed, 
-; and each message text is compared for each regular expression in the list.
-; UCDBTestStatusMessageFilter = "Done with Test Bench" "Ignore .* message" 
+; Specify maximum number of Cross bins in any instance of a Covergroup
+; MaxSVCrossBinsInst = 2147483648
 
 ; Set weight for all PSL/SVA cover directives.  Default is 1.
 ; CoverWeight = 2
@@ -1738,17 +1280,13 @@ OnFinish = ask
 ; Windows or AIX platforms.
 ; GlobalSharedObjectList = example1.so example2.so example3.so
 
-; Generate the stub definitions for the undefined symbols in the shared libraries being
-; loaded in the simulation. When this flow is turned on, the undefined symbols will not
-; prevent vsim from loading. Calling undefined symbols at runtime will cause fatal error.
-; The valid arguments are: on, off, verbose. 
-;     on : turn on the automatic generation of stub definitions.
-;     off: turn off the flow. The undefined symbols will trigger an immediate load failure.
-;     verbose: Turn on the flow and report the undefined symbols for each shared library.
-; NOTE: This variable can be overriden with vsim switch "-undefsyms".
-; The default is off.
-;
-; UndefSyms = on
+; Run the 0in tools from within the simulator. 
+; Default is off.
+; ZeroIn = 1
+
+; Set the options to be passed to the 0in runtime tool.
+; Default value set to "".
+; ZeroInOptions = ""
 
 ; Initial seed for the random number generator of the root thread (SystemVerilog).
 ; NOTE: This variable can be overridden with the vsim "-sv_seed" command line switch.
@@ -1766,6 +1304,7 @@ OnFinish = ask
 ; involving bitwise logical relationships, the ACT solver engine can exhibit
 ; superior performance with constraint scenarios involving large numbers of
 ; random variables related via arithmetic operators (+, *, etc).
+; NOTE: At this time, the "auto" setting is equivalent to the "bdd" setting.
 ; NOTE: This variable can be overridden with the vsim "-solveengine" command
 ; line switch.
 ; The default value is "auto".
@@ -1782,45 +1321,19 @@ OnFinish = ask
 ; Specifies the maximum size that a dynamic array may be resized to by the
 ; solver. If the solver attempts to resize a dynamic array to a size greater
 ; than the specified limit, the solver will abort with an error.
-; The default value is 10000. A value of 0 indicates no limit.
-; SolveArrayResizeMax = 10000
+; The default value is 2000. A value of 0 indicates no limit.
+; SolveArrayResizeMax = 2000
 
 ; Error message severity when randomize() failure is detected (SystemVerilog).
 ; 0 = No error  1 = Warning  2 = Error  3 = Failure  4 = Fatal
 ; The default is 0 (no error).
 ; SolveFailSeverity = 0
 
-; Error message severity for suppressible errors that are detected in a
-; solve/before constraint.
-; NOTE: This variable can be overridden with the vsim "-solvebeforeerrorseverity"
-; command line switch.
-; 0 = No error  1 = Warning  2 = Error  3 = Failure  4 = Fatal
-; The default is 3 (failure).
-; SolveBeforeErrorSeverity = 3
-
 ; Enable/disable debug information for randomize() failures.
-; NOTE: This variable can be overridden with the vsim "-solvefaildebug" command
+; NOTE: This variable can be overridden with the vsim "-solvefaildbug" command
 ; line switch.
-; The default is 0 (disabled). Set to 1 to enable basic debug (with no
-; performance penalty). Set to 2 for enhanced debug (will result in slower
-; runtime performance).
+; The default is 0 (disabled). Set to 1 to enable.
 ; SolveFailDebug = 0
-
-; Upon encountering a randomize() failure, generate a simplified testcase that
-; will reproduce the failure. Optionally output the testcase to a file.
-; Testcases for 'no-solution' failures will only be produced if SolveFailDebug
-; is enabled (see above).
-; NOTE: This variable can be overridden with the vsim "-solvefailtestcase"
-; command line switch.
-; The default is OFF (do not generate a testcase). To enable testcase
-; generation, uncomment this variable. To redirect testcase generation to a
-; file, specify the name of the output file.
-; SolveFailTestcase = 
-
-; Specify solver timeout threshold (in seconds). randomize() will fail if the
-; CPU time required to evaluate any randset exceeds the specified timeout.
-; The default value is 500. A value of 0 will disable timeout failures. 
-; SolveTimeout = 500
 
 ; Specify the maximum size of the solution graph generated by the BDD solver.
 ; This value can be used to force the BDD solver to abort the evaluation of a
@@ -1838,19 +1351,80 @@ OnFinish = ask
 
 ; Specify the maximum number of tests that the ACT solver may evaluate before
 ; abandoning an attempt to solve a particular constraint scenario.
-; The default value is 2000000.  A value of 0 indicates no limit.
-; SolveACTMaxTests = 2000000
-
-; Specify the maximum number of operations that the ACT solver may perform 
-; before abandoning an attempt to solve a particular constraint scenario.  The 
-; value is specified in 1000000s of operations.
-; The default value is 10000. A value of 0 indicates no limit.
-; SolveACTMaxOps = 10000
+; The default value is 1000000.  A value of 0 indicates no limit.
+; SolveACTMaxTests = 1000000
 
 ; Specify the number of times the ACT solver will retry to evaluate a constraint
-; scenario that fails due to the SolveACTMax[Tests|Ops] threshold.
+; scenario that fails due to the SolveACTMaxTests threshold.
 ; The default value is 0 (no retry).
 ; SolveACTRetryCount = 0
+
+; SolveSpeculateLevel controls whether or not the solver performs speculation
+; during the evaluation of a constraint scenario.
+; Speculation is an attempt to partition complex constraint scenarios by
+; choosing a 'speculation' subset of the variables and constraints.  This 
+; 'speculation' set is solved independently of the remaining constraints. 
+; The solver then attempts to solve the remaining variables and constraints
+; (the 'dependent' set).  If this attempt fails, the solver backs up and
+; re-solves the 'speculation' set, then retries the 'dependent' set.
+; Valid values are:
+;    0 - no speculation
+;    1 - enable speculation that maintains LRM specified distribution
+;    2 - enable other speculation - may yield non-LRM distribution 
+; Currently, distribution constraints and solve-before constraints are 
+; used in selecting the 'speculation' sets for speculation level 1. Non-LRM 
+; compliant speculation includes random variables in condition expressions.
+; The default value is 0.
+; SolveSpeculateLevel = 0
+
+; By default, when speculation is enabled, the solver first tries to solve a
+; constraint scenario *without* speculation. If the solver fails to evaluate
+; the constraint scenario (due to time/memory limits) then the solver will
+; re-evaluate the constraint scenario with speculation. If SolveSpeculateFirst
+; is set to 1, the solver will skip the initial non-speculative attempt to
+; evaluate the constraint scenario. (Only applies when SolveSpeculateLevel is
+; non-zero)
+; The default value is 0.
+; SolveSpeculateFirst = 0
+
+; Specify the maximum bit width of a variable in a conditional expression that
+; may be considered as the basis for "conditional" speculation. (Only applies
+; when SolveSpeculateLevel=2)
+; The default value is 6.
+; SolveSpeculateMaxCondWidth = 6
+
+; Specify the maximum number of attempts to solve a speculative set of random
+; variables and constraints. Exceeding this limit will cause the solver to
+; abandon the current speculative set. (Only applies when SolveSpeculateLevel
+; is non-zero)
+; The default value is 100. 
+; SolveSpeculateMaxIterations = 100
+
+; Specifies whether to attempt speculation on solve-before constraints or
+; distribution constraints first. A value of 0 specifies that solve-before
+; constraints are attempted first as the basis for speculative randomization.
+; A value of 1 specifies that distribution constraints are attempted first
+; as the basis for speculative randomization.
+; The default value is 0.
+; SolveSpeculateDistFirst = 0
+
+; If the non-speculative BDD solver fails to evaluate a constraint scenario
+; (due to time/memory limits) then the solver can be instructed to automatically
+; re-evaluate the constraint scenario with the ACT solver engine. Set
+; SolveACTbeforeSpeculate to 1 to enable this feature.
+; The default value is 0 (do not re-evaluate with the ACT solver).
+; SolveACTbeforeSpeculate = 0
+
+; Use SolveFlags to specify options that will guide the behavior of the
+; constraint solver. These options may improve the performance of the
+; constraint solver for some testcases, and decrease the performance of the
+; constraint solver for others.
+; Valid flags are:
+;    i = disable bit interleaving for >, >=, <, <= constraints (BDD engine)
+;    n = disable bit interleaving for all constraints (BDD engine)
+;    r = reverse bit interleaving (BDD engine)
+; The default value is "" (no options).
+; SolveFlags =
 
 ; Specify random sequence compatiblity with a prior letter release. This 
 ; option is used to get the same random sequences during simulation as
@@ -1872,57 +1446,16 @@ OnFinish = ask
 ; deprecated behavior.  The default value is 0.
 ; DeprecatedEnvironmentVariableExpansion = 0
 
-; Specify the memory threshold for the System Verilog garbage collector.
-; The value is the number of megabytes of class objects that must accumulate
-; before the garbage collector is run.
-; The GCThreshold setting is used when class debug mode is disabled to allow
-; less frequent garbage collection and better simulation performance.
-; The GCThresholdClassDebug setting is used when class debug mode is enabled
-; to allow for more frequent garbage collection.
-; GCThreshold = 100
-; GCThresholdClassDebug = 5
-
 ; Turn on/off collapsing of bus ports in VCD dumpports output
 DumpportsCollapse = 1
 
 ; Location of Multi-Level Verification Component (MVC) installation. 
 ; The default location is the product installation directory.
-MvcHome = $MODEL_TECH/..
-
-; Location of InFact installation. The default is $MODEL_TECH/../../infact
-;
-; InFactHome = $MODEL_TECH/../../infact
+; MvcHome = $MODEL_TECH/...
 
 ; Initialize SystemVerilog enums using the base type's default value
 ; instead of the leftmost value.
 ; EnumBaseInit = 1
-
-; Suppress file type registration.  
-; SuppressFileTypeReg = 1
-
-; Controls SystemVerilog Language Extensions.  These options enable
-; some non-LRM compliant behavior.  Valid extensions are "cfce",
-; SvExtensions = cfce
-
-; Controls the formatting of '%p' and '%P' conversion specification, used in $display
-; and similar system tasks.
-; 1. SVPrettyPrintFlags=I<n><S|T> use <n> spaces(S) or tabs(T) per indentation level. 
-;    The 'I' flag when present causes relevant data types to be expanded and indented into
-;    a more readable format.
-;    (e.g. SVPrettyPrintFlags=I4S will cause 4 spaces to be used per indentation level).
-; 2. SVPrettyPrintFlags=L<numLines> limits the output to <numLines> lines.
-;    (e.g. SVPrettyPrintFlags=L20 will limit the output to 20 lines).
-; 3. SVPrettyPrintFlags=C<numChars> limits the output to <numChars> characters.
-;    (e.g. SVPrettyPrintFlags=C256 will limit the output to 256 characters).
-; 4. SVPrettyPrintFlags=F<numFields> limits the output to <numFields> of relevant datatypes
-;    (e.g. SVPrettyPrintFlags=F4 will limit the output to 4 fields of a structure).
-; 5. SVPrettyPrintFlags=E<numElements> limits the output to <numElements> of relevant datatypes
-;    (e.g. SVPrettyPrintFlags=E50 will limit the output to 50 elements of an array).
-; 6. SVPrettyPrintFlags=D<depth> suppresses the output of sub-elements below <depth>.
-;    (e.g. SVPrettyPrintFlags=D5 will suppresses the output of sub elements below a depth of 5).
-; 7. Items 1-6 above can be combined as a comma separated list.
-;    (e.g. SVPrettyPrintFlags=I4S,L20,C256,F4,E50,D5)
-; SVPrettyPrintFlags=I4S
 
 [lmc]
 ; The simulator's interface to Logic Modeling's SmartModel SWIFT software
@@ -1963,20 +1496,19 @@ libhm = $MODEL_TECH/libhm.sl
 ; suppress can be used to achieve +nowarn<CODE> functionality
 ; The format is: suppress = <CODE>,<msg number>,[<CODE>,<msg number>,...]
 ; Examples:
-suppress = 8780 ;an explanation can be had by running: verror 8780 
 ;   note = 3009
 ;   warning = 3033
 ;   error = 3010,3016
 ;   fatal = 3016,3033
-;   suppress = 3009,3016,3601
-;   suppress = 3009,CNNODP,3601,TFMPC
+;   suppress = 3009,3016,3043
+;   suppress = 3009,CNNODP,3043,TFMPC
 ;   suppress = 8683,8684
 ; The command verror <msg number> can be used to get the complete
 ; description of a message.
 
 ; Control transcripting of Verilog display system task messages and
 ; PLI/FLI print function call messages.  The system tasks include
-; $display[bho], $strobe[bho], $monitor[bho], and $write[bho].  They
+; $display[bho], $strobe[bho], Smonitor{bho], and $write[bho].  They
 ; also include the analogous file I/O tasks that write to STDOUT 
 ; (i.e. $fwrite or $fdisplay).  The PLI/FLI calls include io_printf,
 ; vpi_printf, mti_PrintMessage, and mti_PrintFormatted.  The default
@@ -1991,40 +1523,15 @@ suppress = 8780 ;an explanation can be had by running: verror 8780
 
 ; Control transcripting of elaboration/runtime messages not
 ; addressed by the displaymsgmode setting.  The default is to 
-; have messages appear only in the transcript.  The other settings
-; are to send messages to the wlf file only (messages that are
-; recorded in the wlf file can be viewed in the MsgViewer) or to both
-; the transcript and the wlf file. The valid values are
-;    tran  {transcript only (default)}
+; have messages appear in the transcript and recorded in the wlf
+; file (messages that are recorded in the wlf file can be viewed
+; in the MsgViewer).  The other settings are to send messages 
+; only to the transcript or only to the wlf file.  The valid 
+; values are
+;    both  {default}
+;    tran  {transcript only}
 ;    wlf   {wlf file only}
-;    both  {transcript and wlf file}
-; msgmode = tran
-
-; Controls number of displays of a particluar message
-; default value is 5
-; MsgLimitCount = 5
-
-[utils]
-; Default Library Type (while creating a library with "vlib")
-;  0 - legacy library using subdirectories for design units
-;  2 - flat library
-; DefaultLibType = 2
-
-; Flat Library Page Size (while creating a library with "vlib")
-; Set the size in bytes for flat library file pages.  Libraries containing
-; very large files may benefit from a larger value.
-; FlatLibPageSize = 8192
-
-; Flat Library Page Cleanup Percentage (while creating a library with "vlib")
-; Set the percentage of total pages deleted before library cleanup can occur.
-; This setting is applied together with FlatLibPageDeleteThreshold.
-; FlatLibPageDeletePercentage = 50
-
-; Flat Library Page Cleanup Threshold (while creating a library with "vlib")
-; Set the number of pages deleted before library cleanup can occur.
-; This setting is applied together with FlatLibPageDeletePercentage.
-; FlatLibPageDeleteThreshold = 1000
-
+; msgmode = both
 [Project]
 ; Warning -- Do not edit the project properties directly.
 ;            Property names are dynamic in nature and property
@@ -2035,70 +1542,70 @@ Project_Version = 6
 Project_DefaultLib = work
 Project_SortMethod = unused
 Project_Files_Count = 32
-Project_File_0 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Argmax.vhd
-Project_File_P_0 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 3 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_1 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/CreateWord.vhd
-Project_File_P_1 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 9 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_2 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_b_1.vhd
-Project_File_P_2 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 15 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_3 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_b_2.vhd
-Project_File_P_3 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550249164 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 16 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_4 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_b_3.vhd
-Project_File_P_4 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 17 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_5 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L1.vhd
-Project_File_P_5 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550247118 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 6 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_6 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_fsm.vhd
-Project_File_P_6 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243098 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 29 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_7 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/NeuronCombinator.vhd
-Project_File_P_7 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 14 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_8 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L2.vhd
-Project_File_P_8 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550253805 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 7 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_9 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SinglePort_RAM.vhd
-Project_File_P_9 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 23 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_10 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_1.vhd
-Project_File_P_10 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 18 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_11 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/FSM.vhd
-Project_File_P_11 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550252167 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 12 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_12 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L3.vhd
-Project_File_P_12 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550252314 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 8 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_13 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/FCNN_top_unit.vhd
-Project_File_P_13 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550253778 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 11 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_14 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_createword.vhd
-Project_File_P_14 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243098 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 28 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_15 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_argmax.vhd
-Project_File_P_15 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 27 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_16 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_2.vhd
-Project_File_P_16 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550253081 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 19 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_17 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Acc.vhd
-Project_File_P_17 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 1 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_18 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_3.vhd
-Project_File_P_18 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 20 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_19 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/generic_LUT_unit.vhd
-Project_File_P_19 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 13 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_20 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter.vhd
-Project_File_P_20 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 4 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_21 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_Ram_3.vhd
-Project_File_P_21 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 31 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_22 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L1.vhd
-Project_File_P_22 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 24 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_23 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/utils_pkg.vhd
-Project_File_P_23 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243098 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 0 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_24 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd
-Project_File_P_24 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 2 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_25 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/DualPort_RAM.vhd
-Project_File_P_25 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 10 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_26 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L2.vhd
-Project_File_P_26 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550248699 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 25 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_27 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L3.vhd
-Project_File_P_27 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 26 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_28 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/ShiftReg.vhd
-Project_File_P_28 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 22 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_29 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/RegWLoad.vhd
-Project_File_P_29 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 21 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_30 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_MNIST_FCNN.vhd
-Project_File_P_30 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 30 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_31 = C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_I_0.vhd
-Project_File_P_31 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550243097 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 5 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_0 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/NeuronCombinator.vhd
+Project_File_P_0 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549989589 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 13 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_1 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L2.vhd
+Project_File_P_1 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550506061 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 6 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_2 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SinglePort_RAM.vhd
+Project_File_P_2 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550504115 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 22 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_3 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L3.vhd
+Project_File_P_3 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550506084 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 7 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_4 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_createword.vhd
+Project_File_P_4 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549967826 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 27 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_5 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_argmax.vhd
+Project_File_P_5 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549988525 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 26 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_6 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_I_0.vhd
+Project_File_P_6 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550090993 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 4 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_7 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/generic_LUT_unit.vhd
+Project_File_P_7 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550504115 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 12 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_8 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_1.vhd
+Project_File_P_8 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549989960 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 14 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_9 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_2.vhd
+Project_File_P_9 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549989136 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 15 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_10 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Arg_el.vhd
+Project_File_P_10 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549987017 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 1 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_11 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/DualPort_RAM.vhd
+Project_File_P_11 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550504115 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 9 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_12 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_3.vhd
+Project_File_P_12 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549989148 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 16 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_13 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/ShiftReg.vhd
+Project_File_P_13 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550177125 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 21 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_14 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_fsm.vhd
+Project_File_P_14 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550086006 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 28 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_15 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/RegWLoad.vhd
+Project_File_P_15 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550087482 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 20 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_16 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_MNIST_FCNN.vhd
+Project_File_P_16 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550504115 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 29 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_17 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_1.vhd
+Project_File_P_17 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550184739 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 17 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_18 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FSM.vhd
+Project_File_P_18 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 1 cover_noshort 0 compile_to work compile_order 11 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_19 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd
+Project_File_P_19 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 1 cover_noshort 0 compile_to work compile_order 10 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_20 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_2.vhd
+Project_File_P_20 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 1 cover_noshort 0 compile_to work compile_order 18 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_21 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Acc.vhd
+Project_File_P_21 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550505833 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 0 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_22 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_3.vhd
+Project_File_P_22 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549989111 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 19 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_23 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Argmax.vhd
+Project_File_P_23 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549986987 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 2 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_24 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter.vhd
+Project_File_P_24 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549987039 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 3 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_25 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/CreateWord.vhd
+Project_File_P_25 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550177130 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 8 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_26 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_Ram_3.vhd
+Project_File_P_26 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1549988497 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 30 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_27 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/utils_pkg.vhd
+Project_File_P_27 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550504117 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 31 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_28 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd
+Project_File_P_28 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 1 cover_noshort 0 compile_to work compile_order 23 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_29 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd
+Project_File_P_29 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 1 cover_noshort 0 compile_to work compile_order 24 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_30 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd
+Project_File_P_30 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 1 cover_noshort 0 compile_to work compile_order 25 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_31 = /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L1.vhd
+Project_File_P_31 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1550506020 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 5 cover_nosub 0 dont_compile 0 vhdl_use93 2002
 Project_Sim_Count = 0
 Project_Folder_Count = 0
 Echo_Compile_Output = 0
@@ -2132,19 +1639,7 @@ LOGFILE_DoubleClick = Edit
 LOGFILE_CustomDoubleClick = 
 UCDB_DoubleClick = Edit
 UCDB_CustomDoubleClick = 
-TDB_DoubleClick = Edit
-TDB_CustomDoubleClick = 
-UPF_DoubleClick = Edit
-UPF_CustomDoubleClick = 
-PCF_DoubleClick = Edit
-PCF_CustomDoubleClick = 
 PROJECT_DoubleClick = Edit
 PROJECT_CustomDoubleClick = 
-VRM_DoubleClick = Edit
-VRM_CustomDoubleClick = 
-DEBUGDATABASE_DoubleClick = Edit
-DEBUGDATABASE_CustomDoubleClick = 
-DEBUGARCHIVE_DoubleClick = Edit
-DEBUGARCHIVE_CustomDoubleClick = 
-Project_Major_Version = 10
-Project_Minor_Version = 4
+Project_Major_Version = 6
+Project_Minor_Version = 6

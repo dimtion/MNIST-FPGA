@@ -1,11 +1,92 @@
-C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Argmax.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Argmax.vhd
+/homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L2.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L2.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/generic_LUT_unit.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/generic_LUT_unit.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_1.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_1.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L2.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity Argmax
--- Compiling architecture Behavioral of Argmax
+-- Compiling entity Counter_L2
+-- Compiling architecture Behavioral of Counter_L2
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_3.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_3.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SinglePort_RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SinglePort_RAM.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package std_logic_textio
+-- Loading package utils_pkg
+-- Compiling entity SinglePort_RAM
+-- Compiling architecture Behavioral of SinglePort_RAM
+
+} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_argmax.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_argmax.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity testbench_argmax
+-- Compiling architecture Testbench_argmax of testbench_argmax
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FSM.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FSM.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Arg_el
+-- Compiling architecture Behavioral of Arg_el
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_2.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_2.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/CreateWord.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/CreateWord.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_MNIST_FCNN.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_MNIST_FCNN.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package std_logic_textio
+-- Loading package utils_pkg
+-- Compiling entity testbench_MNIST_FCNN
+-- Compiling architecture Behavioral of testbench_MNIST_FCNN
+-- Loading entity FCNN_top_unit
 
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/CreateWord.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/CreateWord.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -29,6 +110,207 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity Ram_b_1
 -- Compiling architecture Behavioral of Ram_b_1
 
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_argmax.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_argmax.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_I_0.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_I_0.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_b_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_b_3.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package std_logic_textio
+-- Loading package utils_pkg
+-- Compiling entity Ram_b_3
+-- Compiling architecture Behavioral of Ram_b_3
+
+} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/NeuronCombinator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/NeuronCombinator.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity NeuronCombinator
+-- Compiling architecture Behavioral of NeuronCombinator
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/DualPort_RAM.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/DualPort_RAM.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_2.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package utils_pkg
+-- Compiling entity Ram_W_2
+-- Compiling architecture Behavioral of Ram_W_2
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L2.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SubNeurone_l2
+-- Compiling architecture Behavioral of SubNeurone_l2
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/utils_pkg.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/utils_pkg.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/RegWLoad.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/RegWLoad.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegWEn
+-- Compiling architecture Behavioral of RegWEn
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L1.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L1.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Argmax.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Argmax.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Argmax
+-- Compiling architecture Behavioral of Argmax
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/NeuronCombinator.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/NeuronCombinator.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SinglePort_RAM.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SinglePort_RAM.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L3.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L3.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_createword.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_createword.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L1.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Counter_L1
+-- Compiling architecture Behavioral of Counter_L1
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Arg_el.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Arg_el.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_2.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_b_2.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L3.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Counter_L3
+-- Compiling architecture Behavioral of Counter_L3
+
+} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Acc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Acc.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Acc
+-- Compiling architecture Behavioral of Acc
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/RegWLoad.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/RegWLoad.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_1.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_1.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/DualPort_RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/DualPort_RAM.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package std_logic_textio
+-- Loading package utils_pkg
+-- Compiling entity DualPort_RAM
+-- Compiling architecture rtl of DualPort_RAM
+
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_3.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_3.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_Ram_3.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_Ram_3.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/ShiftReg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/ShiftReg.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ShiftReg_0
+-- Compiling architecture Behavioral of ShiftReg_0
+
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_b_2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_b_2.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -42,37 +324,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity Ram_b_2
 -- Compiling architecture Behavioral of Ram_b_2
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_b_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_b_3.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package ATTRIBUTES
--- Loading package std_logic_misc
--- Loading package std_logic_textio
--- Loading package utils_pkg
--- Compiling entity Ram_b_3
--- Compiling architecture Behavioral of Ram_b_3
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L1.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Counter_L1
--- Compiling architecture Behavioral of Counter_L1
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L2.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Counter_L2
--- Compiling architecture Behavioral of Counter_L2
-
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_fsm.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_fsm.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -82,24 +333,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity testbench_fsm
 -- Compiling architecture tb_fsm of testbench_fsm
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/NeuronCombinator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/NeuronCombinator.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity NeuronCombinator
--- Compiling architecture Behavioral of NeuronCombinator
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_L3.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Counter_L3
--- Compiling architecture Behavioral of Counter_L3
-
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/FSM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/FSM.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -108,19 +341,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading package NUMERIC_STD
 -- Compiling entity FSM
 -- Compiling architecture Behavioral of FSM
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SinglePort_RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SinglePort_RAM.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package ATTRIBUTES
--- Loading package std_logic_misc
--- Loading package std_logic_textio
--- Loading package utils_pkg
--- Compiling entity SinglePort_RAM
--- Compiling architecture Behavioral of SinglePort_RAM
 
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_1.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -135,19 +355,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity Ram_W_1
 -- Compiling architecture Behavioral of Ram_W_1
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_2.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Loading package ATTRIBUTES
--- Loading package std_logic_misc
--- Loading package utils_pkg
--- Compiling entity Ram_W_2
--- Compiling architecture Behavioral of Ram_W_2
-
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_createword.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_createword.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -157,25 +364,12 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity testbench_createword
 -- Compiling architecture Testbench_createword of testbench_createword
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_argmax.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_argmax.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity testbench_argmax
--- Compiling architecture Testbench_argmax of testbench_argmax
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/ShiftReg.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/ShiftReg.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Acc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Acc.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Acc
--- Compiling architecture Behavioral of Acc
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_3.vhd
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Ram_W_3.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -210,7 +404,12 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity Counter
 -- Compiling architecture Behavioral of Counter
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_Ram_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_Ram_3.vhd
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_fsm.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_fsm.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_Ram_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_Ram_3.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -219,7 +418,17 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity testbench_Ram_W_3
 -- Compiling architecture tb_ram_3 of testbench_Ram_W_3
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L1.vhd
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_MNIST_FCNN.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_MNIST_FCNN.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Acc.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Acc.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L1.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -241,38 +450,12 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling package body utils_pkg
 -- Loading package utils_pkg
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Arg_el
--- Compiling architecture Behavioral of Arg_el
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Argmax.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Argmax.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/DualPort_RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/DualPort_RAM.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package ATTRIBUTES
--- Loading package std_logic_misc
--- Loading package std_logic_textio
--- Loading package utils_pkg
--- Compiling entity DualPort_RAM
--- Compiling architecture rtl of DualPort_RAM
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L2.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SubNeurone_l2
--- Compiling architecture Behavioral of SubNeurone_l2
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L3.vhd
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/SubNeurone_L3.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -281,40 +464,12 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity SubNeurone_l3
 -- Compiling architecture Behavioral of SubNeurone_l3
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/ShiftReg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/ShiftReg.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ShiftReg_0
--- Compiling architecture Behavioral of ShiftReg_0
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/RegWLoad.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/RegWLoad.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity RegWEn
--- Compiling architecture Behavioral of RegWEn
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_MNIST_FCNN.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_MNIST_FCNN.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package MATH_REAL
--- Loading package ATTRIBUTES
--- Loading package std_logic_misc
--- Loading package std_logic_textio
--- Loading package utils_pkg
--- Compiling entity testbench_MNIST_FCNN
--- Compiling architecture Behavioral of testbench_MNIST_FCNN
--- Loading entity FCNN_top_unit
-
-} {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_I_0.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_I_0.vhd
+} {3.0 4.0} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_I_0.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Counter_I_0.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -323,4 +478,9 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity Counter_Clean
 -- Compiling architecture Behavioral of Counter_Clean
 
-} {} {}}
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd {0 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+** Error: (vcom-19) Failed to access library 'work' at "work".
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}}

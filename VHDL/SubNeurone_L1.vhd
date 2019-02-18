@@ -38,18 +38,18 @@ signal mult_d : MULT_X;
 type ADDS_1 is array(0 to 13) of signed(14 downto 0);
 type ADDS_2 is array(0 to 6) of signed(15 downto 0);
 type ADDS_3 is array(0 to 3) of signed(16 downto 0);
-type ADDS_4 is array(0 to 1) of signed(17 downto 0);
+type ADDS_4 is array(0 to 1) of signed(16 downto 0);
 
 signal add_1 : ADDS_1;
 signal add_2 : ADDS_2;
 signal add_3 : ADDS_3;
 signal add_4 : ADDS_4;
-signal add_5 : signed(17 downto 0);
-signal l_add_5 : std_logic_vector(17 downto 0);
-signal l_out_acc : std_logic_vector(17 downto 0);
+signal add_5 : signed(16 downto 0);
+signal l_add_5 : std_logic_vector(16 downto 0);
+signal l_out_acc : std_logic_vector(16 downto 0);
 
-signal add_b : signed(17 downto 0);
-signal add_r : signed(17 downto 0);
+signal add_b : signed(16 downto 0);
+signal add_r : signed(16 downto 0);
 
 signal en_Acc : std_logic;
 
@@ -57,7 +57,7 @@ begin
 
 	Acc_1 : Acc 
 		generic map (
-			size => 18
+			size => 17
 		)
 		port map (
 			I_clk 	=> I_clk,
@@ -98,16 +98,16 @@ process(add_2)
 begin
 --additionneur 3eme etage
     add_3_loop : for index_a3 in 0 to 2 loop
-	    add_3(index_a3) <= resize(add_2(Index_a3*2),17) + resize(add_2(Index_a3*2+1),17);
+	    add_3(index_a3) <= resize(add_2(Index_a3*2),16) + resize(add_2(Index_a3*2+1),16);
     end loop add_3_loop;
-    add_3(3) <= resize(add_2(6),17);
+    add_3(3) <= resize(add_2(6),16);
 end process;
 
 process(add_3)
 begin
 -- additionneur 4eme etage
-    add_4(0) <= resize(add_3(0),18) + resize(add_3(1),18);
-    add_4(1) <= resize(add_3(2),18) + resize(add_3(3),18);
+    add_4(0) <= resize(add_3(0),16) + resize(add_3(1),16);
+    add_4(1) <= resize(add_3(2),16) + resize(add_3(3),16);
 end process;
 
 process(add_4)
@@ -119,12 +119,12 @@ end process;
 -- biais 
 process (I_biais,out_acc)
 begin
-	add_b <= out_acc + resize(signed(I_biais),18);
+	add_b <= out_acc + SHIFT_LEFT(resize(signed(I_biais),18),4);
 end process;
 --relu
 process(add_b) 
 begin
-	if (add_b(17)='0') then 
+	if (add_b(16)='0') then 
 		add_r <= add_b;
 	else 
 		add_r <= (others => '0'); 
