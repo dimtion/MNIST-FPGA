@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/ML/FCNN_top_unit.xst" -ofn "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/ML/FCNN_top_unit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7z020-clg484-3 FCNN_top_unit.ngc FCNN_top_unit.ngd  
+map -intstyle ise -p xc7z020-clg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o FCNN_top_unit_map.ncd FCNN_top_unit.ngd FCNN_top_unit.pcf 
+par -w -intstyle ise -ol high -mt off FCNN_top_unit_map.ncd FCNN_top_unit.ncd FCNN_top_unit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FCNN_top_unit.twx FCNN_top_unit.ncd -o FCNN_top_unit.twr FCNN_top_unit.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FCNN_top_unit.ucf -p xc7z020-clg484-3 FCNN_top_unit.ngc FCNN_top_unit.ngd  
+map -intstyle ise -p xc7z020-clg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o FCNN_top_unit_map.ncd FCNN_top_unit.ngd FCNN_top_unit.pcf 
+par -w -intstyle ise -ol high -mt off FCNN_top_unit_map.ncd FCNN_top_unit.ncd FCNN_top_unit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FCNN_top_unit.twx FCNN_top_unit.ncd -o FCNN_top_unit.twr FCNN_top_unit.pcf -ucf FCNN_top_unit.ucf 

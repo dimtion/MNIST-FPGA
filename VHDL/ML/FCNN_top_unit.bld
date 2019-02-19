@@ -1,0 +1,37 @@
+Release 14.7 ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/xilinx/ise147/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
+-intstyle ise -dd _ngo -nt timestamp -uc FCNN_top_unit.ucf -p xc7z020-clg484-3
+FCNN_top_unit.ngc FCNN_top_unit.ngd
+
+Reading NGO file
+"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/ML/FCNN_top_unit.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "FCNN_top_unit.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 480124 kilobytes
+
+Writing NGD file "FCNN_top_unit.ngd" ...
+Total REAL time to NGDBUILD completion:  16 sec
+Total CPU time to NGDBUILD completion:   14 sec
+
+Writing NGDBUILD log file "FCNN_top_unit.bld"...

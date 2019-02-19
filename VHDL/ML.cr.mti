@@ -76,6 +76,14 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity testbench_argmax
 -- Compiling architecture Testbench_argmax of testbench_argmax
 
+} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FSM.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/FSM.vhd
+Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity fsm
+-- Compiling architecture behavioral of fsm
+
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/Arg_el.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -250,14 +258,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading package NUMERIC_STD
 -- Compiling entity RegWEn
 -- Compiling architecture Behavioral of RegWEn
-
-} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd
-Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package numeric_std
--- Compiling entity subneurone_l2
--- Compiling architecture behavioral of subneurone_l2
 
 } {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L1.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L1.vhd
 Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
@@ -536,21 +536,6 @@ Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
 -- Loading package numeric_std
 -- Compiling entity testbench_fsm
 -- Compiling architecture tb_fsm of testbench_fsm
-
-} {} {}} /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_MNIST_FCNN.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/plcamill/Filiere1/UV404/MNIST-FPGA/VHDL/testbench_MNIST_FCNN.vhd
-Model Technology ModelSim SE vcom 6.6b Compiler 2010.05 May 21 2010
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package numeric_std
--- Loading package math_real
--- Loading package attributes
--- Loading package std_logic_misc
--- Loading package textio
--- Loading package std_logic_textio
--- Loading package utils_pkg
--- Compiling entity testbench_mnist_fcnn
--- Compiling architecture behavioral of testbench_mnist_fcnn
--- Loading entity fcnn_top_unit
 
 } {} {}} C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_Ram_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Paul-Louis/Desktop/Cours/Filiere1/404/Implem/MNIST-FPGA-master/VHDL/testbench_Ram_3.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
