@@ -8,5 +8,11 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Counter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Counter_L1.vhd&quot; into library work</arg>
+</msg>
+
 </messages>
 

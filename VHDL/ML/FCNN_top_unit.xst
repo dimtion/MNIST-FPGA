@@ -7,7 +7,7 @@ run
 -p xc7z020-3-clg484
 -top FCNN_top_unit
 -opt_mode Speed
--opt_level 1
+-opt_level 2
 -power NO
 -iuc NO
 -keep_hierarchy No
@@ -42,11 +42,13 @@ run
 -max_fanout 100000
 -bufg 32
 -register_duplication YES
--register_balancing No
+-register_balancing Yes
+-move_first_stage YES
+-move_last_stage YES
 -optimize_primitives NO
 -use_clock_enable Auto
 -use_sync_set Auto
 -use_sync_reset Auto
--iob Auto
+-iob True
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5

@@ -5,201 +5,94 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="LIT" num="701" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;I_clk&quot;</arg> has an undefined IOSTANDARD.
+<msg type="warning" file="LIT" num="701" delta="old" ><arg fmt="%s" index="1">PAD symbol &quot;I_clk&quot;</arg> has an undefined IOSTANDARD.
 </msg>
 
-<msg type="warning" file="LIT" num="702" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;I_clk&quot;</arg> is not constrained (LOC) to a specific location.
+<msg type="warning" file="LIT" num="702" delta="old" ><arg fmt="%s" index="1">PAD symbol &quot;I_clk&quot;</arg> is not constrained (LOC) to a specific location.
 </msg>
 
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">Ram_I/Mram_mem382/SPO</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">Ram_I/Mram_mem223/SPO</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">1</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">Ram_I/Mram_mem381/SPO</arg>
+<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">223</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">Ram_I/Mram_mem222/SPO,
+Ram_I/Mram_mem224/SPO,
+Ram_I/Mram_mem221/SPO,
+Ram_I/Mram_mem220/SPO,
+Ram_I/Mram_mem219/SPO</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 
-<msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
-<msg type="info" file="Pack" num="1716" delta="new" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+<msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
 </msg>
 
-<msg type="info" file="Pack" num="1720" delta="new" >Initializing voltage to <arg fmt="%0.3f" index="1">0.950</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">0.950</arg> to <arg fmt="%0.3f" index="3">1.050</arg> Volts)
+<msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">0.950</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">0.950</arg> to <arg fmt="%0.3f" index="3">1.050</arg> Volts)
 </msg>
 
-<msg type="info" file="Map" num="215" delta="new" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+<msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
 </msg>
 
-<msg type="info" file="Pack" num="1650" delta="new" >Map created a placed design.
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="2500" delta="new" >This design does not have a PS7 block. Instantiate the PS7 block in order to ensure proper fabric tie-offs and correct operation of the processing_system7.
+<msg type="warning" file="PhysDesignRules" num="2500" delta="old" >This design does not have a PS7 block. Instantiate the PS7 block in order to ensure proper fabric tie-offs and correct operation of the processing_system7.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem17_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_aync_rst</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem19_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_pixel&lt;4&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem20_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_pixel&lt;3&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem18_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_pixel&lt;2&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem16_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_pixel&lt;1&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem15_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_pixel&lt;0&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem21_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_pixel&lt;7&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem14_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_pixel&lt;6&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem12_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_pixel&lt;5&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem22_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_ackPixel</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem13_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">O_requestPixel</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem23_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">I_clk</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem11_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">O_classif&lt;0&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem28_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">O_classif&lt;1&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem27_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">O_classif&lt;2&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem24_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">O_classif&lt;3&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem25_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">O_classifValid</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem37_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem36_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem26_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem35_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem10_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem33_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem34_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem9_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem8_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem7_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem6_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem5_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem4_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem32_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem3_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem31_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem30_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem2_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem1_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">Ram_I/Mram_mem29_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_aync_rst</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_pixel&lt;4&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_pixel&lt;3&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_pixel&lt;2&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_pixel&lt;1&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_pixel&lt;0&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_pixel&lt;7&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_pixel&lt;6&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_pixel&lt;5&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_ackPixel</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">O_requestPixel</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">I_clk</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">O_classif&lt;0&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">O_classif&lt;1&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">O_classif&lt;2&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">O_classif&lt;3&gt;</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">O_classifValid</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="2452" delta="new" >The IOB <arg fmt="%s" index="1">O_readyClassif</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
+<msg type="warning" file="PhysDesignRules" num="2452" delta="old" >The IOB <arg fmt="%s" index="1">O_readyClassif</arg> is either not constrained (LOC) to a specific location and/or has an undefined I/O Standard (IOSTANDARD). This condition may seriously affect the device and will be an error in bitstream creation. It should be corrected by properly specifying the pin location and I/O Standard.
 </msg>
 
 </messages>

@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: FCNN_top_unit.prj
@@ -66,7 +66,7 @@ Resource Sharing                   : YES
 Asynchronous To Synchronous        : NO
 Shift Register Minimum Size        : 2
 Use DSP Block                      : Auto
-Automatic Register Balancing       : No
+Automatic Register Balancing       : Yes
 
 ---- Target Options
 LUT Combining                      : Auto
@@ -75,16 +75,18 @@ Add IO Buffers                     : YES
 Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 32
 Register Duplication               : YES
+Move First FlipFlop Stage          : YES
+Move Last FlipFlop Stage           : YES
 Optimize Instantiated Primitives   : NO
 Use Clock Enable                   : Auto
 Use Synchronous Set                : Auto
 Use Synchronous Reset              : Auto
-Pack IO Registers into IOBs        : Auto
+Pack IO Registers into IOBs        : True
 Equivalent register Removal        : YES
 
 ---- General Options
 Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Effort                : 2
 Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
@@ -3365,6 +3367,9 @@ Optimizing unit <NeuronCombinator_3> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block FCNN_top_unit, actual ratio is 10.
+Replicating register Fsm_top/SR_Present_FSM_FFd10 to handle IOB=TRUE attribute
+Replicating register Fsm_top/SR_Present_FSM_FFd1 to handle IOB=TRUE attribute
+
 
 Final Macro Processing ...
 
@@ -3372,8 +3377,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 3023
- Flip-Flops                                            : 3023
+# Registers                                            : 3025
+ Flip-Flops                                            : 3025
 
 =========================================================================
 
@@ -3396,26 +3401,25 @@ Top Level Output File Name         : FCNN_top_unit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 6175
+# BELS                             : 6174
 #      GND                         : 1
 #      INV                         : 1
 #      LUT2                        : 1042
 #      LUT3                        : 42
-#      LUT4                        : 133
-#      LUT5                        : 196
-#      LUT6                        : 2606
+#      LUT4                        : 134
+#      LUT5                        : 198
+#      LUT6                        : 2602
 #      MUXCY                       : 987
 #      MUXF7                       : 121
 #      VCC                         : 1
 #      XORCY                       : 1045
-# FlipFlops/Latches                : 3023
-#      FDC                         : 2053
+# FlipFlops/Latches                : 3025
+#      FDC                         : 2055
 #      FDCE                        : 889
 #      FDE                         : 80
 #      FDP                         : 1
-# RAMS                             : 39
-#      RAM32M                      : 37
-#      RAM32X1D                    : 2
+# RAMS                             : 224
+#      RAM32X1D                    : 224
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 17
@@ -3431,22 +3435,23 @@ Selected Device : 7z020clg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3023  out of  106400     2%  
- Number of Slice LUTs:                 4172  out of  53200     7%  
-    Number used as Logic:              4020  out of  53200     7%  
-    Number used as Memory:              152  out of  17400     0%  
-       Number used as RAM:              152
+ Number of Slice Registers:            3011  out of  106400     2%  
+ Number of Slice LUTs:                 4467  out of  53200     8%  
+    Number used as Logic:              4019  out of  53200     7%  
+    Number used as Memory:              448  out of  17400     2%  
+       Number used as RAM:              448
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   5860
-   Number with an unused Flip Flop:    2837  out of   5860    48%  
-   Number with an unused LUT:          1688  out of   5860    28%  
-   Number of fully used LUT-FF pairs:  1335  out of   5860    22%  
+ Number of LUT Flip Flop pairs used:   5979
+   Number with an unused Flip Flop:    2968  out of   5979    49%  
+   Number with an unused LUT:          1512  out of   5979    25%  
+   Number of fully used LUT-FF pairs:  1499  out of   5979    25%  
    Number of unique control sets:        17
 
 IO Utilization: 
  Number of IOs:                          18
  Number of bonded IOBs:                  18  out of    200     9%  
+    IOB Flip Flops/Latches:              14
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -3473,7 +3478,7 @@ Clock Information:
 -----------------------------------+-------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                     | Load  |
 -----------------------------------+-------------------------------------------+-------+
-I_clk                              | BUFGP                                     | 3130  |
+I_clk                              | BUFGP                                     | 3317  |
 N1                                 | NONE(Madd_O_W_N_1[10]_GND_8_o_add_13_OUT1)| 1     |
 -----------------------------------+-------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -3488,7 +3493,7 @@ Speed Grade: -3
 
    Minimum period: 7.439ns (Maximum Frequency: 134.418MHz)
    Minimum input arrival time before clock: 1.240ns
-   Maximum output required time after clock: 0.521ns
+   Maximum output required time after clock: 0.515ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -3498,7 +3503,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'I_clk'
   Clock period: 7.439ns (frequency: 134.418MHz)
-  Total number of paths / destination ports: 57062742 / 6613
+  Total number of paths / destination ports: 57071245 / 8835
 -------------------------------------------------------------------------
 Delay:               7.439ns (Levels of Logic = 7)
   Source:            Counter_L1_1/Counter_40/temp_value_5 (FF)
@@ -3525,7 +3530,7 @@ Delay:               7.439ns (Levels of Logic = 7)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'I_clk'
-  Total number of paths / destination ports: 3073 / 3073
+  Total number of paths / destination ports: 3076 / 3076
 -------------------------------------------------------------------------
 Offset:              1.240ns (Levels of Logic = 2)
   Source:            I_aync_rst (PAD)
@@ -3537,7 +3542,7 @@ Offset:              1.240ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O           121   0.000   0.400  I_aync_rst_IBUF (I_aync_rst_IBUF)
-     INV:I->O           2943   0.053   0.533  Counter_L2_1/Counter_2/I_rst_inv1_INV_0 (Argmax_1/Arg_el_1_1/I_rst_inv)
+     INV:I->O           2945   0.053   0.533  Counter_L2_1/Counter_2/I_rst_inv1_INV_0 (Argmax_1/Arg_el_1_1/I_rst_inv)
      FDCE:CLR                  0.255          Argmax_1/Arg_el_4_1/Reg_I/O_value_0
     ----------------------------------------
     Total                      1.240ns (0.308ns logic, 0.932ns route)
@@ -3547,20 +3552,20 @@ Offset:              1.240ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'I_clk'
   Total number of paths / destination ports: 7 / 7
 -------------------------------------------------------------------------
-Offset:              0.521ns (Levels of Logic = 1)
-  Source:            Fsm_top/SR_Present_FSM_FFd10 (FF)
-  Destination:       O_requestPixel (PAD)
+Offset:              0.515ns (Levels of Logic = 1)
+  Source:            Fsm_top/SR_Present_FSM_FFd1_1 (FF)
+  Destination:       O_readyClassif (PAD)
   Source Clock:      I_clk rising
 
-  Data Path: Fsm_top/SR_Present_FSM_FFd10 to O_requestPixel
+  Data Path: Fsm_top/SR_Present_FSM_FFd1_1 to O_readyClassif
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.232   0.289  Fsm_top/SR_Present_FSM_FFd10 (Fsm_top/SR_Present_FSM_FFd10)
-     OBUF:I->O                 0.000          O_requestPixel_OBUF (O_requestPixel)
+     FDC:C->Q              2   0.232   0.283  Fsm_top/SR_Present_FSM_FFd1_1 (Fsm_top/SR_Present_FSM_FFd1_1)
+     OBUF:I->O                 0.000          O_readyClassif_OBUF (O_readyClassif)
     ----------------------------------------
-    Total                      0.521ns (0.232ns logic, 0.289ns route)
-                                       (44.5% logic, 55.5% route)
+    Total                      0.515ns (0.232ns logic, 0.283ns route)
+                                       (45.0% logic, 55.0% route)
 
 =========================================================================
 
@@ -3580,12 +3585,12 @@ N1             |    4.398|         |         |         |
 
 
 Total REAL time to Xst completion: 654.00 secs
-Total CPU time to Xst completion: 644.55 secs
+Total CPU time to Xst completion: 644.99 secs
  
 --> 
 
 
-Total memory usage is 624024 kilobytes
+Total memory usage is 630524 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  206 (   0 filtered)

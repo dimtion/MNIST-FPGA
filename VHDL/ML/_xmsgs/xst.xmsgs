@@ -5,899 +5,899 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/ShiftReg.vhd" Line 62: <arg fmt="%s" index="1">reg_o</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/ShiftReg.vhd" Line 62: <arg fmt="%s" index="1">reg_o</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/ShiftReg.vhd" Line 69: <arg fmt="%s" index="1">reg_o</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/ShiftReg.vhd" Line 69: <arg fmt="%s" index="1">reg_o</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_1.vhd" Line 63: <arg fmt="%s" index="1">o_l_1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_1.vhd" Line 63: <arg fmt="%s" index="1">o_l_1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 182: <arg fmt="%s" index="1">mult_d_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 182: <arg fmt="%s" index="1">mult_d_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 190: <arg fmt="%s" index="1">add_1_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 190: <arg fmt="%s" index="1">add_1_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 198: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 198: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 206: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 206: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 207: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 207: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 213: <arg fmt="%s" index="1">add_4_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 213: <arg fmt="%s" index="1">add_4_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 179: <arg fmt="%s" index="1">mult_d_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 179: <arg fmt="%s" index="1">mult_d_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 187: <arg fmt="%s" index="1">add_1_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 187: <arg fmt="%s" index="1">add_1_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 194: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 194: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 195: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 195: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 196: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 196: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 202: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 202: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 203: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 203: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 209: <arg fmt="%s" index="1">add_4_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 209: <arg fmt="%s" index="1">add_4_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_2.vhd" Line 63: <arg fmt="%s" index="1">o_l_1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_2.vhd" Line 63: <arg fmt="%s" index="1">o_l_1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 174: <arg fmt="%s" index="1">mult_d_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 174: <arg fmt="%s" index="1">mult_d_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 182: <arg fmt="%s" index="1">add_1_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 182: <arg fmt="%s" index="1">add_1_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 189: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 189: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 190: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 190: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 191: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 191: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 197: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 197: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 198: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 198: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 203: <arg fmt="%s" index="1">add_4_r</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 203: <arg fmt="%s" index="1">add_4_r</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_3.vhd" Line 63: <arg fmt="%s" index="1">o_l_1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_3.vhd" Line 63: <arg fmt="%s" index="1">o_l_1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Arg_el.vhd" Line 69: <arg fmt="%s" index="1">i_i1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Arg_el.vhd" Line 69: <arg fmt="%s" index="1">i_i1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Arg_el.vhd" Line 72: <arg fmt="%s" index="1">i_i2</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Arg_el.vhd" Line 72: <arg fmt="%s" index="1">i_i2</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd</arg>&quot; line <arg fmt="%d" index="2">114</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">A2[6].reg_a2</arg>&gt; of block &lt;<arg fmt="%s" index="4">RegWEn</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">SubNeurone_l1</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd</arg>&quot; line <arg fmt="%d" index="2">114</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">A2[6].reg_a2</arg>&gt; of block &lt;<arg fmt="%s" index="4">RegWEn</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">SubNeurone_l1</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%d" index="2">479</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Ram_B_1_1</arg>&gt; of block &lt;<arg fmt="%s" index="4">Ram_b_1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">FCNN_top_unit</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%d" index="2">479</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Ram_B_1_1</arg>&gt; of block &lt;<arg fmt="%s" index="4">Ram_b_1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">FCNN_top_unit</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%d" index="2">586</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Ram_B_2_1</arg>&gt; of block &lt;<arg fmt="%s" index="4">Ram_b_2</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">FCNN_top_unit</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%d" index="2">586</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Ram_B_2_1</arg>&gt; of block &lt;<arg fmt="%s" index="4">Ram_b_2</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">FCNN_top_unit</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%d" index="2">642</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Ram_b_3_1</arg>&gt; of block &lt;<arg fmt="%s" index="4">Ram_b_3</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">FCNN_top_unit</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%d" index="2">642</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Ram_b_3_1</arg>&gt; of block &lt;<arg fmt="%s" index="4">Ram_b_3</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">FCNN_top_unit</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%s" index="2">479</arg>: Output port &lt;<arg fmt="%s" index="3">data_r</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Ram_B_1_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%s" index="2">479</arg>: Output port &lt;<arg fmt="%s" index="3">data_r</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Ram_B_1_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%s" index="2">586</arg>: Output port &lt;<arg fmt="%s" index="3">data_r</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Ram_B_2_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%s" index="2">586</arg>: Output port &lt;<arg fmt="%s" index="3">data_r</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Ram_B_2_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%s" index="2">642</arg>: Output port &lt;<arg fmt="%s" index="3">data_r</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Ram_b_3</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%s" index="2">642</arg>: Output port &lt;<arg fmt="%s" index="3">data_r</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Ram_b_3</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">I_en_C_P</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">I_en_C_P</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">I_rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">I_rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_1</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_1</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_2</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_2</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_3</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_3</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_4</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_4</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_5</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_5</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_6</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_6</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_7</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_7</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_8</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_8</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_9</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_9</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_10</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_10</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_11</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_11</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_12</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_12</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_13</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_13</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_14</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_14</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_15</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_15</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_16</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_16</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_17</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_17</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_18</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_18</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_19</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_19</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_20</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_20</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_21</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_21</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_22</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_22</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_23</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_23</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_24</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_24</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_25</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_25</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_26</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_26</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_27</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_27</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_28</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_28</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_29</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_29</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd</arg>&quot; line <arg fmt="%s" index="2">114</arg>: Output port &lt;<arg fmt="%s" index="3">O_value</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">A2[6].reg_a2</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd</arg>&quot; line <arg fmt="%s" index="2">114</arg>: Output port &lt;<arg fmt="%s" index="3">O_value</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">A2[6].reg_a2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">mem</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">mem</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">I_rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">I_rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_30</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_30</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_31</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_31</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_32</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_32</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_33</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_33</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_34</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_34</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_35</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_35</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_36</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_36</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_37</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_37</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_38</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_38</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_39</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_39</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_40</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_40</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_41</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_41</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_42</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_42</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_43</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_43</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_44</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_44</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_45</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_45</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_46</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_46</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_47</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_47</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_48</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_48</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_49</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_49</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_50</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_50</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">I_ouputswitch</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">I_ouputswitch</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">I_rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">I_rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_51</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_51</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_52</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_52</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_53</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_53</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_54</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_54</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_55</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_55</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_56</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_56</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_57</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_57</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_58</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_58</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_59</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_59</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_60</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_60</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_61</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_61</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_62</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_62</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_63</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_63</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_64</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_64</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_65</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_65</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_66</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_66</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_67</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_67</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_68</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_68</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_69</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_69</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_70</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_70</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_71</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">generic_LUT_unit_71</arg>&apos;, is tied to its initial value.
 </msg>
 
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Argmax.vhd</arg>&quot; line <arg fmt="%s" index="2">200</arg>: Output port &lt;<arg fmt="%s" index="3">O_P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Arg_el_4_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Argmax.vhd</arg>&quot; line <arg fmt="%s" index="2">200</arg>: Output port &lt;<arg fmt="%s" index="3">O_P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Arg_el_4_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">I_ouputswitch</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">I_ouputswitch</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">Reg_P</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Arg_el_4_1</arg>&gt;.
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Reg_P</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Arg_el_4_1</arg>&gt;.
 It will be removed from the design.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_mem</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_mem</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+<msg type="info" file="Xst" num="3216" delta="old" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">A3[3].reg_a3/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A3[3].reg_a3/O_value_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">A3[3].reg_a3/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A3[3].reg_a3/O_value_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">A3[2].reg_a3/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A3[2].reg_a3/O_value_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">A3[2].reg_a3/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A3[2].reg_a3/O_value_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">A4[1].reg_a4/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A4[1].reg_a4/O_value_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">A4[1].reg_a4/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A4[1].reg_a4/O_value_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">A3[2].reg_a3/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A3[2].reg_a3/O_value_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">A3[2].reg_a3/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A3[2].reg_a3/O_value_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">A4[1].reg_a4/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A4[1].reg_a4/O_value_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">A4[1].reg_a4/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A4[1].reg_a4/O_value_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_5/O_done</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Argmax</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Arg_el_1_4/O_done&gt; &lt;Arg_el_1_3/O_done&gt; &lt;Arg_el_1_2/O_done&gt; &lt;Arg_el_1_1/O_done&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_5/O_done</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Argmax</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Arg_el_1_4/O_done&gt; &lt;Arg_el_1_3/O_done&gt; &lt;Arg_el_1_2/O_done&gt; &lt;Arg_el_1_1/O_done&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">Arg_el_4_1/Reg_P</arg>&gt; of block &lt;<arg fmt="%s" index="2">RegWEn_1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Arg_el_4_1/Reg_P</arg>&gt; of block &lt;<arg fmt="%s" index="2">RegWEn_1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Acc_1/tmp_value_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_1/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_1/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_1/Reg_I/O_value_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_1/Reg_I/O_value_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_1/Reg_I/O_value_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_1/Reg_I/O_value_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_2/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_2/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_2/Reg_I/O_value_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_2/Reg_I/O_value_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_3/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_3/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_3/Reg_I/O_value_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_3/Reg_I/O_value_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_4/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_4/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_5/Reg_I/O_value_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_5/Reg_I/O_value_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_5/Reg_I/O_value_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_5/Reg_I/O_value_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_2_1/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_2_1/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_2_1/Reg_I/O_value_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_2_1/Reg_I/O_value_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_2_2/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_2_2/Reg_I/O_value_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Argmax</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[4].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[4].lut/R_LUT_cpx_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[4].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[4].lut/R_LUT_cpx_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[12].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[12].lut/R_LUT_cpx_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[12].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[12].lut/R_LUT_cpx_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[4].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[4].lut/R_LUT_cpx_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[4].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[4].lut/R_LUT_cpx_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[8].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[8].lut/R_LUT_cpx_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[8].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[8].lut/R_LUT_cpx_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[11].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[11].lut/R_LUT_cpx_3&gt; &lt;L1[11].lut/R_LUT_cpx_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[11].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[11].lut/R_LUT_cpx_3&gt; &lt;L1[11].lut/R_LUT_cpx_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[15].lut/R_LUT_cpx_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[17].lut/R_LUT_cpx_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[15].lut/R_LUT_cpx_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[17].lut/R_LUT_cpx_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[1].lut/R_LUT_cpx_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[15].lut/R_LUT_cpx_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[1].lut/R_LUT_cpx_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[15].lut/R_LUT_cpx_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[1].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[1].lut/R_LUT_cpx_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[1].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[1].lut/R_LUT_cpx_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[7].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[7].lut/R_LUT_cpx_3&gt; &lt;L1[7].lut/R_LUT_cpx_2&gt; &lt;L1[7].lut/R_LUT_cpx_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[7].lut/R_LUT_cpx_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[7].lut/R_LUT_cpx_3&gt; &lt;L1[7].lut/R_LUT_cpx_2&gt; &lt;L1[7].lut/R_LUT_cpx_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[9].lut/R_LUT_cpx_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[14].lut/R_LUT_cpx_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">L1[9].lut/R_LUT_cpx_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Ram_W_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;L1[14].lut/R_LUT_cpx_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_2/Reg_I/O_value_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Argmax</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Arg_el_1_3/Reg_I/O_value_2&gt; &lt;Arg_el_1_4/Reg_I/O_value_2&gt; &lt;Arg_el_1_4/Reg_I/O_value_1&gt; &lt;Arg_el_1_5/Reg_I/O_value_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_2/Reg_I/O_value_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Argmax</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Arg_el_1_3/Reg_I/O_value_2&gt; &lt;Arg_el_1_4/Reg_I/O_value_2&gt; &lt;Arg_el_1_4/Reg_I/O_value_1&gt; &lt;Arg_el_1_5/Reg_I/O_value_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>
