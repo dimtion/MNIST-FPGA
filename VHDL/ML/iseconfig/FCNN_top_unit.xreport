@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-02-19T17:57:00</DateModified>
+  <DateModified>2019-02-19T20:44:38</DateModified>
   <ModuleName>FCNN_top_unit</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/ML/iseconfig/FCNN_top_unit.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/ML</ImplementationReportsDirectory>
-  <DateInitialized>2019-02-19T17:56:59</DateInitialized>
+  <DateInitialized>2019-02-19T20:44:38</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

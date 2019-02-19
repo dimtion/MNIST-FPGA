@@ -17,6 +17,19 @@ end SubNeurone_l1;
 
 architecture Behavioral of SubNeurone_l1 is 
 
+	Component RegWEn is 
+		generic (
+			size : natural 
+		);
+		port (
+			I_clk 	: in std_logic; 
+			I_rst 	: in std_logic;
+			I_en 	: in std_logic;
+			I_data 	: in std_logic_vector(size-1 downto 0);
+			O_value : out std_logic_vector(size-1 downto 0)
+		);
+	end component;
+
     component Acc is
 	    generic (
 		    size : natural
@@ -34,6 +47,7 @@ signal out_acc 	: signed(16 downto 0);
 
 type MULT_X is array(0 to 27) of signed(13 downto 0);
 signal mult_d : MULT_X;
+
 
 type ADDS_1 is array(0 to 13) of signed(14 downto 0);
 type ADDS_2 is array(0 to 6) of signed(15 downto 0);
@@ -53,7 +67,90 @@ signal add_r : signed(16 downto 0);
 
 signal en_Acc : std_logic;
 
+type MULT_X_V is array(0 to 27) of std_logic_vector(13 downto 0);
+type ADDS_1_V is array(0 to 13) of std_logic_vector(14 downto 0);
+type ADDS_2_V is array(0 to 6) of std_logic_vector(15 downto 0);
+type ADDS_3_V is array(0 to 3) of std_logic_vector(16 downto 0);
+type ADDS_4_V is array(0 to 1) of std_logic_vector(16 downto 0);
+
+
+signal mult_d_r : MULT_X_V;
+signal add_1_r : ADDS_1_V;
+signal add_2_r : ADDS_2_V;
+signal add_3_r : ADDS_3_V;
+signal add_4_r : ADDS_4_V;
+
 begin 
+
+A4 : FOR index_A4 in 0 to 1 GENERATE
+	reg_a4:RegWen
+		generic map (
+			size => 17
+		)
+		port map (
+			I_clk => I_clk,	
+			I_rst => I_rst,
+			I_en  => '1',	
+			I_data => std_logic_vector(add_4(index_A4)),	
+			O_value => add_4_r(index_A4)
+		);
+end GENERATE A4;
+
+A3 : FOR index_A3 in 0 to 3 GENERATE
+	reg_a3:RegWen
+		generic map (
+			size => 17
+		)
+		port map (
+			I_clk => I_clk,	
+			I_rst => I_rst,
+			I_en  => '1',	
+			I_data => std_logic_vector(add_3(index_A3)),	
+			O_value => add_3_r(index_A3)
+		);
+end GENERATE A3;
+
+A2 : FOR index_A2 in 0 to 6 GENERATE
+	reg_a2:RegWen
+		generic map (
+			size => 16
+		)
+		port map (
+			I_clk => I_clk,	
+			I_rst => I_rst,
+			I_en  => '1',	
+			I_data => std_logic_vector(add_2(index_A2)),	
+			O_value => add_2_r(index_A2)
+		);
+end GENERATE A2;
+
+A1 : FOR index_A1 in 0 to 13 GENERATE
+	reg_a1:RegWen
+		generic map (
+			size => 15
+		)
+		port map (
+			I_clk => I_clk,	
+			I_rst => I_rst,
+			I_en  => '1',	
+			I_data => std_logic_vector(add_1(index_A1)),	
+			O_value => add_1_r(index_A1)
+		);
+end GENERATE A1;
+
+M1 : FOR index_M1 in 0 to 27 GENERATE 
+	reg_m :RegWEn
+		generic map(
+			size => 14
+		)
+		port map(
+			I_clk => I_clk,	
+			I_rst => I_rst,
+			I_en  => '1',	
+			I_data => std_logic_vector(mult_d(index_M1)),	
+			O_value => mult_d_r(index_M1)
+		);
+end GENERATE M1;
 
 	Acc_1 : Acc 
 		generic map (
@@ -82,7 +179,7 @@ process(mult_d)
 begin
 -- additionneurs premier etage
     add_1_loop : for Index_a1 in 0 to 13 loop
-	    add_1(Index_a1) <= resize(mult_d(Index_a1*2),15) + resize(mult_d(Index_a1*2+1),15);
+	    add_1(Index_a1) <= resize(signed(mult_d_r(Index_a1*2)),15) + resize(signed(mult_d_r(Index_a1*2+1)),15);
     end loop add_1_loop;
 end process;
 
@@ -90,7 +187,7 @@ process(add_1)
 begin
 -- additionneur 2eme etage
     add_2_loop : for Index_a2 in 0 to 6 loop
-	    add_2(Index_a2) <= resize(add_1(Index_a2*2),16) + resize(add_1(Index_a2*2+1),16);
+	    add_2(Index_a2) <= resize(signed(add_1_r(Index_a2*2)),16) + resize(signed(add_1_r(Index_a2*2+1)),16);
     end loop add_2_loop;
 end process;
 
@@ -98,22 +195,22 @@ process(add_2)
 begin
 --additionneur 3eme etage
     add_3_loop : for index_a3 in 0 to 2 loop
-	    add_3(index_a3) <= resize(add_2(Index_a3*2),17) + resize(add_2(Index_a3*2+1),17);
+	    add_3(index_a3) <= resize(signed(add_2_r(Index_a3*2)),17) + resize(signed(add_2_r(Index_a3*2+1)),17);
     end loop add_3_loop;
-    add_3(3) <= resize(add_2(6),17);
+    add_3(3) <= resize(signed(add_2(6)),17);
 end process;
 
 process(add_3)
 begin
 -- additionneur 4eme etage
-    add_4(0) <= resize(add_3(0),17) + resize(add_3(1),17);
-    add_4(1) <= resize(add_3(2),17) + resize(add_3(3),17);
+    add_4(0) <= resize(signed(add_3_r(0)),17) + resize(signed(add_3_r(1)),17);
+    add_4(1) <= resize(signed(add_3_r(2)),17) + resize(signed(add_3_r(3)),17);
 end process;
 
 process(add_4)
 begin
 -- addtionneur 5eme etage 
-    add_5 <= add_4(0) + add_4(1);
+    add_5 <= signed(add_4_r(0)) + signed(add_4_r(1));
 
 end process;
 -- biais 

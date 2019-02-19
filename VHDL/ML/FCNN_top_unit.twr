@@ -26,24 +26,24 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
    please see the device datasheet.
 
 ================================================================================
-Timing constraint: TS_I_clk = PERIOD TIMEGRP "I_clk" 10 ns HIGH 50%;
+Timing constraint: TS_I_clk = PERIOD TIMEGRP "I_clk" 20 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 172751481922275069637031128257884144103134855168 paths analyzed, 6894 endpoints analyzed, 634 failing endpoints
- 634 timing errors detected. (634 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  38.106ns.
+ 57065294 paths analyzed, 14957 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  13.121ns.
 --------------------------------------------------------------------------------
 
-Paths for end point SubNeurone_L1_1/Acc_1/tmp_value_16 (SLICE_X98Y119.CIN), 26957866121360978509221898303956733996373639168 paths
+Paths for end point SubNeurone_L1_1/Mmult_mult_d<12> (DSP48_X1Y6.A2), 81325 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     -28.106ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SubNeurone_L1_1/Mmult_mult_d<1> (DSP)
-  Destination:          SubNeurone_L1_1/Acc_1/tmp_value_16 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      37.994ns (Levels of Logic = 32)(Component delays alone exceeds constraint)
-  Clock Path Skew:      -0.077ns (1.240 - 1.317)
+Slack (setup path):     6.879ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Counter_L1_1/Counter_40/temp_value_4 (FF)
+  Destination:          SubNeurone_L1_1/Mmult_mult_d<12> (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      13.098ns (Levels of Logic = 7)
+  Clock Path Skew:      0.012ns (1.267 - 1.255)
   Source Clock:         I_clk_BUFGP rising at 0.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -52,123 +52,50 @@ Slack (setup path):     -28.106ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SubNeurone_L1_1/Mmult_mult_d<1> to SubNeurone_L1_1/Acc_1/tmp_value_16
+  Maximum Data Path at Slow Process Corner: Counter_L1_1/Counter_40/temp_value_4 to SubNeurone_L1_1/Mmult_mult_d<12>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    DSP48_X4Y20.PCOUT0   Tdspcko_PCOUT_AREG_MULT  3.098   SubNeurone_L1_1/Mmult_mult_d<1>
-                                                       SubNeurone_L1_1/Mmult_mult_d<1>
-    DSP48_X4Y21.PCIN0    net (fanout=1)        0.002   SubNeurone_L1_1/Mmult_mult_d<1>_PCOUT_to_Maddsub_mult_d<0>_PCIN_0
-    DSP48_X4Y21.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<0>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<0>
-    DSP48_X4Y22.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<0>_PCOUT_to_Maddsub_mult_d<3>_PCIN_9
-    DSP48_X4Y22.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<3>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<3>
-    DSP48_X4Y23.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<3>_PCOUT_to_Maddsub_mult_d<4>_PCIN_9
-    DSP48_X4Y23.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<4>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<4>
-    DSP48_X4Y24.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<4>_PCOUT_to_Maddsub_mult_d<5>_PCIN_9
-    DSP48_X4Y24.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<5>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<5>
-    DSP48_X4Y25.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<5>_PCOUT_to_Maddsub_mult_d<6>_PCIN_9
-    DSP48_X4Y25.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<6>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<6>
-    DSP48_X4Y26.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<6>_PCOUT_to_Maddsub_mult_d<7>_PCIN_9
-    DSP48_X4Y26.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<7>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<7>
-    DSP48_X4Y27.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<7>_PCOUT_to_Maddsub_mult_d<8>_PCIN_9
-    DSP48_X4Y27.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<8>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<8>
-    DSP48_X4Y28.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<8>_PCOUT_to_Maddsub_mult_d<9>_PCIN_9
-    DSP48_X4Y28.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<9>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<9>
-    DSP48_X4Y29.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<9>_PCOUT_to_Maddsub_mult_d<10>_PCIN_9
-    DSP48_X4Y29.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<10>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<10>
-    DSP48_X4Y30.PCIN9    net (fanout=1)        0.056   SubNeurone_L1_1/Maddsub_mult_d<10>_PCOUT_to_Maddsub_mult_d<11>_PCIN_9
-    DSP48_X4Y30.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<11>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<11>
-    DSP48_X4Y31.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<11>_PCOUT_to_Maddsub_mult_d<12>_PCIN_9
-    DSP48_X4Y31.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<12>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<12>
-    DSP48_X4Y32.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<12>_PCOUT_to_Maddsub_mult_d<13>_PCIN_9
-    DSP48_X4Y32.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<13>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<13>
-    DSP48_X4Y33.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<13>_PCOUT_to_Maddsub_mult_d<14>_PCIN_9
-    DSP48_X4Y33.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<14>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<14>
-    DSP48_X4Y34.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<14>_PCOUT_to_Maddsub_mult_d<15>_PCIN_9
-    DSP48_X4Y34.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<15>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<15>
-    DSP48_X4Y35.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<15>_PCOUT_to_Maddsub_mult_d<16>_PCIN_9
-    DSP48_X4Y35.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<16>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<16>
-    DSP48_X4Y36.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<16>_PCOUT_to_Maddsub_mult_d<17>_PCIN_9
-    DSP48_X4Y36.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<17>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<17>
-    DSP48_X4Y37.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<17>_PCOUT_to_Maddsub_mult_d<18>_PCIN_9
-    DSP48_X4Y37.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<18>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<18>
-    DSP48_X4Y38.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<18>_PCOUT_to_Maddsub_mult_d<19>_PCIN_9
-    DSP48_X4Y38.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<19>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<19>
-    DSP48_X4Y39.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<19>_PCOUT_to_Maddsub_mult_d<20>_PCIN_9
-    DSP48_X4Y39.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<20>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<20>
-    DSP48_X4Y40.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<20>_PCOUT_to_Maddsub_mult_d<21>_PCIN_9
-    DSP48_X4Y40.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<21>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<21>
-    DSP48_X4Y41.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<21>_PCOUT_to_Maddsub_mult_d<22>_PCIN_9
-    DSP48_X4Y41.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<22>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<22>
-    DSP48_X4Y42.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<22>_PCOUT_to_Maddsub_mult_d<23>_PCIN_9
-    DSP48_X4Y42.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<23>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<23>
-    DSP48_X4Y43.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<23>_PCOUT_to_Maddsub_mult_d<24>_PCIN_9
-    DSP48_X4Y43.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<24>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<24>
-    DSP48_X4Y44.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<24>_PCOUT_to_Maddsub_mult_d<25>_PCIN_9
-    DSP48_X4Y44.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<25>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<25>
-    DSP48_X4Y45.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<25>_PCOUT_to_Maddsub_mult_d<26>_PCIN_9
-    DSP48_X4Y45.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<26>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<26>
-    DSP48_X4Y46.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<26>_PCOUT_to_Maddsub_mult_d<27>_PCIN_9
-    DSP48_X4Y46.P0       Tdspdo_PCIN_P         1.107   SubNeurone_L1_1/Maddsub_mult_d<27>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<27>
-    SLICE_X101Y115.AX    net (fanout=2)        0.482   SubNeurone_L1_1/ADDER_FOR_MULTADD_Madd_025
-    SLICE_X101Y115.COUT  Taxcy                 0.392   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.CIN   net (fanout=1)        0.000   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.BMUX  Tcinb                 0.358   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-    SLICE_X98Y116.B6     net (fanout=2)        0.330   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_5
-    SLICE_X98Y116.COUT   Topcyb                0.499   SubNeurone_L1_1/Acc_1/tmp_value<7>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<5>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<11>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<15>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-    SLICE_X98Y119.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-    SLICE_X98Y119.CLK    Tcinck                0.063   SubNeurone_L1_1/Acc_1/tmp_value<16>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_xor<16>
-                                                       SubNeurone_L1_1/Acc_1/tmp_value_16
+    SLICE_X38Y53.CMUX    Tshcko                0.463   Counter_L1_1/Counter_40/temp_value<5>
+                                                       Counter_L1_1/Counter_40/temp_value_4
+    DSP48_X2Y21.B4       net (fanout=7)        0.553   Counter_L1_1/Counter_40/temp_value<4>
+    DSP48_X2Y21.P2       Tdspdo_B_P_MULT       2.690   Counter_L1_1/Maddsub_n0018
+                                                       Counter_L1_1/Maddsub_n0018
+    SLICE_X32Y55.C2      net (fanout=2)        1.016   O_W_N_1<2>
+    SLICE_X32Y55.C       Tilo                  0.097   I_read_W_l1<6>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1_SW0
+    SLICE_X33Y55.A3      net (fanout=1)        0.479   N01
+    SLICE_X33Y55.A       Tilo                  0.097   I_read_W_l1<7>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1
+    SLICE_X33Y56.D1      net (fanout=11)       0.671   O_W_N_1[10]_PWR_8_o_LessThan_13_o
+    SLICE_X33Y56.D       Tilo                  0.097   I_read_W_l1<1>
+                                                       Mmux_I_read_W_l131
+    SLICE_X0Y6.B2        net (fanout=1723)     3.655   I_read_W_l1<1>
+    SLICE_X0Y6.B         Tilo                  0.097   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES45
+                                                       Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES451
+    SLICE_X0Y7.A1        net (fanout=1)        0.749   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES45
+    SLICE_X0Y7.A         Tilo                  0.097   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES42
+                                                       Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES561_9
+    SLICE_X7Y8.D2        net (fanout=1)        0.805   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES561_9
+    SLICE_X7Y8.CMUX      Topdc                 0.408   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES55
+                                                       Ram_W_1_1_L1[12].lut/_n0007<2>_inv1_F
+                                                       Ram_W_1_1_L1[12].lut/_n0007<2>_inv1
+    DSP48_X1Y6.A2        net (fanout=1)        0.870   Ram_W_1_1/L1[12].lut/_n0007<2>
+    DSP48_X1Y6.CLK       Tdspdck_A_AREG        0.254   SubNeurone_L1_1/Mmult_mult_d<12>
+                                                       SubNeurone_L1_1/Mmult_mult_d<12>
     -------------------------------------------------  ---------------------------
-    Total                                     37.994ns (37.076ns logic, 0.918ns route)
-                                                       (97.6% logic, 2.4% route)
+    Total                                     13.098ns (4.300ns logic, 8.798ns route)
+                                                       (32.8% logic, 67.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -28.106ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SubNeurone_L1_1/Mmult_mult_d<1> (DSP)
-  Destination:          SubNeurone_L1_1/Acc_1/tmp_value_16 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      37.994ns (Levels of Logic = 32)(Component delays alone exceeds constraint)
-  Clock Path Skew:      -0.077ns (1.240 - 1.317)
+Slack (setup path):     6.949ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Counter_L1_1/Counter_40/temp_value_4 (FF)
+  Destination:          SubNeurone_L1_1/Mmult_mult_d<12> (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      13.028ns (Levels of Logic = 7)
+  Clock Path Skew:      0.012ns (1.267 - 1.255)
   Source Clock:         I_clk_BUFGP rising at 0.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -177,123 +104,50 @@ Slack (setup path):     -28.106ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SubNeurone_L1_1/Mmult_mult_d<1> to SubNeurone_L1_1/Acc_1/tmp_value_16
+  Maximum Data Path at Slow Process Corner: Counter_L1_1/Counter_40/temp_value_4 to SubNeurone_L1_1/Mmult_mult_d<12>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    DSP48_X4Y20.PCOUT9   Tdspcko_PCOUT_AREG_MULT  3.098   SubNeurone_L1_1/Mmult_mult_d<1>
-                                                       SubNeurone_L1_1/Mmult_mult_d<1>
-    DSP48_X4Y21.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Mmult_mult_d<1>_PCOUT_to_Maddsub_mult_d<0>_PCIN_9
-    DSP48_X4Y21.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<0>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<0>
-    DSP48_X4Y22.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<0>_PCOUT_to_Maddsub_mult_d<3>_PCIN_9
-    DSP48_X4Y22.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<3>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<3>
-    DSP48_X4Y23.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<3>_PCOUT_to_Maddsub_mult_d<4>_PCIN_9
-    DSP48_X4Y23.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<4>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<4>
-    DSP48_X4Y24.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<4>_PCOUT_to_Maddsub_mult_d<5>_PCIN_9
-    DSP48_X4Y24.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<5>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<5>
-    DSP48_X4Y25.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<5>_PCOUT_to_Maddsub_mult_d<6>_PCIN_9
-    DSP48_X4Y25.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<6>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<6>
-    DSP48_X4Y26.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<6>_PCOUT_to_Maddsub_mult_d<7>_PCIN_9
-    DSP48_X4Y26.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<7>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<7>
-    DSP48_X4Y27.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<7>_PCOUT_to_Maddsub_mult_d<8>_PCIN_9
-    DSP48_X4Y27.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<8>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<8>
-    DSP48_X4Y28.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<8>_PCOUT_to_Maddsub_mult_d<9>_PCIN_9
-    DSP48_X4Y28.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<9>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<9>
-    DSP48_X4Y29.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<9>_PCOUT_to_Maddsub_mult_d<10>_PCIN_9
-    DSP48_X4Y29.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<10>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<10>
-    DSP48_X4Y30.PCIN9    net (fanout=1)        0.056   SubNeurone_L1_1/Maddsub_mult_d<10>_PCOUT_to_Maddsub_mult_d<11>_PCIN_9
-    DSP48_X4Y30.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<11>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<11>
-    DSP48_X4Y31.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<11>_PCOUT_to_Maddsub_mult_d<12>_PCIN_9
-    DSP48_X4Y31.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<12>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<12>
-    DSP48_X4Y32.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<12>_PCOUT_to_Maddsub_mult_d<13>_PCIN_9
-    DSP48_X4Y32.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<13>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<13>
-    DSP48_X4Y33.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<13>_PCOUT_to_Maddsub_mult_d<14>_PCIN_9
-    DSP48_X4Y33.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<14>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<14>
-    DSP48_X4Y34.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<14>_PCOUT_to_Maddsub_mult_d<15>_PCIN_9
-    DSP48_X4Y34.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<15>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<15>
-    DSP48_X4Y35.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<15>_PCOUT_to_Maddsub_mult_d<16>_PCIN_9
-    DSP48_X4Y35.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<16>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<16>
-    DSP48_X4Y36.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<16>_PCOUT_to_Maddsub_mult_d<17>_PCIN_9
-    DSP48_X4Y36.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<17>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<17>
-    DSP48_X4Y37.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<17>_PCOUT_to_Maddsub_mult_d<18>_PCIN_9
-    DSP48_X4Y37.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<18>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<18>
-    DSP48_X4Y38.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<18>_PCOUT_to_Maddsub_mult_d<19>_PCIN_9
-    DSP48_X4Y38.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<19>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<19>
-    DSP48_X4Y39.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<19>_PCOUT_to_Maddsub_mult_d<20>_PCIN_9
-    DSP48_X4Y39.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<20>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<20>
-    DSP48_X4Y40.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<20>_PCOUT_to_Maddsub_mult_d<21>_PCIN_9
-    DSP48_X4Y40.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<21>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<21>
-    DSP48_X4Y41.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<21>_PCOUT_to_Maddsub_mult_d<22>_PCIN_9
-    DSP48_X4Y41.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<22>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<22>
-    DSP48_X4Y42.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<22>_PCOUT_to_Maddsub_mult_d<23>_PCIN_9
-    DSP48_X4Y42.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<23>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<23>
-    DSP48_X4Y43.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<23>_PCOUT_to_Maddsub_mult_d<24>_PCIN_9
-    DSP48_X4Y43.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<24>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<24>
-    DSP48_X4Y44.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<24>_PCOUT_to_Maddsub_mult_d<25>_PCIN_9
-    DSP48_X4Y44.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<25>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<25>
-    DSP48_X4Y45.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<25>_PCOUT_to_Maddsub_mult_d<26>_PCIN_9
-    DSP48_X4Y45.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<26>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<26>
-    DSP48_X4Y46.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<26>_PCOUT_to_Maddsub_mult_d<27>_PCIN_9
-    DSP48_X4Y46.P0       Tdspdo_PCIN_P         1.107   SubNeurone_L1_1/Maddsub_mult_d<27>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<27>
-    SLICE_X101Y115.AX    net (fanout=2)        0.482   SubNeurone_L1_1/ADDER_FOR_MULTADD_Madd_025
-    SLICE_X101Y115.COUT  Taxcy                 0.392   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.CIN   net (fanout=1)        0.000   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.BMUX  Tcinb                 0.358   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-    SLICE_X98Y116.B6     net (fanout=2)        0.330   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_5
-    SLICE_X98Y116.COUT   Topcyb                0.499   SubNeurone_L1_1/Acc_1/tmp_value<7>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<5>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<11>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<15>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-    SLICE_X98Y119.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-    SLICE_X98Y119.CLK    Tcinck                0.063   SubNeurone_L1_1/Acc_1/tmp_value<16>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_xor<16>
-                                                       SubNeurone_L1_1/Acc_1/tmp_value_16
+    SLICE_X38Y53.CMUX    Tshcko                0.463   Counter_L1_1/Counter_40/temp_value<5>
+                                                       Counter_L1_1/Counter_40/temp_value_4
+    DSP48_X2Y21.B4       net (fanout=7)        0.553   Counter_L1_1/Counter_40/temp_value<4>
+    DSP48_X2Y21.P1       Tdspdo_B_P_MULT       2.690   Counter_L1_1/Maddsub_n0018
+                                                       Counter_L1_1/Maddsub_n0018
+    SLICE_X32Y55.C3      net (fanout=2)        0.946   O_W_N_1<1>
+    SLICE_X32Y55.C       Tilo                  0.097   I_read_W_l1<6>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1_SW0
+    SLICE_X33Y55.A3      net (fanout=1)        0.479   N01
+    SLICE_X33Y55.A       Tilo                  0.097   I_read_W_l1<7>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1
+    SLICE_X33Y56.D1      net (fanout=11)       0.671   O_W_N_1[10]_PWR_8_o_LessThan_13_o
+    SLICE_X33Y56.D       Tilo                  0.097   I_read_W_l1<1>
+                                                       Mmux_I_read_W_l131
+    SLICE_X0Y6.B2        net (fanout=1723)     3.655   I_read_W_l1<1>
+    SLICE_X0Y6.B         Tilo                  0.097   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES45
+                                                       Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES451
+    SLICE_X0Y7.A1        net (fanout=1)        0.749   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES45
+    SLICE_X0Y7.A         Tilo                  0.097   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES42
+                                                       Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES561_9
+    SLICE_X7Y8.D2        net (fanout=1)        0.805   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES561_9
+    SLICE_X7Y8.CMUX      Topdc                 0.408   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES55
+                                                       Ram_W_1_1_L1[12].lut/_n0007<2>_inv1_F
+                                                       Ram_W_1_1_L1[12].lut/_n0007<2>_inv1
+    DSP48_X1Y6.A2        net (fanout=1)        0.870   Ram_W_1_1/L1[12].lut/_n0007<2>
+    DSP48_X1Y6.CLK       Tdspdck_A_AREG        0.254   SubNeurone_L1_1/Mmult_mult_d<12>
+                                                       SubNeurone_L1_1/Mmult_mult_d<12>
     -------------------------------------------------  ---------------------------
-    Total                                     37.994ns (37.076ns logic, 0.918ns route)
-                                                       (97.6% logic, 2.4% route)
+    Total                                     13.028ns (4.300ns logic, 8.728ns route)
+                                                       (33.0% logic, 67.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -28.106ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SubNeurone_L1_1/Mmult_mult_d<1> (DSP)
-  Destination:          SubNeurone_L1_1/Acc_1/tmp_value_16 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      37.994ns (Levels of Logic = 32)(Component delays alone exceeds constraint)
-  Clock Path Skew:      -0.077ns (1.240 - 1.317)
+Slack (setup path):     6.953ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Counter_L1_1/Counter_40/temp_value_3 (FF)
+  Destination:          SubNeurone_L1_1/Mmult_mult_d<12> (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      13.024ns (Levels of Logic = 7)
+  Clock Path Skew:      0.012ns (1.267 - 1.255)
   Source Clock:         I_clk_BUFGP rising at 0.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -302,126 +156,53 @@ Slack (setup path):     -28.106ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SubNeurone_L1_1/Mmult_mult_d<1> to SubNeurone_L1_1/Acc_1/tmp_value_16
+  Maximum Data Path at Slow Process Corner: Counter_L1_1/Counter_40/temp_value_3 to SubNeurone_L1_1/Mmult_mult_d<12>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    DSP48_X4Y20.PCOUT1   Tdspcko_PCOUT_AREG_MULT  3.098   SubNeurone_L1_1/Mmult_mult_d<1>
-                                                       SubNeurone_L1_1/Mmult_mult_d<1>
-    DSP48_X4Y21.PCIN1    net (fanout=1)        0.002   SubNeurone_L1_1/Mmult_mult_d<1>_PCOUT_to_Maddsub_mult_d<0>_PCIN_1
-    DSP48_X4Y21.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<0>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<0>
-    DSP48_X4Y22.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<0>_PCOUT_to_Maddsub_mult_d<3>_PCIN_9
-    DSP48_X4Y22.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<3>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<3>
-    DSP48_X4Y23.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<3>_PCOUT_to_Maddsub_mult_d<4>_PCIN_9
-    DSP48_X4Y23.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<4>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<4>
-    DSP48_X4Y24.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<4>_PCOUT_to_Maddsub_mult_d<5>_PCIN_9
-    DSP48_X4Y24.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<5>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<5>
-    DSP48_X4Y25.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<5>_PCOUT_to_Maddsub_mult_d<6>_PCIN_9
-    DSP48_X4Y25.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<6>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<6>
-    DSP48_X4Y26.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<6>_PCOUT_to_Maddsub_mult_d<7>_PCIN_9
-    DSP48_X4Y26.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<7>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<7>
-    DSP48_X4Y27.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<7>_PCOUT_to_Maddsub_mult_d<8>_PCIN_9
-    DSP48_X4Y27.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<8>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<8>
-    DSP48_X4Y28.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<8>_PCOUT_to_Maddsub_mult_d<9>_PCIN_9
-    DSP48_X4Y28.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<9>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<9>
-    DSP48_X4Y29.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<9>_PCOUT_to_Maddsub_mult_d<10>_PCIN_9
-    DSP48_X4Y29.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<10>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<10>
-    DSP48_X4Y30.PCIN9    net (fanout=1)        0.056   SubNeurone_L1_1/Maddsub_mult_d<10>_PCOUT_to_Maddsub_mult_d<11>_PCIN_9
-    DSP48_X4Y30.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<11>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<11>
-    DSP48_X4Y31.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<11>_PCOUT_to_Maddsub_mult_d<12>_PCIN_9
-    DSP48_X4Y31.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<12>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<12>
-    DSP48_X4Y32.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<12>_PCOUT_to_Maddsub_mult_d<13>_PCIN_9
-    DSP48_X4Y32.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<13>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<13>
-    DSP48_X4Y33.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<13>_PCOUT_to_Maddsub_mult_d<14>_PCIN_9
-    DSP48_X4Y33.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<14>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<14>
-    DSP48_X4Y34.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<14>_PCOUT_to_Maddsub_mult_d<15>_PCIN_9
-    DSP48_X4Y34.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<15>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<15>
-    DSP48_X4Y35.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<15>_PCOUT_to_Maddsub_mult_d<16>_PCIN_9
-    DSP48_X4Y35.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<16>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<16>
-    DSP48_X4Y36.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<16>_PCOUT_to_Maddsub_mult_d<17>_PCIN_9
-    DSP48_X4Y36.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<17>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<17>
-    DSP48_X4Y37.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<17>_PCOUT_to_Maddsub_mult_d<18>_PCIN_9
-    DSP48_X4Y37.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<18>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<18>
-    DSP48_X4Y38.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<18>_PCOUT_to_Maddsub_mult_d<19>_PCIN_9
-    DSP48_X4Y38.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<19>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<19>
-    DSP48_X4Y39.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<19>_PCOUT_to_Maddsub_mult_d<20>_PCIN_9
-    DSP48_X4Y39.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<20>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<20>
-    DSP48_X4Y40.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<20>_PCOUT_to_Maddsub_mult_d<21>_PCIN_9
-    DSP48_X4Y40.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<21>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<21>
-    DSP48_X4Y41.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<21>_PCOUT_to_Maddsub_mult_d<22>_PCIN_9
-    DSP48_X4Y41.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<22>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<22>
-    DSP48_X4Y42.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<22>_PCOUT_to_Maddsub_mult_d<23>_PCIN_9
-    DSP48_X4Y42.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<23>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<23>
-    DSP48_X4Y43.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<23>_PCOUT_to_Maddsub_mult_d<24>_PCIN_9
-    DSP48_X4Y43.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<24>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<24>
-    DSP48_X4Y44.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<24>_PCOUT_to_Maddsub_mult_d<25>_PCIN_9
-    DSP48_X4Y44.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<25>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<25>
-    DSP48_X4Y45.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<25>_PCOUT_to_Maddsub_mult_d<26>_PCIN_9
-    DSP48_X4Y45.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<26>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<26>
-    DSP48_X4Y46.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<26>_PCOUT_to_Maddsub_mult_d<27>_PCIN_9
-    DSP48_X4Y46.P0       Tdspdo_PCIN_P         1.107   SubNeurone_L1_1/Maddsub_mult_d<27>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<27>
-    SLICE_X101Y115.AX    net (fanout=2)        0.482   SubNeurone_L1_1/ADDER_FOR_MULTADD_Madd_025
-    SLICE_X101Y115.COUT  Taxcy                 0.392   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.CIN   net (fanout=1)        0.000   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.BMUX  Tcinb                 0.358   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-    SLICE_X98Y116.B6     net (fanout=2)        0.330   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_5
-    SLICE_X98Y116.COUT   Topcyb                0.499   SubNeurone_L1_1/Acc_1/tmp_value<7>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<5>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<11>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<15>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-    SLICE_X98Y119.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-    SLICE_X98Y119.CLK    Tcinck                0.063   SubNeurone_L1_1/Acc_1/tmp_value<16>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_xor<16>
-                                                       SubNeurone_L1_1/Acc_1/tmp_value_16
+    SLICE_X38Y53.AQ      Tcko                  0.393   Counter_L1_1/Counter_40/temp_value<5>
+                                                       Counter_L1_1/Counter_40/temp_value_3
+    DSP48_X2Y21.B3       net (fanout=8)        0.549   Counter_L1_1/Counter_40/temp_value<3>
+    DSP48_X2Y21.P2       Tdspdo_B_P_MULT       2.690   Counter_L1_1/Maddsub_n0018
+                                                       Counter_L1_1/Maddsub_n0018
+    SLICE_X32Y55.C2      net (fanout=2)        1.016   O_W_N_1<2>
+    SLICE_X32Y55.C       Tilo                  0.097   I_read_W_l1<6>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1_SW0
+    SLICE_X33Y55.A3      net (fanout=1)        0.479   N01
+    SLICE_X33Y55.A       Tilo                  0.097   I_read_W_l1<7>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1
+    SLICE_X33Y56.D1      net (fanout=11)       0.671   O_W_N_1[10]_PWR_8_o_LessThan_13_o
+    SLICE_X33Y56.D       Tilo                  0.097   I_read_W_l1<1>
+                                                       Mmux_I_read_W_l131
+    SLICE_X0Y6.B2        net (fanout=1723)     3.655   I_read_W_l1<1>
+    SLICE_X0Y6.B         Tilo                  0.097   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES45
+                                                       Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES451
+    SLICE_X0Y7.A1        net (fanout=1)        0.749   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES45
+    SLICE_X0Y7.A         Tilo                  0.097   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES42
+                                                       Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES561_9
+    SLICE_X7Y8.D2        net (fanout=1)        0.805   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES561_9
+    SLICE_X7Y8.CMUX      Topdc                 0.408   Ram_W_1_1_L1[12].lut/Mram_C_LUT_SAMPLES55
+                                                       Ram_W_1_1_L1[12].lut/_n0007<2>_inv1_F
+                                                       Ram_W_1_1_L1[12].lut/_n0007<2>_inv1
+    DSP48_X1Y6.A2        net (fanout=1)        0.870   Ram_W_1_1/L1[12].lut/_n0007<2>
+    DSP48_X1Y6.CLK       Tdspdck_A_AREG        0.254   SubNeurone_L1_1/Mmult_mult_d<12>
+                                                       SubNeurone_L1_1/Mmult_mult_d<12>
     -------------------------------------------------  ---------------------------
-    Total                                     37.994ns (37.076ns logic, 0.918ns route)
-                                                       (97.6% logic, 2.4% route)
+    Total                                     13.024ns (4.230ns logic, 8.794ns route)
+                                                       (32.5% logic, 67.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point SubNeurone_L1_1/Acc_1/tmp_value_15 (SLICE_X98Y118.CIN), 15163799693265553897476468423606516988893986816 paths
+Paths for end point SubNeurone_L1_1/Mmult_mult_d<11> (DSP48_X1Y5.A16), 81325 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     -28.092ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SubNeurone_L1_1/Mmult_mult_d<1> (DSP)
-  Destination:          SubNeurone_L1_1/Acc_1/tmp_value_15 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      37.981ns (Levels of Logic = 31)(Component delays alone exceeds constraint)
-  Clock Path Skew:      -0.076ns (1.241 - 1.317)
+Slack (setup path):     7.158ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Counter_L1_1/Counter_40/temp_value_4 (FF)
+  Destination:          SubNeurone_L1_1/Mmult_mult_d<11> (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.821ns (Levels of Logic = 7)
+  Clock Path Skew:      0.014ns (1.269 - 1.255)
   Source Clock:         I_clk_BUFGP rising at 0.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -430,120 +211,50 @@ Slack (setup path):     -28.092ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SubNeurone_L1_1/Mmult_mult_d<1> to SubNeurone_L1_1/Acc_1/tmp_value_15
+  Maximum Data Path at Slow Process Corner: Counter_L1_1/Counter_40/temp_value_4 to SubNeurone_L1_1/Mmult_mult_d<11>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    DSP48_X4Y20.PCOUT0   Tdspcko_PCOUT_AREG_MULT  3.098   SubNeurone_L1_1/Mmult_mult_d<1>
-                                                       SubNeurone_L1_1/Mmult_mult_d<1>
-    DSP48_X4Y21.PCIN0    net (fanout=1)        0.002   SubNeurone_L1_1/Mmult_mult_d<1>_PCOUT_to_Maddsub_mult_d<0>_PCIN_0
-    DSP48_X4Y21.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<0>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<0>
-    DSP48_X4Y22.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<0>_PCOUT_to_Maddsub_mult_d<3>_PCIN_9
-    DSP48_X4Y22.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<3>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<3>
-    DSP48_X4Y23.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<3>_PCOUT_to_Maddsub_mult_d<4>_PCIN_9
-    DSP48_X4Y23.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<4>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<4>
-    DSP48_X4Y24.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<4>_PCOUT_to_Maddsub_mult_d<5>_PCIN_9
-    DSP48_X4Y24.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<5>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<5>
-    DSP48_X4Y25.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<5>_PCOUT_to_Maddsub_mult_d<6>_PCIN_9
-    DSP48_X4Y25.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<6>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<6>
-    DSP48_X4Y26.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<6>_PCOUT_to_Maddsub_mult_d<7>_PCIN_9
-    DSP48_X4Y26.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<7>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<7>
-    DSP48_X4Y27.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<7>_PCOUT_to_Maddsub_mult_d<8>_PCIN_9
-    DSP48_X4Y27.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<8>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<8>
-    DSP48_X4Y28.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<8>_PCOUT_to_Maddsub_mult_d<9>_PCIN_9
-    DSP48_X4Y28.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<9>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<9>
-    DSP48_X4Y29.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<9>_PCOUT_to_Maddsub_mult_d<10>_PCIN_9
-    DSP48_X4Y29.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<10>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<10>
-    DSP48_X4Y30.PCIN9    net (fanout=1)        0.056   SubNeurone_L1_1/Maddsub_mult_d<10>_PCOUT_to_Maddsub_mult_d<11>_PCIN_9
-    DSP48_X4Y30.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<11>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<11>
-    DSP48_X4Y31.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<11>_PCOUT_to_Maddsub_mult_d<12>_PCIN_9
-    DSP48_X4Y31.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<12>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<12>
-    DSP48_X4Y32.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<12>_PCOUT_to_Maddsub_mult_d<13>_PCIN_9
-    DSP48_X4Y32.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<13>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<13>
-    DSP48_X4Y33.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<13>_PCOUT_to_Maddsub_mult_d<14>_PCIN_9
-    DSP48_X4Y33.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<14>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<14>
-    DSP48_X4Y34.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<14>_PCOUT_to_Maddsub_mult_d<15>_PCIN_9
-    DSP48_X4Y34.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<15>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<15>
-    DSP48_X4Y35.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<15>_PCOUT_to_Maddsub_mult_d<16>_PCIN_9
-    DSP48_X4Y35.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<16>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<16>
-    DSP48_X4Y36.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<16>_PCOUT_to_Maddsub_mult_d<17>_PCIN_9
-    DSP48_X4Y36.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<17>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<17>
-    DSP48_X4Y37.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<17>_PCOUT_to_Maddsub_mult_d<18>_PCIN_9
-    DSP48_X4Y37.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<18>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<18>
-    DSP48_X4Y38.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<18>_PCOUT_to_Maddsub_mult_d<19>_PCIN_9
-    DSP48_X4Y38.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<19>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<19>
-    DSP48_X4Y39.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<19>_PCOUT_to_Maddsub_mult_d<20>_PCIN_9
-    DSP48_X4Y39.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<20>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<20>
-    DSP48_X4Y40.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<20>_PCOUT_to_Maddsub_mult_d<21>_PCIN_9
-    DSP48_X4Y40.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<21>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<21>
-    DSP48_X4Y41.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<21>_PCOUT_to_Maddsub_mult_d<22>_PCIN_9
-    DSP48_X4Y41.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<22>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<22>
-    DSP48_X4Y42.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<22>_PCOUT_to_Maddsub_mult_d<23>_PCIN_9
-    DSP48_X4Y42.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<23>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<23>
-    DSP48_X4Y43.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<23>_PCOUT_to_Maddsub_mult_d<24>_PCIN_9
-    DSP48_X4Y43.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<24>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<24>
-    DSP48_X4Y44.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<24>_PCOUT_to_Maddsub_mult_d<25>_PCIN_9
-    DSP48_X4Y44.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<25>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<25>
-    DSP48_X4Y45.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<25>_PCOUT_to_Maddsub_mult_d<26>_PCIN_9
-    DSP48_X4Y45.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<26>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<26>
-    DSP48_X4Y46.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<26>_PCOUT_to_Maddsub_mult_d<27>_PCIN_9
-    DSP48_X4Y46.P0       Tdspdo_PCIN_P         1.107   SubNeurone_L1_1/Maddsub_mult_d<27>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<27>
-    SLICE_X101Y115.AX    net (fanout=2)        0.482   SubNeurone_L1_1/ADDER_FOR_MULTADD_Madd_025
-    SLICE_X101Y115.COUT  Taxcy                 0.392   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.CIN   net (fanout=1)        0.000   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.BMUX  Tcinb                 0.358   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-    SLICE_X98Y116.B6     net (fanout=2)        0.330   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_5
-    SLICE_X98Y116.COUT   Topcyb                0.499   SubNeurone_L1_1/Acc_1/tmp_value<7>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<5>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<11>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CLK    Tcinck                0.142   SubNeurone_L1_1/Acc_1/tmp_value<15>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-                                                       SubNeurone_L1_1/Acc_1/tmp_value_15
+    SLICE_X38Y53.CMUX    Tshcko                0.463   Counter_L1_1/Counter_40/temp_value<5>
+                                                       Counter_L1_1/Counter_40/temp_value_4
+    DSP48_X2Y21.B4       net (fanout=7)        0.553   Counter_L1_1/Counter_40/temp_value<4>
+    DSP48_X2Y21.P2       Tdspdo_B_P_MULT       2.690   Counter_L1_1/Maddsub_n0018
+                                                       Counter_L1_1/Maddsub_n0018
+    SLICE_X32Y55.C2      net (fanout=2)        1.016   O_W_N_1<2>
+    SLICE_X32Y55.C       Tilo                  0.097   I_read_W_l1<6>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1_SW0
+    SLICE_X33Y55.A3      net (fanout=1)        0.479   N01
+    SLICE_X33Y55.A       Tilo                  0.097   I_read_W_l1<7>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1
+    SLICE_X33Y56.D1      net (fanout=11)       0.671   O_W_N_1[10]_PWR_8_o_LessThan_13_o
+    SLICE_X33Y56.D       Tilo                  0.097   I_read_W_l1<1>
+                                                       Mmux_I_read_W_l131
+    SLICE_X8Y3.C4        net (fanout=1723)     3.462   I_read_W_l1<1>
+    SLICE_X8Y3.C         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES70
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES721
+    SLICE_X9Y4.A2        net (fanout=1)        0.686   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES72
+    SLICE_X9Y4.A         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES62
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.D1        net (fanout=2)        0.601   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.CMUX      Topdc                 0.408   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES92
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1_F
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1
+    DSP48_X1Y5.A16       net (fanout=21)       1.053   Ram_W_1_1/L1[11].lut/_n0007<4>
+    DSP48_X1Y5.CLK       Tdspdck_A_AREG        0.254   SubNeurone_L1_1/Mmult_mult_d<11>
+                                                       SubNeurone_L1_1/Mmult_mult_d<11>
     -------------------------------------------------  ---------------------------
-    Total                                     37.981ns (37.063ns logic, 0.918ns route)
-                                                       (97.6% logic, 2.4% route)
+    Total                                     12.821ns (4.300ns logic, 8.521ns route)
+                                                       (33.5% logic, 66.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -28.092ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SubNeurone_L1_1/Mmult_mult_d<1> (DSP)
-  Destination:          SubNeurone_L1_1/Acc_1/tmp_value_15 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      37.981ns (Levels of Logic = 31)(Component delays alone exceeds constraint)
-  Clock Path Skew:      -0.076ns (1.241 - 1.317)
+Slack (setup path):     7.228ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Counter_L1_1/Counter_40/temp_value_4 (FF)
+  Destination:          SubNeurone_L1_1/Mmult_mult_d<11> (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.751ns (Levels of Logic = 7)
+  Clock Path Skew:      0.014ns (1.269 - 1.255)
   Source Clock:         I_clk_BUFGP rising at 0.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -552,120 +263,50 @@ Slack (setup path):     -28.092ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SubNeurone_L1_1/Mmult_mult_d<1> to SubNeurone_L1_1/Acc_1/tmp_value_15
+  Maximum Data Path at Slow Process Corner: Counter_L1_1/Counter_40/temp_value_4 to SubNeurone_L1_1/Mmult_mult_d<11>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    DSP48_X4Y20.PCOUT9   Tdspcko_PCOUT_AREG_MULT  3.098   SubNeurone_L1_1/Mmult_mult_d<1>
-                                                       SubNeurone_L1_1/Mmult_mult_d<1>
-    DSP48_X4Y21.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Mmult_mult_d<1>_PCOUT_to_Maddsub_mult_d<0>_PCIN_9
-    DSP48_X4Y21.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<0>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<0>
-    DSP48_X4Y22.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<0>_PCOUT_to_Maddsub_mult_d<3>_PCIN_9
-    DSP48_X4Y22.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<3>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<3>
-    DSP48_X4Y23.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<3>_PCOUT_to_Maddsub_mult_d<4>_PCIN_9
-    DSP48_X4Y23.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<4>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<4>
-    DSP48_X4Y24.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<4>_PCOUT_to_Maddsub_mult_d<5>_PCIN_9
-    DSP48_X4Y24.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<5>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<5>
-    DSP48_X4Y25.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<5>_PCOUT_to_Maddsub_mult_d<6>_PCIN_9
-    DSP48_X4Y25.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<6>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<6>
-    DSP48_X4Y26.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<6>_PCOUT_to_Maddsub_mult_d<7>_PCIN_9
-    DSP48_X4Y26.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<7>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<7>
-    DSP48_X4Y27.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<7>_PCOUT_to_Maddsub_mult_d<8>_PCIN_9
-    DSP48_X4Y27.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<8>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<8>
-    DSP48_X4Y28.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<8>_PCOUT_to_Maddsub_mult_d<9>_PCIN_9
-    DSP48_X4Y28.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<9>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<9>
-    DSP48_X4Y29.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<9>_PCOUT_to_Maddsub_mult_d<10>_PCIN_9
-    DSP48_X4Y29.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<10>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<10>
-    DSP48_X4Y30.PCIN9    net (fanout=1)        0.056   SubNeurone_L1_1/Maddsub_mult_d<10>_PCOUT_to_Maddsub_mult_d<11>_PCIN_9
-    DSP48_X4Y30.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<11>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<11>
-    DSP48_X4Y31.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<11>_PCOUT_to_Maddsub_mult_d<12>_PCIN_9
-    DSP48_X4Y31.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<12>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<12>
-    DSP48_X4Y32.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<12>_PCOUT_to_Maddsub_mult_d<13>_PCIN_9
-    DSP48_X4Y32.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<13>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<13>
-    DSP48_X4Y33.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<13>_PCOUT_to_Maddsub_mult_d<14>_PCIN_9
-    DSP48_X4Y33.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<14>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<14>
-    DSP48_X4Y34.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<14>_PCOUT_to_Maddsub_mult_d<15>_PCIN_9
-    DSP48_X4Y34.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<15>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<15>
-    DSP48_X4Y35.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<15>_PCOUT_to_Maddsub_mult_d<16>_PCIN_9
-    DSP48_X4Y35.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<16>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<16>
-    DSP48_X4Y36.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<16>_PCOUT_to_Maddsub_mult_d<17>_PCIN_9
-    DSP48_X4Y36.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<17>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<17>
-    DSP48_X4Y37.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<17>_PCOUT_to_Maddsub_mult_d<18>_PCIN_9
-    DSP48_X4Y37.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<18>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<18>
-    DSP48_X4Y38.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<18>_PCOUT_to_Maddsub_mult_d<19>_PCIN_9
-    DSP48_X4Y38.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<19>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<19>
-    DSP48_X4Y39.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<19>_PCOUT_to_Maddsub_mult_d<20>_PCIN_9
-    DSP48_X4Y39.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<20>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<20>
-    DSP48_X4Y40.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<20>_PCOUT_to_Maddsub_mult_d<21>_PCIN_9
-    DSP48_X4Y40.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<21>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<21>
-    DSP48_X4Y41.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<21>_PCOUT_to_Maddsub_mult_d<22>_PCIN_9
-    DSP48_X4Y41.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<22>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<22>
-    DSP48_X4Y42.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<22>_PCOUT_to_Maddsub_mult_d<23>_PCIN_9
-    DSP48_X4Y42.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<23>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<23>
-    DSP48_X4Y43.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<23>_PCOUT_to_Maddsub_mult_d<24>_PCIN_9
-    DSP48_X4Y43.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<24>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<24>
-    DSP48_X4Y44.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<24>_PCOUT_to_Maddsub_mult_d<25>_PCIN_9
-    DSP48_X4Y44.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<25>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<25>
-    DSP48_X4Y45.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<25>_PCOUT_to_Maddsub_mult_d<26>_PCIN_9
-    DSP48_X4Y45.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<26>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<26>
-    DSP48_X4Y46.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<26>_PCOUT_to_Maddsub_mult_d<27>_PCIN_9
-    DSP48_X4Y46.P0       Tdspdo_PCIN_P         1.107   SubNeurone_L1_1/Maddsub_mult_d<27>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<27>
-    SLICE_X101Y115.AX    net (fanout=2)        0.482   SubNeurone_L1_1/ADDER_FOR_MULTADD_Madd_025
-    SLICE_X101Y115.COUT  Taxcy                 0.392   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.CIN   net (fanout=1)        0.000   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.BMUX  Tcinb                 0.358   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-    SLICE_X98Y116.B6     net (fanout=2)        0.330   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_5
-    SLICE_X98Y116.COUT   Topcyb                0.499   SubNeurone_L1_1/Acc_1/tmp_value<7>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<5>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<11>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CLK    Tcinck                0.142   SubNeurone_L1_1/Acc_1/tmp_value<15>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-                                                       SubNeurone_L1_1/Acc_1/tmp_value_15
+    SLICE_X38Y53.CMUX    Tshcko                0.463   Counter_L1_1/Counter_40/temp_value<5>
+                                                       Counter_L1_1/Counter_40/temp_value_4
+    DSP48_X2Y21.B4       net (fanout=7)        0.553   Counter_L1_1/Counter_40/temp_value<4>
+    DSP48_X2Y21.P1       Tdspdo_B_P_MULT       2.690   Counter_L1_1/Maddsub_n0018
+                                                       Counter_L1_1/Maddsub_n0018
+    SLICE_X32Y55.C3      net (fanout=2)        0.946   O_W_N_1<1>
+    SLICE_X32Y55.C       Tilo                  0.097   I_read_W_l1<6>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1_SW0
+    SLICE_X33Y55.A3      net (fanout=1)        0.479   N01
+    SLICE_X33Y55.A       Tilo                  0.097   I_read_W_l1<7>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1
+    SLICE_X33Y56.D1      net (fanout=11)       0.671   O_W_N_1[10]_PWR_8_o_LessThan_13_o
+    SLICE_X33Y56.D       Tilo                  0.097   I_read_W_l1<1>
+                                                       Mmux_I_read_W_l131
+    SLICE_X8Y3.C4        net (fanout=1723)     3.462   I_read_W_l1<1>
+    SLICE_X8Y3.C         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES70
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES721
+    SLICE_X9Y4.A2        net (fanout=1)        0.686   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES72
+    SLICE_X9Y4.A         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES62
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.D1        net (fanout=2)        0.601   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.CMUX      Topdc                 0.408   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES92
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1_F
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1
+    DSP48_X1Y5.A16       net (fanout=21)       1.053   Ram_W_1_1/L1[11].lut/_n0007<4>
+    DSP48_X1Y5.CLK       Tdspdck_A_AREG        0.254   SubNeurone_L1_1/Mmult_mult_d<11>
+                                                       SubNeurone_L1_1/Mmult_mult_d<11>
     -------------------------------------------------  ---------------------------
-    Total                                     37.981ns (37.063ns logic, 0.918ns route)
-                                                       (97.6% logic, 2.4% route)
+    Total                                     12.751ns (4.300ns logic, 8.451ns route)
+                                                       (33.7% logic, 66.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -28.092ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SubNeurone_L1_1/Mmult_mult_d<1> (DSP)
-  Destination:          SubNeurone_L1_1/Acc_1/tmp_value_15 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      37.981ns (Levels of Logic = 31)(Component delays alone exceeds constraint)
-  Clock Path Skew:      -0.076ns (1.241 - 1.317)
+Slack (setup path):     7.232ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Counter_L1_1/Counter_40/temp_value_3 (FF)
+  Destination:          SubNeurone_L1_1/Mmult_mult_d<11> (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.747ns (Levels of Logic = 7)
+  Clock Path Skew:      0.014ns (1.269 - 1.255)
   Source Clock:         I_clk_BUFGP rising at 0.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -674,123 +315,53 @@ Slack (setup path):     -28.092ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SubNeurone_L1_1/Mmult_mult_d<1> to SubNeurone_L1_1/Acc_1/tmp_value_15
+  Maximum Data Path at Slow Process Corner: Counter_L1_1/Counter_40/temp_value_3 to SubNeurone_L1_1/Mmult_mult_d<11>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    DSP48_X4Y20.PCOUT1   Tdspcko_PCOUT_AREG_MULT  3.098   SubNeurone_L1_1/Mmult_mult_d<1>
-                                                       SubNeurone_L1_1/Mmult_mult_d<1>
-    DSP48_X4Y21.PCIN1    net (fanout=1)        0.002   SubNeurone_L1_1/Mmult_mult_d<1>_PCOUT_to_Maddsub_mult_d<0>_PCIN_1
-    DSP48_X4Y21.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<0>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<0>
-    DSP48_X4Y22.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<0>_PCOUT_to_Maddsub_mult_d<3>_PCIN_9
-    DSP48_X4Y22.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<3>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<3>
-    DSP48_X4Y23.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<3>_PCOUT_to_Maddsub_mult_d<4>_PCIN_9
-    DSP48_X4Y23.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<4>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<4>
-    DSP48_X4Y24.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<4>_PCOUT_to_Maddsub_mult_d<5>_PCIN_9
-    DSP48_X4Y24.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<5>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<5>
-    DSP48_X4Y25.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<5>_PCOUT_to_Maddsub_mult_d<6>_PCIN_9
-    DSP48_X4Y25.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<6>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<6>
-    DSP48_X4Y26.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<6>_PCOUT_to_Maddsub_mult_d<7>_PCIN_9
-    DSP48_X4Y26.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<7>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<7>
-    DSP48_X4Y27.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<7>_PCOUT_to_Maddsub_mult_d<8>_PCIN_9
-    DSP48_X4Y27.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<8>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<8>
-    DSP48_X4Y28.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<8>_PCOUT_to_Maddsub_mult_d<9>_PCIN_9
-    DSP48_X4Y28.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<9>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<9>
-    DSP48_X4Y29.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<9>_PCOUT_to_Maddsub_mult_d<10>_PCIN_9
-    DSP48_X4Y29.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<10>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<10>
-    DSP48_X4Y30.PCIN9    net (fanout=1)        0.056   SubNeurone_L1_1/Maddsub_mult_d<10>_PCOUT_to_Maddsub_mult_d<11>_PCIN_9
-    DSP48_X4Y30.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<11>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<11>
-    DSP48_X4Y31.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<11>_PCOUT_to_Maddsub_mult_d<12>_PCIN_9
-    DSP48_X4Y31.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<12>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<12>
-    DSP48_X4Y32.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<12>_PCOUT_to_Maddsub_mult_d<13>_PCIN_9
-    DSP48_X4Y32.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<13>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<13>
-    DSP48_X4Y33.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<13>_PCOUT_to_Maddsub_mult_d<14>_PCIN_9
-    DSP48_X4Y33.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<14>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<14>
-    DSP48_X4Y34.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<14>_PCOUT_to_Maddsub_mult_d<15>_PCIN_9
-    DSP48_X4Y34.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<15>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<15>
-    DSP48_X4Y35.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<15>_PCOUT_to_Maddsub_mult_d<16>_PCIN_9
-    DSP48_X4Y35.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<16>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<16>
-    DSP48_X4Y36.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<16>_PCOUT_to_Maddsub_mult_d<17>_PCIN_9
-    DSP48_X4Y36.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<17>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<17>
-    DSP48_X4Y37.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<17>_PCOUT_to_Maddsub_mult_d<18>_PCIN_9
-    DSP48_X4Y37.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<18>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<18>
-    DSP48_X4Y38.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<18>_PCOUT_to_Maddsub_mult_d<19>_PCIN_9
-    DSP48_X4Y38.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<19>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<19>
-    DSP48_X4Y39.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<19>_PCOUT_to_Maddsub_mult_d<20>_PCIN_9
-    DSP48_X4Y39.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<20>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<20>
-    DSP48_X4Y40.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<20>_PCOUT_to_Maddsub_mult_d<21>_PCIN_9
-    DSP48_X4Y40.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<21>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<21>
-    DSP48_X4Y41.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<21>_PCOUT_to_Maddsub_mult_d<22>_PCIN_9
-    DSP48_X4Y41.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<22>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<22>
-    DSP48_X4Y42.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<22>_PCOUT_to_Maddsub_mult_d<23>_PCIN_9
-    DSP48_X4Y42.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<23>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<23>
-    DSP48_X4Y43.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<23>_PCOUT_to_Maddsub_mult_d<24>_PCIN_9
-    DSP48_X4Y43.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<24>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<24>
-    DSP48_X4Y44.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<24>_PCOUT_to_Maddsub_mult_d<25>_PCIN_9
-    DSP48_X4Y44.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<25>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<25>
-    DSP48_X4Y45.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<25>_PCOUT_to_Maddsub_mult_d<26>_PCIN_9
-    DSP48_X4Y45.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<26>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<26>
-    DSP48_X4Y46.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<26>_PCOUT_to_Maddsub_mult_d<27>_PCIN_9
-    DSP48_X4Y46.P0       Tdspdo_PCIN_P         1.107   SubNeurone_L1_1/Maddsub_mult_d<27>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<27>
-    SLICE_X101Y115.AX    net (fanout=2)        0.482   SubNeurone_L1_1/ADDER_FOR_MULTADD_Madd_025
-    SLICE_X101Y115.COUT  Taxcy                 0.392   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.CIN   net (fanout=1)        0.000   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.BMUX  Tcinb                 0.358   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-    SLICE_X98Y116.B6     net (fanout=2)        0.330   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_5
-    SLICE_X98Y116.COUT   Topcyb                0.499   SubNeurone_L1_1/Acc_1/tmp_value<7>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<5>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<11>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CLK    Tcinck                0.142   SubNeurone_L1_1/Acc_1/tmp_value<15>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-                                                       SubNeurone_L1_1/Acc_1/tmp_value_15
+    SLICE_X38Y53.AQ      Tcko                  0.393   Counter_L1_1/Counter_40/temp_value<5>
+                                                       Counter_L1_1/Counter_40/temp_value_3
+    DSP48_X2Y21.B3       net (fanout=8)        0.549   Counter_L1_1/Counter_40/temp_value<3>
+    DSP48_X2Y21.P2       Tdspdo_B_P_MULT       2.690   Counter_L1_1/Maddsub_n0018
+                                                       Counter_L1_1/Maddsub_n0018
+    SLICE_X32Y55.C2      net (fanout=2)        1.016   O_W_N_1<2>
+    SLICE_X32Y55.C       Tilo                  0.097   I_read_W_l1<6>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1_SW0
+    SLICE_X33Y55.A3      net (fanout=1)        0.479   N01
+    SLICE_X33Y55.A       Tilo                  0.097   I_read_W_l1<7>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1
+    SLICE_X33Y56.D1      net (fanout=11)       0.671   O_W_N_1[10]_PWR_8_o_LessThan_13_o
+    SLICE_X33Y56.D       Tilo                  0.097   I_read_W_l1<1>
+                                                       Mmux_I_read_W_l131
+    SLICE_X8Y3.C4        net (fanout=1723)     3.462   I_read_W_l1<1>
+    SLICE_X8Y3.C         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES70
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES721
+    SLICE_X9Y4.A2        net (fanout=1)        0.686   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES72
+    SLICE_X9Y4.A         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES62
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.D1        net (fanout=2)        0.601   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.CMUX      Topdc                 0.408   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES92
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1_F
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1
+    DSP48_X1Y5.A16       net (fanout=21)       1.053   Ram_W_1_1/L1[11].lut/_n0007<4>
+    DSP48_X1Y5.CLK       Tdspdck_A_AREG        0.254   SubNeurone_L1_1/Mmult_mult_d<11>
+                                                       SubNeurone_L1_1/Mmult_mult_d<11>
     -------------------------------------------------  ---------------------------
-    Total                                     37.981ns (37.063ns logic, 0.918ns route)
-                                                       (97.6% logic, 2.4% route)
+    Total                                     12.747ns (4.230ns logic, 8.517ns route)
+                                                       (33.2% logic, 66.8% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point SubNeurone_L1_1/Acc_1/tmp_value_13 (SLICE_X98Y118.CIN), 15163799693265553897476468423606516988893986816 paths
+Paths for end point SubNeurone_L1_1/Mmult_mult_d<11> (DSP48_X1Y5.A17), 81325 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     -28.079ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SubNeurone_L1_1/Mmult_mult_d<1> (DSP)
-  Destination:          SubNeurone_L1_1/Acc_1/tmp_value_13 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      37.968ns (Levels of Logic = 31)(Component delays alone exceeds constraint)
-  Clock Path Skew:      -0.076ns (1.241 - 1.317)
+Slack (setup path):     7.158ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Counter_L1_1/Counter_40/temp_value_4 (FF)
+  Destination:          SubNeurone_L1_1/Mmult_mult_d<11> (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.821ns (Levels of Logic = 7)
+  Clock Path Skew:      0.014ns (1.269 - 1.255)
   Source Clock:         I_clk_BUFGP rising at 0.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -799,120 +370,50 @@ Slack (setup path):     -28.079ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SubNeurone_L1_1/Mmult_mult_d<1> to SubNeurone_L1_1/Acc_1/tmp_value_13
+  Maximum Data Path at Slow Process Corner: Counter_L1_1/Counter_40/temp_value_4 to SubNeurone_L1_1/Mmult_mult_d<11>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    DSP48_X4Y20.PCOUT0   Tdspcko_PCOUT_AREG_MULT  3.098   SubNeurone_L1_1/Mmult_mult_d<1>
-                                                       SubNeurone_L1_1/Mmult_mult_d<1>
-    DSP48_X4Y21.PCIN0    net (fanout=1)        0.002   SubNeurone_L1_1/Mmult_mult_d<1>_PCOUT_to_Maddsub_mult_d<0>_PCIN_0
-    DSP48_X4Y21.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<0>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<0>
-    DSP48_X4Y22.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<0>_PCOUT_to_Maddsub_mult_d<3>_PCIN_9
-    DSP48_X4Y22.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<3>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<3>
-    DSP48_X4Y23.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<3>_PCOUT_to_Maddsub_mult_d<4>_PCIN_9
-    DSP48_X4Y23.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<4>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<4>
-    DSP48_X4Y24.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<4>_PCOUT_to_Maddsub_mult_d<5>_PCIN_9
-    DSP48_X4Y24.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<5>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<5>
-    DSP48_X4Y25.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<5>_PCOUT_to_Maddsub_mult_d<6>_PCIN_9
-    DSP48_X4Y25.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<6>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<6>
-    DSP48_X4Y26.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<6>_PCOUT_to_Maddsub_mult_d<7>_PCIN_9
-    DSP48_X4Y26.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<7>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<7>
-    DSP48_X4Y27.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<7>_PCOUT_to_Maddsub_mult_d<8>_PCIN_9
-    DSP48_X4Y27.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<8>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<8>
-    DSP48_X4Y28.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<8>_PCOUT_to_Maddsub_mult_d<9>_PCIN_9
-    DSP48_X4Y28.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<9>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<9>
-    DSP48_X4Y29.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<9>_PCOUT_to_Maddsub_mult_d<10>_PCIN_9
-    DSP48_X4Y29.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<10>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<10>
-    DSP48_X4Y30.PCIN9    net (fanout=1)        0.056   SubNeurone_L1_1/Maddsub_mult_d<10>_PCOUT_to_Maddsub_mult_d<11>_PCIN_9
-    DSP48_X4Y30.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<11>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<11>
-    DSP48_X4Y31.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<11>_PCOUT_to_Maddsub_mult_d<12>_PCIN_9
-    DSP48_X4Y31.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<12>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<12>
-    DSP48_X4Y32.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<12>_PCOUT_to_Maddsub_mult_d<13>_PCIN_9
-    DSP48_X4Y32.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<13>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<13>
-    DSP48_X4Y33.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<13>_PCOUT_to_Maddsub_mult_d<14>_PCIN_9
-    DSP48_X4Y33.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<14>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<14>
-    DSP48_X4Y34.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<14>_PCOUT_to_Maddsub_mult_d<15>_PCIN_9
-    DSP48_X4Y34.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<15>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<15>
-    DSP48_X4Y35.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<15>_PCOUT_to_Maddsub_mult_d<16>_PCIN_9
-    DSP48_X4Y35.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<16>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<16>
-    DSP48_X4Y36.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<16>_PCOUT_to_Maddsub_mult_d<17>_PCIN_9
-    DSP48_X4Y36.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<17>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<17>
-    DSP48_X4Y37.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<17>_PCOUT_to_Maddsub_mult_d<18>_PCIN_9
-    DSP48_X4Y37.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<18>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<18>
-    DSP48_X4Y38.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<18>_PCOUT_to_Maddsub_mult_d<19>_PCIN_9
-    DSP48_X4Y38.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<19>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<19>
-    DSP48_X4Y39.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<19>_PCOUT_to_Maddsub_mult_d<20>_PCIN_9
-    DSP48_X4Y39.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<20>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<20>
-    DSP48_X4Y40.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<20>_PCOUT_to_Maddsub_mult_d<21>_PCIN_9
-    DSP48_X4Y40.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<21>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<21>
-    DSP48_X4Y41.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<21>_PCOUT_to_Maddsub_mult_d<22>_PCIN_9
-    DSP48_X4Y41.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<22>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<22>
-    DSP48_X4Y42.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<22>_PCOUT_to_Maddsub_mult_d<23>_PCIN_9
-    DSP48_X4Y42.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<23>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<23>
-    DSP48_X4Y43.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<23>_PCOUT_to_Maddsub_mult_d<24>_PCIN_9
-    DSP48_X4Y43.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<24>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<24>
-    DSP48_X4Y44.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<24>_PCOUT_to_Maddsub_mult_d<25>_PCIN_9
-    DSP48_X4Y44.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<25>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<25>
-    DSP48_X4Y45.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<25>_PCOUT_to_Maddsub_mult_d<26>_PCIN_9
-    DSP48_X4Y45.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<26>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<26>
-    DSP48_X4Y46.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<26>_PCOUT_to_Maddsub_mult_d<27>_PCIN_9
-    DSP48_X4Y46.P0       Tdspdo_PCIN_P         1.107   SubNeurone_L1_1/Maddsub_mult_d<27>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<27>
-    SLICE_X101Y115.AX    net (fanout=2)        0.482   SubNeurone_L1_1/ADDER_FOR_MULTADD_Madd_025
-    SLICE_X101Y115.COUT  Taxcy                 0.392   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.CIN   net (fanout=1)        0.000   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.BMUX  Tcinb                 0.358   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-    SLICE_X98Y116.B6     net (fanout=2)        0.330   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_5
-    SLICE_X98Y116.COUT   Topcyb                0.499   SubNeurone_L1_1/Acc_1/tmp_value<7>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<5>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<11>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CLK    Tcinck                0.129   SubNeurone_L1_1/Acc_1/tmp_value<15>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-                                                       SubNeurone_L1_1/Acc_1/tmp_value_13
+    SLICE_X38Y53.CMUX    Tshcko                0.463   Counter_L1_1/Counter_40/temp_value<5>
+                                                       Counter_L1_1/Counter_40/temp_value_4
+    DSP48_X2Y21.B4       net (fanout=7)        0.553   Counter_L1_1/Counter_40/temp_value<4>
+    DSP48_X2Y21.P2       Tdspdo_B_P_MULT       2.690   Counter_L1_1/Maddsub_n0018
+                                                       Counter_L1_1/Maddsub_n0018
+    SLICE_X32Y55.C2      net (fanout=2)        1.016   O_W_N_1<2>
+    SLICE_X32Y55.C       Tilo                  0.097   I_read_W_l1<6>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1_SW0
+    SLICE_X33Y55.A3      net (fanout=1)        0.479   N01
+    SLICE_X33Y55.A       Tilo                  0.097   I_read_W_l1<7>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1
+    SLICE_X33Y56.D1      net (fanout=11)       0.671   O_W_N_1[10]_PWR_8_o_LessThan_13_o
+    SLICE_X33Y56.D       Tilo                  0.097   I_read_W_l1<1>
+                                                       Mmux_I_read_W_l131
+    SLICE_X8Y3.C4        net (fanout=1723)     3.462   I_read_W_l1<1>
+    SLICE_X8Y3.C         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES70
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES721
+    SLICE_X9Y4.A2        net (fanout=1)        0.686   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES72
+    SLICE_X9Y4.A         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES62
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.D1        net (fanout=2)        0.601   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.CMUX      Topdc                 0.408   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES92
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1_F
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1
+    DSP48_X1Y5.A17       net (fanout=21)       1.053   Ram_W_1_1/L1[11].lut/_n0007<4>
+    DSP48_X1Y5.CLK       Tdspdck_A_AREG        0.254   SubNeurone_L1_1/Mmult_mult_d<11>
+                                                       SubNeurone_L1_1/Mmult_mult_d<11>
     -------------------------------------------------  ---------------------------
-    Total                                     37.968ns (37.050ns logic, 0.918ns route)
-                                                       (97.6% logic, 2.4% route)
+    Total                                     12.821ns (4.300ns logic, 8.521ns route)
+                                                       (33.5% logic, 66.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -28.079ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SubNeurone_L1_1/Mmult_mult_d<1> (DSP)
-  Destination:          SubNeurone_L1_1/Acc_1/tmp_value_13 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      37.968ns (Levels of Logic = 31)(Component delays alone exceeds constraint)
-  Clock Path Skew:      -0.076ns (1.241 - 1.317)
+Slack (setup path):     7.228ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Counter_L1_1/Counter_40/temp_value_4 (FF)
+  Destination:          SubNeurone_L1_1/Mmult_mult_d<11> (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.751ns (Levels of Logic = 7)
+  Clock Path Skew:      0.014ns (1.269 - 1.255)
   Source Clock:         I_clk_BUFGP rising at 0.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -921,120 +422,50 @@ Slack (setup path):     -28.079ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SubNeurone_L1_1/Mmult_mult_d<1> to SubNeurone_L1_1/Acc_1/tmp_value_13
+  Maximum Data Path at Slow Process Corner: Counter_L1_1/Counter_40/temp_value_4 to SubNeurone_L1_1/Mmult_mult_d<11>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    DSP48_X4Y20.PCOUT9   Tdspcko_PCOUT_AREG_MULT  3.098   SubNeurone_L1_1/Mmult_mult_d<1>
-                                                       SubNeurone_L1_1/Mmult_mult_d<1>
-    DSP48_X4Y21.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Mmult_mult_d<1>_PCOUT_to_Maddsub_mult_d<0>_PCIN_9
-    DSP48_X4Y21.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<0>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<0>
-    DSP48_X4Y22.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<0>_PCOUT_to_Maddsub_mult_d<3>_PCIN_9
-    DSP48_X4Y22.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<3>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<3>
-    DSP48_X4Y23.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<3>_PCOUT_to_Maddsub_mult_d<4>_PCIN_9
-    DSP48_X4Y23.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<4>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<4>
-    DSP48_X4Y24.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<4>_PCOUT_to_Maddsub_mult_d<5>_PCIN_9
-    DSP48_X4Y24.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<5>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<5>
-    DSP48_X4Y25.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<5>_PCOUT_to_Maddsub_mult_d<6>_PCIN_9
-    DSP48_X4Y25.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<6>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<6>
-    DSP48_X4Y26.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<6>_PCOUT_to_Maddsub_mult_d<7>_PCIN_9
-    DSP48_X4Y26.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<7>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<7>
-    DSP48_X4Y27.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<7>_PCOUT_to_Maddsub_mult_d<8>_PCIN_9
-    DSP48_X4Y27.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<8>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<8>
-    DSP48_X4Y28.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<8>_PCOUT_to_Maddsub_mult_d<9>_PCIN_9
-    DSP48_X4Y28.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<9>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<9>
-    DSP48_X4Y29.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<9>_PCOUT_to_Maddsub_mult_d<10>_PCIN_9
-    DSP48_X4Y29.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<10>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<10>
-    DSP48_X4Y30.PCIN9    net (fanout=1)        0.056   SubNeurone_L1_1/Maddsub_mult_d<10>_PCOUT_to_Maddsub_mult_d<11>_PCIN_9
-    DSP48_X4Y30.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<11>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<11>
-    DSP48_X4Y31.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<11>_PCOUT_to_Maddsub_mult_d<12>_PCIN_9
-    DSP48_X4Y31.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<12>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<12>
-    DSP48_X4Y32.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<12>_PCOUT_to_Maddsub_mult_d<13>_PCIN_9
-    DSP48_X4Y32.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<13>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<13>
-    DSP48_X4Y33.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<13>_PCOUT_to_Maddsub_mult_d<14>_PCIN_9
-    DSP48_X4Y33.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<14>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<14>
-    DSP48_X4Y34.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<14>_PCOUT_to_Maddsub_mult_d<15>_PCIN_9
-    DSP48_X4Y34.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<15>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<15>
-    DSP48_X4Y35.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<15>_PCOUT_to_Maddsub_mult_d<16>_PCIN_9
-    DSP48_X4Y35.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<16>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<16>
-    DSP48_X4Y36.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<16>_PCOUT_to_Maddsub_mult_d<17>_PCIN_9
-    DSP48_X4Y36.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<17>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<17>
-    DSP48_X4Y37.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<17>_PCOUT_to_Maddsub_mult_d<18>_PCIN_9
-    DSP48_X4Y37.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<18>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<18>
-    DSP48_X4Y38.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<18>_PCOUT_to_Maddsub_mult_d<19>_PCIN_9
-    DSP48_X4Y38.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<19>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<19>
-    DSP48_X4Y39.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<19>_PCOUT_to_Maddsub_mult_d<20>_PCIN_9
-    DSP48_X4Y39.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<20>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<20>
-    DSP48_X4Y40.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<20>_PCOUT_to_Maddsub_mult_d<21>_PCIN_9
-    DSP48_X4Y40.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<21>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<21>
-    DSP48_X4Y41.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<21>_PCOUT_to_Maddsub_mult_d<22>_PCIN_9
-    DSP48_X4Y41.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<22>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<22>
-    DSP48_X4Y42.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<22>_PCOUT_to_Maddsub_mult_d<23>_PCIN_9
-    DSP48_X4Y42.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<23>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<23>
-    DSP48_X4Y43.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<23>_PCOUT_to_Maddsub_mult_d<24>_PCIN_9
-    DSP48_X4Y43.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<24>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<24>
-    DSP48_X4Y44.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<24>_PCOUT_to_Maddsub_mult_d<25>_PCIN_9
-    DSP48_X4Y44.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<25>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<25>
-    DSP48_X4Y45.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<25>_PCOUT_to_Maddsub_mult_d<26>_PCIN_9
-    DSP48_X4Y45.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<26>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<26>
-    DSP48_X4Y46.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<26>_PCOUT_to_Maddsub_mult_d<27>_PCIN_9
-    DSP48_X4Y46.P0       Tdspdo_PCIN_P         1.107   SubNeurone_L1_1/Maddsub_mult_d<27>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<27>
-    SLICE_X101Y115.AX    net (fanout=2)        0.482   SubNeurone_L1_1/ADDER_FOR_MULTADD_Madd_025
-    SLICE_X101Y115.COUT  Taxcy                 0.392   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.CIN   net (fanout=1)        0.000   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.BMUX  Tcinb                 0.358   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-    SLICE_X98Y116.B6     net (fanout=2)        0.330   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_5
-    SLICE_X98Y116.COUT   Topcyb                0.499   SubNeurone_L1_1/Acc_1/tmp_value<7>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<5>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<11>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CLK    Tcinck                0.129   SubNeurone_L1_1/Acc_1/tmp_value<15>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-                                                       SubNeurone_L1_1/Acc_1/tmp_value_13
+    SLICE_X38Y53.CMUX    Tshcko                0.463   Counter_L1_1/Counter_40/temp_value<5>
+                                                       Counter_L1_1/Counter_40/temp_value_4
+    DSP48_X2Y21.B4       net (fanout=7)        0.553   Counter_L1_1/Counter_40/temp_value<4>
+    DSP48_X2Y21.P1       Tdspdo_B_P_MULT       2.690   Counter_L1_1/Maddsub_n0018
+                                                       Counter_L1_1/Maddsub_n0018
+    SLICE_X32Y55.C3      net (fanout=2)        0.946   O_W_N_1<1>
+    SLICE_X32Y55.C       Tilo                  0.097   I_read_W_l1<6>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1_SW0
+    SLICE_X33Y55.A3      net (fanout=1)        0.479   N01
+    SLICE_X33Y55.A       Tilo                  0.097   I_read_W_l1<7>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1
+    SLICE_X33Y56.D1      net (fanout=11)       0.671   O_W_N_1[10]_PWR_8_o_LessThan_13_o
+    SLICE_X33Y56.D       Tilo                  0.097   I_read_W_l1<1>
+                                                       Mmux_I_read_W_l131
+    SLICE_X8Y3.C4        net (fanout=1723)     3.462   I_read_W_l1<1>
+    SLICE_X8Y3.C         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES70
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES721
+    SLICE_X9Y4.A2        net (fanout=1)        0.686   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES72
+    SLICE_X9Y4.A         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES62
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.D1        net (fanout=2)        0.601   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.CMUX      Topdc                 0.408   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES92
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1_F
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1
+    DSP48_X1Y5.A17       net (fanout=21)       1.053   Ram_W_1_1/L1[11].lut/_n0007<4>
+    DSP48_X1Y5.CLK       Tdspdck_A_AREG        0.254   SubNeurone_L1_1/Mmult_mult_d<11>
+                                                       SubNeurone_L1_1/Mmult_mult_d<11>
     -------------------------------------------------  ---------------------------
-    Total                                     37.968ns (37.050ns logic, 0.918ns route)
-                                                       (97.6% logic, 2.4% route)
+    Total                                     12.751ns (4.300ns logic, 8.451ns route)
+                                                       (33.7% logic, 66.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -28.079ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SubNeurone_L1_1/Mmult_mult_d<1> (DSP)
-  Destination:          SubNeurone_L1_1/Acc_1/tmp_value_13 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      37.968ns (Levels of Logic = 31)(Component delays alone exceeds constraint)
-  Clock Path Skew:      -0.076ns (1.241 - 1.317)
+Slack (setup path):     7.232ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Counter_L1_1/Counter_40/temp_value_3 (FF)
+  Destination:          SubNeurone_L1_1/Mmult_mult_d<11> (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.747ns (Levels of Logic = 7)
+  Clock Path Skew:      0.014ns (1.269 - 1.255)
   Source Clock:         I_clk_BUFGP rising at 0.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -1043,229 +474,159 @@ Slack (setup path):     -28.079ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SubNeurone_L1_1/Mmult_mult_d<1> to SubNeurone_L1_1/Acc_1/tmp_value_13
+  Maximum Data Path at Slow Process Corner: Counter_L1_1/Counter_40/temp_value_3 to SubNeurone_L1_1/Mmult_mult_d<11>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    DSP48_X4Y20.PCOUT1   Tdspcko_PCOUT_AREG_MULT  3.098   SubNeurone_L1_1/Mmult_mult_d<1>
-                                                       SubNeurone_L1_1/Mmult_mult_d<1>
-    DSP48_X4Y21.PCIN1    net (fanout=1)        0.002   SubNeurone_L1_1/Mmult_mult_d<1>_PCOUT_to_Maddsub_mult_d<0>_PCIN_1
-    DSP48_X4Y21.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<0>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<0>
-    DSP48_X4Y22.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<0>_PCOUT_to_Maddsub_mult_d<3>_PCIN_9
-    DSP48_X4Y22.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<3>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<3>
-    DSP48_X4Y23.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<3>_PCOUT_to_Maddsub_mult_d<4>_PCIN_9
-    DSP48_X4Y23.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<4>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<4>
-    DSP48_X4Y24.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<4>_PCOUT_to_Maddsub_mult_d<5>_PCIN_9
-    DSP48_X4Y24.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<5>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<5>
-    DSP48_X4Y25.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<5>_PCOUT_to_Maddsub_mult_d<6>_PCIN_9
-    DSP48_X4Y25.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<6>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<6>
-    DSP48_X4Y26.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<6>_PCOUT_to_Maddsub_mult_d<7>_PCIN_9
-    DSP48_X4Y26.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<7>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<7>
-    DSP48_X4Y27.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<7>_PCOUT_to_Maddsub_mult_d<8>_PCIN_9
-    DSP48_X4Y27.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<8>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<8>
-    DSP48_X4Y28.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<8>_PCOUT_to_Maddsub_mult_d<9>_PCIN_9
-    DSP48_X4Y28.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<9>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<9>
-    DSP48_X4Y29.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<9>_PCOUT_to_Maddsub_mult_d<10>_PCIN_9
-    DSP48_X4Y29.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<10>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<10>
-    DSP48_X4Y30.PCIN9    net (fanout=1)        0.056   SubNeurone_L1_1/Maddsub_mult_d<10>_PCOUT_to_Maddsub_mult_d<11>_PCIN_9
-    DSP48_X4Y30.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<11>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<11>
-    DSP48_X4Y31.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<11>_PCOUT_to_Maddsub_mult_d<12>_PCIN_9
-    DSP48_X4Y31.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<12>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<12>
-    DSP48_X4Y32.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<12>_PCOUT_to_Maddsub_mult_d<13>_PCIN_9
-    DSP48_X4Y32.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<13>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<13>
-    DSP48_X4Y33.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<13>_PCOUT_to_Maddsub_mult_d<14>_PCIN_9
-    DSP48_X4Y33.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<14>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<14>
-    DSP48_X4Y34.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<14>_PCOUT_to_Maddsub_mult_d<15>_PCIN_9
-    DSP48_X4Y34.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<15>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<15>
-    DSP48_X4Y35.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<15>_PCOUT_to_Maddsub_mult_d<16>_PCIN_9
-    DSP48_X4Y35.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<16>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<16>
-    DSP48_X4Y36.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<16>_PCOUT_to_Maddsub_mult_d<17>_PCIN_9
-    DSP48_X4Y36.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<17>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<17>
-    DSP48_X4Y37.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<17>_PCOUT_to_Maddsub_mult_d<18>_PCIN_9
-    DSP48_X4Y37.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<18>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<18>
-    DSP48_X4Y38.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<18>_PCOUT_to_Maddsub_mult_d<19>_PCIN_9
-    DSP48_X4Y38.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<19>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<19>
-    DSP48_X4Y39.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<19>_PCOUT_to_Maddsub_mult_d<20>_PCIN_9
-    DSP48_X4Y39.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<20>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<20>
-    DSP48_X4Y40.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<20>_PCOUT_to_Maddsub_mult_d<21>_PCIN_9
-    DSP48_X4Y40.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<21>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<21>
-    DSP48_X4Y41.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<21>_PCOUT_to_Maddsub_mult_d<22>_PCIN_9
-    DSP48_X4Y41.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<22>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<22>
-    DSP48_X4Y42.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<22>_PCOUT_to_Maddsub_mult_d<23>_PCIN_9
-    DSP48_X4Y42.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<23>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<23>
-    DSP48_X4Y43.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<23>_PCOUT_to_Maddsub_mult_d<24>_PCIN_9
-    DSP48_X4Y43.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<24>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<24>
-    DSP48_X4Y44.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<24>_PCOUT_to_Maddsub_mult_d<25>_PCIN_9
-    DSP48_X4Y44.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<25>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<25>
-    DSP48_X4Y45.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<25>_PCOUT_to_Maddsub_mult_d<26>_PCIN_9
-    DSP48_X4Y45.PCOUT9   Tdspdo_PCIN_PCOUT     1.255   SubNeurone_L1_1/Maddsub_mult_d<26>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<26>
-    DSP48_X4Y46.PCIN9    net (fanout=1)        0.002   SubNeurone_L1_1/Maddsub_mult_d<26>_PCOUT_to_Maddsub_mult_d<27>_PCIN_9
-    DSP48_X4Y46.P0       Tdspdo_PCIN_P         1.107   SubNeurone_L1_1/Maddsub_mult_d<27>
-                                                       SubNeurone_L1_1/Maddsub_mult_d<27>
-    SLICE_X101Y115.AX    net (fanout=2)        0.482   SubNeurone_L1_1/ADDER_FOR_MULTADD_Madd_025
-    SLICE_X101Y115.COUT  Taxcy                 0.392   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.CIN   net (fanout=1)        0.000   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>
-    SLICE_X101Y116.BMUX  Tcinb                 0.358   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-                                                       SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>
-    SLICE_X98Y116.B6     net (fanout=2)        0.330   SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_5
-    SLICE_X98Y116.COUT   Topcyb                0.499   SubNeurone_L1_1/Acc_1/tmp_value<7>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<5>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<7>
-    SLICE_X98Y117.COUT   Tbyp                  0.092   SubNeurone_L1_1/Acc_1/tmp_value<11>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CIN    net (fanout=1)        0.000   SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<11>
-    SLICE_X98Y118.CLK    Tcinck                0.129   SubNeurone_L1_1/Acc_1/tmp_value<15>
-                                                       SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>
-                                                       SubNeurone_L1_1/Acc_1/tmp_value_13
+    SLICE_X38Y53.AQ      Tcko                  0.393   Counter_L1_1/Counter_40/temp_value<5>
+                                                       Counter_L1_1/Counter_40/temp_value_3
+    DSP48_X2Y21.B3       net (fanout=8)        0.549   Counter_L1_1/Counter_40/temp_value<3>
+    DSP48_X2Y21.P2       Tdspdo_B_P_MULT       2.690   Counter_L1_1/Maddsub_n0018
+                                                       Counter_L1_1/Maddsub_n0018
+    SLICE_X32Y55.C2      net (fanout=2)        1.016   O_W_N_1<2>
+    SLICE_X32Y55.C       Tilo                  0.097   I_read_W_l1<6>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1_SW0
+    SLICE_X33Y55.A3      net (fanout=1)        0.479   N01
+    SLICE_X33Y55.A       Tilo                  0.097   I_read_W_l1<7>
+                                                       O_W_N_1[10]_PWR_8_o_LessThan_13_o1
+    SLICE_X33Y56.D1      net (fanout=11)       0.671   O_W_N_1[10]_PWR_8_o_LessThan_13_o
+    SLICE_X33Y56.D       Tilo                  0.097   I_read_W_l1<1>
+                                                       Mmux_I_read_W_l131
+    SLICE_X8Y3.C4        net (fanout=1723)     3.462   I_read_W_l1<1>
+    SLICE_X8Y3.C         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES70
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES721
+    SLICE_X9Y4.A2        net (fanout=1)        0.686   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES72
+    SLICE_X9Y4.A         Tilo                  0.097   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES62
+                                                       Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.D1        net (fanout=2)        0.601   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES751_10
+    SLICE_X9Y5.CMUX      Topdc                 0.408   Ram_W_1_1_L1[11].lut/Mram_C_LUT_SAMPLES92
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1_F
+                                                       Ram_W_1_1_L1[11].lut/_n0007<4>_inv1
+    DSP48_X1Y5.A17       net (fanout=21)       1.053   Ram_W_1_1/L1[11].lut/_n0007<4>
+    DSP48_X1Y5.CLK       Tdspdck_A_AREG        0.254   SubNeurone_L1_1/Mmult_mult_d<11>
+                                                       SubNeurone_L1_1/Mmult_mult_d<11>
     -------------------------------------------------  ---------------------------
-    Total                                     37.968ns (37.050ns logic, 0.918ns route)
-                                                       (97.6% logic, 2.4% route)
+    Total                                     12.747ns (4.230ns logic, 8.517ns route)
+                                                       (33.2% logic, 66.8% route)
 
 --------------------------------------------------------------------------------
 
-Hold Paths: TS_I_clk = PERIOD TIMEGRP "I_clk" 10 ns HIGH 50%;
+Hold Paths: TS_I_clk = PERIOD TIMEGRP "I_clk" 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point NeuronCombinator_1/SR_reg_124 (SLICE_X36Y99.AX), 1 path
+Paths for end point Ram_I/Mram_mem10_RAMA (SLICE_X34Y47.AI), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.027ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               NeuronCombinator_1/SR_reg_116 (FF)
-  Destination:          NeuronCombinator_1/SR_reg_124 (FF)
+Slack (hold path):      0.003ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_6 (FF)
+  Destination:          Ram_I/Mram_mem10_RAMA (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.208ns (Levels of Logic = 0)
-  Clock Path Skew:      0.181ns (0.770 - 0.589)
-  Source Clock:         I_clk_BUFGP rising at 10.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Data Path Delay:      0.273ns (Levels of Logic = 0)
+  Clock Path Skew:      0.270ns (0.828 - 0.558)
+  Source Clock:         I_clk_BUFGP rising at 20.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: NeuronCombinator_1/SR_reg_116 to NeuronCombinator_1/SR_reg_124
+  Minimum Data Path at Fast Process Corner: CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_6 to Ram_I/Mram_mem10_RAMA
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X37Y101.AQ     Tcko                  0.141   NeuronCombinator_1/SR_reg<119>
-                                                       NeuronCombinator_1/SR_reg_116
-    SLICE_X36Y99.AX      net (fanout=2)        0.126   NeuronCombinator_1/SR_reg<116>
-    SLICE_X36Y99.CLK     Tckdi       (-Th)     0.059   NeuronCombinator_1/SR_reg<127>
-                                                       NeuronCombinator_1/SR_reg_124
+    SLICE_X37Y50.CQ      Tcko                  0.141   CreateWord_1/Reg_I/R1[21].reg_shifted/O_value<7>
+                                                       CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_6
+    SLICE_X34Y47.AI      net (fanout=2)        0.279   CreateWord_1/Reg_I/R1[21].reg_shifted/O_value<6>
+    SLICE_X34Y47.CLK     Tdh         (-Th)     0.147   Ram_I/_n0009<59>
+                                                       Ram_I/Mram_mem10_RAMA
     -------------------------------------------------  ---------------------------
-    Total                                      0.208ns (0.082ns logic, 0.126ns route)
-                                                       (39.4% logic, 60.6% route)
+    Total                                      0.273ns (-0.006ns logic, 0.279ns route)
+                                                       (-2.2% logic, 102.2% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_3 (SLICE_X103Y99.DX), 1 path
+Paths for end point NeuronCombinator_2/SR_reg_129 (SLICE_X93Y100.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.035ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               CreateWord_1/Reg_I/R1[22].reg_shifted/O_value_3 (FF)
-  Destination:          CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_3 (FF)
+Slack (hold path):      0.003ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               NeuronCombinator_2/SR_reg_121 (FF)
+  Destination:          NeuronCombinator_2/SR_reg_129 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.218ns (Levels of Logic = 0)
-  Clock Path Skew:      0.183ns (0.824 - 0.641)
-  Source Clock:         I_clk_BUFGP rising at 10.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Data Path Delay:      0.355ns (Levels of Logic = 0)
+  Clock Path Skew:      0.352ns (0.908 - 0.556)
+  Source Clock:         I_clk_BUFGP rising at 20.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: CreateWord_1/Reg_I/R1[22].reg_shifted/O_value_3 to CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_3
+  Minimum Data Path at Fast Process Corner: NeuronCombinator_2/SR_reg_121 to NeuronCombinator_2/SR_reg_129
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X102Y101.DQ    Tcko                  0.164   CreateWord_1/Reg_I/R1[22].reg_shifted/O_value<3>
-                                                       CreateWord_1/Reg_I/R1[22].reg_shifted/O_value_3
-    SLICE_X103Y99.DX     net (fanout=2)        0.126   CreateWord_1/Reg_I/R1[22].reg_shifted/O_value<3>
-    SLICE_X103Y99.CLK    Tckdi       (-Th)     0.072   CreateWord_1/Reg_I/R1[21].reg_shifted/O_value<3>
-                                                       CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_3
+    SLICE_X92Y96.BQ      Tcko                  0.164   NeuronCombinator_2/SR_reg<123>
+                                                       NeuronCombinator_2/SR_reg_121
+    SLICE_X93Y100.BX     net (fanout=2)        0.257   NeuronCombinator_2/SR_reg<121>
+    SLICE_X93Y100.CLK    Tckdi       (-Th)     0.066   NeuronCombinator_2/SR_reg<131>
+                                                       NeuronCombinator_2/SR_reg_129
     -------------------------------------------------  ---------------------------
-    Total                                      0.218ns (0.092ns logic, 0.126ns route)
-                                                       (42.2% logic, 57.8% route)
+    Total                                      0.355ns (0.098ns logic, 0.257ns route)
+                                                       (27.6% logic, 72.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Ram_I/Mram_mem37_RAMA (SLICE_X96Y58.AI), 1 path
+Paths for end point CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_0 (SLICE_X37Y49.AX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.036ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               CreateWord_1/Reg_I/R1[0].reg_shifted/O_value_0 (FF)
-  Destination:          Ram_I/Mram_mem37_RAMA (RAM)
+Slack (hold path):      0.010ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               CreateWord_1/Reg_I/R1[22].reg_shifted/O_value_0 (FF)
+  Destination:          CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_0 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.049ns (Levels of Logic = 0)
-  Clock Path Skew:      0.013ns (0.071 - 0.058)
-  Source Clock:         I_clk_BUFGP rising at 10.000ns
-  Destination Clock:    I_clk_BUFGP rising at 10.000ns
+  Data Path Delay:      0.280ns (Levels of Logic = 0)
+  Clock Path Skew:      0.270ns (0.827 - 0.557)
+  Source Clock:         I_clk_BUFGP rising at 20.000ns
+  Destination Clock:    I_clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: CreateWord_1/Reg_I/R1[0].reg_shifted/O_value_0 to Ram_I/Mram_mem37_RAMA
+  Minimum Data Path at Fast Process Corner: CreateWord_1/Reg_I/R1[22].reg_shifted/O_value_0 to CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X97Y58.AQ      Tcko                  0.141   CreateWord_1/Reg_I/R1[0].reg_shifted/O_value<3>
-                                                       CreateWord_1/Reg_I/R1[0].reg_shifted/O_value_0
-    SLICE_X96Y58.AI      net (fanout=1)        0.055   CreateWord_1/Reg_I/R1[0].reg_shifted/O_value<0>
-    SLICE_X96Y58.CLK     Tdh         (-Th)     0.147   Ram_I/_n0009<221>
-                                                       Ram_I/Mram_mem37_RAMA
+    SLICE_X37Y53.AQ      Tcko                  0.141   CreateWord_1/Reg_I/R1[22].reg_shifted/O_value<3>
+                                                       CreateWord_1/Reg_I/R1[22].reg_shifted/O_value_0
+    SLICE_X37Y49.AX      net (fanout=2)        0.209   CreateWord_1/Reg_I/R1[22].reg_shifted/O_value<0>
+    SLICE_X37Y49.CLK     Tckdi       (-Th)     0.070   CreateWord_1/Reg_I/R1[21].reg_shifted/O_value<3>
+                                                       CreateWord_1/Reg_I/R1[21].reg_shifted/O_value_0
     -------------------------------------------------  ---------------------------
-    Total                                      0.049ns (-0.006ns logic, 0.055ns route)
-                                                       (-12.2% logic, 112.2% route)
+    Total                                      0.280ns (0.071ns logic, 0.209ns route)
+                                                       (25.4% logic, 74.6% route)
 
 --------------------------------------------------------------------------------
 
-Component Switching Limit Checks: TS_I_clk = PERIOD TIMEGRP "I_clk" 10 ns HIGH 50%;
+Component Switching Limit Checks: TS_I_clk = PERIOD TIMEGRP "I_clk" 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
-Slack: 7.900ns (period - (min low pulse limit / (low pulse / period)))
-  Period: 10.000ns
-  Low pulse: 5.000ns
+Slack: 17.900ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
   Low pulse limit: 1.050ns (Tmpw)
-  Physical resource: Ram_I/_n0009<173>/CLK
-  Logical resource: Ram_I/Mram_mem29_RAMA/CLK
-  Location pin: SLICE_X36Y62.CLK
+  Physical resource: Ram_I/_n0009<101>/CLK
+  Logical resource: Ram_I/Mram_mem17_RAMA/CLK
+  Location pin: SLICE_X16Y24.CLK
   Clock network: I_clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 7.900ns (period - (min high pulse limit / (high pulse / period)))
-  Period: 10.000ns
-  High pulse: 5.000ns
+Slack: 17.900ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
   High pulse limit: 1.050ns (Tmpw)
-  Physical resource: Ram_I/_n0009<173>/CLK
-  Logical resource: Ram_I/Mram_mem29_RAMA/CLK
-  Location pin: SLICE_X36Y62.CLK
+  Physical resource: Ram_I/_n0009<101>/CLK
+  Logical resource: Ram_I/Mram_mem17_RAMA/CLK
+  Location pin: SLICE_X16Y24.CLK
   Clock network: I_clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 7.900ns (period - (min low pulse limit / (low pulse / period)))
-  Period: 10.000ns
-  Low pulse: 5.000ns
+Slack: 17.900ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
   Low pulse limit: 1.050ns (Tmpw)
-  Physical resource: Ram_I/_n0009<173>/CLK
-  Logical resource: Ram_I/Mram_mem29_RAMA_D1/CLK
-  Location pin: SLICE_X36Y62.CLK
+  Physical resource: Ram_I/_n0009<101>/CLK
+  Logical resource: Ram_I/Mram_mem17_RAMA_D1/CLK
+  Location pin: SLICE_X16Y24.CLK
   Clock network: I_clk_BUFGP
 --------------------------------------------------------------------------------
 
 
-1 constraint not met.
+All constraints were met.
 
 
 Data Sheet report:
@@ -1277,32 +638,32 @@ Clock to Setup on destination clock I_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-I_clk          |   38.106|         |         |         |
+I_clk          |   13.121|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
 Timing summary:
 ---------------
 
-Timing errors: 634  Score: 2788462  (Setup/Max: 2788462, Hold: 0)
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 172751481922275029072211920954543296208632283136 paths, 0 nets, and 25079 connections
+Constraints cover 57065294 paths, 0 nets, and 26580 connections
 
 Design statistics:
-   Minimum period:  38.106ns{1}   (Maximum frequency:  26.243MHz)
+   Minimum period:  13.121ns{1}   (Maximum frequency:  76.214MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Feb 19 18:21:17 2019 
+Analysis completed Tue Feb 19 20:59:37 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 920 MB
+Peak Memory Usage: 862 MB
 
 
 

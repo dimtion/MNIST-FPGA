@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: FCNN_top_unit.prj
@@ -279,7 +279,21 @@ Elaborating entity <Counter_Clean> (architecture <Behavioral>) with generics fro
 
 Elaborating entity <SubNeurone_l1> (architecture <Behavioral>) from library <work>.
 
+Elaborating entity <RegWEn> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <RegWEn> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <RegWEn> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <RegWEn> (architecture <Behavioral>) with generics from library <work>.
+
 Elaborating entity <Acc> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 182: mult_d_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 190: add_1_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 198: add_2_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 206: add_3_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 207: add_3_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 213: add_4_r should be on the sensitivity list of the process
 
 Elaborating entity <NeuronCombinator> (architecture <Behavioral>) with generics from library <work>.
 
@@ -292,6 +306,14 @@ Elaborating entity <Counter_Clean> (architecture <Behavioral>) with generics fro
 Elaborating entity <Counter_Clean> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <SubNeurone_l2> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 179: mult_d_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 187: add_1_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 194: add_2_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 195: add_2_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 196: add_2_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 202: add_3_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 203: add_3_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 209: add_4_r should be on the sensitivity list of the process
 
 Elaborating entity <Ram_W_2> (architecture <Behavioral>) with generics from library <work>.
 
@@ -347,6 +369,14 @@ Elaborating entity <Counter_L3> (architecture <Behavioral>) from library <work>.
 Elaborating entity <Counter_Clean> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <SubNeurone_l3> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 174: mult_d_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 182: add_1_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 189: add_2_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 190: add_2_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 191: add_2_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 197: add_3_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 198: add_3_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 203: add_4_r should be on the sensitivity list of the process
 
 Elaborating entity <Ram_W_3> (architecture <Behavioral>) with generics from library <work>.
 
@@ -404,6 +434,7 @@ WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Arg
 WARNING:HDLCompiler:92 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Arg_el.vhd" Line 72: i_i2 should be on the sensitivity list of the process
 
 Elaborating entity <NeuronCombinator> (architecture <Behavioral>) with generics from library <work>.
+WARNING:Xst:2972 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" line 114. All outputs of instance <A2[6].reg_a2> of block <RegWEn> are unconnected in block <SubNeurone_l1>. Underlying logic will be removed.
 WARNING:Xst:2972 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd" line 479. All outputs of instance <Ram_B_1_1> of block <Ram_b_1> are unconnected in block <FCNN_top_unit>. Underlying logic will be removed.
 WARNING:Xst:2972 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd" line 586. All outputs of instance <Ram_B_2_1> of block <Ram_b_2> are unconnected in block <FCNN_top_unit>. Underlying logic will be removed.
 WARNING:Xst:2972 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd" line 642. All outputs of instance <Ram_b_3_1> of block <Ram_b_3> are unconnected in block <FCNN_top_unit>. Underlying logic will be removed.
@@ -1050,68 +1081,101 @@ Unit <Counter_Clean_2> synthesized.
 
 Synthesizing Unit <SubNeurone_l1>.
     Related source file is "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd".
-    Found 15-bit adder for signal <add_1<0>> created at line 85.
-    Found 15-bit adder for signal <add_1<1>> created at line 85.
-    Found 15-bit adder for signal <add_1<2>> created at line 85.
-    Found 15-bit adder for signal <add_1<3>> created at line 85.
-    Found 15-bit adder for signal <add_1<4>> created at line 85.
-    Found 15-bit adder for signal <add_1<5>> created at line 85.
-    Found 15-bit adder for signal <add_1<6>> created at line 85.
-    Found 15-bit adder for signal <add_1<7>> created at line 85.
-    Found 15-bit adder for signal <add_1<8>> created at line 85.
-    Found 15-bit adder for signal <add_1<9>> created at line 85.
-    Found 15-bit adder for signal <add_1<10>> created at line 85.
-    Found 15-bit adder for signal <add_1<11>> created at line 85.
-    Found 15-bit adder for signal <add_1<12>> created at line 85.
-    Found 15-bit adder for signal <add_1<13>> created at line 85.
-    Found 16-bit adder for signal <add_2<0>> created at line 93.
-    Found 16-bit adder for signal <add_2<1>> created at line 93.
-    Found 16-bit adder for signal <add_2<2>> created at line 93.
-    Found 16-bit adder for signal <add_2<3>> created at line 93.
-    Found 16-bit adder for signal <add_2<4>> created at line 93.
-    Found 16-bit adder for signal <add_2<5>> created at line 93.
-    Found 16-bit adder for signal <add_2<6>> created at line 93.
-    Found 17-bit adder for signal <add_3<0>> created at line 101.
-    Found 17-bit adder for signal <add_3<1>> created at line 101.
-    Found 17-bit adder for signal <add_3<2>> created at line 101.
-    Found 17-bit adder for signal <add_4<0>> created at line 109.
-    Found 17-bit adder for signal <add_4<1>> created at line 110.
-    Found 17-bit adder for signal <add_5> created at line 116.
-    Found 9x5-bit multiplier for signal <mult_d<0>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<1>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<2>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<3>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<4>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<5>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<6>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<7>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<8>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<9>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<10>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<11>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<12>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<13>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<14>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<15>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<16>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<17>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<18>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<19>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<20>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<21>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<22>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<23>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<24>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<25>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<26>> created at line 77.
-    Found 9x5-bit multiplier for signal <mult_d<27>> created at line 77.
-    Found 17-bit comparator lessequal for signal <n0059> created at line 137
+INFO:Xst:3210 - "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" line 114: Output port <O_value> of the instance <A2[6].reg_a2> is unconnected or connected to loadless signal.
+    Found 15-bit adder for signal <add_1<0>> created at line 182.
+    Found 15-bit adder for signal <add_1<1>> created at line 182.
+    Found 15-bit adder for signal <add_1<2>> created at line 182.
+    Found 15-bit adder for signal <add_1<3>> created at line 182.
+    Found 15-bit adder for signal <add_1<4>> created at line 182.
+    Found 15-bit adder for signal <add_1<5>> created at line 182.
+    Found 15-bit adder for signal <add_1<6>> created at line 182.
+    Found 15-bit adder for signal <add_1<7>> created at line 182.
+    Found 15-bit adder for signal <add_1<8>> created at line 182.
+    Found 15-bit adder for signal <add_1<9>> created at line 182.
+    Found 15-bit adder for signal <add_1<10>> created at line 182.
+    Found 15-bit adder for signal <add_1<11>> created at line 182.
+    Found 15-bit adder for signal <add_1<12>> created at line 182.
+    Found 15-bit adder for signal <add_1<13>> created at line 182.
+    Found 16-bit adder for signal <add_2<0>> created at line 190.
+    Found 16-bit adder for signal <add_2<1>> created at line 190.
+    Found 16-bit adder for signal <add_2<2>> created at line 190.
+    Found 16-bit adder for signal <add_2<3>> created at line 190.
+    Found 16-bit adder for signal <add_2<4>> created at line 190.
+    Found 16-bit adder for signal <add_2<5>> created at line 190.
+    Found 16-bit adder for signal <add_2<6>> created at line 190.
+    Found 17-bit adder for signal <add_3<0>> created at line 198.
+    Found 17-bit adder for signal <add_3<1>> created at line 198.
+    Found 17-bit adder for signal <add_3<2>> created at line 198.
+    Found 17-bit adder for signal <add_4<0>> created at line 206.
+    Found 17-bit adder for signal <add_4<1>> created at line 207.
+    Found 17-bit adder for signal <add_5> created at line 213.
+    Found 9x5-bit multiplier for signal <mult_d<0>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<1>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<2>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<3>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<4>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<5>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<6>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<7>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<8>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<9>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<10>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<11>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<12>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<13>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<14>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<15>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<16>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<17>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<18>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<19>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<20>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<21>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<22>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<23>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<24>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<25>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<26>> created at line 174.
+    Found 9x5-bit multiplier for signal <mult_d<27>> created at line 174.
+    Found 17-bit comparator lessequal for signal <n0059> created at line 234
     Summary:
 	inferred  28 Multiplier(s).
 	inferred  27 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
 	inferred   2 Multiplexer(s).
 Unit <SubNeurone_l1> synthesized.
+
+Synthesizing Unit <RegWEn_3>.
+    Related source file is "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/RegWLoad.vhd".
+        size = 17
+    Found 17-bit register for signal <O_value>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <RegWEn_3> synthesized.
+
+Synthesizing Unit <RegWEn_4>.
+    Related source file is "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/RegWLoad.vhd".
+        size = 16
+    Found 16-bit register for signal <O_value>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <RegWEn_4> synthesized.
+
+Synthesizing Unit <RegWEn_5>.
+    Related source file is "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/RegWLoad.vhd".
+        size = 15
+    Found 15-bit register for signal <O_value>.
+    Summary:
+	inferred  15 D-type flip-flop(s).
+Unit <RegWEn_5> synthesized.
+
+Synthesizing Unit <RegWEn_6>.
+    Related source file is "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/RegWLoad.vhd".
+        size = 14
+    Found 14-bit register for signal <O_value>.
+    Summary:
+	inferred  14 D-type flip-flop(s).
+Unit <RegWEn_6> synthesized.
 
 Synthesizing Unit <Acc>.
     Related source file is "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Acc.vhd".
@@ -1164,7 +1228,7 @@ Synthesizing Unit <Counter_Clean_3>.
         val_max = 19
         nb_bits = 5
     Found 5-bit register for signal <temp_value>.
-    Found 5-bit adder for signal <temp_value[4]_GND_61_o_add_1_OUT> created at line 1241.
+    Found 5-bit adder for signal <temp_value[4]_GND_65_o_add_1_OUT> created at line 1241.
     Found 5-bit comparator lessequal for signal <n0001> created at line 37
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -1178,7 +1242,7 @@ Synthesizing Unit <Counter_Clean_4>.
         val_max = 2
         nb_bits = 2
     Found 2-bit register for signal <temp_value>.
-    Found 2-bit adder for signal <temp_value[1]_GND_62_o_add_1_OUT> created at line 1241.
+    Found 2-bit adder for signal <temp_value[1]_GND_66_o_add_1_OUT> created at line 1241.
     Found 2-bit comparator lessequal for signal <n0001> created at line 37
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -1189,46 +1253,46 @@ Unit <Counter_Clean_4> synthesized.
 
 Synthesizing Unit <SubNeurone_l2>.
     Related source file is "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd".
-    Found 15-bit adder for signal <add_1<0>> created at line 82.
-    Found 15-bit adder for signal <add_1<1>> created at line 82.
-    Found 15-bit adder for signal <add_1<2>> created at line 82.
-    Found 15-bit adder for signal <add_1<3>> created at line 82.
-    Found 15-bit adder for signal <add_1<4>> created at line 82.
-    Found 15-bit adder for signal <add_1<5>> created at line 82.
-    Found 15-bit adder for signal <add_1<6>> created at line 82.
-    Found 15-bit adder for signal <add_1<7>> created at line 82.
-    Found 15-bit adder for signal <add_1<8>> created at line 82.
-    Found 15-bit adder for signal <add_1<9>> created at line 82.
-    Found 16-bit adder for signal <add_2<0>> created at line 90.
-    Found 16-bit adder for signal <add_2<1>> created at line 90.
-    Found 16-bit adder for signal <add_2<2>> created at line 90.
-    Found 16-bit adder for signal <add_2<3>> created at line 90.
-    Found 16-bit adder for signal <add_2<4>> created at line 90.
-    Found 17-bit adder for signal <add_3<0>> created at line 97.
-    Found 17-bit adder for signal <add_3<1>> created at line 98.
-    Found 17-bit adder for signal <add_4<0>> created at line 105.
-    Found 17-bit adder for signal <add_5> created at line 112.
-    Found 9x5-bit multiplier for signal <mult<0>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<1>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<2>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<3>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<4>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<5>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<6>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<7>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<8>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<9>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<10>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<11>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<12>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<13>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<14>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<15>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<16>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<17>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<18>> created at line 74.
-    Found 9x5-bit multiplier for signal <mult<19>> created at line 74.
-    Found 17-bit comparator lessequal for signal <n0046> created at line 143
+    Found 15-bit adder for signal <add_1<0>> created at line 179.
+    Found 15-bit adder for signal <add_1<1>> created at line 179.
+    Found 15-bit adder for signal <add_1<2>> created at line 179.
+    Found 15-bit adder for signal <add_1<3>> created at line 179.
+    Found 15-bit adder for signal <add_1<4>> created at line 179.
+    Found 15-bit adder for signal <add_1<5>> created at line 179.
+    Found 15-bit adder for signal <add_1<6>> created at line 179.
+    Found 15-bit adder for signal <add_1<7>> created at line 179.
+    Found 15-bit adder for signal <add_1<8>> created at line 179.
+    Found 15-bit adder for signal <add_1<9>> created at line 179.
+    Found 16-bit adder for signal <add_2<0>> created at line 187.
+    Found 16-bit adder for signal <add_2<1>> created at line 187.
+    Found 16-bit adder for signal <add_2<2>> created at line 187.
+    Found 16-bit adder for signal <add_2<3>> created at line 187.
+    Found 16-bit adder for signal <add_2<4>> created at line 187.
+    Found 17-bit adder for signal <add_3<0>> created at line 194.
+    Found 17-bit adder for signal <add_3<1>> created at line 195.
+    Found 17-bit adder for signal <add_4<0>> created at line 202.
+    Found 17-bit adder for signal <add_5> created at line 209.
+    Found 9x5-bit multiplier for signal <mult<0>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<1>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<2>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<3>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<4>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<5>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<6>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<7>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<8>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<9>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<10>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<11>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<12>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<13>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<14>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<15>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<16>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<17>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<18>> created at line 171.
+    Found 9x5-bit multiplier for signal <mult<19>> created at line 171.
+    Found 17-bit comparator lessequal for signal <n0046> created at line 240
     Summary:
 	inferred  20 Multiplier(s).
 	inferred  19 Adder/Subtractor(s).
@@ -1629,7 +1693,7 @@ Synthesizing Unit <Counter_Clean_5>.
         val_max = 12
         nb_bits = 4
     Found 4-bit register for signal <temp_value>.
-    Found 4-bit adder for signal <temp_value[3]_GND_95_o_add_1_OUT> created at line 1241.
+    Found 4-bit adder for signal <temp_value[3]_GND_99_o_add_1_OUT> created at line 1241.
     Found 4-bit comparator lessequal for signal <n0001> created at line 37
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -1640,45 +1704,45 @@ Unit <Counter_Clean_5> synthesized.
 
 Synthesizing Unit <SubNeurone_l3>.
     Related source file is "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd".
-    Found 15-bit adder for signal <add_1<0>> created at line 79.
-    Found 15-bit adder for signal <add_1<1>> created at line 79.
-    Found 15-bit adder for signal <add_1<2>> created at line 79.
-    Found 15-bit adder for signal <add_1<3>> created at line 79.
-    Found 15-bit adder for signal <add_1<4>> created at line 79.
-    Found 15-bit adder for signal <add_1<5>> created at line 79.
-    Found 15-bit adder for signal <add_1<6>> created at line 79.
-    Found 15-bit adder for signal <add_1<7>> created at line 79.
-    Found 15-bit adder for signal <add_1<8>> created at line 79.
-    Found 15-bit adder for signal <add_1<9>> created at line 79.
-    Found 16-bit adder for signal <add_2<0>> created at line 87.
-    Found 16-bit adder for signal <add_2<1>> created at line 87.
-    Found 16-bit adder for signal <add_2<2>> created at line 87.
-    Found 16-bit adder for signal <add_2<3>> created at line 87.
-    Found 16-bit adder for signal <add_2<4>> created at line 87.
-    Found 17-bit adder for signal <add_3<0>> created at line 94.
-    Found 17-bit adder for signal <add_3<1>> created at line 95.
-    Found 17-bit adder for signal <add_4<0>> created at line 102.
-    Found 17-bit adder for signal <add_5> created at line 108.
-    Found 9x5-bit multiplier for signal <mult<0>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<1>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<2>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<3>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<4>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<5>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<6>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<7>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<8>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<9>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<10>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<11>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<12>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<13>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<14>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<15>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<16>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<17>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<18>> created at line 71.
-    Found 9x5-bit multiplier for signal <mult<19>> created at line 71.
+    Found 15-bit adder for signal <add_1<0>> created at line 174.
+    Found 15-bit adder for signal <add_1<1>> created at line 174.
+    Found 15-bit adder for signal <add_1<2>> created at line 174.
+    Found 15-bit adder for signal <add_1<3>> created at line 174.
+    Found 15-bit adder for signal <add_1<4>> created at line 174.
+    Found 15-bit adder for signal <add_1<5>> created at line 174.
+    Found 15-bit adder for signal <add_1<6>> created at line 174.
+    Found 15-bit adder for signal <add_1<7>> created at line 174.
+    Found 15-bit adder for signal <add_1<8>> created at line 174.
+    Found 15-bit adder for signal <add_1<9>> created at line 174.
+    Found 16-bit adder for signal <add_2<0>> created at line 182.
+    Found 16-bit adder for signal <add_2<1>> created at line 182.
+    Found 16-bit adder for signal <add_2<2>> created at line 182.
+    Found 16-bit adder for signal <add_2<3>> created at line 182.
+    Found 16-bit adder for signal <add_2<4>> created at line 182.
+    Found 17-bit adder for signal <add_3<0>> created at line 189.
+    Found 17-bit adder for signal <add_3<1>> created at line 190.
+    Found 17-bit adder for signal <add_4<0>> created at line 197.
+    Found 17-bit adder for signal <add_5> created at line 203.
+    Found 9x5-bit multiplier for signal <mult<0>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<1>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<2>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<3>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<4>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<5>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<6>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<7>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<8>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<9>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<10>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<11>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<12>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<13>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<14>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<15>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<16>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<17>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<18>> created at line 166.
+    Found 9x5-bit multiplier for signal <mult<19>> created at line 166.
     Summary:
 	inferred  20 Multiplier(s).
 	inferred  19 Adder/Subtractor(s).
@@ -2071,13 +2135,13 @@ Synthesizing Unit <Arg_el>.
 	inferred   2 Multiplexer(s).
 Unit <Arg_el> synthesized.
 
-Synthesizing Unit <RegWEn_3>.
+Synthesizing Unit <RegWEn_7>.
     Related source file is "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/RegWLoad.vhd".
         size = 4
     Found 4-bit register for signal <O_value>.
     Summary:
 	inferred   4 D-type flip-flop(s).
-Unit <RegWEn_3> synthesized.
+Unit <RegWEn_7> synthesized.
 
 Synthesizing Unit <NeuronCombinator_3>.
     Related source file is "/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/NeuronCombinator.vhd".
@@ -2112,10 +2176,13 @@ Macro Statistics
  4-bit adder                                           : 2
  5-bit adder                                           : 5
  6-bit adder                                           : 3
-# Registers                                            : 141
+# Registers                                            : 275
  1-bit register                                        : 10
+ 14-bit register                                       : 68
+ 15-bit register                                       : 34
+ 16-bit register                                       : 16
  160-bit register                                      : 3
- 17-bit register                                       : 3
+ 17-bit register                                       : 19
  2-bit register                                        : 1
  224-bit register                                      : 1
  320-bit register                                      : 1
@@ -2185,93 +2252,6 @@ Unit <DualPort_RAM> synthesized (advanced).
 Synthesizing (advanced) Unit <FCNN_top_unit>.
 	Multiplier <Counter_L1_1/Mmult_n0018> in block <FCNN_top_unit> and adder/subtractor <Counter_L1_1/Madd_O_W_N> in block <FCNN_top_unit> are combined into a MAC<Counter_L1_1/Maddsub_n0018>.
 Unit <FCNN_top_unit> synthesized (advanced).
-
-Synthesizing (advanced) Unit <SubNeurone_l1>.
-	The following adders/subtractors are grouped into adder tree <Madd_add_51> :
- 	<Madd_add_1<0>> in block <SubNeurone_l1>, 	<Madd_add_1<1>> in block <SubNeurone_l1>, 	<Madd_add_1<2>> in block <SubNeurone_l1>, 	<Madd_add_1<3>> in block <SubNeurone_l1>, 	<Madd_add_1<4>> in block <SubNeurone_l1>, 	<Madd_add_1<5>> in block <SubNeurone_l1>, 	<Madd_add_1<6>> in block <SubNeurone_l1>, 	<Madd_add_1<7>> in block <SubNeurone_l1>, 	<Madd_add_1<8>> in block <SubNeurone_l1>, 	<Madd_add_1<9>> in block <SubNeurone_l1>, 	<Madd_add_1<10>> in block <SubNeurone_l1>, 	<Madd_add_1<11>> in block <SubNeurone_l1>, 	<Madd_add_1<12>> in block <SubNeurone_l1>, 	<Madd_add_1<13>> in block <SubNeurone_l1>.
-	The following adders/subtractors are grouped into adder tree <Madd_add_4<0>1> :
- 	<Madd_add_2<0>> in block <SubNeurone_l1>, 	<Madd_add_2<1>> in block <SubNeurone_l1>, 	<Madd_add_2<2>> in block <SubNeurone_l1>, 	<Madd_add_2<3>> in block <SubNeurone_l1>.
-	The following adders/subtractors are grouped into adder tree <Madd_add_4<1>1> :
- 	<Madd_add_2<4>> in block <SubNeurone_l1>, 	<Madd_add_2<5>> in block <SubNeurone_l1>, 	<Madd_add_2<6>> in block <SubNeurone_l1>.
-	Multiplier <Mmult_mult_d<27>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd25> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<27>>.
-	Multiplier <Mmult_mult_d<26>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd24> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<26>>.
-	Multiplier <Mmult_mult_d<25>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd23> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<25>>.
-	Multiplier <Mmult_mult_d<24>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd22> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<24>>.
-	Multiplier <Mmult_mult_d<23>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd21> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<23>>.
-	Multiplier <Mmult_mult_d<22>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd20> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<22>>.
-	Multiplier <Mmult_mult_d<21>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd19> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<21>>.
-	Multiplier <Mmult_mult_d<20>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd18> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<20>>.
-	Multiplier <Mmult_mult_d<19>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd17> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<19>>.
-	Multiplier <Mmult_mult_d<18>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd16> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<18>>.
-	Multiplier <Mmult_mult_d<17>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd15> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<17>>.
-	Multiplier <Mmult_mult_d<16>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd14> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<16>>.
-	Multiplier <Mmult_mult_d<15>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd13> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<15>>.
-	Multiplier <Mmult_mult_d<14>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd12> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<14>>.
-	Multiplier <Mmult_mult_d<13>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd11> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<13>>.
-	Multiplier <Mmult_mult_d<12>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd10> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<12>>.
-	Multiplier <Mmult_mult_d<11>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd9> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<11>>.
-	Multiplier <Mmult_mult_d<10>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd8> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<10>>.
-	Multiplier <Mmult_mult_d<9>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd7> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<9>>.
-	Multiplier <Mmult_mult_d<8>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd6> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<8>>.
-	Multiplier <Mmult_mult_d<7>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd5> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<7>>.
-	Multiplier <Mmult_mult_d<6>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd4> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<6>>.
-	Multiplier <Mmult_mult_d<5>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<5>>.
-	Multiplier <Mmult_mult_d<4>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<4>>.
-	Multiplier <Mmult_mult_d<3>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<3>>.
-	Multiplier <Mmult_mult_d<0>> in block <SubNeurone_l1> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <SubNeurone_l1> are combined into a MAC<Maddsub_mult_d<0>>.
-Unit <SubNeurone_l1> synthesized (advanced).
-
-Synthesizing (advanced) Unit <SubNeurone_l2>.
-	The following adders/subtractors are grouped into adder tree <Madd_add_51> :
- 	<Madd_add_1<0>> in block <SubNeurone_l2>, 	<Madd_add_1<1>> in block <SubNeurone_l2>, 	<Madd_add_1<2>> in block <SubNeurone_l2>, 	<Madd_add_1<3>> in block <SubNeurone_l2>, 	<Madd_add_1<4>> in block <SubNeurone_l2>, 	<Madd_add_1<5>> in block <SubNeurone_l2>, 	<Madd_add_1<6>> in block <SubNeurone_l2>, 	<Madd_add_1<7>> in block <SubNeurone_l2>, 	<Madd_add_1<8>> in block <SubNeurone_l2>, 	<Madd_add_1<9>> in block <SubNeurone_l2>.
-	The following adders/subtractors are grouped into adder tree <Madd_add_4<0>1> :
- 	<Madd_add_2<0>> in block <SubNeurone_l2>, 	<Madd_add_2<1>> in block <SubNeurone_l2>, 	<Madd_add_2<2>> in block <SubNeurone_l2>, 	<Madd_add_2<3>> in block <SubNeurone_l2>.
-	Multiplier <Mmult_mult<19>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd18> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<19>>.
-	Multiplier <Mmult_mult<18>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd17> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<18>>.
-	Multiplier <Mmult_mult<17>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd16> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<17>>.
-	Multiplier <Mmult_mult<16>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd15> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<16>>.
-	Multiplier <Mmult_mult<15>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd14> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<15>>.
-	Multiplier <Mmult_mult<14>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd13> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<14>>.
-	Multiplier <Mmult_mult<13>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd12> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<13>>.
-	Multiplier <Mmult_mult<12>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd11> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<12>>.
-	Multiplier <Mmult_mult<11>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd10> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<11>>.
-	Multiplier <Mmult_mult<10>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd9> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<10>>.
-	Multiplier <Mmult_mult<9>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd8> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<9>>.
-	Multiplier <Mmult_mult<8>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd7> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<8>>.
-	Multiplier <Mmult_mult<7>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd6> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<7>>.
-	Multiplier <Mmult_mult<6>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd5> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<6>>.
-	Multiplier <Mmult_mult<5>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd4> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<5>>.
-	Multiplier <Mmult_mult<4>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<4>>.
-	Multiplier <Mmult_mult<3>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<3>>.
-	Multiplier <Mmult_mult<2>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<2>>.
-	Multiplier <Mmult_mult<0>> in block <SubNeurone_l2> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <SubNeurone_l2> are combined into a MAC<Maddsub_mult<0>>.
-Unit <SubNeurone_l2> synthesized (advanced).
-
-Synthesizing (advanced) Unit <SubNeurone_l3>.
-	The following adders/subtractors are grouped into adder tree <Madd_add_51> :
- 	<Madd_add_1<0>> in block <SubNeurone_l3>, 	<Madd_add_1<1>> in block <SubNeurone_l3>, 	<Madd_add_1<2>> in block <SubNeurone_l3>, 	<Madd_add_1<3>> in block <SubNeurone_l3>, 	<Madd_add_1<4>> in block <SubNeurone_l3>, 	<Madd_add_1<5>> in block <SubNeurone_l3>, 	<Madd_add_1<6>> in block <SubNeurone_l3>, 	<Madd_add_1<7>> in block <SubNeurone_l3>, 	<Madd_add_1<8>> in block <SubNeurone_l3>, 	<Madd_add_1<9>> in block <SubNeurone_l3>.
-	The following adders/subtractors are grouped into adder tree <Madd_add_4<0>1> :
- 	<Madd_add_2<0>> in block <SubNeurone_l3>, 	<Madd_add_2<1>> in block <SubNeurone_l3>, 	<Madd_add_2<2>> in block <SubNeurone_l3>, 	<Madd_add_2<3>> in block <SubNeurone_l3>.
-	Multiplier <Mmult_mult<19>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd18> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<19>>.
-	Multiplier <Mmult_mult<18>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd17> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<18>>.
-	Multiplier <Mmult_mult<17>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd16> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<17>>.
-	Multiplier <Mmult_mult<16>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd15> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<16>>.
-	Multiplier <Mmult_mult<15>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd14> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<15>>.
-	Multiplier <Mmult_mult<14>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd13> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<14>>.
-	Multiplier <Mmult_mult<13>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd12> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<13>>.
-	Multiplier <Mmult_mult<12>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd11> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<12>>.
-	Multiplier <Mmult_mult<11>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd10> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<11>>.
-	Multiplier <Mmult_mult<10>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd9> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<10>>.
-	Multiplier <Mmult_mult<9>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd8> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<9>>.
-	Multiplier <Mmult_mult<8>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd7> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<8>>.
-	Multiplier <Mmult_mult<7>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd6> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<7>>.
-	Multiplier <Mmult_mult<6>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd5> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<6>>.
-	Multiplier <Mmult_mult<5>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd4> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<5>>.
-	Multiplier <Mmult_mult<4>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<4>>.
-	Multiplier <Mmult_mult<3>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<3>>.
-	Multiplier <Mmult_mult<2>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<2>>.
-	Multiplier <Mmult_mult<0>> in block <SubNeurone_l3> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <SubNeurone_l3> are combined into a MAC<Maddsub_mult<0>>.
-Unit <SubNeurone_l3> synthesized (advanced).
 
 Synthesizing (advanced) Unit <generic_LUT_unit_1>.
 INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the RAM <Mram_C_LUT_SAMPLES>. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
@@ -3234,25 +3214,25 @@ Macro Statistics
  1120x5-bit single-port distributed Read Only RAM      : 28
  28x224-bit dual-port distributed RAM                  : 1
  40x5-bit single-port distributed Read Only RAM        : 20
-# MACs                                                 : 65
+# MACs                                                 : 1
  6x5-to-11-bit MAC                                     : 1
- 9x5-to-17-bit MAC                                     : 64
-# Multipliers                                          : 4
- 9x5-bit multiplier                                    : 4
-# Adders/Subtractors                                   : 11
+# Multipliers                                          : 68
+ 9x5-bit multiplier                                    : 68
+# Adders/Subtractors                                   : 76
  11-bit adder                                          : 1
+ 15-bit adder                                          : 34
+ 16-bit adder                                          : 17
+ 17-bit adder                                          : 14
  2-bit adder                                           : 1
  4-bit adder                                           : 2
  5-bit adder                                           : 4
  6-bit adder                                           : 3
-# Adder Trees                                          : 1
- 17-bit / 2-inputs adder tree                          : 1
 # Counters                                             : 1
  5-bit up counter                                      : 1
 # Accumulators                                         : 3
  17-bit up loadable accumulator                        : 3
-# Registers                                            : 1893
- Flip-Flops                                            : 1893
+# Registers                                            : 3883
+ Flip-Flops                                            : 3883
 # Comparators                                          : 22
  11-bit comparator greater                             : 1
  17-bit comparator lessequal                           : 2
@@ -3280,6 +3260,11 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2261 - The FF/Latch <A3[3].reg_a3/O_value_15> in Unit <SubNeurone_l1> is equivalent to the following FF/Latch, which will be removed : <A3[3].reg_a3/O_value_16> 
+INFO:Xst:2261 - The FF/Latch <A3[2].reg_a3/O_value_15> in Unit <SubNeurone_l2> is equivalent to the following FF/Latch, which will be removed : <A3[2].reg_a3/O_value_16> 
+INFO:Xst:2261 - The FF/Latch <A4[1].reg_a4/O_value_15> in Unit <SubNeurone_l2> is equivalent to the following FF/Latch, which will be removed : <A4[1].reg_a4/O_value_16> 
+INFO:Xst:2261 - The FF/Latch <A3[2].reg_a3/O_value_15> in Unit <SubNeurone_l3> is equivalent to the following FF/Latch, which will be removed : <A3[2].reg_a3/O_value_16> 
+INFO:Xst:2261 - The FF/Latch <A4[1].reg_a4/O_value_15> in Unit <SubNeurone_l3> is equivalent to the following FF/Latch, which will be removed : <A4[1].reg_a4/O_value_16> 
 INFO:Xst:2261 - The FF/Latch <Arg_el_1_5/O_done> in Unit <Argmax> is equivalent to the following 4 FFs/Latches, which will be removed : <Arg_el_1_4/O_done> <Arg_el_1_3/O_done> <Arg_el_1_2/O_done> <Arg_el_1_1/O_done> 
 WARNING:Xst:2973 - All outputs of instance <Arg_el_4_1/Reg_P> of block <RegWEn_1> are unconnected in block <Argmax>. Underlying logic will be removed.
 Analyzing FSM <MFsm> for best encoding.
@@ -3351,6 +3336,12 @@ Optimizing unit <Counter_Clean_2> ...
 
 Optimizing unit <SubNeurone_l1> ...
 
+Optimizing unit <RegWEn_4> ...
+
+Optimizing unit <RegWEn_5> ...
+
+Optimizing unit <RegWEn_6> ...
+
 Optimizing unit <NeuronCombinator_1> ...
 
 Optimizing unit <Counter_Clean_3> ...
@@ -3373,7 +3364,7 @@ Optimizing unit <NeuronCombinator_3> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block FCNN_top_unit, actual ratio is 6.
+Found area constraint ratio of 100 (+ 5) on block FCNN_top_unit, actual ratio is 10.
 
 Final Macro Processing ...
 
@@ -3381,8 +3372,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1038
- Flip-Flops                                            : 1038
+# Registers                                            : 3023
+ Flip-Flops                                            : 3023
 
 =========================================================================
 
@@ -3405,20 +3396,20 @@ Top Level Output File Name         : FCNN_top_unit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3192
+# BELS                             : 6175
 #      GND                         : 1
 #      INV                         : 1
-#      LUT2                        : 39
-#      LUT3                        : 94
-#      LUT4                        : 116
+#      LUT2                        : 1042
+#      LUT3                        : 42
+#      LUT4                        : 133
 #      LUT5                        : 196
-#      LUT6                        : 2592
-#      MUXCY                       : 32
-#      MUXF7                       : 86
+#      LUT6                        : 2606
+#      MUXCY                       : 987
+#      MUXF7                       : 121
 #      VCC                         : 1
-#      XORCY                       : 34
-# FlipFlops/Latches                : 1038
-#      FDC                         : 68
+#      XORCY                       : 1045
+# FlipFlops/Latches                : 3023
+#      FDC                         : 2053
 #      FDCE                        : 889
 #      FDE                         : 80
 #      FDP                         : 1
@@ -3430,8 +3421,8 @@ Primitive and Black Box Usage:
 # IO Buffers                       : 17
 #      IBUF                        : 10
 #      OBUF                        : 7
-# DSPs                             : 72
-#      DSP48E1                     : 72
+# DSPs                             : 70
+#      DSP48E1                     : 70
 
 Device utilization summary:
 ---------------------------
@@ -3440,17 +3431,17 @@ Selected Device : 7z020clg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1038  out of  106400     0%  
- Number of Slice LUTs:                 3190  out of  53200     5%  
-    Number used as Logic:              3038  out of  53200     5%  
+ Number of Slice Registers:            3023  out of  106400     2%  
+ Number of Slice LUTs:                 4172  out of  53200     7%  
+    Number used as Logic:              4020  out of  53200     7%  
     Number used as Memory:              152  out of  17400     0%  
        Number used as RAM:              152
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3875
-   Number with an unused Flip Flop:    2837  out of   3875    73%  
-   Number with an unused LUT:           685  out of   3875    17%  
-   Number of fully used LUT-FF pairs:   353  out of   3875     9%  
+ Number of LUT Flip Flop pairs used:   5860
+   Number with an unused Flip Flop:    2837  out of   5860    48%  
+   Number with an unused LUT:          1688  out of   5860    28%  
+   Number of fully used LUT-FF pairs:  1335  out of   5860    22%  
    Number of unique control sets:        17
 
 IO Utilization: 
@@ -3459,7 +3450,7 @@ IO Utilization:
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
- Number of DSP48E1s:                     72  out of    220    32%  
+ Number of DSP48E1s:                     70  out of    220    31%  
 
 ---------------------------
 Partition Resource Summary:
@@ -3482,8 +3473,8 @@ Clock Information:
 -----------------------------------+-------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                     | Load  |
 -----------------------------------+-------------------------------------------+-------+
-I_clk                              | BUFGP                                     | 1145  |
-N1                                 | NONE(Madd_O_W_N_1[10]_GND_8_o_add_13_OUT1)| 3     |
+I_clk                              | BUFGP                                     | 3130  |
+N1                                 | NONE(Madd_O_W_N_1[10]_GND_8_o_add_13_OUT1)| 1     |
 -----------------------------------+-------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -3495,8 +3486,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 37.382ns (Maximum Frequency: 26.751MHz)
-   Minimum input arrival time before clock: 1.180ns
+   Minimum period: 7.439ns (Maximum Frequency: 134.418MHz)
+   Minimum input arrival time before clock: 1.240ns
    Maximum output required time after clock: 0.521ns
    Maximum combinational path delay: No path found
 
@@ -3506,76 +3497,37 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'I_clk'
-  Clock period: 37.382ns (frequency: 26.751MHz)
-  Total number of paths / destination ports: 172751481922275150766669542864565839892139999232 / 4628
+  Clock period: 7.439ns (frequency: 134.418MHz)
+  Total number of paths / destination ports: 57062742 / 6613
 -------------------------------------------------------------------------
-Delay:               37.382ns (Levels of Logic = 46)
-  Source:            SubNeurone_L1_1/Mmult_mult_d<1> (DSP)
-  Destination:       SubNeurone_L1_1/Acc_1/tmp_value_16 (FF)
+Delay:               7.439ns (Levels of Logic = 7)
+  Source:            Counter_L1_1/Counter_40/temp_value_5 (FF)
+  Destination:       SubNeurone_L1_1/Mmult_mult_d<3> (DSP)
   Source Clock:      I_clk rising
   Destination Clock: I_clk rising
 
-  Data Path: SubNeurone_L1_1/Mmult_mult_d<1> to SubNeurone_L1_1/Acc_1/tmp_value_16
+  Data Path: Counter_L1_1/Counter_40/temp_value_5 to SubNeurone_L1_1/Mmult_mult_d<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     DSP48E1:CLK->PCOUT47    1   3.098   0.000  SubNeurone_L1_1/Mmult_mult_d<1> (SubNeurone_L1_1/Mmult_mult_d<1>_PCOUT_to_Maddsub_mult_d<0>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<0> (SubNeurone_L1_1/Maddsub_mult_d<0>_PCOUT_to_Maddsub_mult_d<3>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<3> (SubNeurone_L1_1/Maddsub_mult_d<3>_PCOUT_to_Maddsub_mult_d<4>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<4> (SubNeurone_L1_1/Maddsub_mult_d<4>_PCOUT_to_Maddsub_mult_d<5>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<5> (SubNeurone_L1_1/Maddsub_mult_d<5>_PCOUT_to_Maddsub_mult_d<6>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<6> (SubNeurone_L1_1/Maddsub_mult_d<6>_PCOUT_to_Maddsub_mult_d<7>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<7> (SubNeurone_L1_1/Maddsub_mult_d<7>_PCOUT_to_Maddsub_mult_d<8>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<8> (SubNeurone_L1_1/Maddsub_mult_d<8>_PCOUT_to_Maddsub_mult_d<9>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<9> (SubNeurone_L1_1/Maddsub_mult_d<9>_PCOUT_to_Maddsub_mult_d<10>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<10> (SubNeurone_L1_1/Maddsub_mult_d<10>_PCOUT_to_Maddsub_mult_d<11>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<11> (SubNeurone_L1_1/Maddsub_mult_d<11>_PCOUT_to_Maddsub_mult_d<12>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<12> (SubNeurone_L1_1/Maddsub_mult_d<12>_PCOUT_to_Maddsub_mult_d<13>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<13> (SubNeurone_L1_1/Maddsub_mult_d<13>_PCOUT_to_Maddsub_mult_d<14>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<14> (SubNeurone_L1_1/Maddsub_mult_d<14>_PCOUT_to_Maddsub_mult_d<15>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<15> (SubNeurone_L1_1/Maddsub_mult_d<15>_PCOUT_to_Maddsub_mult_d<16>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<16> (SubNeurone_L1_1/Maddsub_mult_d<16>_PCOUT_to_Maddsub_mult_d<17>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<17> (SubNeurone_L1_1/Maddsub_mult_d<17>_PCOUT_to_Maddsub_mult_d<18>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<18> (SubNeurone_L1_1/Maddsub_mult_d<18>_PCOUT_to_Maddsub_mult_d<19>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<19> (SubNeurone_L1_1/Maddsub_mult_d<19>_PCOUT_to_Maddsub_mult_d<20>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<20> (SubNeurone_L1_1/Maddsub_mult_d<20>_PCOUT_to_Maddsub_mult_d<21>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<21> (SubNeurone_L1_1/Maddsub_mult_d<21>_PCOUT_to_Maddsub_mult_d<22>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<22> (SubNeurone_L1_1/Maddsub_mult_d<22>_PCOUT_to_Maddsub_mult_d<23>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<23> (SubNeurone_L1_1/Maddsub_mult_d<23>_PCOUT_to_Maddsub_mult_d<24>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<24> (SubNeurone_L1_1/Maddsub_mult_d<24>_PCOUT_to_Maddsub_mult_d<25>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<25> (SubNeurone_L1_1/Maddsub_mult_d<25>_PCOUT_to_Maddsub_mult_d<26>_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  SubNeurone_L1_1/Maddsub_mult_d<26> (SubNeurone_L1_1/Maddsub_mult_d<26>_PCOUT_to_Maddsub_mult_d<27>_PCIN_47)
-     DSP48E1:PCIN47->P0    1   1.107   0.289  SubNeurone_L1_1/Maddsub_mult_d<27> (SubNeurone_L1_1/ADDER_FOR_MULTADD_Madd_025)
-     LUT2:I1->O            1   0.043   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_lut<0> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_lut<0>)
-     MUXCY:S->O            1   0.230   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<0> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<0>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<1> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<1>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<2> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<2>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<3>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<4> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<4>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<5> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<5>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<6> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<6>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<7>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<8> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<8>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<9> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<9>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<10> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<10>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<11> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<11>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<12> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<12>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<13> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<13>)
-     MUXCY:CI->O           1   0.013   0.000  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<14> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_cy<14>)
-     XORCY:CI->O           1   0.251   0.289  SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_xor<15> (SubNeurone_L1_1/ADDERTREE_INTERNAL_Madd_15)
-     LUT3:I2->O            1   0.043   0.000  SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<15> (SubNeurone_L1_1/Acc_1/Maccum_tmp_value_lut<15>)
-     MUXCY:S->O            0   0.230   0.000  SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15> (SubNeurone_L1_1/Acc_1/Maccum_tmp_value_cy<15>)
-     XORCY:CI->O           1   0.251   0.000  SubNeurone_L1_1/Acc_1/Maccum_tmp_value_xor<16> (SubNeurone_L1_1/Result<16>)
-     FDC:D                    -0.001          SubNeurone_L1_1/Acc_1/tmp_value_16
+     FDCE:C->Q             9   0.232   0.316  Counter_L1_1/Counter_40/temp_value_5 (Counter_L1_1/Counter_40/temp_value_5)
+     DSP48E1:B5->PCOUT47    1   2.838   0.000  Counter_L1_1/Maddsub_n0018 (Counter_L1_1/Maddsub_n0018_PCOUT_to_Madd_O_W_N_1[10]_GND_8_o_add_13_OUT1_PCIN_47)
+     DSP48E1:PCIN47->P5    1   1.107   0.289  Madd_O_W_N_1[10]_GND_8_o_add_13_OUT1 (O_W_N_1[10]_GND_8_o_add_13_OUT<5>)
+     LUT4:I3->O         1723   0.043   0.766  Mmux_I_read_W_l171 (I_read_W_l1<5>)
+     LUT6:I0->O            2   0.043   0.461  Ram_W_1_1_L1[3].lut/Mram_C_LUT_SAMPLES281 (Ram_W_1_1_L1[3].lut/Mram_C_LUT_SAMPLES28)
+     LUT6:I2->O            2   0.043   0.461  Ram_W_1_1_L1[3].lut/Mram_C_LUT_SAMPLES561_91 (Ram_W_1_1_L1[3].lut/Mram_C_LUT_SAMPLES561_91)
+     LUT6:I2->O            1   0.043   0.000  Ram_W_1_1_L1[3].lut/_n0007<3>_inv1_F (Ram_W_1_1_N196)
+     MUXF7:I0->O          22   0.169   0.374  Ram_W_1_1_L1[3].lut/_n0007<3>_inv1 (Ram_W_1_1/L1[3].lut/_n0007<3>)
+     DSP48E1:A3                0.254          SubNeurone_L1_1/Mmult_mult_d<3>
     ----------------------------------------
-    Total                     37.382ns (36.803ns logic, 0.579ns route)
-                                       (98.5% logic, 1.5% route)
+    Total                      7.439ns (4.772ns logic, 2.667ns route)
+                                       (64.1% logic, 35.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'I_clk'
-  Total number of paths / destination ports: 1088 / 1088
+  Total number of paths / destination ports: 3073 / 3073
 -------------------------------------------------------------------------
-Offset:              1.180ns (Levels of Logic = 2)
+Offset:              1.240ns (Levels of Logic = 2)
   Source:            I_aync_rst (PAD)
   Destination:       CreateWord_1/Reg_temp/O_value_0 (FF)
   Destination Clock: I_clk rising
@@ -3585,11 +3537,11 @@ Offset:              1.180ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O           121   0.000   0.400  I_aync_rst_IBUF (I_aync_rst_IBUF)
-     INV:I->O            958   0.053   0.472  Counter_L2_1/Counter_2/I_rst_inv1_INV_0 (Argmax_1/Arg_el_1_1/I_rst_inv)
+     INV:I->O           2943   0.053   0.533  Counter_L2_1/Counter_2/I_rst_inv1_INV_0 (Argmax_1/Arg_el_1_1/I_rst_inv)
      FDCE:CLR                  0.255          Argmax_1/Arg_el_4_1/Reg_I/O_value_0
     ----------------------------------------
-    Total                      1.180ns (0.308ns logic, 0.872ns route)
-                                       (26.1% logic, 73.9% route)
+    Total                      1.240ns (0.308ns logic, 0.932ns route)
+                                       (24.8% logic, 75.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'I_clk'
@@ -3620,22 +3572,22 @@ Clock to Setup on destination clock I_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-I_clk          |   37.382|         |         |         |
-N1             |    4.669|         |         |         |
+I_clk          |    7.439|         |         |         |
+N1             |    4.398|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 803.00 secs
-Total CPU time to Xst completion: 794.88 secs
+Total REAL time to Xst completion: 654.00 secs
+Total CPU time to Xst completion: 644.55 secs
  
 --> 
 
 
-Total memory usage is 600840 kilobytes
+Total memory usage is 624024 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  183 (   0 filtered)
-Number of infos    :   86 (   0 filtered)
+Number of warnings :  206 (   0 filtered)
+Number of infos    :   92 (   0 filtered)
 

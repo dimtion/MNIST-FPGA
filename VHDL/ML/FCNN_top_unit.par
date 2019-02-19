@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-k2-123-test::  Tue Feb 19 18:19:20 2019
+k2-123-test::  Tue Feb 19 20:58:15 2019
 
 par -w -intstyle ise -ol high -mt off FCNN_top_unit_map.ncd FCNN_top_unit.ncd
 FCNN_top_unit.pcf 
@@ -36,87 +36,87 @@ Device speed data version:  "PRELIMINARY 1.08 2013-10-13".
 Device Utilization Summary:
 
    Number of BUFGs                           1 out of 32      3%
-   Number of DSP48E1s                       72 out of 220    32%
+   Number of DSP48E1s                       70 out of 220    31%
    Number of External IOBs                  18 out of 200     9%
       Number of LOCed IOBs                   0 out of 18      0%
 
-   Number of Slices                       1107 out of 13300   8%
-   Number of Slice Registers              1038 out of 106400  1%
-      Number used as Flip Flops           1038
+   Number of Slices                       1697 out of 13300  12%
+   Number of Slice Registers              3023 out of 106400  2%
+      Number used as Flip Flops           3023
       Number used as Latches                 0
       Number used as LatchThrus              0
 
-   Number of Slice LUTS                   3125 out of 53200   5%
-   Number of Slice LUT-Flip Flop pairs    3748 out of 53200   7%
+   Number of Slice LUTS                   4275 out of 53200   8%
+   Number of Slice LUT-Flip Flop pairs    5172 out of 53200   9%
 
 
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 24 secs 
-Finished initial Timing Analysis.  REAL time: 24 secs 
+Starting initial Timing Analysis.  REAL time: 15 secs 
+Finished initial Timing Analysis.  REAL time: 15 secs 
 
-WARNING:Par:288 - The signal Ram_I/Mram_mem29_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem28_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem27_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem26_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem30_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem23_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem24_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem25_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem33_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem22_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem21_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem20_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem19_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem35_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem17_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem19_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem20_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem18_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem36_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem37_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem34_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem13_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem16_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem15_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem21_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem14_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal Ram_I/Mram_mem10_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem12_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem22_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem13_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem23_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem28_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem27_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem24_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem25_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem37_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem36_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem26_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem35_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem10_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem33_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem34_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem9_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem8_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem7_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem6_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem30_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal Ram_I/Mram_mem1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Ram_I/Mram_mem29_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 32116 unrouted;      REAL time: 26 secs 
+Phase  1  : 36933 unrouted;      REAL time: 16 secs 
 
-Phase  2  : 21934 unrouted;      REAL time: 26 secs 
+Phase  2  : 26311 unrouted;      REAL time: 17 secs 
 
-Phase  3  : 3854 unrouted;      REAL time: 33 secs 
+Phase  3  : 8986 unrouted;      REAL time: 24 secs 
 
-Phase  4  : 3862 unrouted; (Setup:2781775, Hold:28891, Component Switching Limit:0)     REAL time: 39 secs 
+Phase  4  : 8986 unrouted; (Setup:0, Hold:34298, Component Switching Limit:0)     REAL time: 26 secs 
 
 Updating file: FCNN_top_unit.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:2825193, Hold:25555, Component Switching Limit:0)     REAL time: 52 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:30718, Component Switching Limit:0)     REAL time: 35 secs 
 
-Phase  6  : 0 unrouted; (Setup:2825193, Hold:25555, Component Switching Limit:0)     REAL time: 53 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:30718, Component Switching Limit:0)     REAL time: 35 secs 
 
-Phase  7  : 0 unrouted; (Setup:2825193, Hold:25555, Component Switching Limit:0)     REAL time: 53 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:30718, Component Switching Limit:0)     REAL time: 35 secs 
 
-Phase  8  : 0 unrouted; (Setup:2825193, Hold:25555, Component Switching Limit:0)     REAL time: 53 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:30718, Component Switching Limit:0)     REAL time: 35 secs 
 
-Phase  9  : 0 unrouted; (Setup:2788462, Hold:0, Component Switching Limit:0)     REAL time: 56 secs 
-Total REAL time to Router completion: 56 secs 
-Total CPU time to Router completion: 57 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 37 secs 
+Total REAL time to Router completion: 37 secs 
+Total CPU time to Router completion: 36 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -134,7 +134,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|         I_clk_BUFGP | BUFGCTRL_X0Y0| No   |  382 |  0.357     |  1.596      |
+|         I_clk_BUFGP | BUFGCTRL_X0Y0| No   |  775 |  0.355     |  1.596      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -145,23 +145,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 2788462 (Setup: 2788462, Hold: 0, Component Switching Limit: 0)
-
-WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
-
-   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
-   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
-
-   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to ensure the best options
-   are set in the tools for timing closure.
-
-   Use the Xilinx "SmartXplorer" script to try special combinations of
-   options known to produce very good results.
-
-   Visit the Xilinx technical support web at http://support.xilinx.com and go to
-   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
-   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
-   in your design.
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -170,12 +154,12 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_I_clk = PERIOD TIMEGRP "I_clk" 10 ns H | SETUP       |   -28.106ns|    38.106ns|     634|     2788462
-  IGH 50%                                   | HOLD        |     0.027ns|            |       0|           0
+  TS_I_clk = PERIOD TIMEGRP "I_clk" 20 ns H | SETUP       |     6.879ns|    13.121ns|       0|           0
+  IGH 50%                                   | HOLD        |     0.003ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
-1 constraint not met.
+All constraints were met.
 
 
 Generating Pad Report.
@@ -184,17 +168,17 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 37 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 20 secs 
-Total CPU time to PAR completion: 1 mins 3 secs 
+Total REAL time to PAR completion: 58 secs 
+Total CPU time to PAR completion: 42 secs 
 
-Peak Memory Usage:  1180 MB
+Peak Memory Usage:  1130 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
-Timing: Completed - 634 errors found.
+Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 40
+Number of warning messages: 39
 Number of info messages: 0
 
 Writing design to file FCNN_top_unit.ncd

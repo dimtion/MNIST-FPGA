@@ -14,7 +14,73 @@
 <msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_1.vhd" Line 63: <arg fmt="%s" index="1">o_l_1</arg> should be on the sensitivity list of the process
 </msg>
 
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 182: <arg fmt="%s" index="1">mult_d_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 190: <arg fmt="%s" index="1">add_1_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 198: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 206: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 207: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd" Line 213: <arg fmt="%s" index="1">add_4_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 179: <arg fmt="%s" index="1">mult_d_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 187: <arg fmt="%s" index="1">add_1_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 194: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 195: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 196: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 202: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 203: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L2.vhd" Line 209: <arg fmt="%s" index="1">add_4_r</arg> should be on the sensitivity list of the process
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_2.vhd" Line 63: <arg fmt="%s" index="1">o_l_1</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 174: <arg fmt="%s" index="1">mult_d_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 182: <arg fmt="%s" index="1">add_1_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 189: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 190: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 191: <arg fmt="%s" index="1">add_2_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 197: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 198: <arg fmt="%s" index="1">add_3_r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L3.vhd" Line 203: <arg fmt="%s" index="1">add_4_r</arg> should be on the sensitivity list of the process
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Ram_W_3.vhd" Line 63: <arg fmt="%s" index="1">o_l_1</arg> should be on the sensitivity list of the process
@@ -24,6 +90,9 @@
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="92" delta="new" >"/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/Arg_el.vhd" Line 72: <arg fmt="%s" index="1">i_i2</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd</arg>&quot; line <arg fmt="%d" index="2">114</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">A2[6].reg_a2</arg>&gt; of block &lt;<arg fmt="%s" index="4">RegWEn</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">SubNeurone_l1</arg>&gt;. Underlying logic will be removed.
 </msg>
 
 <msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/FCNN_top_unit.vhd</arg>&quot; line <arg fmt="%d" index="2">479</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Ram_B_1_1</arg>&gt; of block &lt;<arg fmt="%s" index="4">Ram_b_1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">FCNN_top_unit</arg>&gt;. Underlying logic will be removed.
@@ -222,6 +291,9 @@
 </msg>
 
 <msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">C_LUT_SAMPLES</arg>&gt;, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/mnt/network/campus/Filiere1/UV404/MNIST-FPGA/VHDL/SubNeurone_L1.vhd</arg>&quot; line <arg fmt="%s" index="2">114</arg>: Output port &lt;<arg fmt="%s" index="3">O_value</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">A2[6].reg_a2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">mem</arg>&gt;, simulation mismatch.
@@ -703,6 +775,21 @@ It will be removed from the design.
 </msg>
 
 <msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_C_LUT_SAMPLES</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">A3[3].reg_a3/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A3[3].reg_a3/O_value_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">A3[2].reg_a3/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A3[2].reg_a3/O_value_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">A4[1].reg_a4/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A4[1].reg_a4/O_value_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">A3[2].reg_a3/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A3[2].reg_a3/O_value_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">A4[1].reg_a4/O_value_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubNeurone_l3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;A4[1].reg_a4/O_value_16&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Arg_el_1_5/O_done</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Argmax</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Arg_el_1_4/O_done&gt; &lt;Arg_el_1_3/O_done&gt; &lt;Arg_el_1_2/O_done&gt; &lt;Arg_el_1_1/O_done&gt; </arg>
